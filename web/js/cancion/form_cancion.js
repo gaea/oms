@@ -1,11 +1,11 @@
 //aqui va el js asociado a la cancion
 
-﻿	var url_arc_web=urlPrefix+'../';
+﻿	var url_arc_web='';
 
 	
 	
    //CREACION DE FORMULARIO
-	var c_formpanel = new Ext.FormPanel({
+	var cancion_formpanel = new Ext.FormPanel({
 		title:'Datos detallados de la canci&oacute;n ',
 		columnWidth:'.4',
 		frame:true,
@@ -53,7 +53,7 @@
 				format: 'Y-m-d'
 			},
 			{
-			//	xtype:'timefield',
+				xtype:'timefield',
 				fieldLabel: 'Duraci&oacute;n',
 				id: 'can_duracion',
 				name: 'can_duracion',
@@ -67,6 +67,36 @@
 				name: 'archivo',buttonText: '',allowBlank:false,
 				buttonCfg: {iconCls: 'archivo'}
 		  	},
+			{
+				xtype:'timefield',
+				fieldLabel: 'Duraci&oacute;n',
+				id: 'can_duracion',
+				name: 'can_duracion',
+				emptyText: 'duracion'
+			},
+			{
+				xtype:'checkbox',
+				fieldLabel: 'Habilitada',
+				id: 'can_habilitada',
+				name: 'can_habilitada',
+				emptyText: 'habilitada'
+			},
+			{
+				xtype:'numberfield',
+				fieldLabel: 'Precio',
+				id: 'can_precio',
+				name: 'can_precio',
+				emptyText: 'precio',
+				allowDecimal:true
+			},
+			{
+				xtype:'numberfield',
+				fieldLabel: 'Ranking',
+				id: 'can_ranking',
+				name: 'can_ranking',
+				emptyText: 'Ranking',
+				allowDecimal:false
+			},
 			{
 				id:'can_codigo',
 				name: 'can_codigo',
@@ -91,7 +121,7 @@
 				text:'Descargar',
 				disabled:true,
 				id:'can_descargar_boton',
-				handler: can_descargar,
+				handler: fun_can_descargar,
 				iconCls: 'descargar',
 				tooltip: 'Seleccione una canci&oacute;n y pulse aqu&iacute; para descargarlo'
 			}
@@ -103,7 +133,7 @@
 	var cancion_datastore = new Ext.data.GroupingStore({
 		id: 'cancion_datastore',
 		proxy: new Ext.data.HttpProxy({
-			url: getAbsoluteUrl('gestionar_cancion','listarCancion'), 
+			url: 'listarCancion',//getAbsoluteUrl('gestionar_cancion','listarCancion'), 
 			method: 'POST',
 			limit: 10,
 			star: 0
@@ -160,7 +190,7 @@
     //cargamos el modelo de la tabla
 	var cancion_gridpanel = new Ext.grid.GridPanel({
 		id: 'cancion_gridpanel',
-		title:'Caniones',
+		title:'Canciones',
 		columnWidth: '.6',
 		stripeRows:true,
 		frame: true,
@@ -181,7 +211,7 @@
 		}),
 //		autoExpandColumn: 'can_descripcion',
 		autoExpandMin: 200,
-		height: largo_panel,
+//		height: largo_panel,
 		listeners: {
 			viewready: function(g) {
 				g.getSelectionModel().selectRow(0);
@@ -200,7 +230,7 @@
 /*INTEGRACION AL CONTENEDOR*/
 	var cancion_contenedor_panel = new Ext.Panel({
 		id: 'cancion_contenedor_panel',
-		height: largo_panel,
+	//	height: largo_panel,
 		autoWidth: true,
 		border: false,
 		tabTip :'Aqui puedes ver, agregar , eliminar y descargar canciones',
@@ -211,7 +241,7 @@
 			cancion_gridpanel, 
 			cancion_formpanel
 		],
-		renderTo:'dcan_can'
+		renderTo:'div_form_cancion'
 	});
    
    
@@ -266,7 +296,7 @@
 		}*/
 	}
          
-	function can_eliminar()
+	function fun_can_eliminar()
 	{/*
 		if(Ext.getCmp('can_eliminar_boton').getText()=='Eliminar')
 		{
@@ -297,7 +327,7 @@
 	}
 
 
-	function can_verificarCamposDocumento(){
+	function fun_can_verificarCamposDocumento(){
 		
 		var valido=true;
 		
