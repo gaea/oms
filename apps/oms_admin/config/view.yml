@@ -12,9 +12,10 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    [main.css, ../extjs/resources/css/ext-all.css, ../extjs/resources/css/xtheme-blue.css, ../extjs/examples/ux/fileuploadfield/css/fileuploadfield.css, data-view.css.php]
 
-  javascripts:    []
+  javascripts:    [../extjs/adapter/ext/ext-base.js, ../extjs/ext-all-debug.js, ../extjs/src/locale/ext-lang-es.js, ../extjs/examples/ux/Spinner.js, ../extjs/examples/ux/SpinnerField.js, ../extjs/examples/ux/fileuploadfield/FileUploadField.js]
+
 
   has_layout:     true
   layout:         layout
