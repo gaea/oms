@@ -24,26 +24,26 @@ class gestionar_cancionActions extends sfActions
  /**
  *Aqui se crea un doc
  */ 
-  public function executeCrearCancion()
+  public function executeCrearCancion(sfWebRequest $request)
   {
 	$salida	='';
 
 	try
 	{  
 		$nombre_carpeta = "uploads";
-
+	
 		if(!is_dir($nombre_carpeta))
 		{
 			mkdir($nombre_carpeta, 0777, true);
 		}
 		
 		sleep(2);
-		//echo(1);
-		$nombre = $_FILES['archivo']['name'];//$iv_nombre;//
-		$tamano = $_FILES['archivo']['size'];
-		$tipo = $_FILES['archivo']['type'];
-		$temporal = $_FILES['archivo']['tmp_name'];
-		
+	
+		$nombre = $_FILES['can_archivo']['name'];//$iv_nombre;//
+		$tamano = $_FILES['can_archivo']['size'];
+		$tipo = $_FILES['can_archivo']['type'];
+		$temporal = $_FILES['can_archivo']['tmp_name'];
+	
 		if(file_exists($nombre_carpeta."/".$nombre))
 		{
 			$salida = "({success: false, errors: { reason: 'Ya existe el archivo con el mismo nombre en la base de datos'}})";
@@ -66,12 +66,12 @@ class gestionar_cancionActions extends sfActions
 				$cancion->setAlbum($this->getRequestParameter('can_album'));
 				$cancion->setFechaDePublicacion($this->getRequestParameter('can_fecha_de_publicacion'));
 				$cancion->setDuracion($this->getRequestParameter('can_duracion'));
-				$cancion->setUrl($this->getRequestParameter('can_url'));
+				$cancion->setUrl("uploads/".$nombre);
 				$cancion->setHabilitada($this->getRequestParameter('can_habilitada'));
 				$cancion->setPrecio($this->getRequestParameter('can_precio'));
 				$cancion->setRanking($this->getRequestParameter('can_ranking'));
-
 				$cancion->save();		
+				
 				$salida = "({success: true, mensaje:'La canci&oacute;n fue creada exitosamente'})";
 				return $this->renderText($salida);
 				}
@@ -100,7 +100,7 @@ class gestionar_cancionActions extends sfActions
 			$cancion;
 				
 			if($can_codigo!=''){
-				$cancion  = CancionsPeer::retrieveByPk($can_codigo);
+				$cancion  = CancionPeer::retrieveByPk($can_codigo);
 			}
 			else
 			{
@@ -143,19 +143,19 @@ class gestionar_cancionActions extends sfActions
 		try{
 
 			$conexion = new Criteria();
-			$cancion = CancionsPeer::doSelect($conexion);
+			$cancion = CancionPeer::doSelect($conexion);
 
 			foreach($cancion as $temporal)
 			{
-				$datos[$fila]['can_nombre'] = $temporal->setNombre();
-				$datos[$fila]['can_autor'] = $temporal->setAutor();
-				$datos[$fila]['can_album'] = $temporal->setAlbum();
-				$datos[$fila]['can_fecha_de_publicacion'] = $temporal->setFechaDePublicacion();
-				$datos[$fila]['can_duracion'] = $temporal->setDuracion();
-				$datos[$fila]['can_url'] = $temporal->setUrl();
-				$datos[$fila]['can_precio'] = $temporal->setPrecio();
-				$datos[$fila]['can_habilitada'] = $temporal->setHabilitada();
-				$datos[$fila]['can_ranking'] = $temporal->setRanking();
+				$datos[$fila]['can_nombre'] = $temporal->getNombre();
+				$datos[$fila]['can_autor'] = $temporal->getAutor();
+				$datos[$fila]['can_album'] = $temporal->getAlbum();
+				$datos[$fila]['can_fecha_de_publicacion'] = $temporal->getFechaDePublicacion();
+				$datos[$fila]['can_duracion'] = $temporal->getDuracion();
+				$datos[$fila]['can_url'] = $temporal->getUrl();
+				$datos[$fila]['can_precio'] = $temporal->getPrecio();
+				$datos[$fila]['can_habilitada'] = $temporal->getHabilitada();
+				$datos[$fila]['can_ranking'] = $temporal->getRanking();
 
 				$fila++;
 			}
@@ -190,7 +190,7 @@ class gestionar_cancionActions extends sfActions
 			$can_codigo = $this->getUser()->getAttribute('can_codigo');
 				
 			$cancion;
-			$cancion  = CancionsPeer::retrieveByPk($can_codigo);
+			$cancion  = CancionPeer::retrieveByPk($can_codigo);
 	
 			if($cancion){
 				$cancion->delete();

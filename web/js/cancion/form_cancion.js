@@ -20,7 +20,7 @@
 				fieldLabel: 'Nombre',
 				id: 'can_nombre',
 				name: 'can_nombre',
-				emptyText: 'Nombre ',
+			//--	emptyText: 'Nombre ',
 				maxLength: 100,
 				maskRe: /([a-zA-Z0-9\s]+)$/,
 				allowBlank: false
@@ -29,7 +29,7 @@
 				fieldLabel: 'Autor',
 				id: 'can_autor',
 				name: 'can_autor',
-				emptyText: 'Autor ',
+			//--	emptyText: 'Autor ',
 				maxLength: 100,
 				maskRe: /([a-zA-Z0-9\s]+)$/,
 				allowBlank: false
@@ -38,7 +38,7 @@
 				fieldLabel: 'Album',
 				id: 'can_album',
 				name: 'can_album',
-				emptyText: 'album ',
+			//--	emptyText: 'album ',
 				maxLength: 100,
 				maskRe: /([a-zA-Z0-9\s]+)$/,
 				allowBlank: false
@@ -49,44 +49,41 @@
 				fieldLabel: 'Fecha de publicaci&oacute;n',
 				id: 'can_fecha_de_publicacion',
 				name: 'can_fecha_de_publicacion',
-				emptyText: 'FEcha de prublicacion',
+			//--	emptyText: 'FEcha de prublicacion',
 				format: 'Y-m-d'
 			},
 			{
-				xtype:'timefield',
+				xtype:'textfield',
 				fieldLabel: 'Duraci&oacute;n',
 				id: 'can_duracion',
 				name: 'can_duracion',
-				emptyText: 'duracion'
+				value:'00:00:00'//,
+				//maskRe : /([0-9]\:)$/  
+			//--	emptyText: 'duracion'
 			},
 			{
 				xtype: 'fileuploadfield', 
 				id: 'can_url', 
 				emptyText: 'Seleccione una cancion', 
 				fieldLabel: 'Escoger',
-				name: 'archivo',buttonText: '',allowBlank:false,
+				name: 'can_archivo',
+				buttonText: '',
+				allowBlank:false,
 				buttonCfg: {iconCls: 'archivo'}
 		  	},
-			{
-				xtype:'timefield',
-				fieldLabel: 'Duraci&oacute;n',
-				id: 'can_duracion',
-				name: 'can_duracion',
-				emptyText: 'duracion'
-			},
 			{
 				xtype:'checkbox',
 				fieldLabel: 'Habilitada',
 				id: 'can_habilitada',
-				name: 'can_habilitada',
-				emptyText: 'habilitada'
+				name: 'can_habilitada'
+			//--	emptyText: 'habilitada'
 			},
 			{
 				xtype:'numberfield',
 				fieldLabel: 'Precio',
 				id: 'can_precio',
 				name: 'can_precio',
-				emptyText: 'precio',
+			//--	emptyText: 'precio',
 				allowDecimal:true
 			},
 			{
@@ -94,7 +91,7 @@
 				fieldLabel: 'Ranking',
 				id: 'can_ranking',
 				name: 'can_ranking',
-				emptyText: 'Ranking',
+			//--	emptyText: 'Ranking',
 				allowDecimal:false
 			},
 			{
@@ -113,10 +110,10 @@
 				tooltip:'Pulse aqui para guardar nuevas canciones'
 			},{
 				text:'Cancelar',
-				id: 'can_eliminar_boton',
-				handler: fun_can_eliminar,
-				iconCls: 'eliminar',
-				tooltip: 'Seleccione una canci&oacute;n y pulse aqu&iacute; para eliminarlo'
+				id: 'can_cancelar_boton',
+				handler: fun_can_cancelar,
+				iconCls: 'cancelar',
+				tooltip: 'Seleccione una canci&oacute;n y pulse aqu&iacute; para cancelarlo'
 			},{
 				text:'Descargar',
 				disabled:true,
@@ -133,7 +130,7 @@
 	var cancion_datastore = new Ext.data.GroupingStore({
 		id: 'cancion_datastore',
 		proxy: new Ext.data.HttpProxy({
-			url: 'listarCancion',//getAbsoluteUrl('gestionar_cancion','listarCancion'), 
+			url: 'gestionar_cancion/listarCancion',//getAbsoluteUrl('gestionar_cancion','listarCancion'), 
 			method: 'POST',
 			limit: 10,
 			star: 0
@@ -163,13 +160,7 @@
 
 	function can_ponericono(val,x,store)
 	{
-
-		var tipo=store.data.can_tipo;
-
-		if(tipo.indexOf('Mapa')!==-1)	
-		{return '<img src="'+url_arc_web+'images/iconos/docs/file_mapa.png">';}
-
-		return '<img src="'+url_arc_web+'images/iconos/docs/file_otro.png">';
+		return '<img src="'+url_web+'images/iconos/play.png">';
 	}
    
  	
@@ -200,18 +191,17 @@
 			singleSelect: true,
 			listeners: {
 				rowselect: function(sm, row, rec) {
-			/*		Ext.getCmp('can_formpanel').getForm().loadRecord(rec);
+					Ext.getCmp('cancion_formpanel').getForm().loadRecord(rec);
 					Ext.getCmp('can_crear_boton').setText('Nuevo');
-					Ext.getCmp('can_eliminar_boton').setText('Eliminar');
+					//Ext.getCmp('can_cancelar_boton').setText('Eliminar');
 					Ext.getCmp('can_descargar_boton').setDisabled(false);
-					Ext.getCmp('can_eliminar_boton').setDisabled(false);
-			*/			
+					Ext.getCmp('can_cancelar_boton').setDisabled(false);		
 				}
 			}
 		}),
 //		autoExpandColumn: 'can_descripcion',
 		autoExpandMin: 200,
-//		height: largo_panel,
+		height: 500,
 		listeners: {
 			viewready: function(g) {
 				g.getSelectionModel().selectRow(0);
@@ -233,7 +223,7 @@
 	//	height: largo_panel,
 		autoWidth: true,
 		border: false,
-		tabTip :'Aqui puedes ver, agregar , eliminar y descargar canciones',
+		tabTip :'Aqui puedes ver, agregar , cancelar y descargar canciones',
 		//monitorResize:true,
 		layout:'column',
 		items: 
@@ -249,81 +239,61 @@
 /************************************************FUNCIONES*****************************/
 
 	function fun_can_crear(){
-		/*
+		
 		if(Ext.getCmp('can_crear_boton').getText()=='Nuevo')
 		{
-			Ext.getCmp('can_formpanel').getForm().reset();
+			cancion_formpanel.getForm().reset();
 			Ext.getCmp('can_crear_boton').setText('Guardar');
 			Ext.getCmp('can_descargar_boton').setDisabled(true);
-			Ext.getCmp('can_eliminar_boton').setText('Cancelar');
-			Ext.getCmp('can_eliminar_boton').setDisabled(false);
+			Ext.getCmp('can_cancelar_boton').setText('Cancelar');
+			Ext.getCmp('can_cancelar_boton').setDisabled(false);
 		}
 
 		if(Ext.getCmp('can_crear_boton').getText()=='Guardar')
 		{ 
-			var verificacion =can_verificarCamposDocumento();
+			var verificacion =fun_can_verificarCamposDocumento();
 	  
 	 		 if(verificacion)
 	  		{
 				subirDatos(
-					can_formpanel,
-					getAbsoluteUrl('can','crearcan'),
+					cancion_formpanel,
+					getAbsoluteUrl('gestionar_cancion','crearCancion'),
 					{},
 					function(){
 					Ext.getCmp('can_crear_boton').setText('Nuevo');
-					Ext.getCmp('can_eliminar_boton').setText('Eliminar');
+					//Ext.getCmp('can_cancelar_boton').setText('Eliminar');
 					Ext.getCmp('can_descargar_boton').setDisabled(false);
-					can_datastore.reload(); 
+					cancion_datastore.reload(); 
 					},
 					function(){}
 					);
 			}
-		}*/
+		}
 
 	}
 
 
         
 	function fun_can_descargar()
-	{/*
+	{
 		if(Ext.getCmp('can_url').getValue()!='')
 		{
-			var url = url_arc_web+Ext.getCmp('can_url').getValue(); 
+		alert(Ext.getCmp('can_url').getValue());
+			var url = url_web+Ext.getCmp('can_url').getValue(); 
 			win = window.open(url,'Documento','height=400,width=400,resizable=1,scrollbars=1, menubar=1');
 		}
 		else{
-			mostrarMensajeConfirmacion('Error',"Selecione una imagén a descargar");
-		}*/
-	}
-         
-	function fun_can_eliminar()
-	{/*
-		if(Ext.getCmp('can_eliminar_boton').getText()=='Eliminar')
-		{
-			if(Ext.getCmp('can_id').getValue()!='')
-			{
-				subirDatosAjax(
-						getAbsoluteUrl('can','eliminarcan'),
-						{can_id:Ext.getCmp('can_id').getValue()},
-						function(){
-						can_formpanel.getForm().reset();
-						can_datastore.reload(); 
-						}
-				);
-			}
-			else{
-				mostrarMensajeConfirmacion('Error',"Selecione una imagén a eliminar");
-			}
-
+			mostrarMensajeConfirmacion('Error',"Selecione una canci&oacute;n a descargar");
 		}
-	
-		
-		if(Ext.getCmp('can_eliminar_boton').getText()=='Cancelar')
+	}
+    
+	function fun_can_cancelar()
+	{
+		if(Ext.getCmp('can_cancelar_boton').getText()=='Cancelar')
 		{
 		    Ext.getCmp('can_crear_boton').setText('Nuevo');
 		    Ext.getCmp('can_descargar_boton').setDisabled(false);
-		    Ext.getCmp('can_eliminar_boton').setText('Eliminar');
-		}*/
+		}
 	}
 
 
