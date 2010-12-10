@@ -113,7 +113,7 @@
 	var cancion_datastore = new Ext.data.GroupingStore({
 		id: 'cancion_datastore',
 		proxy: new Ext.data.HttpProxy({
-			url: 'gestionar_cancion/listarCancion',//getAbsoluteUrl('gestionar_cancion','listarCancion'), 
+			url: 'comprar_cancion/listarCancion',//getAbsoluteUrl('comprar_cancion','listarCancion'), 
 			method: 'POST',
 			limit: 10,
 			star: 0
@@ -211,7 +211,7 @@
 			cancion_gridpanel, 
 			cancion_formpanel
 		],
-		renderTo:'div_form_cancion'
+		renderTo:'div_form_comprar_cancion'
 	});
 
 /***********************************FUNCIONES*****************************/
@@ -232,7 +232,7 @@
 	 		if(verificacion){
 				subirDatos(
 					cancion_formpanel,
-					getAbsoluteUrl('gestionar_cancion','crearCancion'),
+					getAbsoluteUrl('comprar_cancion','crearCancion'),
 					{},
 					function(){
 						Ext.getCmp('can_crear_boton').setText('Nuevo');
