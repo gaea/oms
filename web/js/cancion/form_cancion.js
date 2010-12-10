@@ -1,18 +1,15 @@
-//aqui va el js asociado a la cancion
 
 ﻿	var url_arc_web='';
-
 	
-	
-   //CREACION DE FORMULARIO
 	var cancion_formpanel = new Ext.FormPanel({
 		title:'Datos detallados de la canci&oacute;n ',
 		columnWidth:'.4',
+		height: 500,
 		frame:true,
 		id:'cancion_formpanel',
 		fileUpload: true,
 		style: {"margin-left": "10px"},
-		bodyStyle: 'padding:5px',
+		bodyStyle: 'padding:10px',
 		defaults:{xtype:'textfield',anchor:'100%'},
 		items:
 		[
@@ -20,36 +17,26 @@
 				fieldLabel: 'Nombre',
 				id: 'can_nombre',
 				name: 'can_nombre',
-			//--	emptyText: 'Nombre ',
-				maxLength: 100,
-				maskRe: /([a-zA-Z0-9\s]+)$/,
-				//allowBlank: false
+				maskRe: /([a-zA-Z0-9\s]+)$/
 			},
 			{
 				fieldLabel: 'Autor',
 				id: 'can_autor',
 				name: 'can_autor',
-			//--	emptyText: 'Autor ',
-				maxLength: 100,
-				maskRe: /([a-zA-Z0-9\s]+)$/,
-				//allowBlank: false
+				maskRe: /([a-zA-Z0-9\s]+)$/
 			},
 			{
 				fieldLabel: 'Album',
 				id: 'can_album',
 				name: 'can_album',
-			//--	emptyText: 'album ',
-				maxLength: 100,
 				maskRe: /([a-zA-Z0-9\s]+)$/,
 				//allowBlank: false
 			},
-			
 			{
 				xtype:'datefield',
 				fieldLabel: 'Fecha de publicaci&oacute;n',
 				id: 'can_fecha_de_publicacion',
 				name: 'can_fecha_de_publicacion',
-			//--	emptyText: 'FEcha de prublicacion',
 				format: 'Y-m-d'
 			},
 			{
@@ -57,9 +44,7 @@
 				fieldLabel: 'Duraci&oacute;n',
 				id: 'can_duracion',
 				name: 'can_duracion',
-				value:'00:00:00'//,
-				//maskRe : /([0-9]\:)$/  
-			//--	emptyText: 'duracion'
+				value:'00:00:00'
 			},
 			{
 				xtype: 'fileuploadfield', 
@@ -75,24 +60,24 @@
 				xtype:'checkbox',
 				fieldLabel: 'Habilitada',
 				id: 'can_habilitada',
-				name: 'can_habilitada'
-			//--	emptyText: 'habilitada'
+				name: 'can_habilitada',
+				allowBlank: false
 			},
 			{
 				xtype:'numberfield',
 				fieldLabel: 'Precio',
 				id: 'can_precio',
 				name: 'can_precio',
-			//--	emptyText: 'precio',
-				allowDecimal:true
+				allowDecimal:true,
+				allowBlank: false
 			},
 			{
 				xtype:'numberfield',
 				fieldLabel: 'Ranking',
 				id: 'can_ranking',
 				name: 'can_ranking',
-			//--	emptyText: 'Ranking',
-				allowDecimal:false
+				allowDecimal:false,
+				allowBlank: false
 			},
 			{
 				id:'can_codigo',
@@ -106,27 +91,25 @@
 				text:'Guardar',
 				handler:fun_can_crear,
 				id:'can_crear_boton',
-				iconCls:'guardar',
+				iconCls:'crear16',
 				tooltip:'Pulse aqui para guardar nuevas canciones'
 			},{
 				text:'Cancelar',
 				id: 'can_cancelar_boton',
 				handler: fun_can_cancelar,
-				iconCls: 'cancelar',
-				tooltip: 'Seleccione una canci&oacute;n y pulse aqu&iacute; para cancelarlo'
+				iconCls: 'eliminar16',
+				tooltip: 'Pulse aqu&iacute; para cancelar'
 			},{
 				text:'Descargar',
 				disabled:true,
 				id:'can_descargar_boton',
 				handler: fun_can_descargar,
-				iconCls: 'descargar',
-				tooltip: 'Seleccione una canci&oacute;n y pulse aqu&iacute; para descargarlo'
+				iconCls: 'next16',
+				tooltip: 'Seleccione una canci&oacute;n y pulse aqu&iacute; para descargarla'
 			}
 		]	
 	});
 
-
-//creacion grid
 	var cancion_datastore = new Ext.data.GroupingStore({
 		id: 'cancion_datastore',
 		proxy: new Ext.data.HttpProxy({
@@ -158,27 +141,23 @@
 	});
 	cancion_datastore.load();
 
-	function can_ponericono(val,x,store)
-	{
-		return '<img src="'+url_web+'images/iconos/play.png">';
+	function can_ponericono(val,x,store){
+		//return '<img src="'+url_web+'images/iconos/play.png">';
+		return '<button type="button" name="button_descargar_cancion" onClick="fun_can_descargar()"> <img src="'+url_web+'images/Next16.png"> </button>'
 	}
-   
  	
 	var cancion_colmodel = new Ext.grid.ColumnModel({
-	defaults:{sortable: true, locked: false, resizable: true},
-	columns:[
-		{id: 'imagen', header: "Imagén", width: 60, dataIndex: 'imagen', renderer: can_ponericono},
-		{ header: "Nombre",  dataIndex: 'can_nombre'},
-		{ header: "Autor", width: 90, dataIndex: 'can_autor'},
-		{ header: "Album", width: 90, dataIndex: 'can_album'},
-		{ header: "Duraci&oacute;", width: 230,  dataIndex: 'can_duracion'},
-		{ header: "Precio", width: 230,  dataIndex: 'can_precio'}
-	]
+		defaults:{sortable: true, locked: false, resizable: true},
+		columns:[
+			{ id: 'imagen', header: "Play", width: 50, dataIndex: 'imagen', renderer: can_ponericono},
+			{ id: 'can_nombre_col_id',  header: "Nombre",  dataIndex: 'can_nombre'},
+			{ header: "Autor", width: 150, dataIndex: 'can_autor'},
+			{ header: "Album", width: 200, dataIndex: 'can_album'},
+			{ header: "Duraci&oacute;n", width: 60,  dataIndex: 'can_duracion'},
+			{ header: "Precio", width: 80,  dataIndex: 'can_precio'}
+		]
 	});
-
 	
-    //CREACION DELA GRILLA
-    //cargamos el modelo de la tabla
 	var cancion_gridpanel = new Ext.grid.GridPanel({
 		id: 'cancion_gridpanel',
 		title:'Canciones',
@@ -199,9 +178,9 @@
 				}
 			}
 		}),
-//		autoExpandColumn: 'can_descripcion',
+		autoExpandColumn: 'can_nombre_col_id',
 		autoExpandMin: 200,
-		height: 500,
+		height: 450,
 		listeners: {
 			viewready: function(g) {
 				g.getSelectionModel().selectRow(0);
@@ -217,14 +196,15 @@
 		view: new Ext.grid.GroupingView()
     	});
 	
-/*INTEGRACION AL CONTENEDOR*/
 	var cancion_contenedor_panel = new Ext.Panel({
+		frame: true,
 		id: 'cancion_contenedor_panel',
-	//	height: largo_panel,
+		//	height: largo_panel,
+		padding: '5px',
 		autoWidth: true,
-		border: false,
+		border: true,
 		tabTip :'Aqui puedes ver, agregar , cancelar y descargar canciones',
-		//monitorResize:true,
+		monitorResize:true,
 		layout:'column',
 		items: 
 		[
@@ -233,15 +213,12 @@
 		],
 		renderTo:'div_form_cancion'
 	});
-   
-   
 
-/************************************************FUNCIONES*****************************/
+/***********************************FUNCIONES*****************************/
 
 	function fun_can_crear(){
 		
-		if(Ext.getCmp('can_crear_boton').getText()=='Nuevo')
-		{
+		if(Ext.getCmp('can_crear_boton').getText()=='Nuevo'){
 			cancion_formpanel.getForm().reset();
 			Ext.getCmp('can_crear_boton').setText('Guardar');
 			Ext.getCmp('can_descargar_boton').setDisabled(true);
@@ -249,36 +226,29 @@
 			Ext.getCmp('can_cancelar_boton').setDisabled(false);
 		}
 
-		if(Ext.getCmp('can_crear_boton').getText()=='Guardar')
-		{ 
+		if(Ext.getCmp('can_crear_boton').getText()=='Guardar'){ 
 			var verificacion =fun_can_verificarCamposDocumento();
 	  
-	 		 if(verificacion)
-	  		{
+	 		if(verificacion){
 				subirDatos(
 					cancion_formpanel,
 					getAbsoluteUrl('gestionar_cancion','crearCancion'),
 					{},
 					function(){
-					Ext.getCmp('can_crear_boton').setText('Nuevo');
-					//Ext.getCmp('can_cancelar_boton').setText('Eliminar');
-					Ext.getCmp('can_descargar_boton').setDisabled(false);
-					cancion_datastore.reload(); 
+						Ext.getCmp('can_crear_boton').setText('Nuevo');
+						//Ext.getCmp('can_cancelar_boton').setText('Eliminar');
+						Ext.getCmp('can_descargar_boton').setDisabled(false);
+						cancion_datastore.reload(); 
 					},
 					function(){}
-					);
+				);
 			}
 		}
-
 	}
 
-
-        
-	function fun_can_descargar()
-	{
-		if(Ext.getCmp('can_url').getValue()!='')
-		{
-		alert(Ext.getCmp('can_url').getValue());
+	function fun_can_descargar(){
+		if(Ext.getCmp('can_url').getValue()!=''){
+			//alert(Ext.getCmp('can_url').getValue());
 			var url = url_web+Ext.getCmp('can_url').getValue(); 
 			win = window.open(url,'Documento','height=400,width=400,resizable=1,scrollbars=1, menubar=1');
 		}
@@ -287,20 +257,14 @@
 		}
 	}
     
-	function fun_can_cancelar()
-	{
-		if(Ext.getCmp('can_cancelar_boton').getText()=='Cancelar')
-		{
+	function fun_can_cancelar(){
+		if(Ext.getCmp('can_cancelar_boton').getText()=='Cancelar'){
 		    Ext.getCmp('can_crear_boton').setText('Nuevo');
 		    Ext.getCmp('can_descargar_boton').setDisabled(false);
 		}
 	}
 
-
 	function fun_can_verificarCamposDocumento(){
-		
 		var valido=true;
-		
 		return valido;
 	}
-
