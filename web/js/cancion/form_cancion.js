@@ -23,7 +23,7 @@
 			//--	emptyText: 'Nombre ',
 				maxLength: 100,
 				maskRe: /([a-zA-Z0-9\s]+)$/,
-				allowBlank: false
+				//allowBlank: false
 			},
 			{
 				fieldLabel: 'Autor',
@@ -32,7 +32,7 @@
 			//--	emptyText: 'Autor ',
 				maxLength: 100,
 				maskRe: /([a-zA-Z0-9\s]+)$/,
-				allowBlank: false
+				//allowBlank: false
 			},
 			{
 				fieldLabel: 'Album',
@@ -41,7 +41,7 @@
 			//--	emptyText: 'album ',
 				maxLength: 100,
 				maskRe: /([a-zA-Z0-9\s]+)$/,
-				allowBlank: false
+				//allowBlank: false
 			},
 			
 			{

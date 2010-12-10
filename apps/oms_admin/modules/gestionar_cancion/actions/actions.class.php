@@ -1,5 +1,8 @@
 <?php
 
+include_once('getid3/getid3.php');
+include_once(GETID3_INCLUDEPATH.'getid3.functions.php'); // Function library
+
 /**
  * gestionar_cancion actions.
  *
@@ -21,9 +24,7 @@ class gestionar_cancionActions extends sfActions
   }
 
 
- /**
- *Aqui se crea un doc
- */ 
+
   public function executeCrearCancion(sfWebRequest $request)
   {
 	$salida	='';
@@ -50,37 +51,46 @@ class gestionar_cancionActions extends sfActions
 		}
 		else
 		{
-			if($tamano > 2100000)//$tamano > algo 1000000 aprox 1mega
+			/*if($tamano > 2100000)//$tamano > algo 1000000 aprox 1mega
 			{
 				$salida = "({success: false, errors: { reason: 'El archivo exede el limite de tamano'}})";
 			}
 			else
+			{*/
+				
+			$copio=copy($temporal, "uploads/".$nombre);
+			
+			if($copio)
 			{
-				
-				$copio=copy($temporal, "uploads/".$nombre);
-				
-				if($copio){
+				$atributos_cancion = GetAllMP3info($temporal);
+				//playtime_string, fileformat
 				$cancion = new Cancion();
-				$cancion->setNombre($this->getRequestParameter('can_nombre'));
-				$cancion->setAutor($this->getRequestParameter('can_autor'));
-				$cancion->setAlbum($this->getRequestParameter('can_album'));
-				$cancion->setFechaDePublicacion($this->getRequestParameter('can_fecha_de_publicacion'));
-				$cancion->setDuracion($this->getRequestParameter('can_duracion'));
+				$cancion->setNombre($atributos_cancion['id3']['id3v1']['title']);//$cancion->setNombre($this->getRequestParameter('can_nombre'));//
+				$cancion->setAutor($atributos_cancion['id3']['id3v1']['artist']);//$cancion->setAutor($this->getRequestParameter('can_autor'));
+				$cancion->setAlbum($atributos_cancion['id3']['id3v1']['album']);//$cancion->setAlbum($this->getRequestParameter('can_album'));
+				$cancion->setFechaDePublicacion($atributos_cancion['id3']['id3v1']['year']);//$cancion->setFechaDePublicacion($this->getRequestParameter('can_fecha_de_publicacion'));
+				$cancion->setDuracion($atributos_cancion['playtime_string']);//$cancion->setDuracion($this->getRequestParameter('can_duracion'));
 				$cancion->setUrl("uploads/".$nombre);
 				$cancion->setHabilitada($this->getRequestParameter('can_habilitada'));
 				$cancion->setPrecio($this->getRequestParameter('can_precio'));
 				$cancion->setRanking($this->getRequestParameter('can_ranking'));
-				$cancion->save();		
+				$cancion->save();	
 				
 				$salida = "({success: true, mensaje:'La canci&oacute;n fue creada exitosamente'})";
 				return $this->renderText($salida);
-				}
 			}
+			else
+			{
+				$salida = "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
+			}
+			
+			//}
 		}
 	}
 	catch (Exception $excepcion)
 	{
 		$salida = "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
+		return $this->renderText($salida);
 	}
 	 		
 	return $this->renderText($salida);
@@ -95,11 +105,13 @@ class gestionar_cancionActions extends sfActions
 	{
 		$salida = '';
 
-		try{
+		try
+		{
 			$can_codigo = $this->getUser()->getAttribute('can_codigo');
 			$cancion;
 				
-			if($can_codigo!=''){
+			if($can_codigo!='')
+			{
 				$cancion  = CancionPeer::retrieveByPk($can_codigo);
 			}
 			else
@@ -140,7 +152,8 @@ class gestionar_cancionActions extends sfActions
 		$fila=0;
 		$datos;
 
-		try{
+		try
+		{
 
 			$conexion = new Criteria();
 			$cancion = CancionPeer::doSelect($conexion);
@@ -159,7 +172,8 @@ class gestionar_cancionActions extends sfActions
 
 				$fila++;
 			}
-			if($fila>0){
+			if($fila>0)
+			{
 				$jsonresult = json_encode($datos);
 				$salida= '({"total":"'.$fila.'","results":'.$jsonresult.'})';
 			}
@@ -173,9 +187,6 @@ class gestionar_cancionActions extends sfActions
 		return $this->renderText($salida);
 	}
 
-
-
-
 	/**
 	 *@author:gaea
 	 *@date:2 de dic de 2010
@@ -185,19 +196,22 @@ class gestionar_cancionActions extends sfActions
 	{
 		$salida = '';
 
-		try{
+		try
+		{
 
 			$can_codigo = $this->getUser()->getAttribute('can_codigo');
 				
 			$cancion;
 			$cancion  = CancionPeer::retrieveByPk($can_codigo);
 	
-			if($cancion){
+			if($cancion)
+			{
 				$cancion->delete();
 				$salida = "({success: true, mensaje:'La Canci&oacute;n fue eliminada exitosamente'})";
 			}
 			
-			if(!$cancion){
+			if(!$cancion)
+			{
 				$salida = "({success: true, mensaje:'No se encontro la Canci&oacute;n en el sistema'})";
 			}
 			
@@ -215,6 +229,4 @@ class gestionar_cancionActions extends sfActions
 
 		return $this->renderText($salida);
 	}
-
-
 }
