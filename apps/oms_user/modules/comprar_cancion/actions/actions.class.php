@@ -20,128 +20,12 @@ class comprar_cancionActions extends sfActions
     //$this->forward('default', 'module');
   }
   
-  public function executeCrearCancion(sfWebRequest $request)
-  {
-	$salida	='';
-
-	try
-	{  
-		$nombre_carpeta = "uploads";
-	
-		if(!is_dir($nombre_carpeta))
-		{
-			mkdir($nombre_carpeta, 0777, true);
-		}
-		
-		sleep(2);
-	
-		$nombre = $_FILES['can_archivo']['name'];//$iv_nombre;//
-		$tamano = $_FILES['can_archivo']['size'];
-		$tipo = $_FILES['can_archivo']['type'];
-		$temporal = $_FILES['can_archivo']['tmp_name'];
-	
-		if(file_exists($nombre_carpeta."/".$nombre))
-		{
-			$salida = "({success: false, errors: { reason: 'Ya existe el archivo con el mismo nombre en la base de datos'}})";
-		}
-		else
-		{
-			/*if($tamano > 2100000)//$tamano > algo 1000000 aprox 1mega
-			{
-				$salida = "({success: false, errors: { reason: 'El archivo exede el limite de tamano'}})";
-			}
-			else
-			{*/
-				
-			$copio=copy($temporal, "uploads/".$nombre);
-			
-			if($copio)
-			{
-				$atributos_cancion = GetAllMP3info($temporal);
-				//playtime_string, fileformat
-				$cancion = new Cancion();
-				$cancion->setNombre($atributos_cancion['id3']['id3v1']['title']);//$cancion->setNombre($this->getRequestParameter('can_nombre'));//
-				$cancion->setAutor($atributos_cancion['id3']['id3v1']['artist']);//$cancion->setAutor($this->getRequestParameter('can_autor'));
-				$cancion->setAlbum($atributos_cancion['id3']['id3v1']['album']);//$cancion->setAlbum($this->getRequestParameter('can_album'));
-				$cancion->setFechaDePublicacion($atributos_cancion['id3']['id3v1']['year']);//$cancion->setFechaDePublicacion($this->getRequestParameter('can_fecha_de_publicacion'));
-				$cancion->setDuracion($atributos_cancion['playtime_string']);//$cancion->setDuracion($this->getRequestParameter('can_duracion'));
-				$cancion->setUrl("uploads/".$nombre);
-				$cancion->setHabilitada($this->getRequestParameter('can_habilitada'));
-				$cancion->setPrecio($this->getRequestParameter('can_precio'));
-				$cancion->setRanking($this->getRequestParameter('can_ranking'));
-				$cancion->save();	
-				
-				$salida = "({success: true, mensaje:'La canci&oacute;n fue creada exitosamente'})";
-				return $this->renderText($salida);
-			}
-			else
-			{
-				$salida = "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
-			}
-			
-			//}
-		}
-	}
-	catch (Exception $excepcion)
-	{
-		$salida = "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
-		return $this->renderText($salida);
-	}
-	 		
-	return $this->renderText($salida);
-  }
-  
-	/**
-	 *@author:gaea
-	 *@date:2 de dic de 2010
-	 *Esta funcion actualiza una Cancions
-	 */
-	public function executeActualizarCancion(sfWebRequest $request)
-	{
-		$salida = '';
-
-		try
-		{
-			$can_codigo = $this->getUser()->getAttribute('can_codigo');
-			$cancion;
-				
-			if($can_codigo!='')
-			{
-				$cancion  = CancionPeer::retrieveByPk($can_codigo);
-			}
-			else
-			{
-				$cancion = new Cancion();
-			}
-				
-			if($cancion)
-			{
-				$cancion->setNombre($this->getRequestParameter('can_nombre'));
-				$cancion->setAutor($this->getRequestParameter('can_autor'));
-				$cancion->setAlbum($this->getRequestParameter('can_album'));
-				$cancion->setFechaDePublicacion($this->getRequestParameter('can_fecha_de_publicacion'));
-				$cancion->setDuracion($this->getRequestParameter('can_duracion'));
-				$cancion->setUrl($this->getRequestParameter('can_url'));
-				$cancion->setHabilitada($this->getRequestParameter('can_habilitada'));
-				$cancion->setPrecio($this->getRequestParameter('can_precio'));
-				$cancion->setRanking($this->getRequestParameter('can_ranking'));
-
-				$cancion->save();
-			}
-		}
-		catch (Exception $exception)
-		{
-			$salida= "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
-		}
-
-		return $this->renderText($salida);
-	}
 	/**
 	 *@author:gaea
 	 *@date:2 de dic de 2010
 	 *Esta funcion devuelve un listado de canciones
 	 */
-	public function executeListarCancion(sfWebRequest $request)
+	public function executeListarCanciondisponible(sfWebRequest $request)
 	{
 		$salida='({"total":"0", "results":""})';
 		$fila=0;
@@ -149,12 +33,12 @@ class comprar_cancionActions extends sfActions
 
 		try
 		{
-
 			$conexion = new Criteria();
 			$cancion = CancionPeer::doSelect($conexion);
 
 			foreach($cancion as $temporal)
 			{
+				$datos[$fila]['can_codigo'] = $temporal->getCodigo();
 				$datos[$fila]['can_nombre'] = $temporal->getNombre();
 				$datos[$fila]['can_autor'] = $temporal->getAutor();
 				$datos[$fila]['can_album'] = $temporal->getAlbum();
@@ -181,47 +65,42 @@ class comprar_cancionActions extends sfActions
 
 		return $this->renderText($salida);
 	}
-
-	/**
-	 *@author:gaea
-	 *@date:2 de dic de 2010
-	 *Esta funcion elimina una Cancions
-	 */
-	public function executeEliminarCancion(sfWebRequest $request)
+	
+	public function executeComprarCancion(sfWebRequest $request)
 	{
-		$salida = '';
-
+		$codigo_usuario = 2;
+		$comprar_canciones = json_decode($this->getRequestParameter('canciones'));
+		$precio = 0;
+		$format = '%Y-%m-%d %H:%M:%S';
+		$fecha_venta = strftime($format);
+		//$fecha_venta = '1999-01-08 04:05:06';
+		
 		try
 		{
-
-			$can_codigo = $this->getUser()->getAttribute('can_codigo');
-				
-			$cancion;
-			$cancion  = CancionPeer::retrieveByPk($can_codigo);
-	
-			if($cancion)
+			//$usuario = UsuarioPeer::retrieveByPk($codigo_usuario);
+			$venta = new Venta();
+			$venta->setUsuario($codigo_usuario);
+			$venta->setPrecio($precio);
+			$venta->setFechaVenta($fecha_venta);
+			$venta->save();
+			for($i = 0; $i < sizeof($comprar_canciones); $i++)
 			{
-				$cancion->delete();
-				$salida = "({success: true, mensaje:'La Canci&oacute;n fue eliminada exitosamente'})";
+				$cancion = CancionPeer::retrieveByPk($comprar_canciones[$i]);
+				$precio += $cancion->getPrecio();
+				$venta_cancion = new VentaCancion();
+				$venta_cancion->setVenta($venta->getCodigo());
+				$venta_cancion->setCancion($comprar_canciones[$i]);
+				$venta_cancion->save();
 			}
-			
-			if(!$cancion)
-			{
-				$salida = "({success: true, mensaje:'No se encontro la Canci&oacute;n en el sistema'})";
-			}
-			
-			if($codigo_cancion=='')
-			{
-				$salida = "({success: false,  errors: { reason: 'No ha seleccionado ninguna Canci&oacute;n'}})";
-			}
-				
+			$venta->setPrecio($precio);
+			$venta->save();
 		}
-		catch (Exception $exception)
+		catch(Exception $exception)
 		{
-				
-			$salida= "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n al tratar de eliminar ' , error: '".$exception->getMessage()."'}})";
+			return "({success: false, errors: { reason: 'Hubo una excepci&oacute;n al realizar la compra' , error: '".$exception->getMessage()."'}})";
 		}
-
+		
+		$salida = "({success: true, mensaje:'Compra hecha satisfactoriamente'})";
 		return $this->renderText($salida);
 	}
 }
