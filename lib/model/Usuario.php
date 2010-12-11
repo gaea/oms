@@ -17,5 +17,19 @@
  * @package    lib.model
  */
 class Usuario extends BaseUsuario {
-
+	
+	public function esCliente(){
+		return ($this->getPerfil()===UsuarioPeer::getCodigoPerfilCliente());
+	}
+	
+	public function esAdministrador(){
+		return ($this->getPerfil()===UsuarioPeer::getCodigoPerfilAdmin());
+	}
+	
+	public function validarContrasena($password)
+	{
+		return( $this->getContrasena()==$password );
+	}
+		
+	
 } // Usuario
