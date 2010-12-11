@@ -23,8 +23,6 @@ class gestionar_cancionActions extends sfActions
     //$this->forward('default', 'module');
   }
 
-
-
   public function executeCrearCancion(sfWebRequest $request)
   {
 	$salida	='';
@@ -107,17 +105,9 @@ class gestionar_cancionActions extends sfActions
 
 		try
 		{
-			$can_codigo = $this->getUser()->getAttribute('can_codigo');
-			$cancion;
-				
-			if($can_codigo!='')
-			{
-				$cancion  = CancionPeer::retrieveByPk($can_codigo);
-			}
-			else
-			{
-				$cancion = new Cancion();
-			}
+			$can_codigo = $this->getRequestParameter('codigo_cancion');
+
+			$cancion  = CancionPeer::retrieveByPk($can_codigo);
 				
 			if($cancion)
 			{
@@ -126,17 +116,21 @@ class gestionar_cancionActions extends sfActions
 				$cancion->setAlbum($this->getRequestParameter('can_album'));
 				$cancion->setFechaDePublicacion($this->getRequestParameter('can_fecha_de_publicacion'));
 				$cancion->setDuracion($this->getRequestParameter('can_duracion'));
-				$cancion->setUrl($this->getRequestParameter('can_url'));
+				//$cancion->setUrl($this->getRequestParameter('can_url'));
 				$cancion->setHabilitada($this->getRequestParameter('can_habilitada'));
 				$cancion->setPrecio($this->getRequestParameter('can_precio'));
 				$cancion->setRanking($this->getRequestParameter('can_ranking'));
 
 				$cancion->save();
 			}
+			
+			$salida = "({success: true, mensaje:'La canci&oacute;n fue actualizada exitosamente'})";
+			return $this->renderText($salida);
 		}
 		catch (Exception $exception)
 		{
 			$salida= "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
+			return $this->renderText($salida);
 		}
 
 		return $this->renderText($salida);
@@ -151,15 +145,41 @@ class gestionar_cancionActions extends sfActions
 		$salida='({"total":"0", "results":""})';
 		$fila=0;
 		$datos;
-
+		$buscar = $this->getRequestParameter('buscar');
+		
 		try
 		{
-
 			$conexion = new Criteria();
+
+			if($buscar != '')
+			{
+				$c1 = $conexion->getNewCriterion(CancionPeer::ALBUM, '%'.$buscar.'%', Criteria::LIKE);
+				$c2 = $conexion->getNewCriterion(CancionPeer::NOMBRE, '%'.$buscar.'%', Criteria::LIKE);
+				$c3 = $conexion->getNewCriterion(CancionPeer::AUTOR, '%'.$buscar.'%', Criteria::LIKE);
+				//$c4 = $conexion->getNewCriterion(CancionPeer::DURACION, $buscar, Criteria::LIKE);
+				//$c5 = $conexion->getNewCriterion(CancionPeer::FECHA_DE_PUBLICACION, $buscar, Criteria::LIKE);
+				//$c6 = $conexion->getNewCriterion(CancionPeer::CODIGO, $buscar, Criteria::LIKE);
+				//$c7 = $conexion->getNewCriterion(CancionPeer::PRECIO, $buscar, Criteria::LIKE);
+				//$c8 = $conexion->getNewCriterion(CancionPeer::RANKING, $buscar, Criteria::LIKE);
+				//$c7->addOr($c8);
+				//$c6->addOr($c7);
+				//$c5->addOr($c6);
+				//$c4->addOr($c5);
+				//$c3->addOr($c4);
+				$c2->addOr($c3);
+				$c1->addOr($c2);
+				
+				$conexion->add($c1);
+			}
+			
+			$numero_canciones = CancionPeer::doCount($conexion);
+			$conexion->setLimit($this->getRequestParameter('limit'));
+			$conexion->setOffset($this->getRequestParameter('start'));
 			$cancion = CancionPeer::doSelect($conexion);
 
 			foreach($cancion as $temporal)
 			{
+				$datos[$fila]['can_codigo'] = $temporal->getCodigo();
 				$datos[$fila]['can_nombre'] = $temporal->getNombre();
 				$datos[$fila]['can_autor'] = $temporal->getAutor();
 				$datos[$fila]['can_album'] = $temporal->getAlbum();

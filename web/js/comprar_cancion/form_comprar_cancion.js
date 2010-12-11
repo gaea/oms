@@ -85,7 +85,7 @@
 			{
 				xtype: 'button',
 				text: 'Buscar',
-				handler: function(){},
+				handler: fun_can_buscar,
 				iconCls: 'buscar16'
 			},
 			'->',{
@@ -108,10 +108,10 @@
 	var cancion_adquirida_datastore = new Ext.data.GroupingStore({
 		id: 'cancion_adquirida_datastore',
 		proxy: new Ext.data.HttpProxy({
-			url: 'comprar_cancion/listarCanciondisponible',//getAbsoluteUrl('comprar_cancion','listarCanciondisponible'), 
+			url: 'comprar_cancion/listarCancionadquirida',//getAbsoluteUrl('comprar_cancion','listarCanciondisponible'), 
 			method: 'POST',
 			limit: 10,
-			star: 0
+			start: 0
 		}),
 		baseParams:{}, 
 		reader: new Ext.data.JsonReader({
@@ -221,6 +221,7 @@
 				'comprar_cancion/comprarCancion',
 				{canciones: Ext.util.JSON.encode(array_codigo_canciones)},
 				function(){
+					cancion_adquirida_datastore.reload();
 					//mostrarMensajeRapido('Aviso','Compra hecha satisfactoriamente');
 				},
 				function(){}
@@ -229,6 +230,16 @@
 		else{
 			mostrarMensajeRapido('Error','Por favor seleccione una canci&oacute;n');
 		}
+	}
+	
+	function fun_can_buscar(){
+		cancion_disponible_datastore.load({
+			params: {
+				buscar: Ext.getCmp('cancion_disponible_buscar_textfield').getValue(),
+				start: 0,
+				limit: 10
+			}
+		});
 	}
 
 	function fun_can_descargar(){
