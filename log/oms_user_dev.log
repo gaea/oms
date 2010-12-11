@@ -6218,3 +6218,318 @@ Dec 11 09:34:10 symfony [info] {sfWebDebugLogger} Factories 7.44 ms (1)
 Dec 11 09:34:10 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 37.88 ms (1)
 Dec 11 09:34:10 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
 Dec 11 09:34:10 symfony [info] {sfWebResponse} Send content (1322 o)
+Dec 11 10:07:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:07:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:07:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:07:32 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:07:32 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:07:32 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:07:32 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:07:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:07:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:07:32 symfony [info] {sfWebDebugLogger} Configuration 42.31 ms (10)
+Dec 11 10:07:32 symfony [info] {sfWebDebugLogger} Factories 7.98 ms (1)
+Dec 11 10:07:32 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.18 ms (1)
+Dec 11 10:07:32 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 24.10 ms (1)
+Dec 11 10:07:32 symfony [info] {sfWebResponse} Send content (28754 o)
+Dec 11 10:07:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 11 10:07:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 11 10:07:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:07:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:07:32 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 11 10:07:32 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 10:07:32 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 11 10:07:32 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 11 10:07:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:07:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:07:32 symfony [info] {sfWebDebugLogger} Configuration 1.64 ms (8)
+Dec 11 10:07:32 symfony [info] {sfWebDebugLogger} Factories 8.23 ms (1)
+Dec 11 10:07:32 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 14.33 ms (1)
+Dec 11 10:07:32 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.01 ms (1)
+Dec 11 10:07:32 symfony [info] {sfWebResponse} Send content (1638 o)
+Dec 11 10:07:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:07:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:07:32 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 11 10:07:33 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 10:07:33 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 10:07:33 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 10:07:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:07:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:07:33 symfony [info] {sfWebDebugLogger} Configuration 1.61 ms (8)
+Dec 11 10:07:33 symfony [info] {sfWebDebugLogger} Factories 23.30 ms (1)
+Dec 11 10:07:33 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 46.08 ms (1)
+Dec 11 10:07:33 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
+Dec 11 10:07:33 symfony [info] {sfWebResponse} Send content (1300 o)
+Dec 11 10:08:28 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:08:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:08:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:08:28 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:08:28 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:08:28 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:08:28 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:08:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:08:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:08:28 symfony [info] {sfWebDebugLogger} Configuration 1.83 ms (9)
+Dec 11 10:08:28 symfony [info] {sfWebDebugLogger} Factories 8.12 ms (1)
+Dec 11 10:08:28 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.18 ms (1)
+Dec 11 10:08:28 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 3.25 ms (1)
+Dec 11 10:08:28 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 10:08:29 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 11 10:08:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:08:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:08:29 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 11 10:08:29 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 11 10:08:29 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 10:08:29 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 11 10:08:29 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 11 10:08:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:08:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:08:29 symfony [info] {sfWebDebugLogger} Configuration 1.62 ms (8)
+Dec 11 10:08:29 symfony [info] {sfWebDebugLogger} Factories 8.09 ms (1)
+Dec 11 10:08:29 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 32.09 ms (1)
+Dec 11 10:08:29 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.00 ms (1)
+Dec 11 10:08:29 symfony [info] {sfWebResponse} Send content (1638 o)
+Dec 11 10:08:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:08:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:08:29 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 11 10:08:29 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 10:08:29 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 10:08:29 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 10:08:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:08:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:08:29 symfony [info] {sfWebDebugLogger} Configuration 1.63 ms (8)
+Dec 11 10:08:29 symfony [info] {sfWebDebugLogger} Factories 39.81 ms (1)
+Dec 11 10:08:29 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 47.32 ms (1)
+Dec 11 10:08:29 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
+Dec 11 10:08:29 symfony [info] {sfWebResponse} Send content (1300 o)
+Dec 11 10:09:29 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:09:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:09:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:09:29 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:09:29 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:09:29 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:09:29 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:09:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:09:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:09:29 symfony [info] {sfWebDebugLogger} Configuration 1.27 ms (9)
+Dec 11 10:09:29 symfony [info] {sfWebDebugLogger} Factories 7.21 ms (1)
+Dec 11 10:09:29 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 11 10:09:29 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 3.06 ms (1)
+Dec 11 10:09:29 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 10:09:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:09:30 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:09:30 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:09:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:09:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:09:30 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (5)
+Dec 11 10:09:30 symfony [info] {sfWebDebugLogger} Factories 7.91 ms (1)
+Dec 11 10:09:59 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:09:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:09:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:09:59 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:09:59 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:09:59 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:09:59 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:09:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:09:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:09:59 symfony [info] {sfWebDebugLogger} Configuration 1.36 ms (9)
+Dec 11 10:09:59 symfony [info] {sfWebDebugLogger} Factories 8.09 ms (1)
+Dec 11 10:09:59 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 10:09:59 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.69 ms (1)
+Dec 11 10:09:59 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 10:10:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:10:00 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:10:00 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:10:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:10:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:10:00 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (5)
+Dec 11 10:10:00 symfony [info] {sfWebDebugLogger} Factories 7.93 ms (1)
+Dec 11 10:10:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:10:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:10:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:10:43 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:10:43 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:10:43 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:10:43 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:10:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:10:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:10:43 symfony [info] {sfWebDebugLogger} Configuration 1.21 ms (9)
+Dec 11 10:10:43 symfony [info] {sfWebDebugLogger} Factories 7.71 ms (1)
+Dec 11 10:10:43 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.36 ms (1)
+Dec 11 10:10:43 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.73 ms (1)
+Dec 11 10:10:43 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 10:10:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:10:44 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:10:44 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:10:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:10:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:10:44 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (5)
+Dec 11 10:10:44 symfony [info] {sfWebDebugLogger} Factories 6.62 ms (1)
+Dec 11 10:11:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:11:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:11:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:11:15 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:11:15 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:11:15 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:11:15 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:11:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:11:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:11:15 symfony [info] {sfWebDebugLogger} Configuration 1.21 ms (9)
+Dec 11 10:11:15 symfony [info] {sfWebDebugLogger} Factories 6.43 ms (1)
+Dec 11 10:11:15 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.04 ms (1)
+Dec 11 10:11:15 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.86 ms (1)
+Dec 11 10:11:15 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 10:11:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:11:16 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:11:16 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:11:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:11:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:11:16 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (5)
+Dec 11 10:11:16 symfony [info] {sfWebDebugLogger} Factories 6.75 ms (1)
+Dec 11 10:11:52 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:11:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:11:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:11:52 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:11:52 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:11:52 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:11:52 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:11:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:11:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:11:52 symfony [info] {sfWebDebugLogger} Configuration 1.80 ms (9)
+Dec 11 10:11:52 symfony [info] {sfWebDebugLogger} Factories 8.17 ms (1)
+Dec 11 10:11:52 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.19 ms (1)
+Dec 11 10:11:52 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.52 ms (1)
+Dec 11 10:11:52 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 10:11:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:11:52 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:11:52 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:11:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:11:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:11:53 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (5)
+Dec 11 10:11:53 symfony [info] {sfWebDebugLogger} Factories 7.96 ms (1)
+Dec 11 10:12:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:12:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:12:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:12:13 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:12:13 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:12:13 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:12:13 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:12:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:12:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:13 symfony [info] {sfWebDebugLogger} Configuration 1.20 ms (9)
+Dec 11 10:12:13 symfony [info] {sfWebDebugLogger} Factories 7.48 ms (1)
+Dec 11 10:12:13 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.11 ms (1)
+Dec 11 10:12:13 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.83 ms (1)
+Dec 11 10:12:13 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 10:12:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:12:13 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:12:13 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:12:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:12:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:13 symfony [info] {sfWebDebugLogger} Configuration 0.97 ms (5)
+Dec 11 10:12:13 symfony [info] {sfWebDebugLogger} Factories 5.88 ms (1)
+Dec 11 10:12:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:12:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:12:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:12:23 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:12:23 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:12:23 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:12:23 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:12:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:12:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:23 symfony [info] {sfWebDebugLogger} Configuration 1.81 ms (9)
+Dec 11 10:12:23 symfony [info] {sfWebDebugLogger} Factories 8.18 ms (1)
+Dec 11 10:12:23 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.19 ms (1)
+Dec 11 10:12:23 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 3.29 ms (1)
+Dec 11 10:12:23 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 10:12:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:12:23 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:12:23 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:12:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:12:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:23 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (5)
+Dec 11 10:12:23 symfony [info] {sfWebDebugLogger} Factories 7.94 ms (1)
+Dec 11 10:12:41 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /comprar_cancion with parameters array (  'module' => 'comprar_cancion',  'action' => 'index',)
+Dec 11 10:12:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:12:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:12:41 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeIndex()"
+Dec 11 10:12:41 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/comprar_cancion/templates/indexSuccess.php"
+Dec 11 10:12:41 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:12:41 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:12:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:12:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:41 symfony [info] {sfWebDebugLogger} Configuration 1.84 ms (9)
+Dec 11 10:12:41 symfony [info] {sfWebDebugLogger} Factories 8.12 ms (1)
+Dec 11 10:12:41 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/index" 0.24 ms (1)
+Dec 11 10:12:41 symfony [info] {sfWebDebugLogger} View "Success" for "comprar_cancion/index" 6.01 ms (1)
+Dec 11 10:12:41 symfony [info] {sfWebResponse} Send content (28850 o)
+Dec 11 10:12:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 11 10:12:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:12:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:12:42 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 11 10:12:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 11 10:12:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 10:12:42 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 11 10:12:42 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 11 10:12:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:12:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:42 symfony [info] {sfWebDebugLogger} Configuration 1.18 ms (8)
+Dec 11 10:12:42 symfony [info] {sfWebDebugLogger} Factories 6.25 ms (1)
+Dec 11 10:12:42 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 28.27 ms (1)
+Dec 11 10:12:42 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.01 ms (1)
+Dec 11 10:12:42 symfony [info] {sfWebResponse} Send content (1638 o)
+Dec 11 10:12:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:12:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:12:42 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 11 10:12:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 10:12:42 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 10:12:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 10:12:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:12:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:42 symfony [info] {sfWebDebugLogger} Configuration 1.62 ms (8)
+Dec 11 10:12:42 symfony [info] {sfWebDebugLogger} Factories 34.10 ms (1)
+Dec 11 10:12:42 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 36.92 ms (1)
+Dec 11 10:12:42 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
+Dec 11 10:12:42 symfony [info] {sfWebResponse} Send content (1300 o)
+Dec 11 10:12:52 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:12:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:12:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:12:52 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:12:52 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:12:52 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:12:52 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:12:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:12:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:52 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (9)
+Dec 11 10:12:52 symfony [info] {sfWebDebugLogger} Factories 7.91 ms (1)
+Dec 11 10:12:52 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 10:12:52 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.82 ms (1)
+Dec 11 10:12:52 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 10:12:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:12:53 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:12:53 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:12:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:12:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:12:53 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (5)
+Dec 11 10:12:53 symfony [info] {sfWebDebugLogger} Factories 8.05 ms (1)
+Dec 11 10:15:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 10:15:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 10:15:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 10:15:42 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 10:15:42 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 10:15:42 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:15:42 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 10:15:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 10:15:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:15:42 symfony [info] {sfWebDebugLogger} Configuration 1.25 ms (9)
+Dec 11 10:15:42 symfony [info] {sfWebDebugLogger} Factories 7.95 ms (1)
+Dec 11 10:15:42 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.38 ms (1)
+Dec 11 10:15:42 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.82 ms (1)
+Dec 11 10:15:42 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 10:15:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 11 10:15:43 symfony [info] {sfFrontWebController} Action "gestionar_cancion/listarCancion" does not exist
+Dec 11 10:15:43 symfony [err] {sfError404Exception} Action "gestionar_cancion/listarCancion" does not exist.
+Dec 11 10:15:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 10:15:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 10:15:43 symfony [info] {sfWebDebugLogger} Configuration 0.25 ms (5)
+Dec 11 10:15:43 symfony [info] {sfWebDebugLogger} Factories 2.33 ms (1)

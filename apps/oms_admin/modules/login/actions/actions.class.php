@@ -17,6 +17,47 @@ class loginActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+    //$this->forward('default', 'module');
+  }
+  
+  public function executeLogin(sfWebRequest $request)
+  {
+	$login_usuario = $this->getRequestParameter('login_usuario');
+	$password_usuario = $this->getRequestParameter('password_usuario');
+	$salida= "({success: false, errors: { reason: 'El login no existe como administrador'}})";
+	
+	try
+	{
+		$conexion = new Criteria();
+
+		$conexion->add(UsuarioPeer::USUARIO, $login_usuario);
+		$conexion->add(UsuarioPeer::PERFIL, 1); // perfil admin
+		
+		$usuario = UsuarioPeer::doSelectOne($conexion);
+		
+		if($usuario)
+		{
+			if($usuario->getContrasena() == $password_usuario)
+			{
+				$this->getUser()->setAttribute('codigo_usuario', $usuario->getCodigo());
+				$salida = "({success: true, mensaje:'Ingreso valido en el sistema'})";
+			}
+			else
+			{
+				$salida= "({success: false, errors: { reason: 'Password incorrecto'}})";
+			}
+		}
+		else
+		{
+			$salida= "({success: false, errors: { reason: 'El login no existe como administrador'}})";
+		}
+	}
+	catch (Exception $exception)
+	{
+		$salida= "({success: false, errors: { reason: 'Login o contraseña incorrecta' , error: '".$exception->getMessage()."'}})";
+		return $this->renderText($salida);
+	}
+  
+	return $this->renderText($salida);
   }
 }

@@ -2,13 +2,12 @@
 ﻿	var url_arc_web='';
 	
 	var cancion_formpanel = new Ext.FormPanel({
-		title: 'Datos detallados de la canci&oacute;n ',
-		columnWidth: '.4',
-		height: 500,
-		frame: true,
-		id: 'cancion_formpanel',
+		title:'Datos detallados de la canci&oacute;n ',
+		columnWidth:'.4',
+		height: 450,
+		frame:true,
+		id:'cancion_formpanel',
 		fileUpload: true,
-		style: {"margin-left": "10px"},
 		bodyStyle: 'padding:10px',
 		defaults:{xtype:'textfield',anchor:'100%'},
 		items:
@@ -53,7 +52,7 @@
 				fieldLabel: 'Escoger',
 				name: 'can_archivo',
 				buttonText: '',
-				allowBlank: false,
+				allowBlank:false,
 				buttonCfg: {iconCls: 'archivo'}
 		  	},
 			{
@@ -174,6 +173,7 @@
 		title:'Canciones',
 		columnWidth: '.6',
 		stripeRows:true,
+		style: {"margin-left": "10px"},
 		frame: true,
 		ds: cancion_datastore,
 		cm: cancion_colmodel,
@@ -219,10 +219,10 @@
 		layout:'column',
 		items: 
 		[
-			cancion_gridpanel, 
-			cancion_formpanel
+			cancion_formpanel,
+			cancion_gridpanel
 		],
-		renderTo:'div_form_cancion'
+		renderTo:'div_form_subir_cunia'
 	});
 
 /***********************************FUNCIONES*****************************/
