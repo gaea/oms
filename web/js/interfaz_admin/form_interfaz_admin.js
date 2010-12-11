@@ -6,6 +6,14 @@
 		autoWidth: true,
 		border: true,
 		activeTab: 0,
+		tbar: [
+			'->',{
+				xtype: 'button',
+				text: 'Salir',
+				handler: fun_admin_panel_salir,
+				iconCls: 'salir16'
+			}
+		],
 		items: [
 			{
 				title: 'Gestionar canci&oacute;n',
@@ -16,3 +24,14 @@
 		],
 		renderTo:'div_form_interfaz_admin'
 	});
+	
+	function fun_admin_panel_salir(){
+		subirDatosAjax(
+			'login/desautenticar',
+			{},
+			function(){
+				window.location = 'login';
+			},
+			function(){}
+		);
+	}

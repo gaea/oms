@@ -6533,3 +6533,22 @@ Dec 11 10:15:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Fou
 Dec 11 10:15:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Dec 11 10:15:43 symfony [info] {sfWebDebugLogger} Configuration 0.25 ms (5)
 Dec 11 10:15:43 symfony [info] {sfWebDebugLogger} Factories 2.33 ms (1)
+Dec 11 12:08:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 11 12:08:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 12:08:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 12:08:41 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 11 12:08:41 symfony [info] {loginActions} Forward to action "default/module"
+Dec 11 12:08:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 12:08:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 12:08:41 symfony [info] {defaultActions} Call "defaultActions->executeModule()"
+Dec 11 12:08:41 symfony [info] {sfPHPView} Render "/usr/share/php/symfony/controller/default/templates/moduleSuccess.php"
+Dec 11 12:08:41 symfony [info] {sfPHPView} Decorate content with "/usr/share/php/symfony/controller/default/templates/defaultLayout.php"
+Dec 11 12:08:41 symfony [info] {sfPHPView} Render "/usr/share/php/symfony/controller/default/templates/defaultLayout.php"
+Dec 11 12:08:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 12:08:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 12:08:41 symfony [info] {sfWebDebugLogger} Configuration 10.43 ms (13)
+Dec 11 12:08:41 symfony [info] {sfWebDebugLogger} Factories 9.55 ms (1)
+Dec 11 12:08:41 symfony [info] {sfWebDebugLogger} Action "login/index" 9.05 ms (1)
+Dec 11 12:08:41 symfony [info] {sfWebDebugLogger} Action "default/module" 0.06 ms (1)
+Dec 11 12:08:41 symfony [info] {sfWebDebugLogger} View "Success" for "default/module" 4.20 ms (1)
+Dec 11 12:08:41 symfony [info] {sfWebResponse} Send content (32170 o)
