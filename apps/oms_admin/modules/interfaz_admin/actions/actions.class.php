@@ -17,6 +17,6 @@ class interfaz_adminActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+    //$this->forward('default', 'module');
   }
 }
