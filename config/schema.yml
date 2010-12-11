@@ -45,17 +45,16 @@ propel:
     telefono: { phpName: Telefono, type: VARCHAR, size: '200', required: false }
     e_mail: { phpName: EMail, type: VARCHAR, size: '200', required: false }
     habilitado: { phpName: Habilitado, type: BOOLEAN, required: true }
-    usuario: { phpName: Usuario, type: INTEGER, required: false, foreignTable: usuario, foreignReference: codigo, onDelete: RESTRICT, onUpdate: RESTRICT }
   programacion_cancion:
     _attributes: { phpName: ProgramacionCancion }
-    cancion: { phpName: Cancion, type: INTEGER, primaryKey: true, required: true, foreignTable: venta_cancion, foreignReference: cancion, onDelete: RESTRICT, onUpdate: RESTRICT }
+    cancion: { phpName: Cancion, type: INTEGER, primaryKey: true, required: true }
     venta: { phpName: Venta, type: INTEGER, primaryKey: true, required: true }
     fecha: { phpName: Fecha, type: DATE, primaryKey: true, required: true }
     inicio: { phpName: Inicio, type: TIME, primaryKey: true, required: true }
     fin: { phpName: Fin, type: TIME, primaryKey: true, required: true }
   programacion_cuna:
     _attributes: { phpName: ProgramacionCuna }
-    venta: { phpName: Venta, type: INTEGER, primaryKey: true, required: true, foreignTable: venta_cunia_comercial, foreignReference: venta, onDelete: RESTRICT, onUpdate: RESTRICT }
+    venta: { phpName: Venta, type: INTEGER, primaryKey: true, required: true }
     cunia_comercial: { phpName: CuniaComercial, type: INTEGER, primaryKey: true, required: true }
     fecha: { phpName: Fecha, type: DATE, primaryKey: true, required: true }
     inicio: { phpName: Inicio, type: TIME, primaryKey: true, required: true }
@@ -71,6 +70,7 @@ propel:
     usuario: { phpName: Usuario, type: VARCHAR, size: '200', required: true }
     contrasena: { phpName: Contrasena, type: VARCHAR, size: '200', required: true }
     perfil: { phpName: Perfil, type: INTEGER, required: false, foreignTable: perfil, foreignReference: codigo, onDelete: RESTRICT, onUpdate: RESTRICT }
+    persona: { phpName: Persona, type: INTEGER, required: false, foreignTable: persona, foreignReference: codigo, onDelete: RESTRICT, onUpdate: RESTRICT }
   venta:
     _attributes: { phpName: Venta }
     codigo: { phpName: Codigo, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }

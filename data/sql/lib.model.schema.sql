@@ -105,7 +105,6 @@ CREATE TABLE "persona"
 	"telefono" VARCHAR(200),
 	"e_mail" VARCHAR(200),
 	"habilitado" BOOLEAN  NOT NULL,
-	"usuario" INTEGER,
 	PRIMARY KEY ("codigo")
 );
 
@@ -187,6 +186,7 @@ CREATE TABLE "usuario"
 	"usuario" VARCHAR(200)  NOT NULL,
 	"contrasena" VARCHAR(200)  NOT NULL,
 	"perfil" INTEGER,
+	"persona" INTEGER,
 	PRIMARY KEY ("codigo")
 );
 
@@ -256,13 +256,9 @@ ALTER TABLE "mensaje" ADD CONSTRAINT "mensaje_FK_1" FOREIGN KEY ("usuario") REFE
 
 ALTER TABLE "persona" ADD CONSTRAINT "persona_FK_1" FOREIGN KEY ("tipo_identificacion") REFERENCES "tipo_identificacion" ("codigo") ON UPDATE RESTRICT ON DELETE RESTRICT;
 
-ALTER TABLE "persona" ADD CONSTRAINT "persona_FK_2" FOREIGN KEY ("usuario") REFERENCES "usuario" ("codigo") ON UPDATE RESTRICT ON DELETE RESTRICT;
-
-ALTER TABLE "programacion_cancion" ADD CONSTRAINT "programacion_cancion_FK_1" FOREIGN KEY ("cancion") REFERENCES "venta_cancion" ("cancion") ON UPDATE RESTRICT ON DELETE RESTRICT;
-
-ALTER TABLE "programacion_cuna" ADD CONSTRAINT "programacion_cuna_FK_1" FOREIGN KEY ("venta") REFERENCES "venta_cunia_comercial" ("venta") ON UPDATE RESTRICT ON DELETE RESTRICT;
-
 ALTER TABLE "usuario" ADD CONSTRAINT "usuario_FK_1" FOREIGN KEY ("perfil") REFERENCES "perfil" ("codigo") ON UPDATE RESTRICT ON DELETE RESTRICT;
+
+ALTER TABLE "usuario" ADD CONSTRAINT "usuario_FK_2" FOREIGN KEY ("persona") REFERENCES "persona" ("codigo") ON UPDATE RESTRICT ON DELETE RESTRICT;
 
 ALTER TABLE "venta" ADD CONSTRAINT "venta_FK_1" FOREIGN KEY ("usuario") REFERENCES "usuario" ("codigo") ON UPDATE RESTRICT ON DELETE RESTRICT;
 
