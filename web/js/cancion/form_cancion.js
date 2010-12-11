@@ -93,13 +93,22 @@
 				id:'can_crear_boton',
 				iconCls:'crear16',
 				tooltip:'Pulse aqui para guardar nuevas canciones'
-			},{
+			},
+			{	
+				text:'Actualizar',
+				handler:fun_can_actualizar,
+				//id:'can_crear_boton',
+				iconCls:'actualizar16',
+				tooltip:'Pulse aqui para actualizar los datos de las canciones'
+			},
+			{
 				text:'Cancelar',
 				id: 'can_cancelar_boton',
 				handler: fun_can_cancelar,
 				iconCls: 'eliminar16',
 				tooltip: 'Pulse aqu&iacute; para cancelar'
-			},{
+			},
+			{
 				text:'Descargar',
 				disabled:true,
 				id:'can_descargar_boton',
@@ -158,6 +167,8 @@
 		]
 	});
 	
+	var codigo_cancion_actualizar = '';
+	
 	var cancion_gridpanel = new Ext.grid.GridPanel({
 		id: 'cancion_gridpanel',
 		title:'Canciones',
@@ -172,9 +183,9 @@
 				rowselect: function(sm, row, rec) {
 					Ext.getCmp('cancion_formpanel').getForm().loadRecord(rec);
 					Ext.getCmp('can_crear_boton').setText('Nuevo');
-					//Ext.getCmp('can_cancelar_boton').setText('Eliminar');
 					Ext.getCmp('can_descargar_boton').setDisabled(false);
-					Ext.getCmp('can_cancelar_boton').setDisabled(false);		
+					Ext.getCmp('can_cancelar_boton').setDisabled(false);
+					codigo_cancion_actualizar = rec.get('can_codigo');
 				}
 			}
 		}),
@@ -243,6 +254,29 @@
 					function(){}
 				);
 			}
+		}
+	}
+	
+	function fun_can_actualizar(){
+		if(codigo_cancion_actualizar != ''){ 
+			var verificacion = fun_can_verificarCamposDocumento();
+	 		if(verificacion){
+				subirDatos(
+					cancion_formpanel,
+					getAbsoluteUrl('gestionar_cancion','actualizarCancion'),
+					{codigo_cancion: codigo_cancion_actualizar},
+					function(){
+						Ext.getCmp('can_crear_boton').setText('Nuevo');
+						//Ext.getCmp('can_cancelar_boton').setText('Eliminar');
+						Ext.getCmp('can_descargar_boton').setDisabled(false);
+						cancion_datastore.reload(); 
+					},
+					function(){}
+				);
+			}
+		}
+		else{
+			mostrarMensajeRapido('Alerta!', 'Seleccione una canci&oacute;n');
 		}
 	}
 

@@ -23,8 +23,6 @@ class gestionar_cancionActions extends sfActions
     //$this->forward('default', 'module');
   }
 
-
-
   public function executeCrearCancion(sfWebRequest $request)
   {
 	$salida	='';
@@ -107,17 +105,9 @@ class gestionar_cancionActions extends sfActions
 
 		try
 		{
-			$can_codigo = $this->getUser()->getAttribute('can_codigo');
-			$cancion;
-				
-			if($can_codigo!='')
-			{
-				$cancion  = CancionPeer::retrieveByPk($can_codigo);
-			}
-			else
-			{
-				$cancion = new Cancion();
-			}
+			$can_codigo = $this->getRequestParameter('codigo_cancion');
+
+			$cancion  = CancionPeer::retrieveByPk($can_codigo);
 				
 			if($cancion)
 			{
@@ -126,13 +116,16 @@ class gestionar_cancionActions extends sfActions
 				$cancion->setAlbum($this->getRequestParameter('can_album'));
 				$cancion->setFechaDePublicacion($this->getRequestParameter('can_fecha_de_publicacion'));
 				$cancion->setDuracion($this->getRequestParameter('can_duracion'));
-				$cancion->setUrl($this->getRequestParameter('can_url'));
+				//$cancion->setUrl($this->getRequestParameter('can_url'));
 				$cancion->setHabilitada($this->getRequestParameter('can_habilitada'));
 				$cancion->setPrecio($this->getRequestParameter('can_precio'));
 				$cancion->setRanking($this->getRequestParameter('can_ranking'));
 
 				$cancion->save();
 			}
+			
+			$salida = "({success: true, mensaje:'La canci&oacute;n fue actualizada exitosamente'})";
+			return $this->renderText($salida);
 		}
 		catch (Exception $exception)
 		{
@@ -185,6 +178,7 @@ class gestionar_cancionActions extends sfActions
 
 			foreach($cancion as $temporal)
 			{
+				$datos[$fila]['can_codigo'] = $temporal->getCodigo();
 				$datos[$fila]['can_nombre'] = $temporal->getNombre();
 				$datos[$fila]['can_autor'] = $temporal->getAutor();
 				$datos[$fila]['can_album'] = $temporal->getAlbum();
