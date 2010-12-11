@@ -1,5 +1,4 @@
 	
-	
 	var login_admin_formpanel = new Ext.FormPanel({
 		title: 'Ingreso',
 		frame: true,
@@ -41,7 +40,7 @@
 	function fun_admin_login(){
 		subirDatos(
 			login_admin_formpanel,
-			getAbsoluteUrl('login', 'login'),
+			getAbsoluteUrl('login', 'autenticar'),
 			{},
 			function(){
 				window.location = 'interfaz_admin';

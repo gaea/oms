@@ -20,7 +20,7 @@ class loginActions extends sfActions
     //$this->forward('default', 'module');
   }
   
-  public function executeLogin(sfWebRequest $request)
+  public function executeAutenticar(sfWebRequest $request)
   {
 	$login_usuario = $this->getRequestParameter('login_usuario');
 	$password_usuario = $this->getRequestParameter('password_usuario');
@@ -60,4 +60,11 @@ class loginActions extends sfActions
   
 	return $this->renderText($salida);
   }
+  
+	public function executeDesautenticar()
+	{
+		//session_destroy();
+		$this->getUser()->getAttributeHolder()->clear();
+		return  $this->renderText("({success: true, mensaje:'finaliza sesion'})");
+	}
 }
