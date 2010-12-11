@@ -116,7 +116,7 @@
 			url: 'gestionar_cancion/listarCancion',//getAbsoluteUrl('gestionar_cancion','listarCancion'), 
 			method: 'POST',
 			limit: 10,
-			star: 0
+			start: 0
 		}),
 		baseParams:{}, 
 		reader: new Ext.data.JsonReader({

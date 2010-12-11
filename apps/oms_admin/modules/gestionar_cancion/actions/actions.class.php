@@ -151,11 +151,36 @@ class gestionar_cancionActions extends sfActions
 		$salida='({"total":"0", "results":""})';
 		$fila=0;
 		$datos;
-
+		$buscar = $this->getRequestParameter('buscar');
+		
 		try
 		{
-
 			$conexion = new Criteria();
+
+			if($buscar != '')
+			{
+				$c1 = $conexion->getNewCriterion(CancionPeer::ALBUM, '%'.$buscar.'%', Criteria::LIKE);
+				$c2 = $conexion->getNewCriterion(CancionPeer::NOMBRE, '%'.$buscar.'%', Criteria::LIKE);
+				$c3 = $conexion->getNewCriterion(CancionPeer::AUTOR, '%'.$buscar.'%', Criteria::LIKE);
+				//$c4 = $conexion->getNewCriterion(CancionPeer::DURACION, $buscar, Criteria::LIKE);
+				//$c5 = $conexion->getNewCriterion(CancionPeer::FECHA_DE_PUBLICACION, $buscar, Criteria::LIKE);
+				//$c6 = $conexion->getNewCriterion(CancionPeer::CODIGO, $buscar, Criteria::LIKE);
+				//$c7 = $conexion->getNewCriterion(CancionPeer::PRECIO, $buscar, Criteria::LIKE);
+				//$c8 = $conexion->getNewCriterion(CancionPeer::RANKING, $buscar, Criteria::LIKE);
+				//$c7->addOr($c8);
+				//$c6->addOr($c7);
+				//$c5->addOr($c6);
+				//$c4->addOr($c5);
+				//$c3->addOr($c4);
+				$c2->addOr($c3);
+				$c1->addOr($c2);
+				
+				$conexion->add($c1);
+			}
+			
+			$numero_canciones = CancionPeer::doCount($conexion);
+			$conexion->setLimit($this->getRequestParameter('limit'));
+			$conexion->setOffset($this->getRequestParameter('start'));
 			$cancion = CancionPeer::doSelect($conexion);
 
 			foreach($cancion as $temporal)
