@@ -27,10 +27,16 @@
 						autoLoad: {url: 'gestionar_cancion/index', scripts: true, scope: this}
 					},
 					{
+						title: 'Reportes',
+						tabTip: 'Reportes',
+						autoScroll: true,
+						autoLoad: {url: 'reportes/index', scripts: true, scope: this}
+					},
+					{
 						title: 'Gestionar usuarios administradores',
 						tabTip: 'Gestionar usuarios administradores',
 						autoScroll: true,
-						autoLoad: {url: 'reportes/index', scripts: true, scope: this}
+						autoLoad: {url: 'gestionar_admin/index', scripts: true, scope: this}
 					}
 				]
 			}
