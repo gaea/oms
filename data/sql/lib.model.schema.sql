@@ -104,7 +104,6 @@ CREATE TABLE "persona"
 	"direccion" VARCHAR(200),
 	"telefono" VARCHAR(200),
 	"e_mail" VARCHAR(200),
-	"habilitado" BOOLEAN  NOT NULL,
 	PRIMARY KEY ("codigo")
 );
 
@@ -185,6 +184,7 @@ CREATE TABLE "usuario"
 	"codigo" serial  NOT NULL,
 	"usuario" VARCHAR(200)  NOT NULL,
 	"contrasena" VARCHAR(200)  NOT NULL,
+	"habilitado" BOOLEAN  NOT NULL,
 	"perfil" INTEGER,
 	"persona" INTEGER,
 	PRIMARY KEY ("codigo")

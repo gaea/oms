@@ -17,5 +17,59 @@
  * @package    lib.model
  */
 class UsuarioPeer extends BaseUsuarioPeer {
+	
+	public static function doCountClientes()
+	{
+		$criteria = new Criteria();
+		$criteria->add(self::PERFIL, self::getCodigoPerfilCliente());
+		
+		return self::doCount($criteria);
+	}
+	
+	public static function getCodigoPerfilCliente(){
+		$c = new Criteria();
+		$c->add(PerfilPeer::NOMBRE, 'empresa');
+		$perfil = PerfilPeer::doSelectOne($c);
+		
+		return $perfil->getCodigo();
+	}
+	
+	public static function doCountAdministradores()
+	{
+		$criteria = new Criteria();
+		$criteria->add(self::PERFIL, self::getCodigoPerfilAdmin());
+		
+		return self::doCount($criteria);
+	}
+	
+	public static function getCodigoPerfilAdmin(){
+		$c = new Criteria();
+		$c->add(PerfilPeer::NOMBRE, 'admin');
+		$perfil = PerfilPeer::doSelectOne($c);
+		
+		return $perfil->getCodigo();
+	}
+	
+	public static function doSelectOneCliente($login){
+		$critero = new Criteria();
+		$criterio->add(self::USUARIO, $login);
+		$usuario = self::doSelectOne($criterio);
+		
+		if($usuario->esCliente())
+			return $usuario;
+		else
+			return null;
+	}
+	
+	public static function doSelectOneAdministrador($login){
+		$critero = new Criteria();
+		$criterio->add(self::USUARIO, $login);
+		$usuario = self::doSelectOne($criterio);
+		
+		if($usuario->esAdministrador())
+			return $usuario;
+		else
+			return null;
+	}
 
 } // UsuarioPeer
