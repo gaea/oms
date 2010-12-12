@@ -20,14 +20,14 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	
 	public static function doCountClientes()
 	{
-		$criteria = new Criteria();
-		$criteria->add(self::PERFIL, self::getCodigoPerfilCliente());
+		$criterio = new criterio();
+		$criterio->add(self::PERFIL, self::getCodigoPerfilCliente());
 		
-		return self::doCount($criteria);
+		return self::doCount($criterio);
 	}
 	
 	public static function getCodigoPerfilCliente(){
-		$c = new Criteria();
+		$c = new criterio();
 		$c->add(PerfilPeer::NOMBRE, 'empresa');
 		$perfil = PerfilPeer::doSelectOne($c);
 		
@@ -36,14 +36,14 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	
 	public static function doCountAdministradores()
 	{
-		$criteria = new Criteria();
-		$criteria->add(self::PERFIL, self::getCodigoPerfilAdmin());
+		$criterio = new criterio();
+		$criterio->add(self::PERFIL, self::getCodigoPerfilAdmin());
 		
-		return self::doCount($criteria);
+		return self::doCount($criterio);
 	}
 	
 	public static function getCodigoPerfilAdmin(){
-		$c = new Criteria();
+		$c = new criterio();
 		$c->add(PerfilPeer::NOMBRE, 'admin');
 		$perfil = PerfilPeer::doSelectOne($c);
 		
@@ -51,7 +51,7 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	}
 	
 	public static function doSelectOneCliente($login){
-		$critero = new Criteria();
+		$critero = new criterio();
 		$criterio->add(self::USUARIO, $login);
 		$usuario = self::doSelectOne($criterio);
 		
@@ -61,8 +61,17 @@ class UsuarioPeer extends BaseUsuarioPeer {
 			return null;
 	}
 	
+	public static function doSelectClientes(){
+		$criterio = new criterio();
+		$criterio->add(self::PERFIL, self::getCodigoPerfilCliente());
+		
+		$usuarios = self::doSelect($criterio);
+		
+		return $usuarios;
+	}
+	
 	public static function doSelectOneAdministrador($login){
-		$critero = new Criteria();
+		$critero = new criterio();
 		$criterio->add(self::USUARIO, $login);
 		$usuario = self::doSelectOne($criterio);
 		
@@ -70,6 +79,15 @@ class UsuarioPeer extends BaseUsuarioPeer {
 			return $usuario;
 		else
 			return null;
+	}
+	
+	public static function doSelectAdministradores(){
+		$criterio = new criterio();
+		$criterio->add(self::PERFIL, self::getCodigoPerfilAdmin());
+		
+		$usuarios = self::doSelect($criterio);
+		
+		return $usuarios;
 	}
 
 } // UsuarioPeer
