@@ -34,7 +34,7 @@ class loginActions extends sfActions
 		$conexion->add(UsuarioPeer::PERFIL, 1); // perfil admin
 		
 		$usuario = UsuarioPeer::doSelectOne($conexion);
-		
+		//echo 'qwwer';
 		if($usuario)
 		{
 			if($usuario->getContrasena() == $password_usuario)

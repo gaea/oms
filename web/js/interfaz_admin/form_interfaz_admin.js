@@ -29,7 +29,7 @@
 				]
 			}
 		],
-		renderTo:'div_form_interfaz_admin'
+		renderTo:'div_form_interfaz_cliente'
 	});
 	
 	function fun_admin_panel_salir(){

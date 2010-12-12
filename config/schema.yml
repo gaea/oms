@@ -44,6 +44,7 @@ propel:
     direccion: { phpName: Direccion, type: VARCHAR, size: '200', required: false }
     telefono: { phpName: Telefono, type: VARCHAR, size: '200', required: false }
     e_mail: { phpName: EMail, type: VARCHAR, size: '200', required: false }
+    habilitado: { phpName: Habilitado, type: BOOLEAN, required: true }
   programacion_cancion:
     _attributes: { phpName: ProgramacionCancion }
     cancion: { phpName: Cancion, type: INTEGER, primaryKey: true, required: true }
@@ -68,7 +69,6 @@ propel:
     codigo: { phpName: Codigo, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
     usuario: { phpName: Usuario, type: VARCHAR, size: '200', required: true }
     contrasena: { phpName: Contrasena, type: VARCHAR, size: '200', required: true }
-    habilitado: { phpName: Habilitado, type: BOOLEAN, required: true }
     perfil: { phpName: Perfil, type: INTEGER, required: false, foreignTable: perfil, foreignReference: codigo, onDelete: RESTRICT, onUpdate: RESTRICT }
     persona: { phpName: Persona, type: INTEGER, required: false, foreignTable: persona, foreignReference: codigo, onDelete: RESTRICT, onUpdate: RESTRICT }
   venta:
