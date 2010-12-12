@@ -17,5 +17,18 @@
  * @package    lib.model
  */
 class CuniaComercialPeer extends BaseCuniaComercialPeer {
-
+	
+	public static function doSelectMesActualUsuario( $codigo_usuario ){
+		$ventas_cunia = VentaCuniaComercialPeer::doSelectMesActualUsuario( $codigo_usuario );
+		$cunias = null;
+		
+		foreach ($ventas_cunia As $venta_cunia)
+		{
+			$cunia = $venta_cunia->getCuniaComercialRelatedByCuniaComercial();
+			$cunias[] = $cunia;
+		}
+		
+		return $cunias;
+	}
+	
 } // CuniaComercialPeer

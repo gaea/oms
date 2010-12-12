@@ -17,5 +17,27 @@
  * @package    lib.model
  */
 class VentaCuniaComercialPeer extends BaseVentaCuniaComercialPeer {
+	
+	/*
+	 * cunias del mes actual de un usuario
+	 * fecha mayor o igual al primer dia del presente mes
+	 * */
+	public static function doSelectMesActualUsuario( $codigo_usuario ){
+		$timeZone = new DateTimeZone('America/Bogota');
+		$hoy = new DateTime("NOW", $timeZone);
+		$mes = $hoy->format('m');
+		$anio = $hoy->format('Y');
+		$inicio = $anio."-".$mes."-"."01";
+		
+		$criterio = new Criteria();
+		$criterio->addJoin(self::VENTA, VentaPeer::CODIGO);
+		$criterio->add(VentaPeer::FECHA_VENTA, $inicio, Criteria::GREATER_EQUAL);
+		$criterio->add(VentaPeer::USUARIO, $codigo_usuario);
+		
+		$ventas_cunia = self::doSelect($criterio);
+		
+		return $ventas_cunia;
+	}
+	
 
 } // VentaCuniaComercialPeer

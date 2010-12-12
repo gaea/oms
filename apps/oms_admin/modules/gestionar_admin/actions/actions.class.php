@@ -43,7 +43,7 @@ class gestionar_adminActions extends sfActions
 		  $usuario = new Usuario();
 		  $usuario->setUsuario($login_admin);
 		  $usuario->setContrasena($this->getRequestParameter('contrasena_admin'));
-		  $usuario->setPerfil(UsuarioPeer::getCodigoPerfilAdmin);
+		  $usuario->setPerfil(UsuarioPeer::getCodigoPerfilAdmin());
 		  $usuario->setHabilitado(true);
 		  $usuario->setPersonaRelatedByPersona($persona);
 			

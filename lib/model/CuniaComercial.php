@@ -17,5 +17,5 @@
  * @package    lib.model
  */
 class CuniaComercial extends BaseCuniaComercial {
-
+	
 } // CuniaComercial

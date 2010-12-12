@@ -17,7 +17,15 @@ class loginActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+    //$this->forward('default', 'module');
+    $timeZone = new DateTimeZone('America/Bogota');
+		$hoy = new DateTime("NOW", $timeZone);
+		$mes = $hoy->format('m');
+		$anio = $hoy->format('Y');
+		$this->inicio = $anio."-".$mes."-"."01";
+	
+	
+		$ventas = VentaPeer::doSelectMesActual();
   }
   
   public function executeAutenticar(sfWebRequest $request)
