@@ -34,8 +34,8 @@ class Usuario extends BaseUsuario {
 	/*
 	 * Retorna las canciones compradas en el mes actual
 	 * */
-	public function getCanciones(){
-		$canciones = CancionPeer::doSelectMesActualUsuario( this->getCodigo() );
+	public function getCancionesMes(){
+		$canciones = CancionPeer::doSelectMesActualUsuario( $this->getCodigo() );
 		return $canciones;
 	}
 	
@@ -43,7 +43,35 @@ class Usuario extends BaseUsuario {
 	 * Retorna las cunias compradas en el mes actual
 	 * */
 	public function getCuniaComercialsMes(){
-		$cunias = CuniaComercialPeer::doSelectMesActualUsuario( this->getCodigo() );
+		$cunias = CuniaComercialPeer::doSelectMesActualUsuario( $this->getCodigo() );
 		return $cunias;
 	}
+	
+	public function getFacturaMes(){
+		$ventasmes = VentaPeer::doSelectMesActualUsuario( $this->getCodigo() );
+		
+		$total = 0;
+		
+		foreach($ventasmes As $venta)
+		{
+			$total += $venta->getPrecio();
+		}
+		
+		return $total;
+	}
+	
+	public function getFacturaCancionMes(){
+		$ventas_cancion = VentaCancionPeer::doSelectMesActualUsuario(  $this->getCodigo() );
+		
+		$total = 0;
+		
+		foreach ($ventas_cancion As $venta_cancion)
+		{
+			$cancion = $venta_cancion->getCancionRelatedByCancion();
+			$total += $cancion->getPrecio();
+		}
+		
+		return $total;
+	}
+	
 } // Usuario

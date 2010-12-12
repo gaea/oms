@@ -40,30 +40,28 @@ class VentaPeer extends BaseVentaPeer {
 		
 	}
 	
-	
 	/*
 	 * ventas del mes actual
 	 * fecha mayor o igual al primer dia del presente mes
 	 * */
-	public static function getTotalPagarMesUsuario( $codigo_usuario){
+	public static function doSelectMesActualUsuario( $codigo_usuario ){
 		$timeZone = new DateTimeZone('America/Bogota');
 		$hoy = new DateTime("NOW", $timeZone);
 		$mes = $hoy->format('m');
 		$anio = $hoy->format('Y');
 		$inicio = $anio."-".$mes."-"."01";
+		//SELECT EXTRACT(MONTH FROM TIMESTAMP '2009-11-06 17:05:01'); --> 11
+		//SELECT TIMESTAMP WITH TIME ZONE 'now';
 		
 		$criterio = new Criteria();
 		$criterio->add(self::FECHA_VENTA, $inicio, Criteria::GREATER_EQUAL);
+		$criterio->add(self::USUARIO, $inicio, $codigo_usuario);
+		
 		$ventas = self::doSelect($criterio);
 		
-		$total = 0;
+		return $ventas;
 		
-		foreach($ventas As $venta)
-		{
-			$total += $venta->getPrecio();
-		}
-		
-		return $total;
 	}
+	
 
 } // VentaPeer

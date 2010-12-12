@@ -38,6 +38,5 @@ class VentaCuniaComercialPeer extends BaseVentaCuniaComercialPeer {
 		
 		return $ventas_cunia;
 	}
-	
 
 } // VentaCuniaComercialPeer
