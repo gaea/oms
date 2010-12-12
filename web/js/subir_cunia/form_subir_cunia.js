@@ -19,8 +19,8 @@
 			{
 				xtype:'datefield',
 				fieldLabel: 'Fecha de creaci&oacute;n',
-				id: 'cunia_fecha_de_publicacion',
-				name: 'cunia_fecha_de_publicacion',
+				id: 'cunia_fecha_creacion',
+				name: 'cunia_fecha_creacion',
 				format: 'Y-m-d'
 			},
 			{
@@ -123,8 +123,7 @@
 		columns:[
 			{ id: 'imagen', header: "Play", width: 50, dataIndex: 'imagen', renderer: cunia_ponericono},
 			{ id: 'cunia_nombre_col_id',  header: "Nombre",  dataIndex: 'cunia_nombre'},
-			{ header: "Duraci&oacute;n", width: 80,  dataIndex: 'cunia_duracion'},
-			{ header: "Precio", width: 100,  dataIndex: 'can_precio', renderer: Ext.util.Format.usMoney}
+			{ header: "Duraci&oacute;n", width: 80,  dataIndex: 'cunia_duracion'}
 		]
 	});
 	
