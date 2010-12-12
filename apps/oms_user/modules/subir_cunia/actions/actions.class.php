@@ -86,6 +86,48 @@ class subir_cuniaActions extends sfActions
 	return $this->renderText($salida);
   }
   
+	/**
+	 *@author:gaea
+	 *@date:2 de dic de 2010
+	 *Esta funcion actualiza una Cancions
+	 */
+	public function executeActualizarCunia(sfWebRequest $request)
+	{
+		$salida = '';
+
+		try
+		{
+			$cunia_codigo = $this->getRequestParameter('codigo_cunia');
+
+			$cunia  = CuniaComercialPeer::retrieveByPk($cunia_codigo);
+				
+			if($cunia)
+			{
+				$cunia->setNombre($this->getRequestParameter('cunia_nombre'));
+				$cunia->setFechaCreacion($this->getRequestParameter('cunia_fecha_creacion'));
+				$cunia->setDuracion($this->getRequestParameter('cunia_duracion'));
+				//$cunia->setUrl($this->getRequestParameter('can_url'));
+				$cunia->setHabilitada($this->getRequestParameter('cunia_habilitada'));
+
+				$cunia->save();
+			}
+			else
+			{
+				$salida= "({success: false, errors: { reason: 'No existe la cunia '}})";
+			}
+			
+			$salida = "({success: true, mensaje:'La cunia fue actualizada exitosamente'})";
+			return $this->renderText($salida);
+		}
+		catch (Exception $exception)
+		{
+			$salida= "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar cunia ' , error: '".$exception->getMessage()."'}})";
+			return $this->renderText($salida);
+		}
+
+		return $this->renderText($salida);
+	}
+  
   /**
 	 *@author:gaea
 	 *@date:2 de dic de 2010

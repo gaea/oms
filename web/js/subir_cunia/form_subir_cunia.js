@@ -223,8 +223,8 @@
 	 		if(verificacion){
 				subirDatos(
 					cunia_formpanel,
-					getAbsoluteUrl('gestionar_cancion','actualizarCancion'),
-					{codigo_cancion: codigo_cunia_actualizar},
+					getAbsoluteUrl('subir_cunia','actualizarCunia'),
+					{codigo_cunia: codigo_cunia_actualizar},
 					function(){
 						Ext.getCmp('cunia_crear_boton').setText('Nuevo');
 						//Ext.getCmp('cunia_cancelar_boton').setText('Eliminar');
