@@ -1,25 +1,32 @@
 
-	var interfaz_admin_panel = new Ext.TabPanel({
+	var interfaz_admin_panel = new Ext.Panel({
 		frame: true,
 		id: 'interfaz_admin_panel',
 		autoHeight: true,
 		autoWidth: true,
 		border: true,
-		activeTab: 0,
 		tbar: [
-			'->',{
+			{html: 'Bienvenido a el modulo de administraci&oacute;n de OMS'},
+			'->',
+			{
 				xtype: 'button',
-				text: 'Salir',
+				text: 'Terminar sesi&oacute;n',
 				handler: fun_admin_panel_salir,
 				iconCls: 'salir16'
 			}
 		],
 		items: [
 			{
-				title: 'Gestionar canci&oacute;n',
-				tabTip: 'Gestionar canci&oacute;n',
-				autoScroll: true,
-				autoLoad: {url: 'gestionar_cancion/index', scripts: true, scope: this}
+				xtype: 'tabpanel',
+				activeTab: 0,
+				items: [
+					{
+						title: 'Gestionar canci&oacute;n',
+						tabTip: 'Gestionar canci&oacute;n',
+						autoScroll: true,
+						autoLoad: {url: 'gestionar_cancion/index', scripts: true, scope: this}
+					}
+				]
 			}
 		],
 		renderTo:'div_form_interfaz_admin'
