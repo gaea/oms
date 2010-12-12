@@ -1,13 +1,96 @@
 
+	var cancion_adquirida_datastore = new Ext.data.GroupingStore({
+		id: 'cancion_adquirida_datastore',
+		proxy: new Ext.data.HttpProxy({
+			url: 'comprar_cancion/listarCancionadquirida',//getAbsoluteUrl('comprar_cancion','listarCanciondisponible'), 
+			method: 'POST',
+			limit: 10,
+			start: 0
+		}),
+		baseParams:{}, 
+		reader: new Ext.data.JsonReader({
+			root: 'results',
+			totalProperty: 'total',
+			id: 'id'
+			},[ 
+			{name: 'can_codigo'},
+			{name: 'can_nombre'},
+			{name: 'can_autor'},
+			{name: 'can_album'},
+			{name: 'can_fecha_de_publicacion'},
+			{name: 'can_duracion'},
+			{name: 'can_url'},
+			{name: 'can_habilitada'},
+			{name: 'can_precio'},
+			{name: 'can_ranking'}
+	
+		]),
+		sortInfo:{field: 'can_nombre', direction: "ASC"},
+		groupField:'can_album'
+	});
+	cancion_adquirida_datastore.load();
+
+	function can_ponericono(val,x,store){
+		//return '<img src="'+url_web+'images/iconos/play.png">';
+		return '<button type="button" name="button_descargar_cancion" onClick="fun_can_descargar()"> <img src="'+url_web+'images/Next16.png"> </button>'
+	}
+ 	
+	var cancion_adquirida_colmodel = new Ext.grid.ColumnModel({
+		defaults:{sortable: true, locked: false, resizable: true},
+		columns:[
+			{ header: "Play", width: 50, dataIndex: 'imagen', renderer: can_ponericono},
+			{ id: 'can_ad_nombre_col_id',  header: "Nombre",  dataIndex: 'can_nombre'},
+			{ header: "Autor", width: 100, dataIndex: 'can_autor'},
+			{ header: "Album", width: 180, dataIndex: 'can_album'},
+			//{ header: "Precio", width: 80,  dataIndex: 'can_precio', renderer: Ext.util.Format.usMoney},
+			{ header: "Duraci&oacute;n", width: 60,  dataIndex: 'can_duracion'},
+		]
+	});
+	
+	var programacion_cancion_canciones_grid = new Ext.grid.GridPanel({
+		id: 'programacion_cancion_canciones_grid',
+		title:'Canciones adquiridas',
+		//columnWidth: '.5',
+		stripeRows:true,
+		frame: true,
+		ds: cancion_adquirida_datastore,
+		cm: cancion_adquirida_colmodel,
+		sm: new Ext.grid.RowSelectionModel({
+			singleSelect: true,
+			listeners: {
+				rowselect: function(sm, row, rec) {
+					url_cancion = rec.get('can_url');		
+				}
+			}
+		}),
+		autoExpandColumn: 'can_ad_nombre_col_id',
+		autoExpandMin: 150,
+		height: 270,
+		listeners: {
+			viewready: function(g) {
+				g.getSelectionModel().selectRow(0);
+			}
+		},
+		bbar: new Ext.PagingToolbar({
+			pageSize: 10,
+			store: cancion_adquirida_datastore,
+			displayInfo: true,
+			displayMsg: 'Canciones {0} - {1} de {2}',
+			emptyMsg: "No hay canciones"
+		}),
+		view: new Ext.grid.GroupingView()
+    });
+
 	var programacion_cancion_formpanel = new Ext.FormPanel({
 		title:'Crear una entrada a la programaci&oacute;n',
-		columnWidth:'.4',
-		height: 400,
+		columnWidth:'.5',
+		height: 413,
 		frame:true,
 		id:'programacion_cancion_formpanel',
 		fileUpload: true,
 		bodyStyle: 'padding:10px',
-		defaults:{xtype:'textfield',anchor:'100%'},
+		padding: 5,
+		//defaults:{xtype:'textfield'},
 		items:
 		[
 			{
@@ -15,14 +98,15 @@
 				fieldLabel: 'Fecha',
 				id: 'programacion_cancion_fecha',
 				name: 'programacion_cancion_fecha',
-				format: 'Y-m-d'
+				allowBlank: false,
+				format: 'Y-m-d',
+				width: 200,
 			},
 			{
 				xtype: 'compositefield',
-                fieldLabel: 'Hora',
+                fieldLabel: 'Inicio',
 				msgTarget: 'under',
 				items: [
-					//{xtype: 'displayfield', value: '('},
 					{
 						xtype: 'spinnerfield',
 						name: 'programacion_cancion_hora',
@@ -39,7 +123,7 @@
 						xtype: 'spinnerfield',
 						name: 'programacion_cancion_minuto',
 						minValue: 0,
-						maxValue: 60,
+						maxValue: 59,
 						incrementValue: 1,
 						alternateIncrementValue: 2,
 						accelerate: true,
@@ -51,7 +135,7 @@
 						xtype: 'spinnerfield',
 						name: 'programacion_cancion_segundo',
 						minValue: 0,
-						maxValue: 60,
+						maxValue: 59,
 						incrementValue: 1,
 						alternateIncrementValue: 2,
 						accelerate: true,
@@ -60,35 +144,7 @@
 					}
 				]
 			},
-			{
-				xtype: 'textfield',
-				fieldLabel: 'Duraci&oacute;n',
-				id: 'cunia_duracion',
-				name: 'cunia_duracion',
-				value: '00:00:00'
-			},
-			{
-				xtype: 'fileuploadfield', 
-				id: 'cunia_url', 
-				emptyText: 'Seleccione una cuña comercial', 
-				fieldLabel: 'Escoger',
-				name: 'cunia_archivo',
-				buttonText: '',
-				allowBlank: false,
-				buttonCfg: {iconCls: 'archivo'}
-		  	},
-			{
-				xtype: 'checkbox',
-				fieldLabel: 'Habilitada',
-				id: 'cunia_habilitada',
-				name: 'cunia_habilitada',
-				allowBlank: false
-			},
-			{
-				id:' cunia_codigo',
-				name: 'cunia_codigo',
-				xtype: 'hidden'
-			}
+			programacion_cancion_canciones_grid
 		],
 		buttons:
 		[
@@ -160,7 +216,9 @@
 		columns:[
 			{ id: 'imagen', header: "Play", width: 50, dataIndex: 'imagen', renderer: cunia_ponericono},
 			{ id: 'cunia_nombre_col_id',  header: "Nombre",  dataIndex: 'cunia_nombre'},
-			{ header: "Duraci&oacute;n", width: 80,  dataIndex: 'cunia_duracion'}
+			{ header: "Duraci&oacute;n", width: 80,  dataIndex: 'cunia_duracion'},
+			{ header: "Fecha", width: 80},
+			{ header: "Inicio", width: 80},
 		]
 	});
 	
@@ -168,8 +226,8 @@
 	
 	var cunia_gridpanel = new Ext.grid.GridPanel({
 		id: 'cunia_gridpanel',
-		title:'Cunas Comerciales',
-		columnWidth: '.6',
+		title:'Programaci&oacute;n',
+		columnWidth: '.5',
 		stripeRows:true,
 		style: {"margin-left": "10px"},
 		frame: true,
