@@ -85,7 +85,7 @@ class gestionar_cancionActions extends sfActions
 			//}
 		}
 	}
-	catch (Exception $excepcion)
+	catch (Exception $exception)
 	{
 		$salida = "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
 		return $this->renderText($salida);

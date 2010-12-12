@@ -108,8 +108,8 @@
 			{name: 'cunia_url'},
 			{name: 'cunia_habilitada'}
 		]),
-		sortInfo:{field: 'cunia_nombre', direction: "ASC"},
-		groupField:'can_album'
+		sortInfo:{field: 'cunia_nombre', direction: "ASC"}//,
+		//groupField: 'cunia_fecha_creacion'
 	});
 	cunia_datastore.load();
 
@@ -190,7 +190,6 @@
 /***********************************FUNCIONES*****************************/
 
 	function fun_cunia_crear(){
-		
 		if(Ext.getCmp('cunia_crear_boton').getText()=='Nuevo'){
 			cunia_formpanel.getForm().reset();
 			Ext.getCmp('cunia_crear_boton').setText('Guardar');
@@ -205,7 +204,7 @@
 	 		if(verificacion){
 				subirDatos(
 					cunia_formpanel,
-					getAbsoluteUrl('gestionar_cancion','crearCancion'),
+					getAbsoluteUrl('subir_cunia','crearCunia'),
 					{},
 					function(){
 						Ext.getCmp('cunia_crear_boton').setText('Nuevo');

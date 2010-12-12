@@ -243,7 +243,7 @@
 	 		if(verificacion){
 				subirDatos(
 					cancion_formpanel,
-					getAbsoluteUrl('gestionar_cancion','crearCancion'),
+					getAbsoluteUrl('gestionar_cancion','crearCancion'),//'gestionar_cancion/crearCancion',
 					{},
 					function(){
 						Ext.getCmp('can_crear_boton').setText('Nuevo');

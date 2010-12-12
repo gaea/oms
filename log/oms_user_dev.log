@@ -6797,3 +6797,1152 @@ Dec 11 12:59:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Fou
 Dec 11 12:59:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Dec 11 12:59:16 symfony [info] {sfWebDebugLogger} Configuration 0.99 ms (5)
 Dec 11 12:59:16 symfony [info] {sfWebDebugLogger} Factories 7.98 ms (1)
+Dec 11 20:14:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /comprar_cancion with parameters array (  'module' => 'comprar_cancion',  'action' => 'index',)
+Dec 11 20:14:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 20:14:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 20:14:02 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeIndex()"
+Dec 11 20:14:02 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/comprar_cancion/templates/indexSuccess.php"
+Dec 11 20:14:02 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 20:14:02 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 20:14:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 20:14:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 20:14:02 symfony [info] {sfWebDebugLogger} Configuration 0.72 ms (9)
+Dec 11 20:14:02 symfony [info] {sfWebDebugLogger} Factories 388.88 ms (1)
+Dec 11 20:14:02 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/index" 0.05 ms (1)
+Dec 11 20:14:02 symfony [info] {sfWebDebugLogger} View "Success" for "comprar_cancion/index" 75.36 ms (1)
+Dec 11 20:14:02 symfony [info] {sfWebResponse} Send content (28556 o)
+Dec 11 20:14:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 11 20:14:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 11 20:14:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 20:14:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 20:14:04 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 11 20:14:05 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 20:14:05 symfony [debug] {sfPropelLogger} time:  0.120 sec | slow: YES | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 20:14:05 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 20:14:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 20:14:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 20:14:05 symfony [info] {sfWebDebugLogger} Configuration 0.46 ms (8)
+Dec 11 20:14:05 symfony [info] {sfWebDebugLogger} Factories 257.33 ms (1)
+Dec 11 20:14:05 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 344.28 ms (1)
+Dec 11 20:14:05 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.00 ms (1)
+Dec 11 20:14:05 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 20:14:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 20:14:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 20:14:05 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 11 20:14:05 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 20:14:05 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 11 20:14:05 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 11 20:14:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 20:14:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 20:14:05 symfony [info] {sfWebDebugLogger} Configuration 0.57 ms (8)
+Dec 11 20:14:05 symfony [info] {sfWebDebugLogger} Factories 620.39 ms (1)
+Dec 11 20:14:05 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 14.14 ms (1)
+Dec 11 20:14:05 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.01 ms (1)
+Dec 11 20:14:05 symfony [info] {sfWebResponse} Send content (294 o)
+Dec 11 20:56:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 20:56:43 symfony [info] {sfFrontWebController} Action "subir_cunia/listarCunias" does not exist
+Dec 11 20:56:43 symfony [err] {sfError404Exception} Action "subir_cunia/listarCunias" does not exist.
+Dec 11 20:56:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 20:56:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 20:56:43 symfony [info] {sfWebDebugLogger} Configuration 0.60 ms (5)
+Dec 11 20:56:43 symfony [info] {sfWebDebugLogger} Factories 3.69 ms (1)
+Dec 11 20:56:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 11 20:56:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 11 20:56:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 20:56:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 20:56:46 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 11 20:56:46 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 20:56:46 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 11 20:56:46 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 11 20:56:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 20:56:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 20:56:46 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (8)
+Dec 11 20:56:46 symfony [info] {sfWebDebugLogger} Factories 8.15 ms (1)
+Dec 11 20:56:46 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 45.95 ms (1)
+Dec 11 20:56:46 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.01 ms (1)
+Dec 11 20:56:46 symfony [info] {sfWebResponse} Send content (294 o)
+Dec 11 20:56:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 20:56:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 20:56:46 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 11 20:56:46 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 20:56:46 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 20:56:46 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 20:56:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 20:56:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 20:56:46 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (8)
+Dec 11 20:56:46 symfony [info] {sfWebDebugLogger} Factories 57.09 ms (1)
+Dec 11 20:56:46 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 45.86 ms (1)
+Dec 11 20:56:46 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
+Dec 11 20:56:46 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 22:10:07 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 22:10:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:10:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:10:07 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 22:10:07 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 22:10:07 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:10:07 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:10:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:10:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:10:07 symfony [info] {sfWebDebugLogger} Configuration 1.53 ms (9)
+Dec 11 22:10:07 symfony [info] {sfWebDebugLogger} Factories 3.12 ms (1)
+Dec 11 22:10:07 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.19 ms (1)
+Dec 11 22:10:07 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 11.66 ms (1)
+Dec 11 22:10:07 symfony [info] {sfWebResponse} Send content (28585 o)
+Dec 11 22:10:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 22:10:08 symfony [info] {sfFrontWebController} Action "subir_cunia/listarCunias" does not exist
+Dec 11 22:10:08 symfony [err] {sfError404Exception} Action "subir_cunia/listarCunias" does not exist.
+Dec 11 22:10:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 11 22:10:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:10:08 symfony [info] {sfWebDebugLogger} Configuration 0.89 ms (5)
+Dec 11 22:10:08 symfony [info] {sfWebDebugLogger} Factories 5.58 ms (1)
+Dec 11 22:12:28 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 22:12:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:12:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:12:28 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 22:12:28 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 22:12:28 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:12:28 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:12:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:12:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:12:28 symfony [info] {sfWebDebugLogger} Configuration 1.35 ms (9)
+Dec 11 22:12:28 symfony [info] {sfWebDebugLogger} Factories 8.15 ms (1)
+Dec 11 22:12:28 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.07 ms (1)
+Dec 11 22:12:28 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.14 ms (1)
+Dec 11 22:12:28 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 22:12:29 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 22:12:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:12:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:12:29 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 22:12:29 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 22:12:29 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 11 22:12:29 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 11 22:12:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:12:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:12:29 symfony [info] {sfWebDebugLogger} Configuration 1.47 ms (8)
+Dec 11 22:12:29 symfony [info] {sfWebDebugLogger} Factories 7.96 ms (1)
+Dec 11 22:12:29 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 29.93 ms (1)
+Dec 11 22:12:29 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 22:12:29 symfony [info] {sfWebResponse} Send content (294 o)
+Dec 11 22:20:27 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 22:20:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:20:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:20:27 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 22:20:27 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 22:20:27 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:20:27 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:20:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:20:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:20:27 symfony [info] {sfWebDebugLogger} Configuration 0.51 ms (9)
+Dec 11 22:20:27 symfony [info] {sfWebDebugLogger} Factories 4.13 ms (1)
+Dec 11 22:20:27 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 22:20:27 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.44 ms (1)
+Dec 11 22:20:27 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 22:20:28 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 22:20:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:20:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:20:28 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 22:20:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 22:20:28 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:20:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:20:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:20:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:20:28 symfony [info] {sfWebDebugLogger} Configuration 1.60 ms (8)
+Dec 11 22:20:28 symfony [info] {sfWebDebugLogger} Factories 7.97 ms (1)
+Dec 11 22:20:28 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 85.26 ms (1)
+Dec 11 22:20:28 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.00 ms (1)
+Dec 11 22:20:28 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 22:21:05 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 22:21:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:21:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:21:05 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 22:21:05 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 22:21:05 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:21:05 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:21:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:21:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:21:05 symfony [info] {sfWebDebugLogger} Configuration 1.67 ms (9)
+Dec 11 22:21:05 symfony [info] {sfWebDebugLogger} Factories 8.17 ms (1)
+Dec 11 22:21:05 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 22:21:05 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.88 ms (1)
+Dec 11 22:21:05 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 22:21:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 22:21:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:21:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:21:06 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 22:21:06 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 22:21:06 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:21:06 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:21:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:21:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:21:06 symfony [info] {sfWebDebugLogger} Configuration 1.68 ms (8)
+Dec 11 22:21:06 symfony [info] {sfWebDebugLogger} Factories 8.00 ms (1)
+Dec 11 22:21:06 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 29.51 ms (1)
+Dec 11 22:21:06 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 22:21:06 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 22:37:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 22:37:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:37:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:37:44 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 22:37:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 22:37:44 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:37:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:37:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:37:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:37:44 symfony [info] {sfWebDebugLogger} Configuration 1.37 ms (9)
+Dec 11 22:37:44 symfony [info] {sfWebDebugLogger} Factories 5.49 ms (1)
+Dec 11 22:37:44 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 11 22:37:44 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.12 ms (1)
+Dec 11 22:37:44 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 22:37:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 22:37:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:37:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:37:45 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 22:37:45 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 22:37:45 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:37:45 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:37:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:37:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:37:45 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (8)
+Dec 11 22:37:45 symfony [info] {sfWebDebugLogger} Factories 7.97 ms (1)
+Dec 11 22:37:45 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 37.77 ms (1)
+Dec 11 22:37:45 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 22:37:45 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 22:40:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 22:40:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:40:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:40:53 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 22:40:53 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 22:40:53 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:40:53 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:40:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:40:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:40:53 symfony [info] {sfWebDebugLogger} Configuration 1.19 ms (9)
+Dec 11 22:40:53 symfony [info] {sfWebDebugLogger} Factories 6.73 ms (1)
+Dec 11 22:40:53 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 22:40:53 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.23 ms (1)
+Dec 11 22:40:53 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 22:40:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 22:40:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:40:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:40:54 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 22:40:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 22:40:54 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:40:54 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:40:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:40:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:40:54 symfony [info] {sfWebDebugLogger} Configuration 1.58 ms (8)
+Dec 11 22:40:54 symfony [info] {sfWebDebugLogger} Factories 7.85 ms (1)
+Dec 11 22:40:54 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 41.89 ms (1)
+Dec 11 22:40:54 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 22:40:54 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 22:43:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 22:43:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:43:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:43:04 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 22:43:04 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 22:43:04 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:43:04 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:43:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:43:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:43:04 symfony [info] {sfWebDebugLogger} Configuration 0.99 ms (9)
+Dec 11 22:43:04 symfony [info] {sfWebDebugLogger} Factories 3.63 ms (1)
+Dec 11 22:43:04 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 11 22:43:04 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.36 ms (1)
+Dec 11 22:43:04 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 22:43:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 22:43:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:43:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:43:05 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 22:43:05 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 22:43:05 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:43:05 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 22:43:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:43:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:43:05 symfony [info] {sfWebDebugLogger} Configuration 1.34 ms (8)
+Dec 11 22:43:05 symfony [info] {sfWebDebugLogger} Factories 7.89 ms (1)
+Dec 11 22:43:05 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 42.40 ms (1)
+Dec 11 22:43:05 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 22:43:05 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 22:43:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /comprar_cancion with parameters array (  'module' => 'comprar_cancion',  'action' => 'index',)
+Dec 11 22:43:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:43:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:43:23 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeIndex()"
+Dec 11 22:43:23 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/comprar_cancion/templates/indexSuccess.php"
+Dec 11 22:43:23 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:43:23 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 22:43:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:43:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:43:23 symfony [info] {sfWebDebugLogger} Configuration 1.67 ms (9)
+Dec 11 22:43:23 symfony [info] {sfWebDebugLogger} Factories 8.09 ms (1)
+Dec 11 22:43:23 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/index" 0.06 ms (1)
+Dec 11 22:43:23 symfony [info] {sfWebDebugLogger} View "Success" for "comprar_cancion/index" 1.95 ms (1)
+Dec 11 22:43:23 symfony [info] {sfWebResponse} Send content (28881 o)
+Dec 11 22:43:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 11 22:43:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:43:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:43:24 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 11 22:43:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 11 22:43:24 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 22:43:24 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 11 22:43:24 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 11 22:43:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:43:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:43:24 symfony [info] {sfWebDebugLogger} Configuration 1.16 ms (8)
+Dec 11 22:43:24 symfony [info] {sfWebDebugLogger} Factories 8.15 ms (1)
+Dec 11 22:43:24 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 15.66 ms (1)
+Dec 11 22:43:24 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.01 ms (1)
+Dec 11 22:43:24 symfony [info] {sfWebResponse} Send content (294 o)
+Dec 11 22:43:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 22:43:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 22:43:24 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 11 22:43:24 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 22:43:24 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 22:43:24 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 22:43:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 22:43:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 22:43:24 symfony [info] {sfWebDebugLogger} Configuration 1.60 ms (8)
+Dec 11 22:43:24 symfony [info] {sfWebDebugLogger} Factories 23.63 ms (1)
+Dec 11 22:43:24 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 36.77 ms (1)
+Dec 11 22:43:24 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
+Dec 11 22:43:24 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:05:11 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:05:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:05:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:05:11 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:05:11 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:05:11 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:05:11 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:05:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:05:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:05:11 symfony [info] {sfWebDebugLogger} Configuration 1.22 ms (9)
+Dec 11 23:05:11 symfony [info] {sfWebDebugLogger} Factories 5.23 ms (1)
+Dec 11 23:05:11 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:05:11 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.80 ms (1)
+Dec 11 23:05:11 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 23:05:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:05:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:05:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:05:12 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:05:12 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:05:12 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:05:12 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:05:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:05:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:05:12 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (8)
+Dec 11 23:05:12 symfony [info] {sfWebDebugLogger} Factories 8.00 ms (1)
+Dec 11 23:05:12 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 28.28 ms (1)
+Dec 11 23:05:12 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.00 ms (1)
+Dec 11 23:05:12 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:05:36 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:05:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:05:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:05:36 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:05:36 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:05:36 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:05:36 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:05:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:05:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:05:36 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (9)
+Dec 11 23:05:36 symfony [info] {sfWebDebugLogger} Factories 6.60 ms (1)
+Dec 11 23:05:36 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:05:36 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.88 ms (1)
+Dec 11 23:05:36 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 23:05:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:05:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:05:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:05:36 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:05:36 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:05:36 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:05:36 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:05:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:05:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:05:36 symfony [info] {sfWebDebugLogger} Configuration 1.17 ms (8)
+Dec 11 23:05:36 symfony [info] {sfWebDebugLogger} Factories 7.87 ms (1)
+Dec 11 23:05:36 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 28.74 ms (1)
+Dec 11 23:05:36 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:05:36 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:06:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:15 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:15 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:15 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:15 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:15 symfony [info] {sfWebDebugLogger} Configuration 1.64 ms (9)
+Dec 11 23:06:15 symfony [info] {sfWebDebugLogger} Factories 8.24 ms (1)
+Dec 11 23:06:15 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.15 ms (1)
+Dec 11 23:06:15 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.71 ms (1)
+Dec 11 23:06:15 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 23:06:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:06:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:16 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:06:16 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:06:16 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:06:16 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:06:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:16 symfony [info] {sfWebDebugLogger} Configuration 1.70 ms (8)
+Dec 11 23:06:16 symfony [info] {sfWebDebugLogger} Factories 7.97 ms (1)
+Dec 11 23:06:16 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 41.54 ms (1)
+Dec 11 23:06:16 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:06:16 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:06:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:18 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Configuration 1.23 ms (9)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Factories 8.53 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.84 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 23:06:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:18 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Configuration 1.18 ms (9)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Factories 6.57 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.04 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.60 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 23:06:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:18 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Configuration 1.82 ms (9)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Factories 8.06 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.17 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.52 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:06:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:18 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Configuration 1.21 ms (9)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Factories 8.03 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.04 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.54 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:06:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:18 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Configuration 1.20 ms (9)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Factories 7.55 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.07 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.84 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:06:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:18 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Configuration 0.47 ms (9)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Factories 2.28 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.81 ms (1)
+Dec 11 23:06:18 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:06:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:19 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Configuration 1.80 ms (9)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Factories 7.90 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.17 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 4.22 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:06:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:19 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Configuration 0.61 ms (9)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Factories 2.24 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.04 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.98 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:06:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:19 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:19 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Configuration 1.21 ms (9)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Factories 7.83 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.04 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.59 ms (1)
+Dec 11 23:06:19 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:06:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:06:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:20 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:06:20 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:06:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:06:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:06:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:20 symfony [info] {sfWebDebugLogger} Configuration 1.20 ms (8)
+Dec 11 23:06:20 symfony [info] {sfWebDebugLogger} Factories 6.97 ms (1)
+Dec 11 23:06:20 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 15.65 ms (1)
+Dec 11 23:06:20 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:06:20 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:06:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 11 23:06:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:32 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 11 23:06:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:06:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:44 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:06:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:06:44 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:06:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:44 symfony [info] {sfWebDebugLogger} Configuration 1.55 ms (9)
+Dec 11 23:06:44 symfony [info] {sfWebDebugLogger} Factories 8.02 ms (1)
+Dec 11 23:06:44 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:06:44 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.84 ms (1)
+Dec 11 23:06:44 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 23:06:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:06:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:06:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:06:45 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:06:45 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:06:45 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:06:45 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:06:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:06:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:06:45 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (8)
+Dec 11 23:06:45 symfony [info] {sfWebDebugLogger} Factories 7.92 ms (1)
+Dec 11 23:06:45 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 35.37 ms (1)
+Dec 11 23:06:45 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:06:45 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:07:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:07:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:07:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:07:52 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:07:52 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:07:52 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:07:52 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:07:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:07:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:07:52 symfony [info] {sfWebDebugLogger} Configuration 1.20 ms (8)
+Dec 11 23:07:52 symfony [info] {sfWebDebugLogger} Factories 7.88 ms (1)
+Dec 11 23:07:52 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 39.72 ms (1)
+Dec 11 23:07:52 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:07:52 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:08:31 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:08:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:08:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:08:31 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:08:31 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:08:31 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:08:31 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:08:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:08:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:08:31 symfony [info] {sfWebDebugLogger} Configuration 1.22 ms (9)
+Dec 11 23:08:31 symfony [info] {sfWebDebugLogger} Factories 7.64 ms (1)
+Dec 11 23:08:31 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:08:31 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.00 ms (1)
+Dec 11 23:08:31 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:08:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:08:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:08:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:08:32 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:08:32 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:08:32 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:08:32 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:08:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:08:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:08:32 symfony [info] {sfWebDebugLogger} Configuration 1.60 ms (8)
+Dec 11 23:08:32 symfony [info] {sfWebDebugLogger} Factories 8.06 ms (1)
+Dec 11 23:08:32 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 27.01 ms (1)
+Dec 11 23:08:32 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.00 ms (1)
+Dec 11 23:08:32 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:08:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 11 23:08:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:08:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:08:47 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 11 23:08:58 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:08:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:08:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:08:58 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:08:58 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:08:58 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:08:58 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:08:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:08:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:08:58 symfony [info] {sfWebDebugLogger} Configuration 1.66 ms (9)
+Dec 11 23:08:58 symfony [info] {sfWebDebugLogger} Factories 8.03 ms (1)
+Dec 11 23:08:58 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.08 ms (1)
+Dec 11 23:08:58 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.71 ms (1)
+Dec 11 23:08:58 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 23:08:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:08:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:08:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:08:59 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:08:59 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:08:59 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:08:59 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:08:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:08:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:08:59 symfony [info] {sfWebDebugLogger} Configuration 1.60 ms (8)
+Dec 11 23:08:59 symfony [info] {sfWebDebugLogger} Factories 7.99 ms (1)
+Dec 11 23:08:59 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 29.75 ms (1)
+Dec 11 23:08:59 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:08:59 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:10:49 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:10:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:10:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:10:49 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:10:49 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:10:49 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:10:49 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:10:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:10:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:10:49 symfony [info] {sfWebDebugLogger} Configuration 1.22 ms (9)
+Dec 11 23:10:49 symfony [info] {sfWebDebugLogger} Factories 8.25 ms (1)
+Dec 11 23:10:49 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:10:49 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.69 ms (1)
+Dec 11 23:10:49 symfony [info] {sfWebResponse} Send content (28781 o)
+Dec 11 23:10:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:10:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:10:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:10:49 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:10:49 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:10:49 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:10:49 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:10:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:10:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:10:49 symfony [info] {sfWebDebugLogger} Configuration 1.62 ms (8)
+Dec 11 23:10:49 symfony [info] {sfWebDebugLogger} Factories 7.91 ms (1)
+Dec 11 23:10:49 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 29.22 ms (1)
+Dec 11 23:10:49 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:10:49 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:11:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 11 23:11:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:11:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:11:07 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 11 23:11:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:11:09 symfony [debug] {sfPropelLogger} time:  0.016 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 11 23:11:09 symfony [err] {sfPropelLogger} SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «cunia_comercial» viola la llave foránea «cunia_comercial_FK_1»
+DETAIL:  La llave (usuario)=(2) no está presente en la tabla «usuario».
+Dec 11 23:11:09 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/oms/apps/oms_user/modules/subir_cunia/actions/actions.class.php on line 82 (Undefined variable: exception)
+Dec 11 23:11:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:11:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:11:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:11:22 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:11:22 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:11:22 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:11:22 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:11:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:11:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:11:22 symfony [info] {sfWebDebugLogger} Configuration 1.25 ms (9)
+Dec 11 23:11:22 symfony [info] {sfWebDebugLogger} Factories 8.03 ms (1)
+Dec 11 23:11:22 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 1.31 ms (1)
+Dec 11 23:11:22 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.95 ms (1)
+Dec 11 23:11:22 symfony [info] {sfWebResponse} Send content (28782 o)
+Dec 11 23:11:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:11:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:11:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:11:23 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:11:23 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:11:23 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:11:23 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:11:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:11:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:11:23 symfony [info] {sfWebDebugLogger} Configuration 1.21 ms (8)
+Dec 11 23:11:23 symfony [info] {sfWebDebugLogger} Factories 7.97 ms (1)
+Dec 11 23:11:23 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 26.78 ms (1)
+Dec 11 23:11:23 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:11:23 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:22:00 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:22:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:22:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:22:00 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:22:00 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:22:00 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:22:00 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:22:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:22:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:22:00 symfony [info] {sfWebDebugLogger} Configuration 1.89 ms (9)
+Dec 11 23:22:00 symfony [info] {sfWebDebugLogger} Factories 8.44 ms (1)
+Dec 11 23:22:00 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.17 ms (1)
+Dec 11 23:22:00 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 6.07 ms (1)
+Dec 11 23:22:00 symfony [info] {sfWebResponse} Send content (28921 o)
+Dec 11 23:22:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:22:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:22:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:22:00 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:22:00 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:22:00 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:22:00 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:22:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:22:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:22:00 symfony [info] {sfWebDebugLogger} Configuration 1.16 ms (8)
+Dec 11 23:22:00 symfony [info] {sfWebDebugLogger} Factories 7.84 ms (1)
+Dec 11 23:22:00 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 29.08 ms (1)
+Dec 11 23:22:00 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:22:00 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:22:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:22:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:22:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:22:12 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:22:12 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:22:12 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:22:12 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:22:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:22:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:22:12 symfony [info] {sfWebDebugLogger} Configuration 52.31 ms (9)
+Dec 11 23:22:12 symfony [info] {sfWebDebugLogger} Factories 23.73 ms (1)
+Dec 11 23:22:12 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 11 23:22:12 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 3.41 ms (1)
+Dec 11 23:22:12 symfony [info] {sfWebResponse} Send content (28891 o)
+Dec 11 23:22:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:22:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:22:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:22:14 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:22:14 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:22:14 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:22:14 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:22:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:22:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:22:14 symfony [info] {sfWebDebugLogger} Configuration 1.19 ms (8)
+Dec 11 23:22:14 symfony [info] {sfWebDebugLogger} Factories 9.44 ms (1)
+Dec 11 23:22:14 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 25.73 ms (1)
+Dec 11 23:22:14 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:22:14 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:22:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 11 23:22:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:22:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:22:38 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 11 23:22:40 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:22:40 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 11 23:22:40 symfony [err] {sfPropelLogger} SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «cunia_comercial» viola la llave foránea «cunia_comercial_FK_1»
+DETAIL:  La llave (usuario)=(2) no está presente en la tabla «usuario».
+Dec 11 23:22:40 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/oms/apps/oms_user/modules/subir_cunia/actions/actions.class.php on line 82 (Undefined variable: exception)
+Dec 11 23:23:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:23:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:23:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:23:42 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:23:42 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:23:42 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:23:42 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:23:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:23:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:23:42 symfony [info] {sfWebDebugLogger} Configuration 1.24 ms (9)
+Dec 11 23:23:42 symfony [info] {sfWebDebugLogger} Factories 7.10 ms (1)
+Dec 11 23:23:42 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 11 23:23:42 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 3.06 ms (1)
+Dec 11 23:23:42 symfony [info] {sfWebResponse} Send content (28921 o)
+Dec 11 23:23:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:23:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:23:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:23:43 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:23:43 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:23:43 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:23:43 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:23:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:23:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:23:43 symfony [info] {sfWebDebugLogger} Configuration 1.63 ms (8)
+Dec 11 23:23:43 symfony [info] {sfWebDebugLogger} Factories 7.93 ms (1)
+Dec 11 23:23:43 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 21.80 ms (1)
+Dec 11 23:23:43 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:23:43 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:24:00 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:24:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:24:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:24:00 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:24:00 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:24:00 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:24:00 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:24:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:24:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:24:00 symfony [info] {sfWebDebugLogger} Configuration 0.94 ms (9)
+Dec 11 23:24:00 symfony [info] {sfWebDebugLogger} Factories 2.58 ms (1)
+Dec 11 23:24:00 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:24:00 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.02 ms (1)
+Dec 11 23:24:00 symfony [info] {sfWebResponse} Send content (28921 o)
+Dec 11 23:24:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:24:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:24:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:24:00 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:24:00 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:24:00 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:24:00 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:24:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:24:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:24:00 symfony [info] {sfWebDebugLogger} Configuration 1.25 ms (8)
+Dec 11 23:24:00 symfony [info] {sfWebDebugLogger} Factories 7.97 ms (1)
+Dec 11 23:24:00 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 25.93 ms (1)
+Dec 11 23:24:00 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:24:00 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:24:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:24:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:24:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:24:20 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:24:20 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:24:20 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:24:20 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:24:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:24:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:24:20 symfony [info] {sfWebDebugLogger} Configuration 1.34 ms (9)
+Dec 11 23:24:20 symfony [info] {sfWebDebugLogger} Factories 8.11 ms (1)
+Dec 11 23:24:20 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:24:20 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 4.41 ms (1)
+Dec 11 23:24:20 symfony [info] {sfWebResponse} Send content (28921 o)
+Dec 11 23:24:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:24:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:24:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:24:20 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:24:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:24:20 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:24:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:24:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:24:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:24:20 symfony [info] {sfWebDebugLogger} Configuration 1.04 ms (8)
+Dec 11 23:24:20 symfony [info] {sfWebDebugLogger} Factories 3.99 ms (1)
+Dec 11 23:24:20 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 30.61 ms (1)
+Dec 11 23:24:20 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:24:20 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:24:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 11 23:24:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:24:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:24:31 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 11 23:24:33 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:24:33 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 11 23:24:33 symfony [err] {sfPropelLogger} SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «cunia_comercial» viola la llave foránea «cunia_comercial_FK_1»
+DETAIL:  La llave (usuario)=(2) no está presente en la tabla «usuario».
+Dec 11 23:24:33 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/oms/apps/oms_user/modules/subir_cunia/actions/actions.class.php on line 82 (Undefined variable: exception)
+Dec 11 23:24:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:24:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:24:33 symfony [info] {sfWebDebugLogger} Configuration 0.99 ms (8)
+Dec 11 23:24:33 symfony [info] {sfWebDebugLogger} Factories 4.10 ms (1)
+Dec 11 23:24:33 symfony [info] {sfWebDebugLogger} Action "subir_cunia/crearCunia" 2069.54 ms (1)
+Dec 11 23:24:33 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/crearCunia" 0.01 ms (1)
+Dec 11 23:24:33 symfony [info] {sfWebResponse} Send content (18971 o)
+Dec 11 23:26:06 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:26:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:26:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:26:06 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:26:06 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:26:06 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:26:06 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:26:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:26:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:26:06 symfony [info] {sfWebDebugLogger} Configuration 1.88 ms (9)
+Dec 11 23:26:06 symfony [info] {sfWebDebugLogger} Factories 8.26 ms (1)
+Dec 11 23:26:06 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.18 ms (1)
+Dec 11 23:26:06 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.58 ms (1)
+Dec 11 23:26:06 symfony [info] {sfWebResponse} Send content (28920 o)
+Dec 11 23:26:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:26:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:26:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:26:07 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:26:07 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:26:07 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:26:07 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:26:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:26:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:26:07 symfony [info] {sfWebDebugLogger} Configuration 1.20 ms (8)
+Dec 11 23:26:07 symfony [info] {sfWebDebugLogger} Factories 7.94 ms (1)
+Dec 11 23:26:07 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 24.78 ms (1)
+Dec 11 23:26:07 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:26:07 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:26:39 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:26:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:26:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:26:39 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:26:39 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:26:39 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:26:39 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:26:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:26:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:26:39 symfony [info] {sfWebDebugLogger} Configuration 0.93 ms (9)
+Dec 11 23:26:39 symfony [info] {sfWebDebugLogger} Factories 2.58 ms (1)
+Dec 11 23:26:39 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 11 23:26:39 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.85 ms (1)
+Dec 11 23:26:39 symfony [info] {sfWebResponse} Send content (28921 o)
+Dec 11 23:26:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:26:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:26:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:26:39 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:26:39 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:26:39 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:26:39 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:26:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:26:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:26:39 symfony [info] {sfWebDebugLogger} Configuration 1.17 ms (8)
+Dec 11 23:26:39 symfony [info] {sfWebDebugLogger} Factories 5.94 ms (1)
+Dec 11 23:26:39 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 14.15 ms (1)
+Dec 11 23:26:39 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:26:39 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:27:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 11 23:27:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:27:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:27:01 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 11 23:27:03 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:27:03 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 11 23:27:03 symfony [err] {sfPropelLogger} SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «cunia_comercial» viola la llave foránea «cunia_comercial_FK_1»
+DETAIL:  La llave (usuario)=(2) no está presente en la tabla «usuario».
+Dec 11 23:27:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:27:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:27:03 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (8)
+Dec 11 23:27:03 symfony [info] {sfWebDebugLogger} Factories 4.27 ms (1)
+Dec 11 23:27:03 symfony [info] {sfWebDebugLogger} Action "subir_cunia/crearCunia" 2058.98 ms (1)
+Dec 11 23:27:03 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/crearCunia" 0.01 ms (1)
+Dec 11 23:27:03 symfony [info] {sfWebResponse} Send content (19243 o)
+Dec 11 23:28:57 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:28:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:28:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:28:57 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:28:57 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:28:57 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:28:57 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:28:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:28:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:28:57 symfony [info] {sfWebDebugLogger} Configuration 1.67 ms (9)
+Dec 11 23:28:57 symfony [info] {sfWebDebugLogger} Factories 8.29 ms (1)
+Dec 11 23:28:57 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.09 ms (1)
+Dec 11 23:28:57 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.84 ms (1)
+Dec 11 23:28:57 symfony [info] {sfWebResponse} Send content (28920 o)
+Dec 11 23:28:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:28:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:28:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:28:58 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:28:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:28:58 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:28:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:28:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:28:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:28:58 symfony [info] {sfWebDebugLogger} Configuration 1.22 ms (8)
+Dec 11 23:28:58 symfony [info] {sfWebDebugLogger} Factories 7.95 ms (1)
+Dec 11 23:28:58 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 29.66 ms (1)
+Dec 11 23:28:58 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:28:58 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:29:01 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /comprar_cancion with parameters array (  'module' => 'comprar_cancion',  'action' => 'index',)
+Dec 11 23:29:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:29:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:29:01 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeIndex()"
+Dec 11 23:29:01 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/comprar_cancion/templates/indexSuccess.php"
+Dec 11 23:29:01 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:29:01 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:29:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:29:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:29:01 symfony [info] {sfWebDebugLogger} Configuration 7.49 ms (10)
+Dec 11 23:29:01 symfony [info] {sfWebDebugLogger} Factories 8.12 ms (1)
+Dec 11 23:29:01 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/index" 0.04 ms (1)
+Dec 11 23:29:01 symfony [info] {sfWebDebugLogger} View "Success" for "comprar_cancion/index" 3.35 ms (1)
+Dec 11 23:29:01 symfony [info] {sfWebResponse} Send content (28991 o)
+Dec 11 23:29:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 11 23:29:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 11 23:29:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:29:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:29:02 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 11 23:29:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:29:02 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 23:29:02 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 11 23:29:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:29:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:29:02 symfony [info] {sfWebDebugLogger} Configuration 0.46 ms (8)
+Dec 11 23:29:02 symfony [info] {sfWebDebugLogger} Factories 2.31 ms (1)
+Dec 11 23:29:02 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 36.74 ms (1)
+Dec 11 23:29:02 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
+Dec 11 23:29:02 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:29:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:29:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:29:02 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 11 23:29:02 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:29:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 11 23:29:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 11 23:29:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:29:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:29:02 symfony [info] {sfWebDebugLogger} Configuration 1.63 ms (8)
+Dec 11 23:29:02 symfony [info] {sfWebDebugLogger} Factories 47.07 ms (1)
+Dec 11 23:29:02 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 35.02 ms (1)
+Dec 11 23:29:02 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.01 ms (1)
+Dec 11 23:29:02 symfony [info] {sfWebResponse} Send content (1711 o)
+Dec 11 23:29:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:29:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:29:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:29:09 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:29:09 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:29:09 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:29:09 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:29:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:29:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:29:09 symfony [info] {sfWebDebugLogger} Configuration 1.82 ms (9)
+Dec 11 23:29:09 symfony [info] {sfWebDebugLogger} Factories 8.07 ms (1)
+Dec 11 23:29:09 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.18 ms (1)
+Dec 11 23:29:09 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.76 ms (1)
+Dec 11 23:29:09 symfony [info] {sfWebResponse} Send content (28921 o)
+Dec 11 23:29:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:29:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:29:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:29:10 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:29:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:29:10 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:29:10 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:29:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:29:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:29:10 symfony [info] {sfWebDebugLogger} Configuration 1.17 ms (8)
+Dec 11 23:29:10 symfony [info] {sfWebDebugLogger} Factories 8.01 ms (1)
+Dec 11 23:29:10 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 23.75 ms (1)
+Dec 11 23:29:10 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:29:10 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 11 23:29:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 11 23:29:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:29:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:29:26 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 11 23:29:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:29:28 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 11 23:29:28 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | INSERT INTO cunia_comercial (CODIGO,NOMBRE,DURACION,URL,HABILITADA,FECHA_CREACION,USUARIO) VALUES (5,'Gold Digger','03:30:00','uploads/cunias/04- Gold Digger.mp3',true,'2010-12-11',2)
+Dec 11 23:29:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:29:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:29:28 symfony [info] {sfWebDebugLogger} Configuration 1.06 ms (8)
+Dec 11 23:29:28 symfony [info] {sfWebDebugLogger} Factories 4.12 ms (1)
+Dec 11 23:29:28 symfony [info] {sfWebDebugLogger} Action "subir_cunia/crearCunia" 2074.03 ms (1)
+Dec 11 23:29:28 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/crearCunia" 0.01 ms (1)
+Dec 11 23:29:28 symfony [info] {sfWebResponse} Send content (19313 o)
+Dec 11 23:29:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:29:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:29:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:29:44 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:29:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:29:44 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:29:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:29:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:29:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:29:44 symfony [info] {sfWebDebugLogger} Configuration 1.66 ms (9)
+Dec 11 23:29:44 symfony [info] {sfWebDebugLogger} Factories 8.12 ms (1)
+Dec 11 23:29:44 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 1.25 ms (1)
+Dec 11 23:29:44 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.09 ms (1)
+Dec 11 23:29:44 symfony [info] {sfWebResponse} Send content (28920 o)
+Dec 11 23:29:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:29:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:29:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:29:45 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:29:45 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:29:45 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:29:45 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:29:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:29:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:29:45 symfony [info] {sfWebDebugLogger} Configuration 1.40 ms (8)
+Dec 11 23:29:45 symfony [info] {sfWebDebugLogger} Factories 7.96 ms (1)
+Dec 11 23:29:45 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 35.23 ms (1)
+Dec 11 23:29:45 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:29:45 symfony [info] {sfWebResponse} Send content (214 o)
+Dec 11 23:30:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:30:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:30:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:30:02 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:30:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:30:02 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:30:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2 LIMIT 10
+Dec 11 23:30:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:30:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:30:02 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (8)
+Dec 11 23:30:02 symfony [info] {sfWebDebugLogger} Factories 3.83 ms (1)
+Dec 11 23:30:02 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 31.47 ms (1)
+Dec 11 23:30:02 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:30:02 symfony [info] {sfWebResponse} Send content (214 o)
+Dec 11 23:32:49 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:32:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:32:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:32:49 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:32:49 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:32:49 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:32:49 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:32:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:32:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:32:49 symfony [info] {sfWebDebugLogger} Configuration 1.23 ms (9)
+Dec 11 23:32:49 symfony [info] {sfWebDebugLogger} Factories 8.10 ms (1)
+Dec 11 23:32:49 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.30 ms (1)
+Dec 11 23:32:49 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.90 ms (1)
+Dec 11 23:32:49 symfony [info] {sfWebResponse} Send content (28920 o)
+Dec 11 23:32:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:32:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:32:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:32:50 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:32:50 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:32:50 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:32:50 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:32:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:32:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:32:50 symfony [info] {sfWebDebugLogger} Configuration 1.25 ms (8)
+Dec 11 23:32:50 symfony [info] {sfWebDebugLogger} Factories 7.32 ms (1)
+Dec 11 23:32:50 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 16.39 ms (1)
+Dec 11 23:32:50 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:32:50 symfony [info] {sfWebResponse} Send content (214 o)
+Dec 11 23:33:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 11 23:33:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:33:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:33:44 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 11 23:33:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 11 23:33:44 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:33:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 11 23:33:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:33:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:33:44 symfony [info] {sfWebDebugLogger} Configuration 1.25 ms (9)
+Dec 11 23:33:44 symfony [info] {sfWebDebugLogger} Factories 6.33 ms (1)
+Dec 11 23:33:44 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 11 23:33:44 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.04 ms (1)
+Dec 11 23:33:44 symfony [info] {sfWebResponse} Send content (28921 o)
+Dec 11 23:33:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 11 23:33:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 11 23:33:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 11 23:33:45 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 11 23:33:45 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 11 23:33:45 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:33:45 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 11 23:33:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 11 23:33:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 11 23:33:45 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (8)
+Dec 11 23:33:45 symfony [info] {sfWebDebugLogger} Factories 3.77 ms (1)
+Dec 11 23:33:45 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 17.51 ms (1)
+Dec 11 23:33:45 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 11 23:33:45 symfony [info] {sfWebResponse} Send content (214 o)

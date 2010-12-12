@@ -1,5 +1,5 @@
 
-var urlPrefix='http://localhost/oms/web/index.php/';
+//var urlPrefix='http://localhost/oms/web/index.php/';
 
 var url_web = '/oms/web/';
 
