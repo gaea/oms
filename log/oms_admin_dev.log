@@ -180,3 +180,17 @@ Dec 12 04:09:53 symfony [info] {sfWebDebugLogger} Factories 37.83 ms (1)
 Dec 12 04:09:53 symfony [info] {sfWebDebugLogger} Action "login/autenticar" 177.28 ms (1)
 Dec 12 04:09:53 symfony [info] {sfWebDebugLogger} View "None" for "login/autenticar" 0.01 ms (1)
 Dec 12 04:09:53 symfony [info] {sfWebResponse} Send content (19308 o)
+Dec 12 04:49:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 12 04:49:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 12 04:49:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 12 04:49:52 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 12 04:49:52 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/login/templates/indexSuccess.php"
+Dec 12 04:49:52 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 12 04:49:52 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 12 04:49:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 12 04:49:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 12 04:49:52 symfony [info] {sfWebDebugLogger} Configuration 30.97 ms (10)
+Dec 12 04:49:52 symfony [info] {sfWebDebugLogger} Factories 41.82 ms (1)
+Dec 12 04:49:52 symfony [info] {sfWebDebugLogger} Action "login/index" 0.14 ms (1)
+Dec 12 04:49:52 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 172.76 ms (1)
+Dec 12 04:49:52 symfony [info] {sfWebResponse} Send content (29694 o)

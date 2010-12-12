@@ -18,4 +18,46 @@
  */
 class VentaCancionPeer extends BaseVentaCancionPeer {
 
+	/*
+	 * ventas del mes actual
+	 * fecha mayor o igual al primer dia del presente mes
+	 * */
+	public static function doSelectMesActual(){
+		$timeZone = new DateTimeZone('America/Bogota');
+		$hoy = new DateTime("NOW", $timeZone);
+		$mes = $hoy->format('m');
+		$anio = $hoy->format('Y');
+		$inicio = $anio."-".$mes."-"."01";
+		
+		$criterio = new Criteria();
+		$criterio->addJoin(self::VENTA, VentaPeer::CODIGO);
+		$criterio->add(VentaPeer::FECHA_VENTA, $inicio, Criteria::GREATER_EQUAL);
+		
+		$ventas_cancion = self::doSelect($criterio);
+		
+		return $ventas_cancion;
+		
+	}
+	
+	/*
+	 * ventas del mes actual de un usuario
+	 * fecha mayor o igual al primer dia del presente mes
+	 * */
+	public static function doSelectMesActualUsuario( $codigo_usuario ){
+		$timeZone = new DateTimeZone('America/Bogota');
+		$hoy = new DateTime("NOW", $timeZone);
+		$mes = $hoy->format('m');
+		$anio = $hoy->format('Y');
+		$inicio = $anio."-".$mes."-"."01";
+		
+		$criterio = new Criteria();
+		$criterio->addJoin(self::VENTA, VentaPeer::CODIGO);
+		$criterio->add(VentaPeer::FECHA_VENTA, $inicio, Criteria::GREATER_EQUAL);
+		$criterio->add(VentaPeer::USUARIO, $codigo_usuario);
+		
+		$ventas_cancion = self::doSelect($criterio);
+		
+		return $ventas_cancion;
+	}
+
 } // VentaCancionPeer

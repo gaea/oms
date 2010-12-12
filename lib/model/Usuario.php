@@ -30,6 +30,20 @@ class Usuario extends BaseUsuario {
 	{
 		return( $this->getContrasena()==$password );
 	}
-		
 	
+	/*
+	 * Retorna las canciones compradas en el mes actual
+	 * */
+	public function getCanciones(){
+		$canciones = CancionPeer::doSelectMesActualUsuario( this->getCodigo() );
+		return $canciones;
+	}
+	
+	/*
+	 * Retorna las cunias compradas en el mes actual
+	 * */
+	public function getCuniaComercialsMes(){
+		$cunias = CuniaComercialPeer::doSelectMesActualUsuario( this->getCodigo() );
+		return $cunias;
+	}
 } // Usuario

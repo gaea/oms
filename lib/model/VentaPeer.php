@@ -18,4 +18,26 @@
  */
 class VentaPeer extends BaseVentaPeer {
 
+	/*
+	 * ventas del mes actual
+	 * fecha mayor o igual al primer dia del presente mes
+	 * */
+	public static function doSelectMesActual(){
+		$timeZone = new DateTimeZone('America/Bogota');
+		$hoy = new DateTime("NOW", $timeZone);
+		$mes = $hoy->format('m');
+		$anio = $hoy->format('Y');
+		$inicio = $anio."-".$mes."-"."01";
+		//SELECT EXTRACT(MONTH FROM TIMESTAMP '2009-11-06 17:05:01'); --> 11
+		//SELECT TIMESTAMP WITH TIME ZONE 'now';
+		
+		$criterio = new Criteria();
+		$criterio->add(self::FECHA_VENTA, $inicio, Criteria::GREATER_EQUAL);
+		
+		$ventas = self::doSelect($criterio);
+		
+		return $ventas;
+		
+	}
+
 } // VentaPeer

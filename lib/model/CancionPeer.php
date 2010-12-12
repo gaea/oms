@@ -17,5 +17,31 @@
  * @package    lib.model
  */
 class CancionPeer extends BaseCancionPeer {
+	
+	public static function doSelectMesActual(){
+		$ventas_cancion = VentaCancionPeer::doSelectMesActual();
+		$canciones = null;
+		
+		foreach ($ventas_cancion As $venta_cancion)
+		{
+			$cancion = $venta_cancion->getCancionRelatedByCancion();
+			$canciones[] = $cancion;
+		}
+		
+		return $canciones;
+	}
+	
+	public static function doSelectMesActualUsuario( $codigo_usuario ){
+		$ventas_cancion = VentaCancionPeer::doSelectMesActualUsuario( $codigo_usuario );
+		$canciones = null;
+		
+		foreach ($ventas_cancion As $venta_cancion)
+		{
+			$cancion = $venta_cancion->getCancionRelatedByCancion();
+			$canciones[] = $cancion;
+		}
+		
+		return $canciones;
+	}
 
 } // CancionPeer
