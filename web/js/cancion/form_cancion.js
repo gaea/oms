@@ -4,7 +4,7 @@
 	var cancion_formpanel = new Ext.FormPanel({
 		title: 'Datos detallados de la canci&oacute;n ',
 		columnWidth: '.4',
-		height: 500,
+		height: 502,
 		frame: true,
 		id: 'cancion_formpanel',
 		fileUpload: true,
@@ -243,7 +243,7 @@
 	 		if(verificacion){
 				subirDatos(
 					cancion_formpanel,
-					getAbsoluteUrl('gestionar_cancion','crearCancion'),//'gestionar_cancion/crearCancion',
+					'gestionar_cancion/crearCancion',//getAbsoluteUrl('gestionar_cancion','crearCancion'),//
 					{},
 					function(){
 						Ext.getCmp('can_crear_boton').setText('Nuevo');
@@ -263,7 +263,7 @@
 	 		if(verificacion){
 				subirDatos(
 					cancion_formpanel,
-					getAbsoluteUrl('gestionar_cancion','actualizarCancion'),
+					'gestionar_cancion/actualizarCancion',//getAbsoluteUrl('gestionar_cancion','actualizarCancion'),
 					{codigo_cancion: codigo_cancion_actualizar},
 					function(){
 						Ext.getCmp('can_crear_boton').setText('Nuevo');

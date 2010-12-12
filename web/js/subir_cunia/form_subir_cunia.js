@@ -152,7 +152,7 @@
 		}),
 		autoExpandColumn: 'cunia_nombre_col_id',
 		autoExpandMin: 200,
-		height: 415,
+		height: 413,
 		listeners: {
 			viewready: function(g) {
 				g.getSelectionModel().selectRow(0);

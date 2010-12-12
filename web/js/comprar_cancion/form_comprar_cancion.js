@@ -172,7 +172,7 @@
 		}),
 		autoExpandColumn: 'can_ad_nombre_col_id',
 		autoExpandMin: 150,
-		height: 460,
+		height: 463,
 		listeners: {
 			viewready: function(g) {
 				g.getSelectionModel().selectRow(0);

@@ -25,11 +25,17 @@
 						tabTip: 'Gestionar canci&oacute;n',
 						autoScroll: true,
 						autoLoad: {url: 'gestionar_cancion/index', scripts: true, scope: this}
+					},
+					{
+						title: 'Gestionar usuarios administradores',
+						tabTip: 'Gestionar usuarios administradores',
+						autoScroll: true,
+						autoLoad: {url: 'reportes/index', scripts: true, scope: this}
 					}
 				]
 			}
 		],
-		renderTo:'div_form_interfaz_cliente'
+		renderTo:'div_form_interfaz_admin'
 	});
 	
 	function fun_admin_panel_salir(){

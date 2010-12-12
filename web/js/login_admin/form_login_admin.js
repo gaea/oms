@@ -40,7 +40,7 @@
 	function fun_admin_login(){
 		subirDatos(
 			login_admin_formpanel,
-			'login/autenticar',
+			'login/autenticar',//getAbsoluteUrl('login', 'autenticar'),//'login/autenticar',
 			{},
 			function(){
 				window.location = 'interfaz_admin';
