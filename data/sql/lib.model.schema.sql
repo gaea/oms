@@ -41,6 +41,7 @@ CREATE TABLE "cunia_comercial"
 	"habilitada" BOOLEAN,
 	"fecha_creacion" DATE,
 	"usuario" INTEGER,
+	"precio" INTEGER,
 	PRIMARY KEY ("codigo")
 );
 
@@ -104,6 +105,7 @@ CREATE TABLE "persona"
 	"direccion" VARCHAR(200),
 	"telefono" VARCHAR(200),
 	"e_mail" VARCHAR(200),
+	"habilitado" BOOLEAN  NOT NULL,
 	PRIMARY KEY ("codigo")
 );
 
@@ -124,8 +126,8 @@ CREATE TABLE "programacion_cancion"
 	"venta" INTEGER  NOT NULL,
 	"fecha" DATE  NOT NULL,
 	"inicio" TIME  NOT NULL,
-	"fin" TIME  NOT NULL,
-	PRIMARY KEY ("cancion","venta","fecha","inicio","fin")
+	"fin" TIME,
+	PRIMARY KEY ("cancion","venta","fecha","inicio")
 );
 
 COMMENT ON TABLE "programacion_cancion" IS '';
@@ -184,7 +186,6 @@ CREATE TABLE "usuario"
 	"codigo" serial  NOT NULL,
 	"usuario" VARCHAR(200)  NOT NULL,
 	"contrasena" VARCHAR(200)  NOT NULL,
-	"habilitado" BOOLEAN  NOT NULL,
 	"perfil" INTEGER,
 	"persona" INTEGER,
 	PRIMARY KEY ("codigo")
@@ -255,6 +256,10 @@ ALTER TABLE "cunia_comercial" ADD CONSTRAINT "cunia_comercial_FK_1" FOREIGN KEY 
 ALTER TABLE "mensaje" ADD CONSTRAINT "mensaje_FK_1" FOREIGN KEY ("usuario") REFERENCES "usuario" ("codigo") ON UPDATE RESTRICT ON DELETE RESTRICT;
 
 ALTER TABLE "persona" ADD CONSTRAINT "persona_FK_1" FOREIGN KEY ("tipo_identificacion") REFERENCES "tipo_identificacion" ("codigo") ON UPDATE RESTRICT ON DELETE RESTRICT;
+
+ALTER TABLE "programacion_cancion" ADD CONSTRAINT "programacion_cancion_FK_1" FOREIGN KEY ("cancion") REFERENCES "cancion" ("codigo");
+
+ALTER TABLE "programacion_cancion" ADD CONSTRAINT "programacion_cancion_FK_2" FOREIGN KEY ("venta") REFERENCES "venta" ("codigo");
 
 ALTER TABLE "usuario" ADD CONSTRAINT "usuario_FK_1" FOREIGN KEY ("perfil") REFERENCES "perfil" ("codigo") ON UPDATE RESTRICT ON DELETE RESTRICT;
 
