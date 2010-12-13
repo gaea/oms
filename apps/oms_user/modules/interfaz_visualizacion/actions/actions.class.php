@@ -36,36 +36,48 @@ class interfaz_visualizacionActions extends sfActions
 			$programacion = ProgramacionCancionPeer::doSelect($conexion);
 			
 			$file = fopen("/var/www/oms/web/rss/".$codigo_usuario.".xml",'w');
+			
+			fwrite($file, "<?xml version=\"1.0\" ?>\n");
+			fwrite($file, "<rss version=\"2.0\">\n");
+			fwrite($file, "\t<channel>\n");
+			fwrite($file, "\t\t<title>OMS</title>\n");
+			fwrite($file, "\t\t<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link>\n");
+			fwrite($file, "\t\t<description>Open Music Suscriptor...</description>\n");
+			fwrite($file, "\t\t<image>\n");
+			fwrite($file, "\t\t\t<url>http://localhost/oms/web/images/oms.png</url> \n");
+			fwrite($file, "\t\t\t<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link> \n"); // ojo que esta url hay que cambiarla
+			fwrite($file, "\t\t</image>\n");
 
 			if($programacion)
 			{
 				foreach($programacion as $temporal)
 				{
+					fwrite($file, "\t\t<item>\n");
+					
 					$cancion = CancionPeer::retrieveByPk($temporal->getCancion());
 				
-					fwrite($file, $temporal->getCancion()."\n");
-					fwrite($file, $cancion->getNombre()."\n");
-					fwrite($file, $temporal->getFecha()."\n");
-					fwrite($file, $cancion->getDuracion()."\n");
-					fwrite($file, $cancion->getUrl()."\n");
-					fwrite($file, $temporal->getInicio()."\n");
+					//fwrite($file, "\t\t\t".$temporal->getCancion()."\n");
+					fwrite($file, "\t\t\t<title><![CDATA[".$cancion->getNombre()."]]></title>\n");
+					fwrite($file, "\t\t\t<link>http://localhost/oms/web/".$cancion->getUrl()."</link>\n");
+					fwrite($file, "\t\t\t<enclosure url=\"http://localhost/oms/web/".$cancion->getUrl()."\" type=\"audio/mpeg\" />\n");
+					fwrite($file, "\t\t\t<description><![CDATA[Duracion: ".$cancion->getDuracion()."]]></description>\n");
+					fwrite($file, "\t\t\t<pubDate>".$temporal->getFecha()." ".$temporal->getInicio()."</pubDate>\n");
+					fwrite($file, "\t\t</item>\n");
 				}
 			}
 			
-			fwrite($file, "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns='http://www.w3.org/1999/xhtml'><head><meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' /><title>Printing the Grid</title><link rel='stylesheet' type='text/css' href='printstyle.css'/></head>");
-			fwrite($file, "<body><table summary='Presidents List'><caption>The Presidents of the United States</caption><thead><tr><th scope='col'>First Name</th><th scope='col'>Last Name</th><th scope='col'>Party</th><th scope='col'>Entering Office</th><th scope='col'>Leaving Office</th><th scope='col'>Income</th></tr></thead><tfoot><tr><th scope='row'>Total</th><td colspan='4'>");
-			fwrite($file, $numero_canciones);
-			fwrite($file, " presidents</td></tr></tfoot><tbody>");
-			fwrite($file, "</tbody></table></body></html>");  
+			fwrite($file, "\t</channel>\n");
+			fwrite($file, "</rss>\n");
+			
 			fclose($file);
 		}
 		catch (Exception $exception)
 		{
-			$salida= "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
+			$salida= "({success: false, errors: { reason: 'Hubo una excepci&oacute;n al crear el canal rss ' , error: '".$exception->getMessage()."'}})";
 			return $this->renderText($salida);
 		}
 		
-		$salida = "({success: true, mensaje:'La canci&oacute;n fue actualizada exitosamente'})";
+		$salida = "({success: true, mensaje:'El canal rss fue creado exitosamente'})";
 		return $this->renderText($salida);
 	}
 }

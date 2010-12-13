@@ -1,43 +1,61 @@
-8
-The Goldrush
-2010-12-18
-02:29:00
-uploads/03 The Goldrush.mp3
-02:01:01
-6
-Boring 23
-2010-12-18
-01:41:00
-uploads/04.Blink 182 - Boring.mp3
-02:10:03
-7
-Pump It 4
-2010-12-31
-03:33:00
-uploads/01-Pump%20It.mp3
-03:02:00
-6
-Boring 23
-2010-12-18
-01:41:00
-uploads/04.Blink 182 - Boring.mp3
-02:04:02
-7
-Pump It 4
-2010-12-03
-03:33:00
-uploads/01-Pump%20It.mp3
-01:01:01
-7
-Pump It 4
-2010-12-23
-03:33:00
-uploads/01-Pump%20It.mp3
-01:01:01
-8
-The Goldrush
-2010-12-29
-02:29:00
-uploads/03 The Goldrush.mp3
-06:04:04
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns='http://www.w3.org/1999/xhtml'><head><meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' /><title>Printing the Grid</title><link rel='stylesheet' type='text/css' href='printstyle.css'/></head><body><table summary='Presidents List'><caption>The Presidents of the United States</caption><thead><tr><th scope='col'>First Name</th><th scope='col'>Last Name</th><th scope='col'>Party</th><th scope='col'>Entering Office</th><th scope='col'>Leaving Office</th><th scope='col'>Income</th></tr></thead><tfoot><tr><th scope='row'>Total</th><td colspan='4'>7 presidents</td></tr></tfoot><tbody></tbody></table></body></html>
+<?xml version="1.0" ?>
+<rss version="2.0">
+	<channel>
+		<title>OMS</title>
+		<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link>
+		<description>Open Music Suscriptor...</description>
+		<image>
+			<url>http://localhost/oms/web/images/oms.png</url> 
+			<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link> 
+		</image>
+		<item>
+			<title><![CDATA[The Goldrush]]></title>
+			<link>http://localhost/oms/web/uploads/03 The Goldrush.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/03 The Goldrush.mp3" type="audio/mpeg" />
+			<description><![CDATA[Duracion: 02:29:00]]></description>
+			<pubDate>2010-12-18 02:01:01</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Boring 23]]></title>
+			<link>http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3" type="audio/mpeg" />
+			<description><![CDATA[Duracion: 01:41:00]]></description>
+			<pubDate>2010-12-18 02:10:03</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Pump It 4]]></title>
+			<link>http://localhost/oms/web/uploads/01-Pump%20It.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/01-Pump%20It.mp3" type="audio/mpeg" />
+			<description><![CDATA[Duracion: 03:33:00]]></description>
+			<pubDate>2010-12-31 03:02:00</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Boring 23]]></title>
+			<link>http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3" type="audio/mpeg" />
+			<description><![CDATA[Duracion: 01:41:00]]></description>
+			<pubDate>2010-12-18 02:04:02</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Pump It 4]]></title>
+			<link>http://localhost/oms/web/uploads/01-Pump%20It.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/01-Pump%20It.mp3" type="audio/mpeg" />
+			<description><![CDATA[Duracion: 03:33:00]]></description>
+			<pubDate>2010-12-03 01:01:01</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Pump It 4]]></title>
+			<link>http://localhost/oms/web/uploads/01-Pump%20It.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/01-Pump%20It.mp3" type="audio/mpeg" />
+			<description><![CDATA[Duracion: 03:33:00]]></description>
+			<pubDate>2010-12-23 01:01:01</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[The Goldrush]]></title>
+			<link>http://localhost/oms/web/uploads/03 The Goldrush.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/03 The Goldrush.mp3" type="audio/mpeg" />
+			<description><![CDATA[Duracion: 02:29:00]]></description>
+			<pubDate>2010-12-29 06:04:04</pubDate>
+		</item>
+	</channel>
+</rss>
