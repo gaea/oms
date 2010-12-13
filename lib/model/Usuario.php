@@ -74,4 +74,18 @@ class Usuario extends BaseUsuario {
 		return $total;
 	}
 	
+	public function getFacturaCuniaMes(){
+		$ventas_cunia = VentaCuniaComercialPeer::doSelectMesActualUsuario(  $this->getCodigo() );
+		
+		$total = 0;
+		
+		foreach ($ventas_cunia As $venta_cunia)
+		{
+			$cunia = $ventas_cunia->getCuniaComercialRelatedByCuniaComercial();
+			$total += $cunia->getPrecio();
+		}
+		
+		return $total;
+	}
+	
 } // Usuario

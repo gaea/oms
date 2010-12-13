@@ -20,14 +20,14 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	
 	public static function doCountClientes()
 	{
-		$criterio = new criterio();
+		$criterio = new Criteria();
 		$criterio->add(self::PERFIL, self::getCodigoPerfilCliente());
 		
 		return self::doCount($criterio);
 	}
 	
 	public static function getCodigoPerfilCliente(){
-		$c = new criterio();
+		$c = new Criteria();
 		$c->add(PerfilPeer::NOMBRE, 'empresa');
 		$perfil = PerfilPeer::doSelectOne($c);
 		
@@ -36,14 +36,14 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	
 	public static function doCountAdministradores()
 	{
-		$criterio = new criterio();
+		$criterio = new Criteria();
 		$criterio->add(self::PERFIL, self::getCodigoPerfilAdmin());
 		
 		return self::doCount($criterio);
 	}
 	
 	public static function getCodigoPerfilAdmin(){
-		$c = new criterio();
+		$c = new Criteria();
 		$c->add(PerfilPeer::NOMBRE, 'admin');
 		$perfil = PerfilPeer::doSelectOne($c);
 		
@@ -51,7 +51,7 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	}
 	
 	public static function doSelectOneCliente($login){
-		$critero = new criterio();
+		$criterio = new Criteria();
 		$criterio->add(self::USUARIO, $login);
 		$usuario = self::doSelectOne($criterio);
 		
@@ -62,7 +62,7 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	}
 	
 	public static function doSelectClientes(){
-		$criterio = new criterio();
+		$criterio = new Criteria();
 		$criterio->add(self::PERFIL, self::getCodigoPerfilCliente());
 		
 		$usuarios = self::doSelect($criterio);
@@ -71,7 +71,7 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	}
 	
 	public static function doSelectOneAdministrador($login){
-		$critero = new criterio();
+		$critero = new Criteria();
 		$criterio->add(self::USUARIO, $login);
 		$usuario = self::doSelectOne($criterio);
 		
@@ -82,7 +82,7 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	}
 	
 	public static function doSelectAdministradores(){
-		$criterio = new criterio();
+		$criterio = new Criteria();
 		$criterio->add(self::PERFIL, self::getCodigoPerfilAdmin());
 		
 		$usuarios = self::doSelect($criterio);
