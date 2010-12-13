@@ -1,0 +1,54 @@
+Dec 12 15:58:10 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/login/" (/).
+Dec 12 15:58:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 12 15:58:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 12 15:58:10 symfony [info] {sfWebDebugLogger} Configuration 194.31 ms (5)
+Dec 12 15:58:10 symfony [info] {sfWebDebugLogger} Factories 118.26 ms (1)
+Dec 12 15:58:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 12 15:58:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 12 15:58:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 12 15:58:14 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 12 15:58:14 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/login/templates/indexSuccess.php"
+Dec 12 15:58:14 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 12 15:58:14 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 12 15:58:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 12 15:58:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 12 15:58:14 symfony [info] {sfWebDebugLogger} Configuration 48.98 ms (10)
+Dec 12 15:58:14 symfony [info] {sfWebDebugLogger} Factories 75.40 ms (1)
+Dec 12 15:58:14 symfony [info] {sfWebDebugLogger} Action "login/index" 0.14 ms (1)
+Dec 12 15:58:14 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 46.32 ms (1)
+Dec 12 15:58:14 symfony [info] {sfWebResponse} Send content (29996 o)
+Dec 12 15:59:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/login/autenticar with parameters array (  'module' => 'login',  'action' => 'login',  'autenticar' => true,)
+Dec 12 15:59:09 symfony [info] {sfFrontWebController} Action "login/login" does not exist
+Dec 12 15:59:09 symfony [err] {sfError404Exception} Action "login/login" does not exist.
+Dec 12 15:59:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 12 15:59:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 12 15:59:09 symfony [info] {sfWebDebugLogger} Configuration 0.95 ms (5)
+Dec 12 15:59:09 symfony [info] {sfWebDebugLogger} Factories 34.59 ms (1)
+Dec 12 15:59:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/login/autenticar with parameters array (  'module' => 'login',  'action' => 'login',  'autenticar' => true,)
+Dec 12 15:59:17 symfony [info] {sfFrontWebController} Action "login/login" does not exist
+Dec 12 15:59:17 symfony [err] {sfError404Exception} Action "login/login" does not exist.
+Dec 12 15:59:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 12 15:59:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 12 15:59:18 symfony [info] {sfWebDebugLogger} Configuration 0.97 ms (5)
+Dec 12 15:59:18 symfony [info] {sfWebDebugLogger} Factories 75.89 ms (1)
+Dec 12 16:01:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 12 16:01:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 12 16:01:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 12 16:01:13 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 12 16:01:13 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 12 16:01:13 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 12 16:01:13 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 12 16:01:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 12 16:01:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 12 16:01:13 symfony [info] {sfWebDebugLogger} Configuration 31.26 ms (10)
+Dec 12 16:01:13 symfony [info] {sfWebDebugLogger} Factories 50.13 ms (1)
+Dec 12 16:01:13 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.14 ms (1)
+Dec 12 16:01:13 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 23.34 ms (1)
+Dec 12 16:01:13 symfony [info] {sfWebResponse} Send content (30255 o)
+Dec 12 16:01:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'gestionar_cancion',  'listarCancion' => true,)
+Dec 12 16:01:15 symfony [info] {sfFrontWebController} Action "gestionar_cancion/gestionar_cancion" does not exist
+Dec 12 16:01:15 symfony [err] {sfError404Exception} Action "gestionar_cancion/gestionar_cancion" does not exist.
+Dec 12 16:01:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 12 16:01:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 12 16:01:15 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (5)
+Dec 12 16:01:15 symfony [info] {sfWebDebugLogger} Factories 70.47 ms (1)
