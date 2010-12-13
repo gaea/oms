@@ -217,15 +217,15 @@
 	});
 	programacion_cancion_datastore.load();
 
-	function cunia_ponericono(val,x,store){
+	function fun_programacion_cancion_ponericono(val,x,store){
 		//return '<img src="'+url_web+'images/iconos/play.png">';
-		return '<button type="button" name="button_descargar_cunia" onClick="fun_cunia_descargar()"> <img src="'+url_web+'images/Next16.png"> </button>'
+		return '<button type="button" name="button_descargar_programacion_cancion" onClick="fun_programacion_cancion_descargar()"> <img src="'+url_web+'images/Next16.png"> </button>'
 	}
  	
-	var cunia_colmodel = new Ext.grid.ColumnModel({
+	var programacion_cancion_colmodel = new Ext.grid.ColumnModel({
 		defaults:{sortable: true, locked: false, resizable: true},
 		columns:[
-			{ id: 'imagen', header: "Play", width: 50, dataIndex: 'imagen', renderer: cunia_ponericono},
+			{ id: 'imagen', header: "Play", width: 50, dataIndex: 'imagen', renderer: fun_programacion_cancion_ponericono},
 			{ id: 'programacion_cancion_nombre_col_id',  header: "Nombre",  dataIndex: 'programacion_cancion_nombre'},
 			{ header: "Duraci&oacute;n", width: 80,  dataIndex: 'programacion_cancion_duracion'},
 			{ header: "Fecha", width: 80, dataIndex: 'programacion_cancion_fecha'},
@@ -233,26 +233,26 @@
 		]
 	});
 	
-	//var codigo_cunia_actualizar = '';
+	var programar_cancion_codigo_cancion = '';
 	
-	var cunia_gridpanel = new Ext.grid.GridPanel({
-		id: 'cunia_gridpanel',
+	var programacion_cancion_gridpanel = new Ext.grid.GridPanel({
+		id: 'programacion_cancion_gridpanel',
 		title:'Programaci&oacute;n',
 		columnWidth: '.5',
 		stripeRows:true,
 		style: {"margin-left": "10px"},
 		frame: true,
 		ds: programacion_cancion_datastore,
-		cm: cunia_colmodel,
+		cm: programacion_cancion_colmodel,
 		sm: new Ext.grid.RowSelectionModel({
 			singleSelect: true,
 			listeners: {
 				rowselect: function(sm, row, rec) {
+					programar_cancion_codigo_cancion = rec.get('programacion_cancion_url');
 					/*Ext.getCmp('programacion_cancion_formpanel').getForm().loadRecord(rec);
 					Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
 					Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(false);
 					Ext.getCmp('programar_cancion_cancelar_boton').setDisabled(false);*/
-					//codigo_cunia_actualizar = rec.get('cunia_codigo');
 				}
 			}
 		}),
@@ -274,20 +274,20 @@
 		view: new Ext.grid.GroupingView()
     });
 	
-	var cunia_contenedor_panel = new Ext.Panel({
+	var programacion_cancion_contenedor_panel = new Ext.Panel({
 		frame: true,
-		id: 'cunia_contenedor_panel',
+		id: 'programacion_cancion_contenedor_panel',
 		//	height: largo_panel,
 		padding: '5px',
 		autoWidth: true,
 		border: true,
-		tabTip :'Aqui puedes ver, agregar , cancelar y descargar cunas comerciales',
+		tabTip :'Aqui puedes programar las canciones que hayas comprado',
 		monitorResize:true,
 		layout:'column',
 		items: 
 		[
 			programacion_cancion_formpanel,
-			cunia_gridpanel
+			programacion_cancion_gridpanel
 		],
 		renderTo:'div_form_programar_cancion'
 	});
@@ -295,31 +295,22 @@
 /***********************************FUNCIONES*****************************/
 
 	function fun_programar_cancion_programar(){
-		/*if(Ext.getCmp('programar_cancion_programar_boton').getText()=='Nuevo'){
-			programacion_cancion_formpanel.getForm().reset();
-			Ext.getCmp('programar_cancion_programar_boton').setText('Programar');
-			Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(true);
-			Ext.getCmp('programar_cancion_cancelar_boton').setText('Cancelar');
-			Ext.getCmp('programar_cancion_cancelar_boton').setDisabled(false);
-		}*/
-
-		if(Ext.getCmp('programar_cancion_programar_boton').getText()=='Programar'){ 
-			var verificacion =fun_can_verificarCamposDocumento();
-	  
-	 		if(verificacion){
-				subirDatos(
-					programacion_cancion_formpanel,
-					'programar_cancion/programarCancion',//getAbsoluteUrl('programar_cancion','programarCancion'),
-					{codigo_cancion_adquirida : codigo_cancion_adquirida},
-					function(){
-						//Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
-						//Ext.getCmp('programar_cancion_cancelar_boton').setText('Eliminar');
-						//Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(false);
-						programacion_cancion_datastore.reload(); 
-					},
-					function(){}
-				);
-			}
+		if(codigo_cancion_adquirida != ''){
+			subirDatos(
+				programacion_cancion_formpanel,
+				'programar_cancion/programarCancion',//getAbsoluteUrl('programar_cancion','programarCancion'),
+				{
+					codigo_cancion_adquirida : codigo_cancion_adquirida
+				},
+				function(){
+					programacion_cancion_datastore.reload(); 
+				},
+				function(){}
+			);
+		}
+		else
+		{
+			mostrarMensajeRapido('Alerta!', 'Seleccione una canci&oacute;n, una fecha y una hora de inicio');
 		}
 	}
 	
@@ -338,48 +329,13 @@
 		}
 	}
 	
-	function fun_programar_cancion_actualizar(){
-		if(codigo_cunia_actualizar != ''){ 
-			var verificacion = fun_can_verificarCamposDocumento();
-	 		if(verificacion){
-				subirDatos(
-					programacion_cancion_formpanel,
-					getAbsoluteUrl('subir_cunia','actualizarCunia'),
-					{codigo_cunia: codigo_cunia_actualizar},
-					function(){
-						Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
-						//Ext.getCmp('programar_cancion_cancelar_boton').setText('Eliminar');
-						Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(false);
-						programacion_cancion_datastore.reload(); 
-					},
-					function(){}
-				);
-			}
-		}
-		else{
-			mostrarMensajeRapido('Alerta!', 'Seleccione una canci&oacute;n');
-		}
-	}
-
-	function fun_cunia_descargar(){
-		if(Ext.getCmp('cunia_url').getValue()!=''){
-			//alert(Ext.getCmp('cunia_url').getValue());
-			var url = url_web+Ext.getCmp('cunia_url').getValue(); 
+	function fun_programacion_cancion_descargar(){
+		if(programar_cancion_codigo_cancion != ''){
+			var url = url_web+programar_cancion_codigo_cancion; 
 			win = window.open(url,'Documento','height=400,width=400,resizable=1,scrollbars=1, menubar=1');
 		}
 		else{
 			mostrarMensajeConfirmacion('Error',"Selecione una canci&oacute;n a descargar");
 		}
 	}
-    
-	function fun_programar_cancion_cancelar(){
-		if(Ext.getCmp('programar_cancion_cancelar_boton').getText()=='Cancelar'){
-		    Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
-		    Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(false);
-		}
-	}
 
-	function fun_can_verificarCamposDocumento(){
-		var valido=true;
-		return valido;
-	}
