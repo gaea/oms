@@ -23,6 +23,7 @@ propel:
     habilitada: { phpName: Habilitada, type: BOOLEAN, required: false }
     fecha_creacion: { phpName: FechaCreacion, type: DATE, required: false }
     usuario: { phpName: Usuario, type: INTEGER, required: false, foreignTable: usuario, foreignReference: codigo, onDelete: RESTRICT, onUpdate: RESTRICT }
+    precio: { phpName: Precio, type: INTEGER, required: false }
   mensaje:
     _attributes: { phpName: Mensaje }
     codigo: { phpName: Codigo, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
@@ -47,11 +48,11 @@ propel:
     habilitado: { phpName: Habilitado, type: BOOLEAN, required: true }
   programacion_cancion:
     _attributes: { phpName: ProgramacionCancion }
-    cancion: { phpName: Cancion, type: INTEGER, primaryKey: true, required: true }
-    venta: { phpName: Venta, type: INTEGER, primaryKey: true, required: true }
+    cancion: { phpName: Cancion, type: INTEGER, primaryKey: true, required: true, foreignTable: cancion, foreignReference: codigo }
+    venta: { phpName: Venta, type: INTEGER, primaryKey: true, required: true, foreignTable: venta, foreignReference: codigo }
     fecha: { phpName: Fecha, type: DATE, primaryKey: true, required: true }
     inicio: { phpName: Inicio, type: TIME, primaryKey: true, required: true }
-    fin: { phpName: Fin, type: TIME, primaryKey: true, required: true }
+    fin: { phpName: Fin, type: TIME, required: false }
   programacion_cuna:
     _attributes: { phpName: ProgramacionCuna }
     venta: { phpName: Venta, type: INTEGER, primaryKey: true, required: true }

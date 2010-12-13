@@ -128,6 +128,7 @@
 						name: 'programacion_cancion_hora',
 						minValue: 0,
 						maxValue: 23,
+						//value: 0,
 						incrementValue: 1,
 						alternateIncrementValue: 2,
 						accelerate: true,
@@ -140,6 +141,7 @@
 						name: 'programacion_cancion_minuto',
 						minValue: 0,
 						maxValue: 59,
+						//value: 0,
 						incrementValue: 1,
 						alternateIncrementValue: 2,
 						accelerate: true,
@@ -152,6 +154,7 @@
 						name: 'programacion_cancion_segundo',
 						minValue: 0,
 						maxValue: 59,
+						//value: 0,
 						incrementValue: 1,
 						alternateIncrementValue: 2,
 						accelerate: true,
@@ -170,7 +173,7 @@
 				id: 'programar_cancion_programar_boton',
 				iconCls: 'crear16',
 				tooltip: 'Pulse aqui para programar nuevas canciones'
-			},
+			}/*,
 			{	
 				text: 'Actualizar',
 				handler: fun_programar_cancion_actualizar,
@@ -184,7 +187,7 @@
 				handler: fun_programar_cancion_cancelar,
 				iconCls: 'eliminar16',
 				tooltip: 'Pulse aqu&iacute; para cancelar'
-			}
+			}*/
 		]	
 	});
 
@@ -202,15 +205,15 @@
 			totalProperty: 'total',
 			id: 'id'
 			},[ 
-			{name: 'cunia_codigo'},
-			{name: 'cunia_nombre'},
-			{name: 'cunia_fecha_creacion'},
-			{name: 'cunia_duracion'},
-			{name: 'cunia_url'},
-			{name: 'cunia_habilitada'}
+			{name: 'programacion_cancion_codigo'},
+			{name: 'programacion_cancion_nombre'},
+			{name: 'programacion_cancion_fecha'},
+			{name: 'programacion_cancion_duracion'},
+			{name: 'programacion_cancion_url'},
+			{name: 'programacion_cancion_inicio'}
 		]),
-		sortInfo:{field: 'cunia_nombre', direction: "ASC"}//,
-		//groupField: 'cunia_fecha_creacion'
+		sortInfo: {field: 'programacion_cancion_inicio', direction: "DES"},
+		groupField: 'programacion_cancion_fecha'
 	});
 	programacion_cancion_datastore.load();
 
@@ -223,14 +226,14 @@
 		defaults:{sortable: true, locked: false, resizable: true},
 		columns:[
 			{ id: 'imagen', header: "Play", width: 50, dataIndex: 'imagen', renderer: cunia_ponericono},
-			{ id: 'cunia_nombre_col_id',  header: "Nombre",  dataIndex: 'cunia_nombre'},
-			{ header: "Duraci&oacute;n", width: 80,  dataIndex: 'cunia_duracion'},
-			{ header: "Fecha", width: 80},
-			{ header: "Inicio", width: 80},
+			{ id: 'programacion_cancion_nombre_col_id',  header: "Nombre",  dataIndex: 'programacion_cancion_nombre'},
+			{ header: "Duraci&oacute;n", width: 80,  dataIndex: 'programacion_cancion_duracion'},
+			{ header: "Fecha", width: 80, dataIndex: 'programacion_cancion_fecha'},
+			{ header: "Inicio", width: 80, dataIndex: 'programacion_cancion_inicio'},
 		]
 	});
 	
-	var codigo_cunia_actualizar = '';
+	//var codigo_cunia_actualizar = '';
 	
 	var cunia_gridpanel = new Ext.grid.GridPanel({
 		id: 'cunia_gridpanel',
@@ -245,15 +248,15 @@
 			singleSelect: true,
 			listeners: {
 				rowselect: function(sm, row, rec) {
-					Ext.getCmp('programacion_cancion_formpanel').getForm().loadRecord(rec);
+					/*Ext.getCmp('programacion_cancion_formpanel').getForm().loadRecord(rec);
 					Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
-					Ext.getCmp('cunia_descargar_boton').setDisabled(false);
-					Ext.getCmp('programar_cancion_cancelar_boton').setDisabled(false);
-					codigo_cunia_actualizar = rec.get('cunia_codigo');
+					Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(false);
+					Ext.getCmp('programar_cancion_cancelar_boton').setDisabled(false);*/
+					//codigo_cunia_actualizar = rec.get('cunia_codigo');
 				}
 			}
 		}),
-		autoExpandColumn: 'cunia_nombre_col_id',
+		autoExpandColumn: 'programacion_cancion_nombre_col_id',
 		autoExpandMin: 200,
 		height: 513,
 		listeners: {
@@ -266,7 +269,7 @@
 			store: programacion_cancion_datastore,
 			displayInfo: true,
 			displayMsg: 'Cunas {0} - {1} de {2}',
-			emptyMsg: "No hay cunas"
+			emptyMsg: "No hay canciones programadas"
 		}),
 		view: new Ext.grid.GroupingView()
     });
@@ -292,13 +295,13 @@
 /***********************************FUNCIONES*****************************/
 
 	function fun_programar_cancion_programar(){
-		if(Ext.getCmp('programar_cancion_programar_boton').getText()=='Nuevo'){
+		/*if(Ext.getCmp('programar_cancion_programar_boton').getText()=='Nuevo'){
 			programacion_cancion_formpanel.getForm().reset();
 			Ext.getCmp('programar_cancion_programar_boton').setText('Programar');
-			Ext.getCmp('cunia_descargar_boton').setDisabled(true);
+			Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(true);
 			Ext.getCmp('programar_cancion_cancelar_boton').setText('Cancelar');
 			Ext.getCmp('programar_cancion_cancelar_boton').setDisabled(false);
-		}
+		}*/
 
 		if(Ext.getCmp('programar_cancion_programar_boton').getText()=='Programar'){ 
 			var verificacion =fun_can_verificarCamposDocumento();
@@ -306,12 +309,12 @@
 	 		if(verificacion){
 				subirDatos(
 					programacion_cancion_formpanel,
-					getAbsoluteUrl('subir_cunia','crearCunia'),
+					'programar_cancion/programarCancion',//getAbsoluteUrl('programar_cancion','programarCancion'),
 					{codigo_cancion_adquirida : codigo_cancion_adquirida},
 					function(){
-						Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
+						//Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
 						//Ext.getCmp('programar_cancion_cancelar_boton').setText('Eliminar');
-						Ext.getCmp('cunia_descargar_boton').setDisabled(false);
+						//Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(false);
 						programacion_cancion_datastore.reload(); 
 					},
 					function(){}
@@ -346,7 +349,7 @@
 					function(){
 						Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
 						//Ext.getCmp('programar_cancion_cancelar_boton').setText('Eliminar');
-						Ext.getCmp('cunia_descargar_boton').setDisabled(false);
+						Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(false);
 						programacion_cancion_datastore.reload(); 
 					},
 					function(){}
@@ -372,7 +375,7 @@
 	function fun_programar_cancion_cancelar(){
 		if(Ext.getCmp('programar_cancion_cancelar_boton').getText()=='Cancelar'){
 		    Ext.getCmp('programar_cancion_programar_boton').setText('Nuevo');
-		    Ext.getCmp('cunia_descargar_boton').setDisabled(false);
+		    Ext.getCmp('programacion_cancion_descargar_boton').setDisabled(false);
 		}
 	}
 
