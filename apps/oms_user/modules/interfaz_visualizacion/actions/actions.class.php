@@ -60,7 +60,12 @@ class interfaz_visualizacionActions extends sfActions
 					fwrite($file, "\t\t\t<title><![CDATA[".$cancion->getNombre()."]]></title>\n");
 					fwrite($file, "\t\t\t<link>http://localhost/oms/web/".$cancion->getUrl()."</link>\n");
 					fwrite($file, "\t\t\t<enclosure url=\"http://localhost/oms/web/".$cancion->getUrl()."\" type=\"audio/mpeg\" />\n");
-					fwrite($file, "\t\t\t<description><![CDATA[Duracion: ".$cancion->getDuracion()."]]></description>\n");
+					fwrite($file, "\t\t\t<description>\n");
+					//fwrite($file, "\t\t\t\t<![CDATA[\n");
+					fwrite($file, "\t\t\t\t\tAlbum: ".$cancion->getAlbum()."\n");
+					fwrite($file, "Duracion: ".$cancion->getDuracion()."\n");
+					//fwrite($file, "\t\t\t\t]]>\n");
+					fwrite($file, "\t\t\t</description>\n");
 					fwrite($file, "\t\t\t<pubDate>".$temporal->getFecha()." ".$temporal->getInicio()."</pubDate>\n");
 					fwrite($file, "\t\t</item>\n");
 				}
