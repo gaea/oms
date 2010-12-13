@@ -32,7 +32,8 @@
 
 	function can_ponericono(val,x,store){
 		//return '<img src="'+url_web+'images/iconos/play.png">';
-		return '<button type="button" name="button_descargar_cancion" onClick="fun_can_descargar()"> <img src="'+url_web+'images/Next16.png"> </button>'
+		//return '<link rel="alternate" type="application/rss+xml"  href="http://localhost/oms/web/prueba_podcasting2.xml" title="OMS PodCasting">';
+		return '<button type="button" name="button_descargar_cancion" onClick="fun_cancion_adquirida_descargar()"> <img src="'+url_web+'images/Next16.png"> </button>'
 	}
  	
 	var cancion_adquirida_colmodel = new Ext.grid.ColumnModel({
@@ -47,7 +48,7 @@
 		]
 	});
 	
-	var url_cancion = '';
+	var url_cancion_adquirida = '';
 	var codigo_cancion_adquirida = '';
 	
 	var programacion_cancion_canciones_grid = new Ext.grid.GridPanel({
@@ -62,7 +63,7 @@
 			singleSelect: true,
 			listeners: {
 				rowselect: function(sm, row, rec) {
-					url_cancion = rec.get('cancion_adquirida_url');
+					url_cancion_adquirida = rec.get('cancion_adquirida_url');
 					codigo_cancion_adquirida = rec.get('cancion_adquirida_codigo');
 				}
 			}
@@ -332,6 +333,16 @@
 	function fun_programacion_cancion_descargar(){
 		if(programar_cancion_codigo_cancion != ''){
 			var url = url_web+programar_cancion_codigo_cancion; 
+			win = window.open(url,'Documento','height=400,width=400,resizable=1,scrollbars=1, menubar=1');
+		}
+		else{
+			mostrarMensajeConfirmacion('Error',"Selecione una canci&oacute;n a descargar");
+		}
+	}
+	
+	function fun_cancion_adquirida_descargar(){
+		if(url_cancion_adquirida != ''){
+			var url = url_web+url_cancion_adquirida; 
 			win = window.open(url,'Documento','height=400,width=400,resizable=1,scrollbars=1, menubar=1');
 		}
 		else{
