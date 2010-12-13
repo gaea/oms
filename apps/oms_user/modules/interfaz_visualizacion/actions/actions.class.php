@@ -25,7 +25,7 @@ class interfaz_visualizacionActions extends sfActions
 		try
 		{
 			$codigo_usuario = 2;
-			
+			//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
 			$conexion = new Criteria();
 			
 			$conexion->addJoin(ProgramacionCancionPeer::CANCION, CancionPeer::CODIGO);

@@ -27,6 +27,7 @@ class subir_cuniaActions extends sfActions
   {
 	$salida	='';
 	$codigo_usuario = 2;
+	//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
 	
 	try
 	{  
@@ -140,6 +141,7 @@ class subir_cuniaActions extends sfActions
 		$datos;
 		$buscar = $this->getRequestParameter('buscar');
 		$codigo_usuario = 2;
+		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
 		
 		try
 		{

@@ -99,6 +99,7 @@ class comprar_cancionActions extends sfActions
 		$datos;
 		$buscar = $this->getRequestParameter('buscar');
 		$codigo_usuario = 2;
+		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
 
 		try
 		{
@@ -146,6 +147,7 @@ class comprar_cancionActions extends sfActions
 	public function executeComprarCancion(sfWebRequest $request)
 	{
 		$codigo_usuario = 2;
+		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
 		$comprar_canciones = json_decode($this->getRequestParameter('canciones'));
 		$precio = 0;
 		$format = '%Y-%m-%d %H:%M:%S';
