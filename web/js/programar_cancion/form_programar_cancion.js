@@ -32,7 +32,6 @@
 
 	function can_ponericono(val,x,store){
 		//return '<img src="'+url_web+'images/iconos/play.png">';
-		//return '<link rel="alternate" type="application/rss+xml"  href="http://localhost/oms/web/prueba_podcasting2.xml" title="OMS PodCasting">';
 		return '<button type="button" name="button_descargar_cancion" onClick="fun_cancion_adquirida_descargar()"> <img src="'+url_web+'images/Next16.png"> </button>'
 	}
  	

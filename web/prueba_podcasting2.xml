@@ -7,17 +7,7 @@
     <image>
         <url>http://localhost/oms/web/images/oms.png</url> 
         <link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link> 
-    </image> 
-    <item> 
-       <title>News of today</title>
-       <link>http://www.xul.fr/en-xml-rss.html</link>  
-       <description>All you need to know about RSS</description>
-    </item> 
-    <item>
-       <title>News of tomorrows</title>
-       <link>http://www.xul.fr/en-xml-rdf.html</link>  
-       <description>And now, all about RDF</description>
-    </item>
+    </image>
 	<item>
 		<title><![CDATA[Podcast OMS]]></title>
 		<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link>
