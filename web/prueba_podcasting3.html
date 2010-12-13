@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>OMS</title>
+
+	<script type="text/javascript" src="mediaplayer/swfobject.js"></script>
+	
+	<style type="text/css">
+            #wrapper { position:absolute; left:64px; top:128px; width:320px; height:196px; background-color:#CCCC00; }
+    </style>
+
+</head>
+<body>
+	
+    <h1>Custom Podcast Example</h1>
+	
+	<div id="wrapper">  
+		<div id='mediaspace'>
+	</div>
+	
+	<script type='text/javascript'>
+	  var so = new SWFObject('mediaplayer/player.swf','mpl','470','300','9');
+	  so.addParam('allowfullscreen','false');
+	  so.addParam('allowscriptaccess','always');
+	  so.addParam('wmode','opaque');
+	  //so.addVariable('playlistfile','http://localhost/oms/web/prueba_podcasting3.xml');
+	  //so.addVariable('file','http://localhost/oms/web/images/oms_orig.jpg');
+	  //so.addVariable('image','http://localhost/oms/web/images/oms_orig.png');
+	  //so.addVariable('playlistsize', '300');
+	  so.addVariable('skin','mediaplayer/skins/Snel.swf');
+	  so.addVariable('playlist','top');
+	  so.write('mediaspace');
+	</script>
+
+</body>
+
+</html>
