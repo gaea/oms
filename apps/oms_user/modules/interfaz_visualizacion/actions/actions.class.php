@@ -19,6 +19,37 @@ class interfaz_visualizacionActions extends sfActions
 	{
 	//$this->forward('default', 'module');
 	}
+	
+	public function executePublicarMensaje(sfWebRequest $request)
+	{
+		
+		$filename  = '../mensajes/2.txt';
+		
+		// store new message in the file
+		$msg = isset($_GET['msg']) ? $_GET['msg'] : '';
+		if ($msg != '')
+		{
+		  file_put_contents($filename,$msg);
+		  die();
+		}
+
+		// infinite loop until the data file is not modified
+		$lastmodif    = isset($_GET['timestamp']) ? $_GET['timestamp'] : 0;
+		$currentmodif = filemtime($filename);
+		while ($currentmodif <= $lastmodif) // check if the data file has been modified
+		{
+		  usleep(10000); // sleep 10ms to unload the CPU
+		  clearstatcache();
+		  $currentmodif = filemtime($filename);
+		}
+
+		// return a json array
+		$response = array();
+		$response['msg']       = file_get_contents($filename);
+		$response['timestamp'] = $currentmodif;
+
+		return $this->renderText(json_encode($response));
+	}
   
 	public function executeCrearCanalRSS(sfWebRequest $request)
 	{
@@ -59,7 +90,7 @@ class interfaz_visualizacionActions extends sfActions
 					//fwrite($file, "\t\t\t".$temporal->getCancion()."\n");
 					fwrite($file, "\t\t\t<title><![CDATA[".$cancion->getNombre()."]]></title>\n");
 					fwrite($file, "\t\t\t<link>http://localhost/oms/web/".$cancion->getUrl()."</link>\n");
-					fwrite($file, "\t\t\t<enclosure url=\"http://localhost/oms/web/".$cancion->getUrl()."\" type=\"audio/mpeg\" />\n");
+					fwrite($file, "\t\t\t<enclosure url=\"http://localhost/oms/web/".$cancion->getUrl()."\" length=\"".filesize("/var/www/oms/web/".$cancion->getUrl())."\" type=\"audio/mpeg\" />\n");
 					fwrite($file, "\t\t\t<description>\n");
 					//fwrite($file, "\t\t\t\t<![CDATA[\n");
 					fwrite($file, "\t\t\t\t\tAlbum: ".$cancion->getAlbum()."\n");
