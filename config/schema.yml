@@ -72,6 +72,7 @@ propel:
     contrasena: { phpName: Contrasena, type: VARCHAR, size: '200', required: true }
     perfil: { phpName: Perfil, type: INTEGER, required: false, foreignTable: perfil, foreignReference: codigo, onDelete: RESTRICT, onUpdate: RESTRICT }
     persona: { phpName: Persona, type: INTEGER, required: false, foreignTable: persona, foreignReference: codigo, onDelete: RESTRICT, onUpdate: RESTRICT }
+    habilitado: { phpName: Habilitado, type: BOOLEAN, required: false }
   venta:
     _attributes: { phpName: Venta }
     codigo: { phpName: Codigo, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }

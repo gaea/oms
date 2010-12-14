@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Base static class for performing query and update operations on the 'cancion' table.
+ * Base static class for performing query and update operations on the 'cunia_comercial' table.
  *
  * 
  *
@@ -11,64 +11,58 @@
  *
  * @package    lib.model.om
  */
-abstract class BaseCancionPeer {
+abstract class BaseCuniaComercialPeer {
 
 	/** the default database name for this class */
 	const DATABASE_NAME = 'propel';
 
 	/** the table name for this class */
-	const TABLE_NAME = 'cancion';
+	const TABLE_NAME = 'cunia_comercial';
 
 	/** the related Propel class for this table */
-	const OM_CLASS = 'Cancion';
+	const OM_CLASS = 'CuniaComercial';
 
 	/** A class that can be returned by this peer. */
-	const CLASS_DEFAULT = 'lib.model.Cancion';
+	const CLASS_DEFAULT = 'lib.model.CuniaComercial';
 
 	/** the related TableMap class for this table */
-	const TM_CLASS = 'CancionTableMap';
+	const TM_CLASS = 'CuniaComercialTableMap';
 	
 	/** The total number of columns. */
-	const NUM_COLUMNS = 10;
+	const NUM_COLUMNS = 8;
 
 	/** The number of lazy-loaded columns. */
 	const NUM_LAZY_LOAD_COLUMNS = 0;
 
 	/** the column name for the CODIGO field */
-	const CODIGO = 'cancion.CODIGO';
+	const CODIGO = 'cunia_comercial.CODIGO';
 
 	/** the column name for the NOMBRE field */
-	const NOMBRE = 'cancion.NOMBRE';
-
-	/** the column name for the AUTOR field */
-	const AUTOR = 'cancion.AUTOR';
-
-	/** the column name for the ALBUM field */
-	const ALBUM = 'cancion.ALBUM';
-
-	/** the column name for the FECHA_DE_PUBLICACION field */
-	const FECHA_DE_PUBLICACION = 'cancion.FECHA_DE_PUBLICACION';
+	const NOMBRE = 'cunia_comercial.NOMBRE';
 
 	/** the column name for the DURACION field */
-	const DURACION = 'cancion.DURACION';
+	const DURACION = 'cunia_comercial.DURACION';
 
 	/** the column name for the URL field */
-	const URL = 'cancion.URL';
+	const URL = 'cunia_comercial.URL';
 
 	/** the column name for the HABILITADA field */
-	const HABILITADA = 'cancion.HABILITADA';
+	const HABILITADA = 'cunia_comercial.HABILITADA';
+
+	/** the column name for the FECHA_CREACION field */
+	const FECHA_CREACION = 'cunia_comercial.FECHA_CREACION';
+
+	/** the column name for the USUARIO field */
+	const USUARIO = 'cunia_comercial.USUARIO';
 
 	/** the column name for the PRECIO field */
-	const PRECIO = 'cancion.PRECIO';
-
-	/** the column name for the RANKING field */
-	const RANKING = 'cancion.RANKING';
+	const PRECIO = 'cunia_comercial.PRECIO';
 
 	/**
-	 * An identiy map to hold any loaded instances of Cancion objects.
+	 * An identiy map to hold any loaded instances of CuniaComercial objects.
 	 * This must be public so that other peer classes can access this when hydrating from JOIN
 	 * queries.
-	 * @var        array Cancion[]
+	 * @var        array CuniaComercial[]
 	 */
 	public static $instances = array();
 
@@ -87,11 +81,11 @@ abstract class BaseCancionPeer {
 	 * e.g. self::$fieldNames[self::TYPE_PHPNAME][0] = 'Id'
 	 */
 	private static $fieldNames = array (
-		BasePeer::TYPE_PHPNAME => array ('Codigo', 'Nombre', 'Autor', 'Album', 'FechaDePublicacion', 'Duracion', 'Url', 'Habilitada', 'Precio', 'Ranking', ),
-		BasePeer::TYPE_STUDLYPHPNAME => array ('codigo', 'nombre', 'autor', 'album', 'fechaDePublicacion', 'duracion', 'url', 'habilitada', 'precio', 'ranking', ),
-		BasePeer::TYPE_COLNAME => array (self::CODIGO, self::NOMBRE, self::AUTOR, self::ALBUM, self::FECHA_DE_PUBLICACION, self::DURACION, self::URL, self::HABILITADA, self::PRECIO, self::RANKING, ),
-		BasePeer::TYPE_FIELDNAME => array ('codigo', 'nombre', 'autor', 'album', 'fecha_de_publicacion', 'duracion', 'url', 'habilitada', 'precio', 'ranking', ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, )
+		BasePeer::TYPE_PHPNAME => array ('Codigo', 'Nombre', 'Duracion', 'Url', 'Habilitada', 'FechaCreacion', 'Usuario', 'Precio', ),
+		BasePeer::TYPE_STUDLYPHPNAME => array ('codigo', 'nombre', 'duracion', 'url', 'habilitada', 'fechaCreacion', 'usuario', 'precio', ),
+		BasePeer::TYPE_COLNAME => array (self::CODIGO, self::NOMBRE, self::DURACION, self::URL, self::HABILITADA, self::FECHA_CREACION, self::USUARIO, self::PRECIO, ),
+		BasePeer::TYPE_FIELDNAME => array ('codigo', 'nombre', 'duracion', 'url', 'habilitada', 'fecha_creacion', 'usuario', 'precio', ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, 7, )
 	);
 
 	/**
@@ -101,11 +95,11 @@ abstract class BaseCancionPeer {
 	 * e.g. self::$fieldNames[BasePeer::TYPE_PHPNAME]['Id'] = 0
 	 */
 	private static $fieldKeys = array (
-		BasePeer::TYPE_PHPNAME => array ('Codigo' => 0, 'Nombre' => 1, 'Autor' => 2, 'Album' => 3, 'FechaDePublicacion' => 4, 'Duracion' => 5, 'Url' => 6, 'Habilitada' => 7, 'Precio' => 8, 'Ranking' => 9, ),
-		BasePeer::TYPE_STUDLYPHPNAME => array ('codigo' => 0, 'nombre' => 1, 'autor' => 2, 'album' => 3, 'fechaDePublicacion' => 4, 'duracion' => 5, 'url' => 6, 'habilitada' => 7, 'precio' => 8, 'ranking' => 9, ),
-		BasePeer::TYPE_COLNAME => array (self::CODIGO => 0, self::NOMBRE => 1, self::AUTOR => 2, self::ALBUM => 3, self::FECHA_DE_PUBLICACION => 4, self::DURACION => 5, self::URL => 6, self::HABILITADA => 7, self::PRECIO => 8, self::RANKING => 9, ),
-		BasePeer::TYPE_FIELDNAME => array ('codigo' => 0, 'nombre' => 1, 'autor' => 2, 'album' => 3, 'fecha_de_publicacion' => 4, 'duracion' => 5, 'url' => 6, 'habilitada' => 7, 'precio' => 8, 'ranking' => 9, ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, )
+		BasePeer::TYPE_PHPNAME => array ('Codigo' => 0, 'Nombre' => 1, 'Duracion' => 2, 'Url' => 3, 'Habilitada' => 4, 'FechaCreacion' => 5, 'Usuario' => 6, 'Precio' => 7, ),
+		BasePeer::TYPE_STUDLYPHPNAME => array ('codigo' => 0, 'nombre' => 1, 'duracion' => 2, 'url' => 3, 'habilitada' => 4, 'fechaCreacion' => 5, 'usuario' => 6, 'precio' => 7, ),
+		BasePeer::TYPE_COLNAME => array (self::CODIGO => 0, self::NOMBRE => 1, self::DURACION => 2, self::URL => 3, self::HABILITADA => 4, self::FECHA_CREACION => 5, self::USUARIO => 6, self::PRECIO => 7, ),
+		BasePeer::TYPE_FIELDNAME => array ('codigo' => 0, 'nombre' => 1, 'duracion' => 2, 'url' => 3, 'habilitada' => 4, 'fecha_creacion' => 5, 'usuario' => 6, 'precio' => 7, ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, 7, )
 	);
 
 	/**
@@ -154,12 +148,12 @@ abstract class BaseCancionPeer {
 	 *		$c->addJoin(TablePeer::alias("alias1", TablePeer::PRIMARY_KEY_COLUMN), TablePeer::PRIMARY_KEY_COLUMN);
 	 * </code>
 	 * @param      string $alias The alias for the current table.
-	 * @param      string $column The column name for current table. (i.e. CancionPeer::COLUMN_NAME).
+	 * @param      string $column The column name for current table. (i.e. CuniaComercialPeer::COLUMN_NAME).
 	 * @return     string
 	 */
 	public static function alias($alias, $column)
 	{
-		return str_replace(CancionPeer::TABLE_NAME.'.', $alias.'.', $column);
+		return str_replace(CuniaComercialPeer::TABLE_NAME.'.', $alias.'.', $column);
 	}
 
 	/**
@@ -175,16 +169,14 @@ abstract class BaseCancionPeer {
 	 */
 	public static function addSelectColumns(Criteria $criteria)
 	{
-		$criteria->addSelectColumn(CancionPeer::CODIGO);
-		$criteria->addSelectColumn(CancionPeer::NOMBRE);
-		$criteria->addSelectColumn(CancionPeer::AUTOR);
-		$criteria->addSelectColumn(CancionPeer::ALBUM);
-		$criteria->addSelectColumn(CancionPeer::FECHA_DE_PUBLICACION);
-		$criteria->addSelectColumn(CancionPeer::DURACION);
-		$criteria->addSelectColumn(CancionPeer::URL);
-		$criteria->addSelectColumn(CancionPeer::HABILITADA);
-		$criteria->addSelectColumn(CancionPeer::PRECIO);
-		$criteria->addSelectColumn(CancionPeer::RANKING);
+		$criteria->addSelectColumn(CuniaComercialPeer::CODIGO);
+		$criteria->addSelectColumn(CuniaComercialPeer::NOMBRE);
+		$criteria->addSelectColumn(CuniaComercialPeer::DURACION);
+		$criteria->addSelectColumn(CuniaComercialPeer::URL);
+		$criteria->addSelectColumn(CuniaComercialPeer::HABILITADA);
+		$criteria->addSelectColumn(CuniaComercialPeer::FECHA_CREACION);
+		$criteria->addSelectColumn(CuniaComercialPeer::USUARIO);
+		$criteria->addSelectColumn(CuniaComercialPeer::PRECIO);
 	}
 
 	/**
@@ -203,26 +195,26 @@ abstract class BaseCancionPeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(CancionPeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(CuniaComercialPeer::TABLE_NAME);
 
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			CancionPeer::addSelectColumns($criteria);
+			CuniaComercialPeer::addSelectColumns($criteria);
 		}
 
 		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
 		$criteria->setDbName(self::DATABASE_NAME); // Set the correct dbName
 
 		if ($con === null) {
-			$con = Propel::getConnection(CancionPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCancionPeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseCuniaComercialPeer', $criteria, $con);
 		}
 
 		// BasePeer returns a PDOStatement
@@ -241,7 +233,7 @@ abstract class BaseCancionPeer {
 	 *
 	 * @param      Criteria $criteria object used to create the SELECT statement.
 	 * @param      PropelPDO $con
-	 * @return     Cancion
+	 * @return     CuniaComercial
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
@@ -249,7 +241,7 @@ abstract class BaseCancionPeer {
 	{
 		$critcopy = clone $criteria;
 		$critcopy->setLimit(1);
-		$objects = CancionPeer::doSelect($critcopy, $con);
+		$objects = CuniaComercialPeer::doSelect($critcopy, $con);
 		if ($objects) {
 			return $objects[0];
 		}
@@ -266,7 +258,7 @@ abstract class BaseCancionPeer {
 	 */
 	public static function doSelect(Criteria $criteria, PropelPDO $con = null)
 	{
-		return CancionPeer::populateObjects(CancionPeer::doSelectStmt($criteria, $con));
+		return CuniaComercialPeer::populateObjects(CuniaComercialPeer::doSelectStmt($criteria, $con));
 	}
 	/**
 	 * Prepares the Criteria object and uses the parent doSelect() method to execute a PDOStatement.
@@ -284,12 +276,12 @@ abstract class BaseCancionPeer {
 	public static function doSelectStmt(Criteria $criteria, PropelPDO $con = null)
 	{
 		if ($con === null) {
-			$con = Propel::getConnection(CancionPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
 		if (!$criteria->hasSelectClause()) {
 			$criteria = clone $criteria;
-			CancionPeer::addSelectColumns($criteria);
+			CuniaComercialPeer::addSelectColumns($criteria);
 		}
 
 		// Set the correct dbName
@@ -297,7 +289,7 @@ abstract class BaseCancionPeer {
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCancionPeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseCuniaComercialPeer', $criteria, $con);
 		}
 
 
@@ -313,10 +305,10 @@ abstract class BaseCancionPeer {
 	 * to the cache in order to ensure that the same objects are always returned by doSelect*()
 	 * and retrieveByPK*() calls.
 	 *
-	 * @param      Cancion $value A Cancion object.
+	 * @param      CuniaComercial $value A CuniaComercial object.
 	 * @param      string $key (optional) key to use for instance map (for performance boost if key was already calculated externally).
 	 */
-	public static function addInstanceToPool(Cancion $obj, $key = null)
+	public static function addInstanceToPool(CuniaComercial $obj, $key = null)
 	{
 		if (Propel::isInstancePoolingEnabled()) {
 			if ($key === null) {
@@ -334,18 +326,18 @@ abstract class BaseCancionPeer {
 	 * methods in your stub classes -- you may need to explicitly remove objects
 	 * from the cache in order to prevent returning objects that no longer exist.
 	 *
-	 * @param      mixed $value A Cancion object or a primary key value.
+	 * @param      mixed $value A CuniaComercial object or a primary key value.
 	 */
 	public static function removeInstanceFromPool($value)
 	{
 		if (Propel::isInstancePoolingEnabled() && $value !== null) {
-			if (is_object($value) && $value instanceof Cancion) {
+			if (is_object($value) && $value instanceof CuniaComercial) {
 				$key = (string) $value->getCodigo();
 			} elseif (is_scalar($value)) {
 				// assume we've been passed a primary key
 				$key = (string) $value;
 			} else {
-				$e = new PropelException("Invalid value passed to removeInstanceFromPool().  Expected primary key or Cancion object; got " . (is_object($value) ? get_class($value) . ' object.' : var_export($value,true)));
+				$e = new PropelException("Invalid value passed to removeInstanceFromPool().  Expected primary key or CuniaComercial object; got " . (is_object($value) ? get_class($value) . ' object.' : var_export($value,true)));
 				throw $e;
 			}
 
@@ -360,7 +352,7 @@ abstract class BaseCancionPeer {
 	 * a multi-column primary key, a serialize()d version of the primary key will be returned.
 	 *
 	 * @param      string $key The key (@see getPrimaryKeyHash()) for this instance.
-	 * @return     Cancion Found object or NULL if 1) no instance exists for specified key or 2) instance pooling has been disabled.
+	 * @return     CuniaComercial Found object or NULL if 1) no instance exists for specified key or 2) instance pooling has been disabled.
 	 * @see        getPrimaryKeyHash()
 	 */
 	public static function getInstanceFromPool($key)
@@ -384,7 +376,7 @@ abstract class BaseCancionPeer {
 	}
 	
 	/**
-	 * Method to invalidate the instance pool of all tables related to cancion
+	 * Method to invalidate the instance pool of all tables related to cunia_comercial
 	 * by a foreign key with ON DELETE CASCADE
 	 */
 	public static function clearRelatedInstancePool()
@@ -422,11 +414,11 @@ abstract class BaseCancionPeer {
 		$results = array();
 	
 		// set the class once to avoid overhead in the loop
-		$cls = CancionPeer::getOMClass(false);
+		$cls = CuniaComercialPeer::getOMClass(false);
 		// populate the object(s)
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key = CancionPeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj = CancionPeer::getInstanceFromPool($key))) {
+			$key = CuniaComercialPeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj = CuniaComercialPeer::getInstanceFromPool($key))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj->hydrate($row, 0, true); // rehydrate
@@ -435,12 +427,270 @@ abstract class BaseCancionPeer {
 				$obj = new $cls();
 				$obj->hydrate($row);
 				$results[] = $obj;
-				CancionPeer::addInstanceToPool($obj, $key);
+				CuniaComercialPeer::addInstanceToPool($obj, $key);
 			} // if key exists
 		}
 		$stmt->closeCursor();
 		return $results;
 	}
+
+	/**
+	 * Returns the number of rows matching criteria, joining the related UsuarioRelatedByUsuario table
+	 *
+	 * @param      Criteria $criteria
+	 * @param      boolean $distinct Whether to select only distinct columns; deprecated: use Criteria->setDistinct() instead.
+	 * @param      PropelPDO $con
+	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
+	 * @return     int Number of matching rows.
+	 */
+	public static function doCountJoinUsuarioRelatedByUsuario(Criteria $criteria, $distinct = false, PropelPDO $con = null, $join_behavior = Criteria::LEFT_JOIN)
+	{
+		// we're going to modify criteria, so copy it first
+		$criteria = clone $criteria;
+
+		// We need to set the primary table name, since in the case that there are no WHERE columns
+		// it will be impossible for the BasePeer::createSelectSql() method to determine which
+		// tables go into the FROM clause.
+		$criteria->setPrimaryTableName(CuniaComercialPeer::TABLE_NAME);
+
+		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
+			$criteria->setDistinct();
+		}
+
+		if (!$criteria->hasSelectClause()) {
+			CuniaComercialPeer::addSelectColumns($criteria);
+		}
+		
+		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
+		
+		// Set the correct dbName
+		$criteria->setDbName(self::DATABASE_NAME);
+
+		if ($con === null) {
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+		}
+
+		$criteria->addJoin(CuniaComercialPeer::USUARIO, UsuarioPeer::CODIGO, $join_behavior);
+
+		// symfony_behaviors behavior
+		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
+		{
+		  call_user_func($sf_hook, 'BaseCuniaComercialPeer', $criteria, $con);
+		}
+
+		$stmt = BasePeer::doCount($criteria, $con);
+
+		if ($row = $stmt->fetch(PDO::FETCH_NUM)) {
+			$count = (int) $row[0];
+		} else {
+			$count = 0; // no rows returned; we infer that means 0 matches.
+		}
+		$stmt->closeCursor();
+		return $count;
+	}
+
+
+	/**
+	 * Selects a collection of CuniaComercial objects pre-filled with their Usuario objects.
+	 * @param      Criteria  $criteria
+	 * @param      PropelPDO $con
+	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
+	 * @return     array Array of CuniaComercial objects.
+	 * @throws     PropelException Any exceptions caught during processing will be
+	 *		 rethrown wrapped into a PropelException.
+	 */
+	public static function doSelectJoinUsuarioRelatedByUsuario(Criteria $criteria, $con = null, $join_behavior = Criteria::LEFT_JOIN)
+	{
+		$criteria = clone $criteria;
+
+		// Set the correct dbName if it has not been overridden
+		if ($criteria->getDbName() == Propel::getDefaultDB()) {
+			$criteria->setDbName(self::DATABASE_NAME);
+		}
+
+		CuniaComercialPeer::addSelectColumns($criteria);
+		$startcol = (CuniaComercialPeer::NUM_COLUMNS - CuniaComercialPeer::NUM_LAZY_LOAD_COLUMNS);
+		UsuarioPeer::addSelectColumns($criteria);
+
+		$criteria->addJoin(CuniaComercialPeer::USUARIO, UsuarioPeer::CODIGO, $join_behavior);
+
+		// symfony_behaviors behavior
+		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
+		{
+		  call_user_func($sf_hook, 'BaseCuniaComercialPeer', $criteria, $con);
+		}
+
+		$stmt = BasePeer::doSelect($criteria, $con);
+		$results = array();
+
+		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
+			$key1 = CuniaComercialPeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = CuniaComercialPeer::getInstanceFromPool($key1))) {
+				// We no longer rehydrate the object, since this can cause data loss.
+				// See http://propel.phpdb.org/trac/ticket/509
+				// $obj1->hydrate($row, 0, true); // rehydrate
+			} else {
+
+				$cls = CuniaComercialPeer::getOMClass(false);
+
+				$obj1 = new $cls();
+				$obj1->hydrate($row);
+				CuniaComercialPeer::addInstanceToPool($obj1, $key1);
+			} // if $obj1 already loaded
+
+			$key2 = UsuarioPeer::getPrimaryKeyHashFromRow($row, $startcol);
+			if ($key2 !== null) {
+				$obj2 = UsuarioPeer::getInstanceFromPool($key2);
+				if (!$obj2) {
+
+					$cls = UsuarioPeer::getOMClass(false);
+
+					$obj2 = new $cls();
+					$obj2->hydrate($row, $startcol);
+					UsuarioPeer::addInstanceToPool($obj2, $key2);
+				} // if obj2 already loaded
+				
+				// Add the $obj1 (CuniaComercial) to $obj2 (Usuario)
+				$obj2->addCuniaComercial($obj1);
+
+			} // if joined row was not null
+
+			$results[] = $obj1;
+		}
+		$stmt->closeCursor();
+		return $results;
+	}
+
+
+	/**
+	 * Returns the number of rows matching criteria, joining all related tables
+	 *
+	 * @param      Criteria $criteria
+	 * @param      boolean $distinct Whether to select only distinct columns; deprecated: use Criteria->setDistinct() instead.
+	 * @param      PropelPDO $con
+	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
+	 * @return     int Number of matching rows.
+	 */
+	public static function doCountJoinAll(Criteria $criteria, $distinct = false, PropelPDO $con = null, $join_behavior = Criteria::LEFT_JOIN)
+	{
+		// we're going to modify criteria, so copy it first
+		$criteria = clone $criteria;
+
+		// We need to set the primary table name, since in the case that there are no WHERE columns
+		// it will be impossible for the BasePeer::createSelectSql() method to determine which
+		// tables go into the FROM clause.
+		$criteria->setPrimaryTableName(CuniaComercialPeer::TABLE_NAME);
+
+		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
+			$criteria->setDistinct();
+		}
+
+		if (!$criteria->hasSelectClause()) {
+			CuniaComercialPeer::addSelectColumns($criteria);
+		}
+		
+		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
+		
+		// Set the correct dbName
+		$criteria->setDbName(self::DATABASE_NAME);
+
+		if ($con === null) {
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+		}
+
+		$criteria->addJoin(CuniaComercialPeer::USUARIO, UsuarioPeer::CODIGO, $join_behavior);
+
+		// symfony_behaviors behavior
+		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
+		{
+		  call_user_func($sf_hook, 'BaseCuniaComercialPeer', $criteria, $con);
+		}
+
+		$stmt = BasePeer::doCount($criteria, $con);
+
+		if ($row = $stmt->fetch(PDO::FETCH_NUM)) {
+			$count = (int) $row[0];
+		} else {
+			$count = 0; // no rows returned; we infer that means 0 matches.
+		}
+		$stmt->closeCursor();
+		return $count;
+	}
+
+	/**
+	 * Selects a collection of CuniaComercial objects pre-filled with all related objects.
+	 *
+	 * @param      Criteria  $criteria
+	 * @param      PropelPDO $con
+	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
+	 * @return     array Array of CuniaComercial objects.
+	 * @throws     PropelException Any exceptions caught during processing will be
+	 *		 rethrown wrapped into a PropelException.
+	 */
+	public static function doSelectJoinAll(Criteria $criteria, $con = null, $join_behavior = Criteria::LEFT_JOIN)
+	{
+		$criteria = clone $criteria;
+
+		// Set the correct dbName if it has not been overridden
+		if ($criteria->getDbName() == Propel::getDefaultDB()) {
+			$criteria->setDbName(self::DATABASE_NAME);
+		}
+
+		CuniaComercialPeer::addSelectColumns($criteria);
+		$startcol2 = (CuniaComercialPeer::NUM_COLUMNS - CuniaComercialPeer::NUM_LAZY_LOAD_COLUMNS);
+
+		UsuarioPeer::addSelectColumns($criteria);
+		$startcol3 = $startcol2 + (UsuarioPeer::NUM_COLUMNS - UsuarioPeer::NUM_LAZY_LOAD_COLUMNS);
+
+		$criteria->addJoin(CuniaComercialPeer::USUARIO, UsuarioPeer::CODIGO, $join_behavior);
+
+		// symfony_behaviors behavior
+		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
+		{
+		  call_user_func($sf_hook, 'BaseCuniaComercialPeer', $criteria, $con);
+		}
+
+		$stmt = BasePeer::doSelect($criteria, $con);
+		$results = array();
+
+		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
+			$key1 = CuniaComercialPeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = CuniaComercialPeer::getInstanceFromPool($key1))) {
+				// We no longer rehydrate the object, since this can cause data loss.
+				// See http://propel.phpdb.org/trac/ticket/509
+				// $obj1->hydrate($row, 0, true); // rehydrate
+			} else {
+				$cls = CuniaComercialPeer::getOMClass(false);
+
+				$obj1 = new $cls();
+				$obj1->hydrate($row);
+				CuniaComercialPeer::addInstanceToPool($obj1, $key1);
+			} // if obj1 already loaded
+
+			// Add objects for joined Usuario rows
+
+			$key2 = UsuarioPeer::getPrimaryKeyHashFromRow($row, $startcol2);
+			if ($key2 !== null) {
+				$obj2 = UsuarioPeer::getInstanceFromPool($key2);
+				if (!$obj2) {
+
+					$cls = UsuarioPeer::getOMClass(false);
+
+					$obj2 = new $cls();
+					$obj2->hydrate($row, $startcol2);
+					UsuarioPeer::addInstanceToPool($obj2, $key2);
+				} // if obj2 loaded
+
+				// Add the $obj1 (CuniaComercial) to the collection in $obj2 (Usuario)
+				$obj2->addCuniaComercial($obj1);
+			} // if joined row not null
+
+			$results[] = $obj1;
+		}
+		$stmt->closeCursor();
+		return $results;
+	}
+
 	/**
 	 * Returns the TableMap related to this peer.
 	 * This method is not needed for general use but a specific application could have a need.
@@ -458,10 +708,10 @@ abstract class BaseCancionPeer {
 	 */
 	public static function buildTableMap()
 	{
-	  $dbMap = Propel::getDatabaseMap(BaseCancionPeer::DATABASE_NAME);
-	  if (!$dbMap->hasTable(BaseCancionPeer::TABLE_NAME))
+	  $dbMap = Propel::getDatabaseMap(BaseCuniaComercialPeer::DATABASE_NAME);
+	  if (!$dbMap->hasTable(BaseCuniaComercialPeer::TABLE_NAME))
 	  {
-	    $dbMap->addTableObject(new CancionTableMap());
+	    $dbMap->addTableObject(new CuniaComercialTableMap());
 	  }
 	}
 
@@ -478,13 +728,13 @@ abstract class BaseCancionPeer {
 	 */
 	public static function getOMClass($withPrefix = true)
 	{
-		return $withPrefix ? CancionPeer::CLASS_DEFAULT : CancionPeer::OM_CLASS;
+		return $withPrefix ? CuniaComercialPeer::CLASS_DEFAULT : CuniaComercialPeer::OM_CLASS;
 	}
 
 	/**
-	 * Method perform an INSERT on the database, given a Cancion or Criteria object.
+	 * Method perform an INSERT on the database, given a CuniaComercial or Criteria object.
 	 *
-	 * @param      mixed $values Criteria or Cancion object containing data that is used to create the INSERT statement.
+	 * @param      mixed $values Criteria or CuniaComercial object containing data that is used to create the INSERT statement.
 	 * @param      PropelPDO $con the PropelPDO connection to use
 	 * @return     mixed The new primary key.
 	 * @throws     PropelException Any exceptions caught during processing will be
@@ -493,26 +743,26 @@ abstract class BaseCancionPeer {
 	public static function doInsert($values, PropelPDO $con = null)
 	{
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseCancionPeer:doInsert:pre') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseCuniaComercialPeer:doInsert:pre') as $sf_hook)
     {
-      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseCancionPeer', $values, $con))
+      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseCuniaComercialPeer', $values, $con))
       {
         return $sf_hook_retval;
       }
     }
 
 		if ($con === null) {
-			$con = Propel::getConnection(CancionPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		if ($values instanceof Criteria) {
 			$criteria = clone $values; // rename for clarity
 		} else {
-			$criteria = $values->buildCriteria(); // build Criteria from Cancion object
+			$criteria = $values->buildCriteria(); // build Criteria from CuniaComercial object
 		}
 
-		if ($criteria->containsKey(CancionPeer::CODIGO) && $criteria->keyContainsValue(CancionPeer::CODIGO) ) {
-			throw new PropelException('Cannot insert a value for auto-increment primary key ('.CancionPeer::CODIGO.')');
+		if ($criteria->containsKey(CuniaComercialPeer::CODIGO) && $criteria->keyContainsValue(CuniaComercialPeer::CODIGO) ) {
+			throw new PropelException('Cannot insert a value for auto-increment primary key ('.CuniaComercialPeer::CODIGO.')');
 		}
 
 
@@ -531,18 +781,18 @@ abstract class BaseCancionPeer {
 		}
 
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseCancionPeer:doInsert:post') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseCuniaComercialPeer:doInsert:post') as $sf_hook)
     {
-      call_user_func($sf_hook, 'BaseCancionPeer', $values, $con, $pk);
+      call_user_func($sf_hook, 'BaseCuniaComercialPeer', $values, $con, $pk);
     }
 
 		return $pk;
 	}
 
 	/**
-	 * Method perform an UPDATE on the database, given a Cancion or Criteria object.
+	 * Method perform an UPDATE on the database, given a CuniaComercial or Criteria object.
 	 *
-	 * @param      mixed $values Criteria or Cancion object containing data that is used to create the UPDATE statement.
+	 * @param      mixed $values Criteria or CuniaComercial object containing data that is used to create the UPDATE statement.
 	 * @param      PropelPDO $con The connection to use (specify PropelPDO connection object to exert more control over transactions).
 	 * @return     int The number of affected rows (if supported by underlying database driver).
 	 * @throws     PropelException Any exceptions caught during processing will be
@@ -551,16 +801,16 @@ abstract class BaseCancionPeer {
 	public static function doUpdate($values, PropelPDO $con = null)
 	{
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseCancionPeer:doUpdate:pre') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseCuniaComercialPeer:doUpdate:pre') as $sf_hook)
     {
-      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseCancionPeer', $values, $con))
+      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseCuniaComercialPeer', $values, $con))
       {
         return $sf_hook_retval;
       }
     }
 
 		if ($con === null) {
-			$con = Propel::getConnection(CancionPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		$selectCriteria = new Criteria(self::DATABASE_NAME);
@@ -568,10 +818,10 @@ abstract class BaseCancionPeer {
 		if ($values instanceof Criteria) {
 			$criteria = clone $values; // rename for clarity
 
-			$comparison = $criteria->getComparison(CancionPeer::CODIGO);
-			$selectCriteria->add(CancionPeer::CODIGO, $criteria->remove(CancionPeer::CODIGO), $comparison);
+			$comparison = $criteria->getComparison(CuniaComercialPeer::CODIGO);
+			$selectCriteria->add(CuniaComercialPeer::CODIGO, $criteria->remove(CuniaComercialPeer::CODIGO), $comparison);
 
-		} else { // $values is Cancion object
+		} else { // $values is CuniaComercial object
 			$criteria = $values->buildCriteria(); // gets full criteria
 			$selectCriteria = $values->buildPkeyCriteria(); // gets criteria w/ primary key(s)
 		}
@@ -582,35 +832,35 @@ abstract class BaseCancionPeer {
 		$ret = BasePeer::doUpdate($selectCriteria, $criteria, $con);
 
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseCancionPeer:doUpdate:post') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseCuniaComercialPeer:doUpdate:post') as $sf_hook)
     {
-      call_user_func($sf_hook, 'BaseCancionPeer', $values, $con, $ret);
+      call_user_func($sf_hook, 'BaseCuniaComercialPeer', $values, $con, $ret);
     }
 
     return $ret;
 	}
 
 	/**
-	 * Method to DELETE all rows from the cancion table.
+	 * Method to DELETE all rows from the cunia_comercial table.
 	 *
 	 * @return     int The number of affected rows (if supported by underlying database driver).
 	 */
 	public static function doDeleteAll($con = null)
 	{
 		if ($con === null) {
-			$con = Propel::getConnection(CancionPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 		$affectedRows = 0; // initialize var to track total num of affected rows
 		try {
 			// use transaction because $criteria could contain info
 			// for more than one table or we could emulating ON DELETE CASCADE, etc.
 			$con->beginTransaction();
-			$affectedRows += BasePeer::doDeleteAll(CancionPeer::TABLE_NAME, $con);
+			$affectedRows += BasePeer::doDeleteAll(CuniaComercialPeer::TABLE_NAME, $con);
 			// Because this db requires some delete cascade/set null emulation, we have to
 			// clear the cached instance *after* the emulation has happened (since
 			// instances get re-added by the select statement contained therein).
-			CancionPeer::clearInstancePool();
-			CancionPeer::clearRelatedInstancePool();
+			CuniaComercialPeer::clearInstancePool();
+			CuniaComercialPeer::clearRelatedInstancePool();
 			$con->commit();
 			return $affectedRows;
 		} catch (PropelException $e) {
@@ -620,9 +870,9 @@ abstract class BaseCancionPeer {
 	}
 
 	/**
-	 * Method perform a DELETE on the database, given a Cancion or Criteria object OR a primary key value.
+	 * Method perform a DELETE on the database, given a CuniaComercial or Criteria object OR a primary key value.
 	 *
-	 * @param      mixed $values Criteria or Cancion object or primary key or array of primary keys
+	 * @param      mixed $values Criteria or CuniaComercial object or primary key or array of primary keys
 	 *              which is used to create the DELETE statement
 	 * @param      PropelPDO $con the connection to use
 	 * @return     int 	The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows
@@ -633,27 +883,27 @@ abstract class BaseCancionPeer {
 	 public static function doDelete($values, PropelPDO $con = null)
 	 {
 		if ($con === null) {
-			$con = Propel::getConnection(CancionPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		if ($values instanceof Criteria) {
 			// invalidate the cache for all objects of this type, since we have no
 			// way of knowing (without running a query) what objects should be invalidated
 			// from the cache based on this Criteria.
-			CancionPeer::clearInstancePool();
+			CuniaComercialPeer::clearInstancePool();
 			// rename for clarity
 			$criteria = clone $values;
-		} elseif ($values instanceof Cancion) { // it's a model object
+		} elseif ($values instanceof CuniaComercial) { // it's a model object
 			// invalidate the cache for this single object
-			CancionPeer::removeInstanceFromPool($values);
+			CuniaComercialPeer::removeInstanceFromPool($values);
 			// create criteria based on pk values
 			$criteria = $values->buildPkeyCriteria();
 		} else { // it's a primary key, or an array of pks
 			$criteria = new Criteria(self::DATABASE_NAME);
-			$criteria->add(CancionPeer::CODIGO, (array) $values, Criteria::IN);
+			$criteria->add(CuniaComercialPeer::CODIGO, (array) $values, Criteria::IN);
 			// invalidate the cache for this object(s)
 			foreach ((array) $values as $singleval) {
-				CancionPeer::removeInstanceFromPool($singleval);
+				CuniaComercialPeer::removeInstanceFromPool($singleval);
 			}
 		}
 
@@ -668,7 +918,7 @@ abstract class BaseCancionPeer {
 			$con->beginTransaction();
 			
 			$affectedRows += BasePeer::doDelete($criteria, $con);
-			CancionPeer::clearRelatedInstancePool();
+			CuniaComercialPeer::clearRelatedInstancePool();
 			$con->commit();
 			return $affectedRows;
 		} catch (PropelException $e) {
@@ -678,24 +928,24 @@ abstract class BaseCancionPeer {
 	}
 
 	/**
-	 * Validates all modified columns of given Cancion object.
+	 * Validates all modified columns of given CuniaComercial object.
 	 * If parameter $columns is either a single column name or an array of column names
 	 * than only those columns are validated.
 	 *
 	 * NOTICE: This does not apply to primary or foreign keys for now.
 	 *
-	 * @param      Cancion $obj The object to validate.
+	 * @param      CuniaComercial $obj The object to validate.
 	 * @param      mixed $cols Column name or array of column names.
 	 *
 	 * @return     mixed TRUE if all columns are valid or the error message of the first invalid column.
 	 */
-	public static function doValidate(Cancion $obj, $cols = null)
+	public static function doValidate(CuniaComercial $obj, $cols = null)
 	{
 		$columns = array();
 
 		if ($cols) {
-			$dbMap = Propel::getDatabaseMap(CancionPeer::DATABASE_NAME);
-			$tableMap = $dbMap->getTable(CancionPeer::TABLE_NAME);
+			$dbMap = Propel::getDatabaseMap(CuniaComercialPeer::DATABASE_NAME);
+			$tableMap = $dbMap->getTable(CuniaComercialPeer::TABLE_NAME);
 
 			if (! is_array($cols)) {
 				$cols = array($cols);
@@ -711,7 +961,7 @@ abstract class BaseCancionPeer {
 
 		}
 
-		return BasePeer::doValidate(CancionPeer::DATABASE_NAME, CancionPeer::TABLE_NAME, $columns);
+		return BasePeer::doValidate(CuniaComercialPeer::DATABASE_NAME, CuniaComercialPeer::TABLE_NAME, $columns);
 	}
 
 	/**
@@ -719,23 +969,23 @@ abstract class BaseCancionPeer {
 	 *
 	 * @param      int $pk the primary key.
 	 * @param      PropelPDO $con the connection to use
-	 * @return     Cancion
+	 * @return     CuniaComercial
 	 */
 	public static function retrieveByPK($pk, PropelPDO $con = null)
 	{
 
-		if (null !== ($obj = CancionPeer::getInstanceFromPool((string) $pk))) {
+		if (null !== ($obj = CuniaComercialPeer::getInstanceFromPool((string) $pk))) {
 			return $obj;
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(CancionPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
-		$criteria = new Criteria(CancionPeer::DATABASE_NAME);
-		$criteria->add(CancionPeer::CODIGO, $pk);
+		$criteria = new Criteria(CuniaComercialPeer::DATABASE_NAME);
+		$criteria->add(CuniaComercialPeer::CODIGO, $pk);
 
-		$v = CancionPeer::doSelect($criteria, $con);
+		$v = CuniaComercialPeer::doSelect($criteria, $con);
 
 		return !empty($v) > 0 ? $v[0] : null;
 	}
@@ -751,16 +1001,16 @@ abstract class BaseCancionPeer {
 	public static function retrieveByPKs($pks, PropelPDO $con = null)
 	{
 		if ($con === null) {
-			$con = Propel::getConnection(CancionPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(CuniaComercialPeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
 		$objs = null;
 		if (empty($pks)) {
 			$objs = array();
 		} else {
-			$criteria = new Criteria(CancionPeer::DATABASE_NAME);
-			$criteria->add(CancionPeer::CODIGO, $pks, Criteria::IN);
-			$objs = CancionPeer::doSelect($criteria, $con);
+			$criteria = new Criteria(CuniaComercialPeer::DATABASE_NAME);
+			$criteria->add(CuniaComercialPeer::CODIGO, $pks, Criteria::IN);
+			$objs = CuniaComercialPeer::doSelect($criteria, $con);
 		}
 		return $objs;
 	}
@@ -792,15 +1042,15 @@ abstract class BaseCancionPeer {
 	{
 	  if (preg_match('/^do(Select|Count)(Join(All(Except)?)?|Stmt)?/', $method, $match))
 	  {
-	    return sprintf('BaseCancionPeer:%s:%1$s', 'Count' == $match[1] ? 'doCount' : $match[0]);
+	    return sprintf('BaseCuniaComercialPeer:%s:%1$s', 'Count' == $match[1] ? 'doCount' : $match[0]);
 	  }
 	
 	  throw new LogicException(sprintf('Unrecognized function "%s"', $method));
 	}
 
-} // BaseCancionPeer
+} // BaseCuniaComercialPeer
 
 // This is the static code needed to register the TableMap for this table with the main Propel class.
 //
-BaseCancionPeer::buildTableMap();
+BaseCuniaComercialPeer::buildTableMap();
 
