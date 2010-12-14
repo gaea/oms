@@ -15,5 +15,12 @@
 		<description><![CDATA[Goldrush]]></description>
 		<pubDate>Wed, 24 Nov 10 21:32:23 +0200</pubDate>
 	</item>
+	<item>
+		<title><![CDATA[Podcast OMS]]></title>
+		<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link>
+		<enclosure url="http://localhost/oms/web/uploads/01-Pump%20It.mp3" type="audio/mpeg" />
+		<description><![CDATA[Pump It]]></description>
+		<pubDate>Wed, 24 Nov 10 21:32:23 +0200</pubDate>
+	</item>
   </channel>
 </rss>

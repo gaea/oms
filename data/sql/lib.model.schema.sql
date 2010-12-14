@@ -105,6 +105,7 @@ CREATE TABLE "persona"
 	"direccion" VARCHAR(200),
 	"telefono" VARCHAR(200),
 	"e_mail" VARCHAR(200),
+	"habilitado" BOOLEAN  NOT NULL,
 	PRIMARY KEY ("codigo")
 );
 
