@@ -583,3 +583,27 @@ Dec 14 18:22:17 symfony [info] {sfWebDebugLogger} Factories 3.58 ms (1)
 Dec 14 18:22:17 symfony [info] {sfWebDebugLogger} Action "publicar_mensaje/index" 0.07 ms (1)
 Dec 14 18:22:17 symfony [info] {sfWebDebugLogger} View "Success" for "publicar_mensaje/index" 2.51 ms (1)
 Dec 14 18:22:17 symfony [info] {sfWebResponse} Send content (29091 o)
+Dec 14 18:26:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 14 18:26:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 14 18:26:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 14 18:26:42 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 14 18:26:42 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    4.0 MB | mempeak:    4.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 14 18:26:42 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 14 18:26:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.3 MB | mempeak:    4.3 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 14 18:26:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.5 MB | mempeak:    4.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=8
+Dec 14 18:26:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=6
+Dec 14 18:26:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=7
+Dec 14 18:26:42 symfony [warning] {sfWebDebugLogger} 
+Dec 14 18:26:42 symfony [warning] {sfWebDebugLogger} 
+Dec 14 18:26:42 symfony [warning] {sfWebDebugLogger} 
+Dec 14 18:26:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 14 18:26:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 14 18:26:42 symfony [info] {sfWebDebugLogger} Configuration 0.81 ms (8)
+Dec 14 18:26:42 symfony [info] {sfWebDebugLogger} Factories 3.55 ms (1)
+Dec 14 18:26:42 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/crearCanalRSS" 57.87 ms (1)
+Dec 14 18:26:42 symfony [info] {sfWebDebugLogger} View "None" for "interfaz_visualizacion/crearCanalRSS" 0.03 ms (1)
+Dec 14 18:26:42 symfony [info] {sfWebResponse} Send content (23383 o)
+Dec 14 18:27:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /programar_cancion with parameters array (  'module' => 'programar_cancion',  'action' => 'index',)
+Dec 14 18:27:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_cliente with parameters array (  'module' => 'interfaz_cliente',  'action' => 'index',)
+Dec 14 18:27:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /publicar_mensaje with parameters array (  'module' => 'publicar_mensaje',  'action' => 'index',)
+Dec 14 18:27:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)

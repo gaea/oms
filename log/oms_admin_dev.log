@@ -39,3 +39,4 @@ Dec 14 18:08:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilt
 Dec 14 18:08:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
 Dec 14 18:08:53 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
 Dec 14 18:08:53 symfony [warning] {sfWebDebugLogger}  Warning at /usr/share/php/symfony/autoload/sfAutoload.class.php on line 188 (require(/var/www/oms/lib/model/om/BaseCancionPeer.php): failed to open stream: No such file or directory)
+Dec 14 18:27:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /gestionar_cancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
