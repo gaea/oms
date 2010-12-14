@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="propel" package="lib.model" defaultIdMethod="native">
+
+  <table name="cancion">
+    <column name="codigo" phpName="Codigo" type="INTEGER" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="nombre" phpName="Nombre" type="VARCHAR" size="200" required="false" />
+    <column name="autor" phpName="Autor" type="VARCHAR" size="200" required="false" />
+    <column name="album" phpName="Album" type="VARCHAR" size="200" required="false" />
+    <column name="fecha_de_publicacion" phpName="FechaDePublicacion" type="DATE" required="false" />
+    <column name="duracion" phpName="Duracion" type="TIME" required="false" />
+    <column name="url" phpName="Url" type="VARCHAR" size="200" required="false" />
+    <column name="habilitada" phpName="Habilitada" type="BOOLEAN" required="false" />
+    <column name="precio" phpName="Precio" type="NUMERIC" required="false" />
+    <column name="ranking" phpName="Ranking" type="INTEGER" required="false" />
+  </table>
+
+  <table name="cunia_comercial">
+    <column name="codigo" phpName="Codigo" type="INTEGER" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="nombre" phpName="Nombre" type="VARCHAR" size="200" required="false" />
+    <column name="duracion" phpName="Duracion" type="TIME" required="false" />
+    <column name="url" phpName="Url" type="VARCHAR" size="200" required="false" />
+    <column name="habilitada" phpName="Habilitada" type="BOOLEAN" required="false" />
+    <column name="fecha_creacion" phpName="FechaCreacion" type="DATE" required="false" />
+    <column name="usuario" phpName="Usuario" type="INTEGER" required="false" />
+    <foreign-key foreignTable="usuario" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="usuario" foreign="codigo" />
+    </foreign-key>
+    <column name="precio" phpName="Precio" type="INTEGER" required="false" />
+  </table>
+
+  <table name="mensaje">
+    <column name="codigo" phpName="Codigo" type="INTEGER" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="usuario" phpName="Usuario" type="INTEGER" required="true" />
+    <foreign-key foreignTable="usuario" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="usuario" foreign="codigo" />
+    </foreign-key>
+    <column name="asunto" phpName="Asunto" type="VARCHAR" size="200" required="false" />
+    <column name="mensaje" phpName="Mensaje" type="LONGVARCHAR" required="false" />
+  </table>
+
+  <table name="perfil">
+    <column name="codigo" phpName="Codigo" type="INTEGER" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="nombre" phpName="Nombre" type="VARCHAR" size="200" required="true" />
+    <column name="descripcion" phpName="Descripcion" type="VARCHAR" size="200" required="false" />
+  </table>
+
+  <table name="persona">
+    <column name="codigo" phpName="Codigo" type="INTEGER" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="nombre" phpName="Nombre" type="VARCHAR" size="200" required="true" />
+    <column name="apellido" phpName="Apellido" type="VARCHAR" size="200" required="false" />
+    <column name="identificacion" phpName="Identificacion" type="VARCHAR" size="200" required="false" />
+    <column name="tipo_identificacion" phpName="TipoIdentificacion" type="INTEGER" required="false" />
+    <foreign-key foreignTable="tipo_identificacion" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="tipo_identificacion" foreign="codigo" />
+    </foreign-key>
+    <column name="direccion" phpName="Direccion" type="VARCHAR" size="200" required="false" />
+    <column name="telefono" phpName="Telefono" type="VARCHAR" size="200" required="false" />
+    <column name="e_mail" phpName="EMail" type="VARCHAR" size="200" required="false" />
+    <column name="habilitado" phpName="Habilitado" type="BOOLEAN" required="true" />
+  </table>
+
+  <table name="programacion_cancion">
+    <column name="cancion" phpName="Cancion" type="INTEGER" primaryKey="true" required="true" />
+    <foreign-key foreignTable="cancion">
+      <reference local="cancion" foreign="codigo" />
+    </foreign-key>
+    <column name="venta" phpName="Venta" type="INTEGER" primaryKey="true" required="true" />
+    <foreign-key foreignTable="venta">
+      <reference local="venta" foreign="codigo" />
+    </foreign-key>
+    <column name="fecha" phpName="Fecha" type="DATE" primaryKey="true" required="true" />
+    <column name="inicio" phpName="Inicio" type="TIME" primaryKey="true" required="true" />
+    <column name="fin" phpName="Fin" type="TIME" required="false" />
+  </table>
+
+  <table name="programacion_cuna">
+    <column name="venta" phpName="Venta" type="INTEGER" primaryKey="true" required="true" />
+    <column name="cunia_comercial" phpName="CuniaComercial" type="INTEGER" primaryKey="true" required="true" />
+    <column name="fecha" phpName="Fecha" type="DATE" primaryKey="true" required="true" />
+    <column name="inicio" phpName="Inicio" type="TIME" primaryKey="true" required="true" />
+    <column name="fin" phpName="Fin" type="TIME" primaryKey="true" required="true" />
+  </table>
+
+  <table name="tipo_identificacion">
+    <column name="codigo" phpName="Codigo" type="INTEGER" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="nombre" phpName="Nombre" type="VARCHAR" size="200" required="false" />
+    <column name="descripcion" phpName="Descripcion" type="VARCHAR" size="200" required="false" />
+  </table>
+
+  <table name="usuario">
+    <column name="codigo" phpName="Codigo" type="INTEGER" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="usuario" phpName="Usuario" type="VARCHAR" size="200" required="true" />
+    <column name="contrasena" phpName="Contrasena" type="VARCHAR" size="200" required="true" />
+    <column name="perfil" phpName="Perfil" type="INTEGER" required="false" />
+    <foreign-key foreignTable="perfil" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="perfil" foreign="codigo" />
+    </foreign-key>
+    <column name="persona" phpName="Persona" type="INTEGER" required="false" />
+    <foreign-key foreignTable="persona" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="persona" foreign="codigo" />
+    </foreign-key>
+  </table>
+
+  <table name="venta">
+    <column name="codigo" phpName="Codigo" type="INTEGER" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="usuario" phpName="Usuario" type="INTEGER" required="true" />
+    <foreign-key foreignTable="usuario" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="usuario" foreign="codigo" />
+    </foreign-key>
+    <column name="precio" phpName="Precio" type="NUMERIC" required="false" />
+    <column name="fecha_venta" phpName="FechaVenta" type="TIMESTAMP" required="false" />
+  </table>
+
+  <table name="venta_cancion">
+    <column name="cancion" phpName="Cancion" type="INTEGER" primaryKey="true" required="true" />
+    <foreign-key foreignTable="cancion" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="cancion" foreign="codigo" />
+    </foreign-key>
+    <column name="venta" phpName="Venta" type="INTEGER" primaryKey="true" required="true" />
+    <foreign-key foreignTable="venta" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="venta" foreign="codigo" />
+    </foreign-key>
+  </table>
+
+  <table name="venta_cunia_comercial">
+    <column name="venta" phpName="Venta" type="INTEGER" primaryKey="true" required="true" />
+    <foreign-key foreignTable="venta" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="venta" foreign="codigo" />
+    </foreign-key>
+    <column name="cunia_comercial" phpName="CuniaComercial" type="INTEGER" primaryKey="true" required="true" />
+    <foreign-key foreignTable="cunia_comercial" onDelete="RESTRICT" onUpdate="RESTRICT">
+      <reference local="cunia_comercial" foreign="codigo" />
+    </foreign-key>
+  </table>
+
+</database>

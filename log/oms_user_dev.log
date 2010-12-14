@@ -1,0 +1,35 @@
+Dec 13 21:52:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_visualizacion with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'index',)
+Dec 13 21:52:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 21:52:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 21:52:53 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeIndex()"
+Dec 13 21:52:53 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/interfaz_visualizacion/templates/indexSuccess.php"
+Dec 13 21:52:53 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 21:52:53 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 21:52:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 21:52:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 21:52:53 symfony [info] {sfWebDebugLogger} Configuration 1.35 ms (9)
+Dec 13 21:52:53 symfony [info] {sfWebDebugLogger} Factories 6.07 ms (1)
+Dec 13 21:52:53 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/index" 0.05 ms (1)
+Dec 13 21:52:53 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_visualizacion/index" 2.15 ms (1)
+Dec 13 21:52:53 symfony [info] {sfWebResponse} Send content (29407 o)
+Dec 13 22:05:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:05:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:05:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:05:26 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:05:26 symfony [warning] {sfWebDebugLogger}  Warning at /usr/share/php/symfony/autoload/sfAutoload.class.php on line 188 (require(/var/www/oms/lib/model/om/BaseProgramacionCancionPeer.php): failed to open stream: No such file or directory)
+Dec 13 22:06:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:06:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:06:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:06:13 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:07:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:07:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:07:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:07:07 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:07:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:07:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:07:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:07:56 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:12:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:12:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:12:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:12:40 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
