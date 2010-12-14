@@ -33,3 +33,716 @@ Dec 13 22:12:40 symfony [info] {sfPatternRouting} Match route "default" (/:modul
 Dec 13 22:12:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
 Dec 13 22:12:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
 Dec 13 22:12:40 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:29:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:29:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:29:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:29:08 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:29:08 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:29:08 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:29:08 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 38 (fopen(/var/www/oms/web/rss/2.xml): failed to open stream: Permission denied)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 40 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 41 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 42 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 43 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 44 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 45 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 46 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 47 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 48 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 49 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=8
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/03 The Goldrush.mp3)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=6
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=7
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/03 The Goldrush.mp3)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 74 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 75 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 77 (fclose() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /usr/share/php/symfony/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php:61))
+Dec 13 22:29:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:29:08 symfony [warning] {sfWebDebugLogger}  Warning at /usr/share/php/symfony/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php:61))
+Dec 13 22:29:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:29:08 symfony [info] {sfWebDebugLogger} Configuration 60.24 ms (8)
+Dec 13 22:29:08 symfony [info] {sfWebDebugLogger} Factories 27.83 ms (1)
+Dec 13 22:29:08 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/crearCanalRSS" 100.35 ms (1)
+Dec 13 22:29:08 symfony [info] {sfWebDebugLogger} View "None" for "interfaz_visualizacion/crearCanalRSS" 0.01 ms (1)
+Dec 13 22:29:08 symfony [info] {sfWebResponse} Send content (23401 o)
+Dec 13 22:29:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:29:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:29:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:29:37 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:29:37 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:29:37 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:29:37 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 38 (fopen(/var/www/oms/web/rss/2.xml): failed to open stream: Permission denied)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 40 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 41 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 42 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 43 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 44 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 45 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 46 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 47 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 48 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 49 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=8
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/03 The Goldrush.mp3)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=6
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=7
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 55 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 60 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 61 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/03 The Goldrush.mp3)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 63 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 65 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 66 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 68 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 69 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 70 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 74 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 75 (fwrite() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 77 (fclose() expects parameter 1 to be resource, boolean given)
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /usr/share/php/symfony/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php:61))
+Dec 13 22:29:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:29:37 symfony [warning] {sfWebDebugLogger}  Warning at /usr/share/php/symfony/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php:61))
+Dec 13 22:29:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:29:37 symfony [info] {sfWebDebugLogger} Configuration 1.36 ms (8)
+Dec 13 22:29:37 symfony [info] {sfWebDebugLogger} Factories 7.81 ms (1)
+Dec 13 22:29:37 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/crearCanalRSS" 66.96 ms (1)
+Dec 13 22:29:37 symfony [info] {sfWebDebugLogger} View "None" for "interfaz_visualizacion/crearCanalRSS" 0.01 ms (1)
+Dec 13 22:29:37 symfony [info] {sfWebResponse} Send content (23395 o)
+Dec 13 22:29:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:29:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:29:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:29:59 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:29:59 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:29:59 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:29:59 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:29:59 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=8
+Dec 13 22:29:59 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/03 The Goldrush.mp3)
+Dec 13 22:29:59 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=6
+Dec 13 22:29:59 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3)
+Dec 13 22:29:59 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=7
+Dec 13 22:29:59 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:59 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3)
+Dec 13 22:29:59 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:59 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:29:59 symfony [warning] {sfWebDebugLogger}  Warning at /var/www/oms/apps/oms_user/modules/interfaz_visualizacion/actions/actions.class.php on line 62 (filesize(): stat failed for http://localhost/oms/web/uploads/03 The Goldrush.mp3)
+Dec 13 22:29:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:29:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:29:59 symfony [info] {sfWebDebugLogger} Configuration 1.33 ms (8)
+Dec 13 22:29:59 symfony [info] {sfWebDebugLogger} Factories 8.56 ms (1)
+Dec 13 22:29:59 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/crearCanalRSS" 69.50 ms (1)
+Dec 13 22:29:59 symfony [info] {sfWebDebugLogger} View "None" for "interfaz_visualizacion/crearCanalRSS" 0.01 ms (1)
+Dec 13 22:29:59 symfony [info] {sfWebResponse} Send content (23395 o)
+Dec 13 22:31:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:31:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:31:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:31:00 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:31:00 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:31:00 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:31:00 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:31:00 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=8
+Dec 13 22:31:00 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=6
+Dec 13 22:31:00 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=7
+Dec 13 22:31:00 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:31:00 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:31:00 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:31:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:31:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:31:00 symfony [info] {sfWebDebugLogger} Configuration 1.27 ms (8)
+Dec 13 22:31:00 symfony [info] {sfWebDebugLogger} Factories 7.56 ms (1)
+Dec 13 22:31:00 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/crearCanalRSS" 35.55 ms (1)
+Dec 13 22:31:00 symfony [info] {sfWebDebugLogger} View "None" for "interfaz_visualizacion/crearCanalRSS" 0.01 ms (1)
+Dec 13 22:31:00 symfony [info] {sfWebResponse} Send content (23396 o)
+Dec 13 22:31:21 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_visualizacion with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'index',)
+Dec 13 22:31:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:31:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:31:21 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeIndex()"
+Dec 13 22:31:21 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/interfaz_visualizacion/templates/indexSuccess.php"
+Dec 13 22:31:21 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:31:21 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:31:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:31:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:31:21 symfony [info] {sfWebDebugLogger} Configuration 3.56 ms (10)
+Dec 13 22:31:21 symfony [info] {sfWebDebugLogger} Factories 2.81 ms (1)
+Dec 13 22:31:21 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/index" 0.05 ms (1)
+Dec 13 22:31:21 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_visualizacion/index" 5.51 ms (1)
+Dec 13 22:31:21 symfony [info] {sfWebResponse} Send content (29409 o)
+Dec 13 22:32:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /interfaz_visualizacion/crearCanalRSS with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'crearCanalRSS',)
+Dec 13 22:32:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:32:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:32:10 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeCrearCanalRSS()"
+Dec 13 22:32:10 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:32:10 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:32:10 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=2 AND programacion_cancion.CANCION=cancion.CODIGO AND programacion_cancion.VENTA=venta.CODIGO
+Dec 13 22:32:10 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=8
+Dec 13 22:32:10 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=6
+Dec 13 22:32:10 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=7
+Dec 13 22:32:10 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:32:10 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:32:10 symfony [warning] {sfWebDebugLogger} 
+Dec 13 22:32:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:32:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:32:10 symfony [info] {sfWebDebugLogger} Configuration 1.39 ms (8)
+Dec 13 22:32:10 symfony [info] {sfWebDebugLogger} Factories 9.00 ms (1)
+Dec 13 22:32:10 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/crearCanalRSS" 56.84 ms (1)
+Dec 13 22:32:10 symfony [info] {sfWebDebugLogger} View "None" for "interfaz_visualizacion/crearCanalRSS" 0.01 ms (1)
+Dec 13 22:32:10 symfony [info] {sfWebResponse} Send content (23396 o)
+Dec 13 22:32:24 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_visualizacion with parameters array (  'module' => 'interfaz_visualizacion',  'action' => 'index',)
+Dec 13 22:32:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:32:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:32:24 symfony [info] {interfaz_visualizacionActions} Call "interfaz_visualizacionActions->executeIndex()"
+Dec 13 22:32:24 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/interfaz_visualizacion/templates/indexSuccess.php"
+Dec 13 22:32:24 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:32:24 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:32:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:32:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:32:24 symfony [info] {sfWebDebugLogger} Configuration 1.92 ms (9)
+Dec 13 22:32:24 symfony [info] {sfWebDebugLogger} Factories 8.95 ms (1)
+Dec 13 22:32:24 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/index" 0.25 ms (1)
+Dec 13 22:32:24 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_visualizacion/index" 2.33 ms (1)
+Dec 13 22:32:24 symfony [info] {sfWebResponse} Send content (29438 o)
+Dec 13 22:41:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/index with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:41:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:41:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:41:42 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 22:41:42 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 22:41:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:41:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:41:42 symfony [info] {sfWebDebugLogger} Configuration 6.40 ms (10)
+Dec 13 22:41:42 symfony [info] {sfWebDebugLogger} Factories 6.62 ms (1)
+Dec 13 22:41:42 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 13 22:41:42 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 3.61 ms (1)
+Dec 13 22:41:42 symfony [info] {sfWebResponse} Send content (222 o)
+Dec 13 22:41:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 22:41:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:41:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:41:43 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 22:41:43 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:41:43 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:41:43 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:41:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:41:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:41:43 symfony [info] {sfWebDebugLogger} Configuration 1.80 ms (8)
+Dec 13 22:41:43 symfony [info] {sfWebDebugLogger} Factories 8.93 ms (1)
+Dec 13 22:41:43 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 55.86 ms (1)
+Dec 13 22:41:43 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 13 22:41:43 symfony [info] {sfWebResponse} Send content (591 o)
+Dec 13 22:42:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 13 22:42:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:42:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:42:17 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 13 22:42:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:42:20 symfony [debug] {sfPropelLogger} time:  0.033 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 13 22:42:20 symfony [debug] {sfPropelLogger} time:  0.069 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | INSERT INTO cunia_comercial (CODIGO,NOMBRE,DURACION,URL,HABILITADA,FECHA_CREACION,USUARIO) VALUES (8,'Bleed It Out','02:47:00','uploads/cunias/04 - Linkin Park - Bleed It Out.mp3',true,'2010-12-13',2)
+Dec 13 22:42:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:42:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:42:20 symfony [info] {sfWebDebugLogger} Configuration 0.64 ms (8)
+Dec 13 22:42:20 symfony [info] {sfWebDebugLogger} Factories 2.70 ms (1)
+Dec 13 22:42:20 symfony [info] {sfWebDebugLogger} Action "subir_cunia/crearCunia" 2185.00 ms (1)
+Dec 13 22:42:20 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/crearCunia" 0.01 ms (1)
+Dec 13 22:42:20 symfony [info] {sfWebResponse} Send content (19358 o)
+Dec 13 22:42:56 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_cliente with parameters array (  'module' => 'interfaz_cliente',  'action' => 'index',)
+Dec 13 22:42:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:42:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:42:56 symfony [info] {interfaz_clienteActions} Call "interfaz_clienteActions->executeIndex()"
+Dec 13 22:42:56 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/interfaz_cliente/templates/indexSuccess.php"
+Dec 13 22:42:56 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:42:56 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:42:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:42:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:42:56 symfony [info] {sfWebDebugLogger} Configuration 6.92 ms (10)
+Dec 13 22:42:56 symfony [info] {sfWebDebugLogger} Factories 8.34 ms (1)
+Dec 13 22:42:56 symfony [info] {sfWebDebugLogger} Action "interfaz_cliente/index" 0.06 ms (1)
+Dec 13 22:42:56 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_cliente/index" 4.50 ms (1)
+Dec 13 22:42:56 symfony [info] {sfWebResponse} Send content (29073 o)
+Dec 13 22:42:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/index with parameters array (  'module' => 'comprar_cancion',  'action' => 'index',)
+Dec 13 22:42:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:42:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:42:57 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeIndex()"
+Dec 13 22:42:57 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/comprar_cancion/templates/indexSuccess.php"
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Configuration 6.36 ms (10)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Factories 9.01 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/index" 0.05 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} View "Success" for "comprar_cancion/index" 2.98 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send content (242 o)
+Dec 13 22:42:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 13 22:42:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:42:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:42:57 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 13 22:42:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 13 22:42:57 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:42:57 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 13 22:42:57 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Configuration 1.55 ms (8)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Factories 9.17 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 25.81 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.01 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send content (2255 o)
+Dec 13 22:42:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:42:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:42:57 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 13 22:42:57 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:42:57 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 13 22:42:57 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.8 MB | mempeak:    3.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Configuration 1.86 ms (8)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Factories 34.84 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 59.52 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
+Dec 13 22:42:57 symfony [info] {sfWebResponse} Send content (824 o)
+Dec 13 22:43:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:43:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:43:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:43:20 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 22:43:20 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 22:43:20 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:43:20 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:43:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:43:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:43:20 symfony [info] {sfWebDebugLogger} Configuration 1.38 ms (9)
+Dec 13 22:43:20 symfony [info] {sfWebDebugLogger} Factories 9.23 ms (1)
+Dec 13 22:43:20 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 13 22:43:20 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.20 ms (1)
+Dec 13 22:43:20 symfony [info] {sfWebResponse} Send content (29047 o)
+Dec 13 22:43:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 22:43:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:43:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:43:21 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 22:43:21 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:43:21 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:43:21 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:43:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:43:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:43:21 symfony [info] {sfWebDebugLogger} Configuration 1.67 ms (8)
+Dec 13 22:43:21 symfony [info] {sfWebDebugLogger} Factories 8.89 ms (1)
+Dec 13 22:43:21 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 37.07 ms (1)
+Dec 13 22:43:21 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 13 22:43:21 symfony [info] {sfWebResponse} Send content (795 o)
+Dec 13 22:43:29 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/index with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:43:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:43:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:43:29 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 22:43:29 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 22:43:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:43:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:43:29 symfony [info] {sfWebDebugLogger} Configuration 1.40 ms (9)
+Dec 13 22:43:29 symfony [info] {sfWebDebugLogger} Factories 11.17 ms (1)
+Dec 13 22:43:29 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 13 22:43:29 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 1.54 ms (1)
+Dec 13 22:43:29 symfony [info] {sfWebResponse} Send content (222 o)
+Dec 13 22:43:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 22:43:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:43:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:43:30 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 22:43:30 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:43:30 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:43:30 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:43:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:43:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:43:30 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (8)
+Dec 13 22:43:30 symfony [info] {sfWebDebugLogger} Factories 9.58 ms (1)
+Dec 13 22:43:30 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 50.29 ms (1)
+Dec 13 22:43:30 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 13 22:43:30 symfony [info] {sfWebResponse} Send content (795 o)
+Dec 13 22:43:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 13 22:43:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:43:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:43:56 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 13 22:43:58 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:43:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 13 22:43:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | INSERT INTO cunia_comercial (CODIGO,NOMBRE,DURACION,URL,HABILITADA,FECHA_CREACION,USUARIO) VALUES (9,'What I\'ve Done','03:29:00','uploads/cunias/06 - Linkin Park - What I\'ve Done.mp3',true,'2010-12-13',2)
+Dec 13 22:43:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:43:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:43:58 symfony [info] {sfWebDebugLogger} Configuration 1.32 ms (8)
+Dec 13 22:43:58 symfony [info] {sfWebDebugLogger} Factories 6.75 ms (1)
+Dec 13 22:43:58 symfony [info] {sfWebDebugLogger} Action "subir_cunia/crearCunia" 2083.51 ms (1)
+Dec 13 22:43:58 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/crearCunia" 0.01 ms (1)
+Dec 13 22:43:58 symfony [info] {sfWebResponse} Send content (19398 o)
+Dec 13 22:44:59 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:44:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:44:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:44:59 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 22:44:59 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 22:44:59 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:44:59 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:44:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:44:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:44:59 symfony [info] {sfWebDebugLogger} Configuration 1.86 ms (9)
+Dec 13 22:44:59 symfony [info] {sfWebDebugLogger} Factories 9.20 ms (1)
+Dec 13 22:44:59 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 13 22:44:59 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.48 ms (1)
+Dec 13 22:44:59 symfony [info] {sfWebResponse} Send content (29079 o)
+Dec 13 22:45:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 22:45:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:45:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:45:00 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 22:45:00 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:45:00 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:45:00 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:45:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:45:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:45:00 symfony [info] {sfWebDebugLogger} Configuration 0.46 ms (8)
+Dec 13 22:45:00 symfony [info] {sfWebDebugLogger} Factories 2.42 ms (1)
+Dec 13 22:45:00 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 43.28 ms (1)
+Dec 13 22:45:00 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.02 ms (1)
+Dec 13 22:45:00 symfony [info] {sfWebResponse} Send content (1003 o)
+Dec 13 22:45:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:45:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:45:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:45:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:45:53 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 22:45:53 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 22:45:53 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:45:53 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:45:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:45:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:45:53 symfony [info] {sfWebDebugLogger} Configuration 1.33 ms (9)
+Dec 13 22:45:53 symfony [info] {sfWebDebugLogger} Factories 9.09 ms (1)
+Dec 13 22:45:53 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 13 22:45:53 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.26 ms (1)
+Dec 13 22:45:53 symfony [info] {sfWebResponse} Send content (29047 o)
+Dec 13 22:45:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 22:45:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:45:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:45:54 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 22:45:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:45:54 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:45:54 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:45:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:45:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:45:54 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (8)
+Dec 13 22:45:54 symfony [info] {sfWebDebugLogger} Factories 6.80 ms (1)
+Dec 13 22:45:54 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 25.49 ms (1)
+Dec 13 22:45:54 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 13 22:45:54 symfony [info] {sfWebResponse} Send content (1003 o)
+Dec 13 22:46:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 13 22:46:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:46:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:46:15 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 13 22:46:17 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:46:17 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 13 22:46:17 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | INSERT INTO cunia_comercial (CODIGO,NOMBRE,DURACION,URL,HABILITADA,FECHA_CREACION,USUARIO) VALUES (10,'In Between','03:19:00','uploads/cunias/10 - Linkin Park - In Between.mp3',true,'2010-12-13',2)
+Dec 13 22:46:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:46:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:46:17 symfony [info] {sfWebDebugLogger} Configuration 0.50 ms (8)
+Dec 13 22:46:17 symfony [info] {sfWebDebugLogger} Factories 2.91 ms (1)
+Dec 13 22:46:17 symfony [info] {sfWebDebugLogger} Action "subir_cunia/crearCunia" 2090.76 ms (1)
+Dec 13 22:46:17 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/crearCunia" 0.01 ms (1)
+Dec 13 22:46:17 symfony [info] {sfWebResponse} Send content (19344 o)
+Dec 13 22:47:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:47:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:47:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:47:18 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 22:47:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 22:47:18 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:47:18 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:47:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:47:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:47:18 symfony [info] {sfWebDebugLogger} Configuration 1.43 ms (9)
+Dec 13 22:47:18 symfony [info] {sfWebDebugLogger} Factories 7.37 ms (1)
+Dec 13 22:47:18 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 13 22:47:18 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 4.50 ms (1)
+Dec 13 22:47:18 symfony [info] {sfWebResponse} Send content (29080 o)
+Dec 13 22:47:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 22:47:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:47:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:47:19 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 22:47:19 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:47:19 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:47:19 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:47:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:47:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:47:19 symfony [info] {sfWebDebugLogger} Configuration 1.31 ms (8)
+Dec 13 22:47:19 symfony [info] {sfWebDebugLogger} Factories 8.86 ms (1)
+Dec 13 22:47:19 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 28.95 ms (1)
+Dec 13 22:47:19 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 13 22:47:19 symfony [info] {sfWebResponse} Send content (1204 o)
+Dec 13 22:58:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:58:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:58:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:58:22 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 22:58:22 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 22:58:22 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:58:22 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:58:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:58:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:58:22 symfony [info] {sfWebDebugLogger} Configuration 1.35 ms (9)
+Dec 13 22:58:22 symfony [info] {sfWebDebugLogger} Factories 9.11 ms (1)
+Dec 13 22:58:22 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 13 22:58:22 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.01 ms (1)
+Dec 13 22:58:22 symfony [info] {sfWebResponse} Send content (29047 o)
+Dec 13 22:58:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 22:58:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:58:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:58:23 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 22:58:23 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:58:23 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:58:23 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:58:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:58:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:58:23 symfony [info] {sfWebDebugLogger} Configuration 1.27 ms (8)
+Dec 13 22:58:23 symfony [info] {sfWebDebugLogger} Factories 8.53 ms (1)
+Dec 13 22:58:23 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 32.47 ms (1)
+Dec 13 22:58:23 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 13 22:58:23 symfony [info] {sfWebResponse} Send content (1204 o)
+Dec 13 22:58:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 13 22:58:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:58:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:58:33 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 13 22:58:35 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:58:35 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 13 22:58:35 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | INSERT INTO cunia_comercial (CODIGO,NOMBRE,DURACION,URL,HABILITADA,FECHA_CREACION,USUARIO,PRECIO) VALUES (11,'Hands Held High','03:55:00','uploads/cunias/07 - Linkin Park - Hands Held High.mp3',true,'2010-12-13',2,235000)
+Dec 13 22:58:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:58:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:58:35 symfony [info] {sfWebDebugLogger} Configuration 1.26 ms (8)
+Dec 13 22:58:35 symfony [info] {sfWebDebugLogger} Factories 9.20 ms (1)
+Dec 13 22:58:35 symfony [info] {sfWebDebugLogger} Action "subir_cunia/crearCunia" 2070.15 ms (1)
+Dec 13 22:58:35 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/crearCunia" 0.01 ms (1)
+Dec 13 22:58:35 symfony [info] {sfWebResponse} Send content (19398 o)
+Dec 13 22:58:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 22:58:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:58:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:58:44 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 22:58:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 22:58:44 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:58:44 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 22:58:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:58:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:58:44 symfony [info] {sfWebDebugLogger} Configuration 1.36 ms (9)
+Dec 13 22:58:44 symfony [info] {sfWebDebugLogger} Factories 8.13 ms (1)
+Dec 13 22:58:44 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 13 22:58:44 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.09 ms (1)
+Dec 13 22:58:44 symfony [info] {sfWebResponse} Send content (29079 o)
+Dec 13 22:58:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 22:58:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 22:58:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 22:58:45 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 22:58:45 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 22:58:45 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:58:45 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 22:58:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 22:58:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 22:58:45 symfony [info] {sfWebDebugLogger} Configuration 1.28 ms (8)
+Dec 13 22:58:45 symfony [info] {sfWebDebugLogger} Factories 8.88 ms (1)
+Dec 13 22:58:45 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 31.83 ms (1)
+Dec 13 22:58:45 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 13 22:58:45 symfony [info] {sfWebResponse} Send content (1415 o)
+Dec 13 23:00:11 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 23:00:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 23:00:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 23:00:11 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 23:00:11 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 23:00:11 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 23:00:11 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 23:00:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 23:00:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 23:00:11 symfony [info] {sfWebDebugLogger} Configuration 1.40 ms (9)
+Dec 13 23:00:11 symfony [info] {sfWebDebugLogger} Factories 5.96 ms (1)
+Dec 13 23:00:11 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.05 ms (1)
+Dec 13 23:00:11 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.05 ms (1)
+Dec 13 23:00:11 symfony [info] {sfWebResponse} Send content (29079 o)
+Dec 13 23:00:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 23:00:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 23:00:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 23:00:12 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 23:00:12 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 23:00:12 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 23:00:12 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 23:00:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 23:00:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 23:00:12 symfony [info] {sfWebDebugLogger} Configuration 1.27 ms (8)
+Dec 13 23:00:12 symfony [info] {sfWebDebugLogger} Factories 5.88 ms (1)
+Dec 13 23:00:12 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 43.35 ms (1)
+Dec 13 23:00:12 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.00 ms (1)
+Dec 13 23:00:12 symfony [info] {sfWebResponse} Send content (1415 o)
+Dec 13 23:00:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/crearCunia with parameters array (  'module' => 'subir_cunia',  'action' => 'crearCunia',)
+Dec 13 23:00:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 23:00:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 23:00:40 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeCrearCunia()"
+Dec 13 23:00:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 23:00:42 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT nextval('cunia_comercial_codigo_seq')
+Dec 13 23:00:42 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | INSERT INTO cunia_comercial (CODIGO,NOMBRE,DURACION,URL,HABILITADA,FECHA_CREACION,USUARIO,PRECIO) VALUES (12,'Valentine\'s Day','03:19:00','uploads/cunias/09 - Linkin Park - Valentine\'s Day.mp3',true,'2010-12-13',2,99500)
+Dec 13 23:00:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 23:00:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 23:00:42 symfony [info] {sfWebDebugLogger} Configuration 1.16 ms (8)
+Dec 13 23:00:42 symfony [info] {sfWebDebugLogger} Factories 4.03 ms (1)
+Dec 13 23:00:42 symfony [info] {sfWebDebugLogger} Action "subir_cunia/crearCunia" 2084.49 ms (1)
+Dec 13 23:00:42 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/crearCunia" 0.02 ms (1)
+Dec 13 23:00:42 symfony [info] {sfWebResponse} Send content (19431 o)
+Dec 13 23:00:58 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /subir_cunia with parameters array (  'module' => 'subir_cunia',  'action' => 'index',)
+Dec 13 23:00:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 23:00:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 23:00:58 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeIndex()"
+Dec 13 23:00:58 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/subir_cunia/templates/indexSuccess.php"
+Dec 13 23:00:58 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 23:00:58 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 13 23:00:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 23:00:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 23:00:58 symfony [info] {sfWebDebugLogger} Configuration 1.87 ms (9)
+Dec 13 23:00:58 symfony [info] {sfWebDebugLogger} Factories 9.97 ms (1)
+Dec 13 23:00:58 symfony [info] {sfWebDebugLogger} Action "subir_cunia/index" 0.06 ms (1)
+Dec 13 23:00:58 symfony [info] {sfWebDebugLogger} View "Success" for "subir_cunia/index" 2.43 ms (1)
+Dec 13 23:00:58 symfony [info] {sfWebResponse} Send content (29079 o)
+Dec 13 23:00:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /subir_cunia/listarCunias with parameters array (  'module' => 'subir_cunia',  'action' => 'listarCunias',)
+Dec 13 23:00:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 13 23:00:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 13 23:00:58 symfony [info] {subir_cuniaActions} Call "subir_cuniaActions->executeListarCunias()"
+Dec 13 23:00:58 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 13 23:00:58 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 23:00:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cunia_comercial.CODIGO, cunia_comercial.NOMBRE, cunia_comercial.DURACION, cunia_comercial.URL, cunia_comercial.HABILITADA, cunia_comercial.FECHA_CREACION, cunia_comercial.USUARIO, cunia_comercial.PRECIO FROM cunia_comercial WHERE cunia_comercial.USUARIO=2
+Dec 13 23:00:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 13 23:00:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 13 23:00:58 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (8)
+Dec 13 23:00:58 symfony [info] {sfWebDebugLogger} Factories 7.32 ms (1)
+Dec 13 23:00:58 symfony [info] {sfWebDebugLogger} Action "subir_cunia/listarCunias" 36.63 ms (1)
+Dec 13 23:00:58 symfony [info] {sfWebDebugLogger} View "None" for "subir_cunia/listarCunias" 0.01 ms (1)
+Dec 13 23:00:58 symfony [info] {sfWebResponse} Send content (1626 o)

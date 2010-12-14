@@ -64,6 +64,13 @@ class subir_cuniaActions extends sfActions
 				$cunia->setNombre($atributos_cunia['id3']['id3v1']['title']);
 				$cunia->setFechaCreacion($fecha_creacion);
 				$cunia->setDuracion($atributos_cunia['playtime_string']);
+				$duracion_min_seg = explode(":", $atributos_cunia['playtime_string']);
+				if($duracion_min_seg)
+				{
+					$precio = ( ( $duracion_min_seg[0] * 60 ) + $duracion_min_seg[1] ) * 500;
+					$cunia->setPrecio($precio);
+				}
+				//echo($atributos_cunia['playtime_string']);
 				$cunia->setUrl("uploads/cunias/".$nombre);
 				$cunia->setHabilitada($this->getRequestParameter('cunia_habilitada'));
 				$cunia->setUsuario($codigo_usuario);

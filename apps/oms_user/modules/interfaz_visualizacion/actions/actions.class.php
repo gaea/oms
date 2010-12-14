@@ -59,7 +59,7 @@ class interfaz_visualizacionActions extends sfActions
 					//fwrite($file, "\t\t\t".$temporal->getCancion()."\n");
 					fwrite($file, "\t\t\t<title><![CDATA[".$cancion->getNombre()."]]></title>\n");
 					fwrite($file, "\t\t\t<link>http://localhost/oms/web/".$cancion->getUrl()."</link>\n");
-					fwrite($file, "\t\t\t<enclosure url=\"http://localhost/oms/web/".$cancion->getUrl()." length=\"".filesize("http://localhost/oms/web/".$cancion->getUrl())."\" type=\"audio/mpeg\" />\n");
+					fwrite($file, "\t\t\t<enclosure url=\"http://localhost/oms/web/".$cancion->getUrl()."\" length=\"".filesize("/var/www/oms/web/".$cancion->getUrl())."\" type=\"audio/mpeg\" />\n");
 					fwrite($file, "\t\t\t<description>\n");
 					//fwrite($file, "\t\t\t\t<![CDATA[\n");
 					fwrite($file, "\t\t\t\t\tAlbum: ".$cancion->getAlbum()."\n");
