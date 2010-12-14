@@ -71,7 +71,8 @@
 	canciones_jwplayer.addVariable('playlistfile','../rss/2.xml');
 	canciones_jwplayer.addVariable('playlistsize', '300');
 	canciones_jwplayer.addVariable('plugins','../mediaplayer/plugins/revolt.swf');
-	canciones_jwplayer.addVariable('skin','../mediaplayer/skins/beelden.zip');
+	canciones_jwplayer.addVariable('skin','../mediaplayer/skins/minimal.zip');
+	canciones_jwplayer.addVariable('screencolor','CCCCCC');
 	canciones_jwplayer.addVariable('playlist','bottom');
 	canciones_jwplayer.write('div_form_interfaz_visualizacion_canciones');
 	
@@ -89,7 +90,8 @@
 	cunias_jwplayer.addVariable('playlistfile','../rss/cunias.xml');
 	cunias_jwplayer.addVariable('playlistsize', '300');
 	cunias_jwplayer.addVariable('plugins','../mediaplayer/plugins/revolt.swf');
-	cunias_jwplayer.addVariable('skin','../mediaplayer/skins/beelden.zip');
+	cunias_jwplayer.addVariable('skin','../mediaplayer/skins/nature01.zip');
+	cunias_jwplayer.addVariable('backcolor','999999');
 	cunias_jwplayer.addVariable('playlist','bottom');
 	cunias_jwplayer.write('div_form_interfaz_visualizacion_cunias');
 	

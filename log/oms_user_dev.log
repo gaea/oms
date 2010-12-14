@@ -543,3 +543,43 @@ Dec 14 18:09:20 symfony [info] {sfWebDebugLogger} Factories 24549.24 ms (1)
 Dec 14 18:09:20 symfony [info] {sfWebDebugLogger} Action "publicar_mensaje/index" 0.06 ms (1)
 Dec 14 18:09:20 symfony [info] {sfWebDebugLogger} View "Success" for "publicar_mensaje/index" 2.31 ms (1)
 Dec 14 18:09:20 symfony [info] {sfWebResponse} Send content (29047 o)
+Dec 14 18:13:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /publicar_mensaje/PublicarMensaje with parameters array (  'module' => 'publicar_mensaje',  'action' => 'PublicarMensaje',)
+Dec 14 18:13:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 14 18:13:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 14 18:13:00 symfony [info] {publicar_mensajeActions} Call "publicar_mensajeActions->executePublicarMensaje()"
+Dec 14 18:13:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 14 18:13:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 14 18:13:00 symfony [info] {sfWebDebugLogger} Configuration 1.77 ms (8)
+Dec 14 18:13:00 symfony [info] {sfWebDebugLogger} Factories 8.91 ms (1)
+Dec 14 18:13:00 symfony [info] {sfWebDebugLogger} Action "publicar_mensaje/PublicarMensaje" 0.15 ms (1)
+Dec 14 18:13:00 symfony [info] {sfWebDebugLogger} View "None" for "publicar_mensaje/PublicarMensaje" 0.00 ms (1)
+Dec 14 18:13:00 symfony [info] {sfWebResponse} Send content (66 o)
+Dec 14 18:14:58 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /publicar_mensaje with parameters array (  'module' => 'publicar_mensaje',  'action' => 'index',)
+Dec 14 18:14:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 14 18:14:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 14 18:14:58 symfony [info] {publicar_mensajeActions} Call "publicar_mensajeActions->executeIndex()"
+Dec 14 18:14:58 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/publicar_mensaje/templates/indexSuccess.php"
+Dec 14 18:14:58 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 14 18:14:58 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 14 18:14:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 14 18:14:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 14 18:14:58 symfony [info] {sfWebDebugLogger} Configuration 0.57 ms (9)
+Dec 14 18:14:58 symfony [info] {sfWebDebugLogger} Factories 2.52 ms (1)
+Dec 14 18:14:58 symfony [info] {sfWebDebugLogger} Action "publicar_mensaje/index" 0.05 ms (1)
+Dec 14 18:14:58 symfony [info] {sfWebDebugLogger} View "Success" for "publicar_mensaje/index" 2.47 ms (1)
+Dec 14 18:14:58 symfony [info] {sfWebResponse} Send content (29041 o)
+Dec 14 18:18:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /publicar_mensaje with parameters array (  'module' => 'publicar_mensaje',  'action' => 'index',)
+Dec 14 18:22:17 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /publicar_mensaje with parameters array (  'module' => 'publicar_mensaje',  'action' => 'index',)
+Dec 14 18:22:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 14 18:22:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 14 18:22:17 symfony [info] {publicar_mensajeActions} Call "publicar_mensajeActions->executeIndex()"
+Dec 14 18:22:17 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/publicar_mensaje/templates/indexSuccess.php"
+Dec 14 18:22:17 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 14 18:22:17 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 14 18:22:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 14 18:22:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 14 18:22:17 symfony [info] {sfWebDebugLogger} Configuration 1.21 ms (9)
+Dec 14 18:22:17 symfony [info] {sfWebDebugLogger} Factories 3.58 ms (1)
+Dec 14 18:22:17 symfony [info] {sfWebDebugLogger} Action "publicar_mensaje/index" 0.07 ms (1)
+Dec 14 18:22:17 symfony [info] {sfWebDebugLogger} View "Success" for "publicar_mensaje/index" 2.51 ms (1)
+Dec 14 18:22:17 symfony [info] {sfWebResponse} Send content (29091 o)
