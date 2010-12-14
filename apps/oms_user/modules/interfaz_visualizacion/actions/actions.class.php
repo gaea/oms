@@ -25,14 +25,6 @@ class interfaz_visualizacionActions extends sfActions
 		$codigo_usuario = 2;
 		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
 		$filename  = "/var/www/oms/web/mensajes/".$codigo_usuario.".txt";
-		
-		// store new message in the file
-		$msg = isset($_GET['msg']) ? $_GET['msg'] : '';
-		if ($msg != '')
-		{
-		  file_put_contents($filename,$msg);
-		  die();
-		}
 
 		// infinite loop until the data file is not modified
 		$lastmodif    = isset($_GET['timestamp']) ? $_GET['timestamp'] : 0;

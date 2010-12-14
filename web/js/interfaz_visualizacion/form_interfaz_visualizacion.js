@@ -94,8 +94,8 @@
 	cunias_jwplayer.write('div_form_interfaz_visualizacion_cunias');
 	
 	
-	//var comet = new Comet();
-	//comet.connect();
+	var comet = new Comet();
+	comet.connect();
 
 /***********************************FUNCIONES*****************************/
 

@@ -1,0 +1,41 @@
+Dec 14 16:59:40 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /gestionar_cancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 14 16:59:40 symfony [info] {myUser} Automatic user logout due to timeout
+Dec 14 16:59:40 symfony [info] {myUser} User is not authenticated
+Dec 14 16:59:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 14 16:59:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 14 16:59:40 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 14 16:59:40 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 14 16:59:40 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_admin/templates/layout.php"
+Dec 14 16:59:40 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_admin/templates/layout.php"
+Dec 14 16:59:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 14 16:59:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 14 16:59:40 symfony [info] {sfWebDebugLogger} Configuration 1.84 ms (9)
+Dec 14 16:59:40 symfony [info] {sfWebDebugLogger} Factories 9.35 ms (1)
+Dec 14 16:59:40 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.06 ms (1)
+Dec 14 16:59:40 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 2.34 ms (1)
+Dec 14 16:59:40 symfony [info] {sfWebResponse} Send content (29725 o)
+Dec 14 16:59:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 14 16:59:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 14 16:59:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 14 16:59:46 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 14 16:59:46 symfony [warning] {sfWebDebugLogger}  Warning at /usr/share/php/symfony/autoload/sfAutoload.class.php on line 188 (require(/var/www/oms/lib/model/om/BaseCancionPeer.php): failed to open stream: No such file or directory)
+Dec 14 18:05:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /gestionar_cancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 14 18:08:50 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /gestionar_cancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 14 18:08:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 14 18:08:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 14 18:08:50 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 14 18:08:50 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 14 18:08:50 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_admin/templates/layout.php"
+Dec 14 18:08:50 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_admin/templates/layout.php"
+Dec 14 18:08:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 14 18:08:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 14 18:08:50 symfony [info] {sfWebDebugLogger} Configuration 0.66 ms (9)
+Dec 14 18:08:50 symfony [info] {sfWebDebugLogger} Factories 5.62 ms (1)
+Dec 14 18:08:50 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.05 ms (1)
+Dec 14 18:08:50 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 2.79 ms (1)
+Dec 14 18:08:50 symfony [info] {sfWebResponse} Send content (28999 o)
+Dec 14 18:08:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 14 18:08:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 14 18:08:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 14 18:08:53 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 14 18:08:53 symfony [warning] {sfWebDebugLogger}  Warning at /usr/share/php/symfony/autoload/sfAutoload.class.php on line 188 (require(/var/www/oms/lib/model/om/BaseCancionPeer.php): failed to open stream: No such file or directory)
