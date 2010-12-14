@@ -32,16 +32,26 @@ class loginActions extends sfActions
 		
 		if($usuario)
 		{
-			if( $usuario->validarContrasena($password_usuario) )
-			{
-				$this->getUser()->setAttribute('codigo_usuario', $usuario->getCodigo());
-				$salida = "({success: true, mensaje:'Ingreso valido en el sistema'})";
+			if( $usuario->getHabilitado() ){
+				if( $usuario->validarContrasena($password_usuario) )
+				{
+					$this->getUser()->setAttribute('codigo_usuario', $usuario->getCodigo());
+					$salida = "({success: true, mensaje:'Ingreso valido en el sistema'})";
+				}
+				else
+				{
+					$salida= "({success: false, errors: { reason: 'Password incorrecto'}})";
+				}
 			}
 			else
-				$salida= "({success: false, errors: { reason: 'Password incorrecto'}})";
+			{
+				$salida= "({success: false, errors: { reason: 'Usuario deshabilitado'}})";
+			}
 		}
 		else
+		{
 			$salida= "({success: false, errors: { reason: 'El login no existe como cliente'}})";
+		}
 	}
 	catch (Exception $exception)
 	{
