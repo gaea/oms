@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+	<channel>
+		<title>OMS</title>
+		<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link>
+		<description>Open Music Suscriptor...</description>
+		<image>
+			<url>http://localhost/oms/web/images/oms.png</url> 
+			<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link> 
+		</image>
+		<item>
+			<title><![CDATA[The Goldrush]]></title>
+			<link>http://localhost/oms/web/uploads/03 The Goldrush.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/03 The Goldrush.mp3" length="6700854" type="audio/mpeg" />
+			<description>
+					Album: Life In Technicolor ii
+Duracion: 02:29:00
+			</description>
+			<pubDate>2010-12-18 02:01:01</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Boring 23]]></title>
+			<link>http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/04.Blink 182 - Boring.mp3" length="1627700" type="audio/mpeg" />
+			<description>
+					Album: Dude Ranch
+Duracion: 01:41:00
+			</description>
+			<pubDate>2010-12-18 02:10:03</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Pump It 4]]></title>
+			<link>http://localhost/oms/web/uploads/01-Pump%20It.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/01-Pump%20It.mp3" length="" type="audio/mpeg" />
+			<description>
+					Album: Monkey Business
+Duracion: 03:33:00
+			</description>
+			<pubDate>2010-12-31 03:02:00</pubDate>
+		</item>
+	</channel>
+</rss>

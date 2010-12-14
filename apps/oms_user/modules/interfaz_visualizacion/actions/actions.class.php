@@ -22,8 +22,9 @@ class interfaz_visualizacionActions extends sfActions
 	
 	public function executePublicarMensaje(sfWebRequest $request)
 	{
-		
-		$filename  = '../mensajes/2.txt';
+		$codigo_usuario = 2;
+		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
+		$filename  = "/var/www/oms/web/mensajes/".$codigo_usuario.".txt";
 		
 		// store new message in the file
 		$msg = isset($_GET['msg']) ? $_GET['msg'] : '';
@@ -47,7 +48,7 @@ class interfaz_visualizacionActions extends sfActions
 		$response = array();
 		$response['msg']       = file_get_contents($filename);
 		$response['timestamp'] = $currentmodif;
-
+		flush();
 		return $this->renderText(json_encode($response));
 	}
   
