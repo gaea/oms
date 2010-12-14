@@ -23,7 +23,7 @@ class gestionar_clienteActions extends sfActions
   public function executeRegistrar()
   {
 	  $login_cliente = $this->getRequestParameter('login_cliente');
-	  $cliente = UsuarioPeer::doSelectOneCliente($login_cliente);
+	  $cliente = UsuarioPeer::doSelectOneUsuario($login_cliente);
 	  
 	  if($cliente)
 	  {
@@ -50,7 +50,7 @@ class gestionar_clienteActions extends sfActions
 		  try
 		  {
 			$usuario->save();
-			$salida = "({success: true, mensaje:'clientei registrado con exito'})";
+			$salida = "({success: true, mensaje:'cliente registrado con exito'})";
 	      }
 		  catch (Exception $exception)
 		  {

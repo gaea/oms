@@ -86,6 +86,9 @@ function subirDatos(panel, url_Action, extraParams, funcionSuccess, funcionFailu
             if (funcionFailure != null) {
                 funcionFailure();
             }
+            else{
+				mostrarMensajeRapido('Error', obj.errors.reason);
+			}
         }
     });
 }

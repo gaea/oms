@@ -50,15 +50,28 @@ class UsuarioPeer extends BaseUsuarioPeer {
 		return $perfil->getCodigo();
 	}
 	
-	public static function doSelectOneCliente($login){
+	public static function doSelectOneUsuario($login){
 		$criterio = new Criteria();
 		$criterio->add(self::USUARIO, $login);
 		$usuario = self::doSelectOne($criterio);
 		
-		if($usuario->esCliente())
-			return $usuario;
+		return $usuario;
+	}
+	
+	public static function doSelectOneCliente($login){
+		$usuario = self::doSelectOneUsuario($login);
+		
+		if($usuario)
+		{
+			if($usuario->esCliente())
+				return $usuario;
+			else
+				return null;
+		}
 		else
+		{
 			return null;
+		}
 	}
 	
 	public static function doSelectClientes(){
@@ -71,14 +84,19 @@ class UsuarioPeer extends BaseUsuarioPeer {
 	}
 	
 	public static function doSelectOneAdministrador($login){
-		$critero = new Criteria();
-		$criterio->add(self::USUARIO, $login);
-		$usuario = self::doSelectOne($criterio);
+		$usuario = self::doSelectOneUsuario($login);
 		
-		if($usuario->esAdministrador())
-			return $usuario;
+		if($usuario)
+		{
+			if($usuario->esAdministrador())
+				return $usuario;
+			else
+				return null;
+		}
 		else
+		{
 			return null;
+		}
 	}
 	
 	public static function doSelectAdministradores(){
