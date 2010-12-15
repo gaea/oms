@@ -35,7 +35,7 @@
 					},
 					{
 						xtype: 'panel',
-						width: 483,
+						//width: 483,
 						columnWidth: 0.4,
 						id: 'interfaz_visualizacion_mensajes_panel',
 						height: 470,
@@ -44,7 +44,7 @@
 						items:[
 							{
 								xtype: 'htmleditor',
-								autoWidth: true,
+								anchor: '100%',
 								height: 435,
 								enableAlignments: false,
 								enableColors: false,
