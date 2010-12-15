@@ -24,13 +24,15 @@ class consulta_facturaActions extends sfActions
   {
 
 	$codigo_usuario = $this->getRequestParameter('codigo_usuario');
+	$usuario = $this->getRequestParameter('usuario');
+	//$password = $this->getRequestParameter('password');
 	$salida = "La factura no pudo ser consultada";
 	$factura = "";
 	
 	try
 	{	
 		// aqui genera la  factura
-		$factura = "Bienvenido a OMS \n\n\tUsuario: pepito\n\tCanciones: lista canciones\n\tCunias: lista cunias\n\n\tValor total: $243546";
+		$factura = "Bienvenido a OMS \n\nFactura de Consulta Mobil\n\n\tUsuario: ".$usuario."\n\n\tFecha: 13-12-2010\n\n\tValor total: $243546";
 		return $this->renderText($factura);
 	}
 	catch (Exception $exception)
