@@ -26,8 +26,8 @@ class subir_cuniaActions extends sfActions
   public function executeCrearCunia(sfWebRequest $request)
   {
 	$salida	='';
-	$codigo_usuario = 2;
-	//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
+	//$codigo_usuario = 2;
+	$codigo_usuario = $this->getUser()->getAttribute('codigo_usuario');
 	
 	try
 	{  
@@ -81,7 +81,7 @@ class subir_cuniaActions extends sfActions
 			}
 			else
 			{
-				$salida = "({success: false, errors: { reason: 'Hubo una excepci&oacute;n al crear la cunia '}})";
+				$salida = "({success: false, errors: { reason: 'Hubo un problema al crear la cunia '}})";
 			}
 		}
 	}
@@ -147,8 +147,8 @@ class subir_cuniaActions extends sfActions
 		$fila=0;
 		$datos;
 		$buscar = $this->getRequestParameter('buscar');
-		$codigo_usuario = 2;
-		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
+		//$codigo_usuario = 2;
+		$codigo_usuario = $this->getUser()->getAttribute('codigo_usuario');
 		
 		try
 		{

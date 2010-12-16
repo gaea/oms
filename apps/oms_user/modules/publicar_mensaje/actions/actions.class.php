@@ -24,12 +24,12 @@ class publicar_mensajeActions extends sfActions
 	{
 		try
 		{
-			$codigo_usuario = 2;
-			//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
+			//$codigo_usuario = 2;
+			$codigo_usuario = $this->getUser()->getAttribute('codigo_usuario');
 			
 			$mensaje = $this->getRequestParameter('mensaje');
 			
-			$file = fopen("/var/www/oms/web/mensajes/".$codigo_usuario.".txt",'w');
+			$file = fopen("mensajes/".$codigo_usuario.".txt",'w');
 			
 			fwrite($file, $mensaje);
 			

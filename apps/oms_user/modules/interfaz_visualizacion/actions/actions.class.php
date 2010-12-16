@@ -18,13 +18,17 @@ class interfaz_visualizacionActions extends sfActions
 	public function executeIndex(sfWebRequest $request)
 	{
 	//$this->forward('default', 'module');
+		//echo 'header("Cache-Control: no-cache, must-revalidate")';
+		$this->crearCanalRSS($request);
+		//crearCanalCunias();
 	}
 	
 	public function executePublicarMensaje(sfWebRequest $request)
 	{
-		$codigo_usuario = 2;
-		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
-		$filename  = "/var/www/oms/web/mensajes/".$codigo_usuario.".txt";
+		//$codigo_usuario = 2;
+		$codigo_usuario = $this->getUser()->getAttribute('codigo_usuario');
+		$filename  = "mensajes/".$codigo_usuario.".txt";
+		//$filename  = "/var/www/oms/web/mensajes/".$codigo_usuario.".txt";
 
 		// infinite loop until the data file is not modified
 		$lastmodif    = isset($_GET['timestamp']) ? $_GET['timestamp'] : 0;
@@ -44,12 +48,12 @@ class interfaz_visualizacionActions extends sfActions
 		return $this->renderText(json_encode($response));
 	}
   
-	public function executeCrearCanalRSS(sfWebRequest $request)
+	public function crearCanalRSS(sfWebRequest $request)
 	{
 		try
 		{
-			$codigo_usuario = 2;
-			//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
+			//$codigo_usuario = 2;
+			$codigo_usuario = $this->getUser()->getAttribute('codigo_usuario');
 			$conexion = new Criteria();
 			
 			$conexion->addJoin(ProgramacionCancionPeer::CANCION, CancionPeer::CODIGO);
@@ -59,14 +63,14 @@ class interfaz_visualizacionActions extends sfActions
 			$numero_canciones = ProgramacionCancionPeer::doCount($conexion);
 			$programacion = ProgramacionCancionPeer::doSelect($conexion);
 			
-			$file = fopen("/var/www/oms/web/rss/".$codigo_usuario.".xml",'w');
+			$file = fopen("rss/".$codigo_usuario.".xml",'w');
 			
 			fwrite($file, "<?xml version=\"1.0\" ?>\n");
 			fwrite($file, "<rss version=\"2.0\">\n");
 			fwrite($file, "\t<channel>\n");
 			fwrite($file, "\t\t<title>OMS</title>\n");
 			fwrite($file, "\t\t<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link>\n");
-			fwrite($file, "\t\t<description>Open Music Suscriptor...</description>\n");
+			fwrite($file, "\t\t<description>Open Music Suscriptores...</description>\n");
 			fwrite($file, "\t\t<image>\n");
 			fwrite($file, "\t\t\t<url>http://localhost/oms/web/images/oms.png</url> \n");
 			fwrite($file, "\t\t\t<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link> \n"); // ojo que esta url hay que cambiarla
@@ -103,10 +107,10 @@ class interfaz_visualizacionActions extends sfActions
 		catch (Exception $exception)
 		{
 			$salida= "({success: false, errors: { reason: 'Hubo una excepci&oacute;n al crear el canal rss ' , error: '".$exception->getMessage()."'}})";
-			return $this->renderText($salida);
+			//return $this->renderText($salida);
 		}
 		
 		$salida = "({success: true, mensaje:'El canal rss fue creado exitosamente'})";
-		return $this->renderText($salida);
+		//return $this->renderText($salida);
 	}
 }

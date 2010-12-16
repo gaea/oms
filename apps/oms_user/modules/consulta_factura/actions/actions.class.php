@@ -23,7 +23,7 @@ class consulta_facturaActions extends sfActions
   public function executeConsultaMovil(sfWebRequest $request)
   {
 
-	$codigo_usuario = $this->getRequestParameter('codigo_usuario');
+	//$codigo_usuario = $this->getRequestParameter('codigo_usuario');
 	$usuario = $this->getRequestParameter('usuario');
 	//$password = $this->getRequestParameter('password');
 	$salida = "La factura no pudo ser consultada";
@@ -31,8 +31,24 @@ class consulta_facturaActions extends sfActions
 	
 	try
 	{	
+		$usuario = UsuarioPeer::doSelectOneCliente($usuario);
+		
+		if($usuario)
+		{
+			$factura = "Bienvenido a OMS \n\n";
+			$factura .= "Factura de Consulta Mobil \n\n ";
+			$factura .= "\tUsuario: ".$usuario->getUsuario()."\n\n ";
+			$timeZone = new DateTimeZone('America/Bogota');
+			$hoy = new DateTime("NOW", $timeZone);
+			$hoy = $hoy->format('Y-m-d');
+			$factura .= "\tFecha: ".$hoy."\n\n ";
+			$factura .= "\tNumero Canciones: ".$usuario->getNumeroCancionesMes()."\n ";
+			$factura .= "\tNumero Cunas: ".$usuario->getNumeroCuniaComercialsMes()."\n\n ";
+			$factura .= "\tValor total: ".$usuario->getFacturaMes();
+			
+		}
 		// aqui genera la  factura
-		$factura = "Bienvenido a OMS \n\nFactura de Consulta Mobil\n\n\tUsuario: ".$usuario."\n\n\tFecha: 13-12-2010\n\n\tValor total: $243546";
+		//$factura = "\n\n\tFecha: 13-12-2010\n\n\tValor total: $243546";
 		return $this->renderText($factura);
 	}
 	catch (Exception $exception)
