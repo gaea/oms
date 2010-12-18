@@ -55,7 +55,7 @@ class VentaPeer extends BaseVentaPeer {
 		
 		$criterio = new Criteria();
 		$criterio->add(self::FECHA_VENTA, $inicio, Criteria::GREATER_EQUAL);
-		$criterio->add(self::USUARIO, $inicio, $codigo_usuario);
+		$criterio->add(self::USUARIO, $codigo_usuario);
 		
 		$ventas = self::doSelect($criterio);
 		

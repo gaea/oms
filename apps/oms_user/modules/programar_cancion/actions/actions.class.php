@@ -22,8 +22,8 @@ class programar_cancionActions extends sfActions
 	
 	public function executeProgramarCancion(sfWebRequest $request)
 	{
-		$codigo_usuario = 2;
-		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
+		//$codigo_usuario = 2;
+		$codigo_usuario = $this->getUser()->getAttribute('codigo_usuario');
 		
 		$programacion_cancion_fecha = $this->getRequestParameter('programacion_cancion_fecha');
 		$programacion_cancion_hora = $this->getRequestParameter('programacion_cancion_hora');
@@ -74,8 +74,8 @@ class programar_cancionActions extends sfActions
 		$fila=0;
 		$datos;
 		$buscar = $this->getRequestParameter('buscar');
-		$codigo_usuario = 2;
-		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
+		//$codigo_usuario = 2;
+		$codigo_usuario = $this->getUser()->getAttribute('codigo_usuario');
 
 		try
 		{
@@ -130,8 +130,8 @@ class programar_cancionActions extends sfActions
 		$fila=0;
 		$datos;
 		$buscar = $this->getRequestParameter('buscar');
-		$codigo_usuario = 2;
-		//$codigo_usuario = $this->getUser()->setAttribute('codigo_usuario');
+		//$codigo_usuario = 2;
+		$codigo_usuario = $this->getUser()->getAttribute('codigo_usuario');
 
 		try
 		{

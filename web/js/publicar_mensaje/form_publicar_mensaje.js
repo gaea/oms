@@ -7,12 +7,12 @@
 		border: true,
 		tabTip :'Aqui puedes publicar los mensajes a tus empleados',
 		monitorResize:true,
-		//layout:'column',
 		items: 
 		[
 			{
 				xtype: 'form',
 				title: 'Mensajes para los empleados',
+				id: 'publicar_mensaje_mensaje_formpanel',
 				frame: true,
 				padding: '5px',
 				items: 
@@ -22,7 +22,7 @@
 						anchor: '100%',
 						height: 300,
 						id: 'publicar_mensaje_mensaje_textfield',
-						name: 'publicar_mensaje_mensaje_textfield',
+						name: 'mensaje',
 						fieldLabel: 'Mensaje'
 					}
 				],
@@ -44,5 +44,11 @@
 /***********************************FUNCIONES*****************************/
 
 	function fun_publicar_mensaje_publicar(){
-		
+		subirDatos(
+			Ext.getCmp('publicar_mensaje_mensaje_formpanel'), 
+			'publicar_mensaje/PublicarMensaje', 
+			{}, 
+			function(){}, 
+			function(){}
+		);
 	}

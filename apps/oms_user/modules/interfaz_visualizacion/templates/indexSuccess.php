@@ -1,3 +1,4 @@
+
 <div id="div_form_interfaz_visualizacion"></div>
 <?php echo javascript_include_tag('prototype.js') ?>
 <?php echo javascript_include_tag('interfaz_visualizacion/comet.js') ?>

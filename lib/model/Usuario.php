@@ -40,6 +40,22 @@ class Usuario extends BaseUsuario {
 	}
 	
 	/*
+	 * Retorna el numero de canciones compradas en el mes actual
+	 * */
+	public function getNumeroCancionesMes(){
+		$canciones = CancionPeer::doSelectMesActualUsuario( $this->getCodigo() );
+		return count($canciones);
+	}
+	
+	/*
+	 * Retorna el numero de cunias compradas en el mes actual
+	 * */
+	public function getNumeroCuniaComercialsMes(){
+		$cunias = CuniaComercialPeer::doSelectMesActualUsuario( $this->getCodigo() );
+		return count($cunias);
+	}
+	
+	/*
 	 * Retorna las cunias compradas en el mes actual
 	 * */
 	public function getCuniaComercialsMes(){

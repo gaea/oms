@@ -3,53 +3,72 @@
 		frame: true,
 		padding: '5px',
 		autoWidth: true,
-		height: 500,
+		height: 530,
 		border: true,
 		tabTip :'Visualizaci&oacute;n',
 		monitorResize:true,
-		layout:'column',
-		items: 
-		[
+		//layout:'column',
+		items: [
 			{
 				xtype: 'panel',
-				columnWidth: 0.333,
-				padding: 0,
-				id: 'interfaz_visualizacion_canciones_panel',
-				height: 470,
-				title: 'Musica para los empleados',
-				frame: true
-			},
-			{
-				xtype: 'panel',
-				columnWidth: 0.333,
-				padding: 0,
-				id: 'interfaz_visualizacion_cunias_panel',
-				height: 470,
-				title: 'Cu&ntilde;as para los empleados',
-				frame: true
-			},
-			{
-				xtype: 'panel',
-				width: 483,
-				columnWidth: 0.333,
-				id: 'interfaz_visualizacion_mensajes_panel',
-				height: 470,
-				title: 'Mensajes para los empleados',
-				frame: true,
-				items:[
+				layout:'column',
+				//frame: true,
+				items: 
+				[
 					{
-						xtype: 'htmleditor',
-						autoWidth: true,
-						height: 435,
-						enableAlignments: false,
-						enableColors: false,
-						enableFont: false,
-						enableFontSize: false,
-						enableFormat: false,
-						enableLinks: false,
-						enableLists: false,
-						enableSourceEdit: false,
-						id: 'interfaz_visualizacion_mensaje_htmleditor'
+						xtype: 'panel',
+						columnWidth: 0.3,
+						padding: 0,
+						id: 'interfaz_visualizacion_canciones_panel',
+						height: 470,
+						title: 'Musica para los empleados',
+						frame: true
+					},
+					{
+						xtype: 'panel',
+						columnWidth: 0.3,
+						padding: 0,
+						id: 'interfaz_visualizacion_cunias_panel',
+						height: 470,
+						title: 'Cu&ntilde;as para los empleados',
+						frame: true
+					},
+					{
+						xtype: 'panel',
+						//width: 483,
+						columnWidth: 0.4,
+						id: 'interfaz_visualizacion_mensajes_panel',
+						height: 470,
+						title: 'Mensajes para los empleados',
+						frame: true,
+						items:[
+							{
+								xtype: 'htmleditor',
+								anchor: '100%',
+								height: 435,
+								enableAlignments: false,
+								enableColors: false,
+								enableFont: false,
+								enableFontSize: false,
+								enableFormat: false,
+								enableLinks: false,
+								enableLists: false,
+								enableSourceEdit: false,
+								id: 'interfaz_visualizacion_mensaje_htmleditor'
+							}
+						]
+					}
+				],
+				tbar:[
+					{
+						xtype: 'label',
+						html: 'Bienvenido a OMS'
+					}
+				],
+				bbar:[
+					{
+						xtype: 'label',
+						html: 'powered by JW Player'
 					}
 				]
 			}
