@@ -1,0 +1,265 @@
+Dec 18 10:43:38 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /login with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 18 10:43:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:43:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:43:38 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 18 10:43:38 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/login/templates/indexSuccess.php"
+Dec 18 10:43:38 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 10:43:38 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 10:43:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 10:43:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 10:43:38 symfony [info] {sfWebDebugLogger} Configuration 123.72 ms (10)
+Dec 18 10:43:38 symfony [info] {sfWebDebugLogger} Factories 70.93 ms (1)
+Dec 18 10:43:38 symfony [info] {sfWebDebugLogger} Action "login/index" 0.16 ms (1)
+Dec 18 10:43:38 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 27.33 ms (1)
+Dec 18 10:43:38 symfony [info] {sfWebResponse} Send content (29755 o)
+Dec 18 10:43:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/autenticar with parameters array (  'module' => 'login',  'action' => 'autenticar',)
+Dec 18 10:43:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:43:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:43:47 symfony [info] {loginActions} Call "loginActions->executeAutenticar()"
+Dec 18 10:43:47 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    4.8 MB | mempeak:    4.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 10:43:47 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario WHERE usuario.USUARIO='admin' AND usuario.PERFIL=1 LIMIT 1
+Dec 18 10:43:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 10:43:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 10:43:47 symfony [info] {sfWebDebugLogger} Configuration 1.56 ms (8)
+Dec 18 10:43:47 symfony [info] {sfWebDebugLogger} Factories 36.03 ms (1)
+Dec 18 10:43:47 symfony [info] {sfWebDebugLogger} Action "login/autenticar" 164.05 ms (1)
+Dec 18 10:43:47 symfony [info] {sfWebDebugLogger} View "None" for "login/autenticar" 0.01 ms (1)
+Dec 18 10:43:47 symfony [info] {sfWebResponse} Send content (57 o)
+Dec 18 10:43:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 18 10:43:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:43:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:43:47 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 18 10:43:47 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 18 10:43:47 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 10:43:47 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 10:43:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 10:43:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 10:43:47 symfony [info] {sfWebDebugLogger} Configuration 1.90 ms (9)
+Dec 18 10:43:47 symfony [info] {sfWebDebugLogger} Factories 91.81 ms (1)
+Dec 18 10:43:47 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 18 10:43:47 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 30.83 ms (1)
+Dec 18 10:43:47 symfony [info] {sfWebResponse} Send content (30132 o)
+Dec 18 10:43:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 18 10:43:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:43:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:43:50 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 18 10:43:50 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 18 10:43:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 10:43:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 10:43:50 symfony [info] {sfWebDebugLogger} Configuration 2.02 ms (9)
+Dec 18 10:43:50 symfony [info] {sfWebDebugLogger} Factories 69.91 ms (1)
+Dec 18 10:43:50 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.14 ms (1)
+Dec 18 10:43:50 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 21.69 ms (1)
+Dec 18 10:43:50 symfony [info] {sfWebResponse} Send content (210 o)
+Dec 18 10:43:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 18 10:43:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:43:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:43:51 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 18 10:43:51 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 10:43:51 symfony [debug] {sfPropelLogger} time:  0.010 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 18 10:43:51 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 18 10:43:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 10:43:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 10:43:51 symfony [info] {sfWebDebugLogger} Configuration 1.50 ms (8)
+Dec 18 10:43:51 symfony [info] {sfWebDebugLogger} Factories 69.54 ms (1)
+Dec 18 10:43:51 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 289.55 ms (1)
+Dec 18 10:43:51 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 18 10:43:51 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 18 10:44:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/crearCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'crearCancion',)
+Dec 18 10:44:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:44:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:44:37 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeCrearCancion()"
+Dec 18 10:44:39 symfony [warning] {sfWebDebugLogger}  Warning at /home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/actions/actions.class.php on line 59 (copy(): Filename cannot be empty)
+Dec 18 10:44:39 symfony [notice] {sfWebDebugLogger}  Notice at /home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/actions/actions.class.php on line 82 (Undefined variable: exception)
+Dec 18 10:59:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 18 10:59:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:59:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:59:20 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 18 10:59:20 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 18 10:59:20 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 10:59:20 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 10:59:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 10:59:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 10:59:20 symfony [info] {sfWebDebugLogger} Configuration 3.19 ms (9)
+Dec 18 10:59:20 symfony [info] {sfWebDebugLogger} Factories 46.05 ms (1)
+Dec 18 10:59:20 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.15 ms (1)
+Dec 18 10:59:20 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 15.97 ms (1)
+Dec 18 10:59:20 symfony [info] {sfWebResponse} Send content (30050 o)
+Dec 18 10:59:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 18 10:59:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:59:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:59:23 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 18 10:59:23 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 18 10:59:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 10:59:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 10:59:23 symfony [info] {sfWebDebugLogger} Configuration 8.11 ms (9)
+Dec 18 10:59:23 symfony [info] {sfWebDebugLogger} Factories 69.57 ms (1)
+Dec 18 10:59:23 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.14 ms (1)
+Dec 18 10:59:23 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 26.30 ms (1)
+Dec 18 10:59:23 symfony [info] {sfWebResponse} Send content (210 o)
+Dec 18 10:59:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 18 10:59:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 10:59:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 10:59:24 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 18 10:59:24 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 10:59:24 symfony [debug] {sfPropelLogger} time:  0.008 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 18 10:59:24 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 18 10:59:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 10:59:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 10:59:24 symfony [info] {sfWebDebugLogger} Configuration 6.19 ms (8)
+Dec 18 10:59:24 symfony [info] {sfWebDebugLogger} Factories 64.71 ms (1)
+Dec 18 10:59:24 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 278.18 ms (1)
+Dec 18 10:59:24 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 18 10:59:24 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 18 11:00:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/crearCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'crearCancion',)
+Dec 18 11:00:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:00:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:00:02 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeCrearCancion()"
+Dec 18 11:00:04 symfony [warning] {sfWebDebugLogger}  Warning at /home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/actions/actions.class.php on line 59 (copy(): Filename cannot be empty)
+Dec 18 11:00:04 symfony [notice] {sfWebDebugLogger}  Notice at /home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/actions/actions.class.php on line 82 (Undefined variable: exception)
+Dec 18 11:02:52 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 18 11:02:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:02:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:02:52 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 18 11:02:52 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 18 11:02:52 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 11:02:52 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 11:02:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:02:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:02:52 symfony [info] {sfWebDebugLogger} Configuration 4.15 ms (9)
+Dec 18 11:02:52 symfony [info] {sfWebDebugLogger} Factories 64.23 ms (1)
+Dec 18 11:02:52 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 18 11:02:52 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 14.45 ms (1)
+Dec 18 11:02:52 symfony [info] {sfWebResponse} Send content (30050 o)
+Dec 18 11:02:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 18 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:02:55 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 18 11:02:55 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 18 11:02:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:02:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:02:55 symfony [info] {sfWebDebugLogger} Configuration 4.63 ms (9)
+Dec 18 11:02:55 symfony [info] {sfWebDebugLogger} Factories 80.72 ms (1)
+Dec 18 11:02:55 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.14 ms (1)
+Dec 18 11:02:55 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 23.84 ms (1)
+Dec 18 11:02:55 symfony [info] {sfWebResponse} Send content (210 o)
+Dec 18 11:02:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 18 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:02:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:02:55 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 18 11:02:55 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 11:02:55 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 18 11:02:55 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 18 11:02:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:02:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:02:55 symfony [info] {sfWebDebugLogger} Configuration 1.61 ms (8)
+Dec 18 11:02:55 symfony [info] {sfWebDebugLogger} Factories 68.12 ms (1)
+Dec 18 11:02:55 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 279.74 ms (1)
+Dec 18 11:02:55 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 18 11:02:55 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 18 11:03:27 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 18 11:03:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:03:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:03:27 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 18 11:03:27 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 18 11:03:27 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 11:03:27 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 11:03:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:03:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:03:27 symfony [info] {sfWebDebugLogger} Configuration 2.04 ms (9)
+Dec 18 11:03:27 symfony [info] {sfWebDebugLogger} Factories 41.35 ms (1)
+Dec 18 11:03:27 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 18 11:03:27 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 14.81 ms (1)
+Dec 18 11:03:27 symfony [info] {sfWebResponse} Send content (30051 o)
+Dec 18 11:03:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 18 11:03:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:03:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:03:30 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 18 11:03:30 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 18 11:03:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:03:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:03:30 symfony [info] {sfWebDebugLogger} Configuration 7.64 ms (9)
+Dec 18 11:03:30 symfony [info] {sfWebDebugLogger} Factories 89.08 ms (1)
+Dec 18 11:03:30 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.15 ms (1)
+Dec 18 11:03:30 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 26.80 ms (1)
+Dec 18 11:03:30 symfony [info] {sfWebResponse} Send content (210 o)
+Dec 18 11:03:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 18 11:03:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:03:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:03:30 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 18 11:03:31 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 11:03:31 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 18 11:03:31 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 18 11:03:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:03:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:03:31 symfony [info] {sfWebDebugLogger} Configuration 4.45 ms (8)
+Dec 18 11:03:31 symfony [info] {sfWebDebugLogger} Factories 67.29 ms (1)
+Dec 18 11:03:31 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 274.40 ms (1)
+Dec 18 11:03:31 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 18 11:03:31 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 18 11:03:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 18 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:03:32 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 18 11:03:32 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 18 11:03:32 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 11:03:32 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 11:03:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:03:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:03:32 symfony [info] {sfWebDebugLogger} Configuration 16.51 ms (9)
+Dec 18 11:03:32 symfony [info] {sfWebDebugLogger} Factories 101.32 ms (1)
+Dec 18 11:03:32 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 18 11:03:32 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 35.99 ms (1)
+Dec 18 11:03:32 symfony [info] {sfWebResponse} Send content (30053 o)
+Dec 18 11:03:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 18 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:03:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:03:32 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 18 11:03:32 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 18 11:03:32 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 11:03:32 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 18 11:03:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:03:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:03:32 symfony [info] {sfWebDebugLogger} Configuration 1.85 ms (9)
+Dec 18 11:03:32 symfony [info] {sfWebDebugLogger} Factories 37.14 ms (1)
+Dec 18 11:03:32 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 18 11:03:32 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 13.76 ms (1)
+Dec 18 11:03:32 symfony [info] {sfWebResponse} Send content (30050 o)
+Dec 18 11:03:35 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 18 11:03:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:03:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:03:35 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 18 11:03:35 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 18 11:03:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:03:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:03:35 symfony [info] {sfWebDebugLogger} Configuration 2.21 ms (9)
+Dec 18 11:03:35 symfony [info] {sfWebDebugLogger} Factories 86.62 ms (1)
+Dec 18 11:03:35 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.14 ms (1)
+Dec 18 11:03:35 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 21.33 ms (1)
+Dec 18 11:03:35 symfony [info] {sfWebResponse} Send content (210 o)
+Dec 18 11:03:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 18 11:03:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:03:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:03:36 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 18 11:03:37 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 11:03:37 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 18 11:03:37 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 18 11:03:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:03:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:03:37 symfony [info] {sfWebDebugLogger} Configuration 1.74 ms (8)
+Dec 18 11:03:37 symfony [info] {sfWebDebugLogger} Factories 67.72 ms (1)
+Dec 18 11:03:37 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 276.61 ms (1)
+Dec 18 11:03:37 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 18 11:03:37 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 18 11:04:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/crearCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'crearCancion',)
+Dec 18 11:04:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 11:04:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 11:04:01 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeCrearCancion()"
+Dec 18 11:04:03 symfony [warning] {sfWebDebugLogger}  Warning at /home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/actions/actions.class.php on line 59 (copy(): Filename cannot be empty)
+Dec 18 11:04:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 11:04:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 11:04:03 symfony [info] {sfWebDebugLogger} Configuration 4.53 ms (8)
+Dec 18 11:04:03 symfony [info] {sfWebDebugLogger} Factories 65.40 ms (1)
+Dec 18 11:04:03 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/crearCancion" 2001.18 ms (1)
+Dec 18 11:04:03 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/crearCancion" 0.02 ms (1)
+Dec 18 11:04:03 symfony [info] {sfWebResponse} Send content (17186 o)

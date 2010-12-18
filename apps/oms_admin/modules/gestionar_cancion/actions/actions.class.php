@@ -79,7 +79,7 @@ class gestionar_cancionActions extends sfActions
 			}
 			else
 			{
-				$salida = "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en gestionar Canci&oacute;n ' , error: '".$exception->getMessage()."'}})";
+				$salida = "({success: false, errors: { reason: 'No se puede copiar Canci&oacute;n para subir'}})";
 			}
 			
 			//}
