@@ -1334,3 +1334,75 @@ Dec 15 17:19:11 symfony [info] {sfWebDebugLogger} Factories 5.97 ms (1)
 Dec 15 17:19:11 symfony [info] {sfWebDebugLogger} Action "interfaz_visualizacion/index" 78.20 ms (1)
 Dec 15 17:19:11 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_visualizacion/index" 5.82 ms (1)
 Dec 15 17:19:11 symfony [info] {sfWebResponse} Send content (40442 o)
+Dec 18 21:39:16 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /login with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 18 21:39:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 21:39:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 21:39:16 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 18 21:39:16 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/login/templates/indexSuccess.php"
+Dec 18 21:39:16 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 18 21:39:16 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 18 21:39:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 21:39:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 21:39:16 symfony [info] {sfWebDebugLogger} Configuration 101.84 ms (10)
+Dec 18 21:39:16 symfony [info] {sfWebDebugLogger} Factories 3.71 ms (1)
+Dec 18 21:39:16 symfony [info] {sfWebDebugLogger} Action "login/index" 0.20 ms (1)
+Dec 18 21:39:16 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 75.46 ms (1)
+Dec 18 21:39:16 symfony [info] {sfWebResponse} Send content (28944 o)
+Dec 18 21:40:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/autenticar with parameters array (  'module' => 'login',  'action' => 'autenticar',)
+Dec 18 21:40:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 21:40:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 21:40:42 symfony [info] {loginActions} Call "loginActions->executeAutenticar()"
+Dec 18 21:40:42 symfony [info] {myUser} User is not authenticated
+Dec 18 21:40:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 21:40:42 symfony [err] {sfPropelLogger} SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna usuario.habilitado
+LINE 1: ...ario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HA...
+                                                             ^
+Dec 18 21:40:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 21:40:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 21:40:42 symfony [info] {sfWebDebugLogger} Configuration 1.31 ms (8)
+Dec 18 21:40:42 symfony [info] {sfWebDebugLogger} Factories 8.59 ms (1)
+Dec 18 21:40:42 symfony [info] {sfWebDebugLogger} Action "login/autenticar" 102.03 ms (1)
+Dec 18 21:40:42 symfony [info] {sfWebDebugLogger} View "None" for "login/autenticar" 0.01 ms (1)
+Dec 18 21:40:42 symfony [info] {sfWebResponse} Send content (317 o)
+Dec 18 21:40:50 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /login with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 18 21:40:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 21:40:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 21:40:50 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 18 21:40:50 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/login/templates/indexSuccess.php"
+Dec 18 21:40:50 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 18 21:40:50 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 18 21:40:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 21:40:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 21:40:50 symfony [info] {sfWebDebugLogger} Configuration 2.01 ms (9)
+Dec 18 21:40:50 symfony [info] {sfWebDebugLogger} Factories 9.17 ms (1)
+Dec 18 21:40:50 symfony [info] {sfWebDebugLogger} Action "login/index" 0.19 ms (1)
+Dec 18 21:40:50 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 10.28 ms (1)
+Dec 18 21:40:50 symfony [info] {sfWebResponse} Send content (28972 o)
+Dec 18 22:04:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 18 22:04:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 18 22:04:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 22:04:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 22:04:58 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCanciondisponible()"
+Dec 18 22:04:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 22:04:58 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 18 22:04:58 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    3.3 MB | mempeak:    3.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 18 22:04:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 22:04:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (8)
+Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} Factories 8.50 ms (1)
+Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCanciondisponible" 34.99 ms (1)
+Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCanciondisponible" 0.01 ms (1)
+Dec 18 22:04:58 symfony [info] {sfWebResponse} Send content (2255 o)
+Dec 18 22:04:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 18 22:04:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 18 22:04:58 symfony [info] {comprar_cancionActions} Call "comprar_cancionActions->executeListarCancionadquirida()"
+Dec 18 22:04:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 18 22:04:58 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, venta_cancion, cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 18 22:04:58 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    3.5 MB | mempeak:    3.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion, venta, venta_cancion WHERE venta.USUARIO=2 AND venta.CODIGO=venta_cancion.VENTA AND venta_cancion.CANCION=cancion.CODIGO
+Dec 18 22:04:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 18 22:04:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} Configuration 1.81 ms (8)
+Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} Factories 45.80 ms (1)
+Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 52.85 ms (1)
+Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
+Dec 18 22:04:58 symfony [info] {sfWebResponse} Send content (824 o)
