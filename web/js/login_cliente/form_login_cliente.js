@@ -1,8 +1,8 @@
 
 	var login_cliente_form_panel = new Ext.FormPanel({
 			title:'Ingreso Sistema',
-			frame:false,
-			height: 200,
+			frame:true,
+			height: 160,
 			width: 350,
 			border:true,
 			bodyStyle:'padding: 10px',
@@ -13,36 +13,38 @@
 			items:
 			[
 				{
+					anchor: '100%',
 					fieldLabel:'Login',
 					name:'login_usuario',
 					id:"login_usuario",
 					allowBlank:false
 				},
 				{
+					anchor: '100%',
 					fieldLabel:'Password',
 					inputType: 'password',
 					name:'pass_usuario',
 					id:'pass_usuario',
 					allowBlank:false
-				},
-			{
-				xtype: 'button',
-				text: 'Nuevo registro',
-				style: 
-				{
-				  "margin-top": "10px", 
-				  "margin-left": "200px"
-				},
-
-				
-				handler: fun_cliente_registro,
-			}
+				}
 			],
-			buttonAlign: 'right',
+			buttonAlign: 'left',
 			buttons:
 			[
 				{
-					text:'Aceptar',
+					xtype: 'button',
+					text: 'Registrase',
+					/*style: 
+					{
+					  "margin-top": "10px", 
+					  "margin-left": "200px"
+					},*/
+					handler: fun_cliente_registro
+				},
+				'->',
+				{
+					xtype: 'button',
+					text:'Entrar',
 					id:'btn_aceptar',
 					handler: fun_cliente_login,
 				}
