@@ -20,6 +20,56 @@ class gestionar_adminActions extends sfActions
     //$this->forward('default', 'module');
   }
   
+  public function executeListar()
+  {
+	  $salida='({"total":"0", "results":""})';
+	  $datos;
+	  $fila = 0;
+	  
+	  try
+	  {  
+		  $admins = UsuarioPeer::doSelectAdministradores();
+		  
+		  foreach($admins As $admin)
+		  {
+			  if( $admin->getHabilitado() )
+			  {
+				  $persona = $admin->getPersonaRelatedByPersona();
+				  $datos[$fila]['persona_codigo'] = $persona->getCodigo();
+				  $datos[$fila]['persona_nombre'] = $persona->getNombre();
+				  $datos[$fila]['persona_apellido'] = $persona->getApellido();
+				  
+				  $identificacion = TipoIdentificacionPeer::retrieveByPK($persona->getTipoIdentificacion());
+				  $datos[$fila]['identificacion_codigo'] = $identificacion->getCodigo();
+				  $datos[$fila]['identificacion_nombre'] = $identificacion->getNombre();
+				  
+				  $datos[$fila]['persona_identificacion'] = $persona->getIdentificacion();
+				  $datos[$fila]['persona_direccion'] = $persona->getDireccion();
+				  $datos[$fila]['persona_telefono'] = $persona->getTelefono();
+				  $datos[$fila]['persona_email'] = $persona->getEMail();
+				  
+				  $datos[$fila]['usuario_codigo'] = $admin->getCodigo();
+				  $datos[$fila]['usuario_nombre'] = $admin->getUsuario();
+				  $datos[$fila]['usuario_contrasena'] = $admin->getContrasena();
+				  
+				  $fila++;
+			  }
+		  }
+		  
+		  if($fila>0)
+		  {
+			  $jsonresult = json_encode($datos);
+			  $salida = '({"total":"'.$fila.'","results":'.$jsonresult.'})';
+		  }
+	  }
+	  catch (Exception $exception)
+	  {
+		  $this->renderText("({success: false, errors: { reason: 'Hubo una excepci&oacute;n en listar administradores ' , error: '".$exception->getMessage()."'}})");
+	  }
+	  
+	  return $this->renderText($salida);
+  }
+  
   public function executeCrear()
   {
 	  $login_admin = $this->getRequestParameter('login_admin');
@@ -110,7 +160,16 @@ class gestionar_adminActions extends sfActions
 		if($admin)
 		{
 			$admin->setHabilitado(false);
-			$salida = "({success: true, mensaje:'Administrador dado de baja con exito'})";
+			
+			try
+			{
+				$admin->save();
+				$salida = "({success: true, mensaje:'Administrador dado de baja con exito'})";
+			} 
+			catch (Exception $exception)
+			{
+				return $this->renderText("({success: false, errors: { reason: 'Excepcion, Hubo un problema al dar de baja el administrador' , error: '".$exception->getMessage()."'}})");
+			}
 		}
 		else
 		{

@@ -32,9 +32,9 @@ class tipo_identificacionActions extends sfActions
 		  
 		  foreach($tipos As $tipo)
 		  {
-			  $datos[$fila]['tipoId_codigo'] = $tipo->getCodigo();
-			  $datos[$fila]['tipoId_nombre'] = $tipo->getNombre();
-			  $datos[$fila++]['tipoId_descripcion'] = $tipo->getDescripcion();
+			  $datos[$fila]['identificacion_codigo'] = $tipo->getCodigo();
+			  $datos[$fila]['identificacion_nombre'] = $tipo->getNombre();
+			  $datos[$fila++]['identificacion_descripcion'] = $tipo->getDescripcion();
 		  }
 		  
 		  if($fila>0)
