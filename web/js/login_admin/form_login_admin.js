@@ -2,10 +2,13 @@
 	var login_admin_formpanel = new Ext.FormPanel({
 		title: 'Ingreso',
 		frame: true,
-		height: 180,
+		height: 150,
 		padding: '10px',
 		width: 350,
 		border: true,
+		style: {
+		  "margin":"50px auto"
+		},
 		items: 
 		[
 			{

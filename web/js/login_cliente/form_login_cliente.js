@@ -47,6 +47,7 @@
 					text:'Entrar',
 					id:'btn_aceptar',
 					handler: fun_cliente_login,
+					iconCls: 'login'
 				}
 			],
 				renderTo:'div_form_login_cliente'

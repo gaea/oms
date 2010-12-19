@@ -22,6 +22,10 @@ class loginActions extends sfActions
   
   public function executeAutenticar(sfWebRequest $request)
   {
+    $this->getUser()->setAuthenticated(false);
+	$this->getUser()->clearCredentials();
+	$this->getUser()->getAttributeHolder()->clear();
+	
 	$login_usuario = $this->getRequestParameter('login_usuario');
 	$password_usuario = $this->getRequestParameter('password_usuario');
 	$salida= "({success: false, errors: { reason: 'El login no existe como administrador'}})";
@@ -39,8 +43,17 @@ class loginActions extends sfActions
 		{
 			if($usuario->getContrasena() == $password_usuario)
 			{
-				$this->getUser()->setAttribute('codigo_usuario', $usuario->getCodigo());
-				$salida = "({success: true, mensaje:'Ingreso valido en el sistema'})";
+				if($usuario->getPerfil() == 1)
+				{
+					$this->getUser()->setAuthenticated(true);
+					$this->getUser()->addCredential('admin');
+					$this->getUser()->setAttribute('codigo_usuario', $usuario->getCodigo());
+					$salida = "({success: true, mensaje:'Ingreso valido en el sistema'})";
+				}
+				else
+				{
+					$salida= "({success: false, errors: { reason: 'El usuario no es administrador'}})";
+				}
 			}
 			else
 			{
@@ -64,6 +77,8 @@ class loginActions extends sfActions
 	public function executeDesautenticar()
 	{
 		//session_destroy();
+		$this->getUser()->setAuthenticated(false);
+		$this->getUser()->clearCredentials();
 		$this->getUser()->getAttributeHolder()->clear();
 		return  $this->renderText("({success: true, mensaje:'finaliza sesion'})");
 	}
