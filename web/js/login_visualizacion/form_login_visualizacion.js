@@ -2,7 +2,7 @@
 	var login_cliente_form_panel = new Ext.FormPanel({
 			title:'Ingreso Sistema',
 			frame:true,
-			height: 160,
+			height: 130,
 			width: 350,
 			border:true,
 			bodyStyle:'padding: 10px',
