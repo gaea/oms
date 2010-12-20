@@ -145,8 +145,8 @@
 			{name: 'can_ranking'}
 	
 		]),
-		sortInfo:{field: 'can_nombre', direction: "ASC"},
-		groupField:'can_album'
+		sortInfo: {field: 'can_nombre', direction: "ASC"},
+		groupField: 'can_album'
 	});
 	cancion_datastore.load();
 

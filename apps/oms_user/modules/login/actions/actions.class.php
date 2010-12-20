@@ -38,13 +38,21 @@ class loginActions extends sfActions
 		
 		if($usuario)
 		{
-			if( $usuario->getHabilitado() ){
+			if( $usuario->getHabilitado() )
+			{
 				if( $usuario->validarContrasena($password_usuario) )
 				{
-					$this->getUser()->setAuthenticated(true);
-					$this->getUser()->addCredential('cliente');
-					$this->getUser()->setAttribute('codigo_usuario', $usuario->getCodigo());
-					$salida = "({success: true, mensaje:'Ingreso valido en el sistema'})";
+					if($usuario->getPerfil() == 2)
+					{	
+						$this->getUser()->setAuthenticated(true);
+						$this->getUser()->addCredential('cliente');
+						$this->getUser()->setAttribute('codigo_usuario', $usuario->getCodigo());
+						$salida = "({success: true, mensaje:'Ingreso valido en el sistema'})";
+					}
+					else
+					{
+						$salida= "({success: false, errors: { reason: 'El usuario no es cliente'}})";
+					}
 				}
 				else
 				{
