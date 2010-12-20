@@ -43,7 +43,7 @@ class loginActions extends sfActions
 					if($usuario->getPerfil() == 2)
 					{	
 						$this->getUser()->setAuthenticated(true);
-						$this->getUser()->addCredential('cliente');
+						$this->getUser()->addCredential('visualizacion');
 						$this->getUser()->setAttribute('codigo_usuario', $usuario->getCodigo());
 						$salida = "({success: true, mensaje:'Ingreso valido en el sistema'})";
 					}
