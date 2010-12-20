@@ -12880,3 +12880,551 @@ Dec 20 03:49:34 symfony [info] {sfWebDebugLogger} Action "reportes/listarCliente
 Dec 20 03:49:34 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarClientes" 0.01 ms (1)
 Dec 20 03:49:34 symfony [info] {sfWebResponse} Send content (249 o)
 >>>>>>> c30c734b4901b16dccbc5403a0946df978576885
+Dec 20 12:36:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/index with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 20 12:36:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:22 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 20 12:36:22 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/login/templates/indexSuccess.php"
+Dec 20 12:36:22 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:36:22 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:36:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:22 symfony [info] {sfWebDebugLogger} Configuration 2632.93 ms (9)
+Dec 20 12:36:22 symfony [info] {sfWebDebugLogger} Factories 626.05 ms (1)
+Dec 20 12:36:22 symfony [info] {sfWebDebugLogger} Action "login/index" 0.45 ms (1)
+Dec 20 12:36:22 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 86.37 ms (1)
+Dec 20 12:36:22 symfony [info] {sfWebResponse} Send content (30062 o)
+Dec 20 12:36:25 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /login with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 20 12:36:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:25 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 20 12:36:25 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/login/templates/indexSuccess.php"
+Dec 20 12:36:25 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:36:25 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:36:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:25 symfony [info] {sfWebDebugLogger} Configuration 2.42 ms (9)
+Dec 20 12:36:25 symfony [info] {sfWebDebugLogger} Factories 71.12 ms (1)
+Dec 20 12:36:25 symfony [info] {sfWebDebugLogger} Action "login/index" 0.14 ms (1)
+Dec 20 12:36:25 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 31.99 ms (1)
+Dec 20 12:36:25 symfony [info] {sfWebResponse} Send content (30023 o)
+Dec 20 12:36:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /login/autenticar with parameters array (  'module' => 'login',  'action' => 'autenticar',)
+Dec 20 12:36:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:43 symfony [info] {loginActions} Call "loginActions->executeAutenticar()"
+Dec 20 12:36:43 symfony [info] {myUser} User is not authenticated
+Dec 20 12:36:43 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:36:43 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario WHERE usuario.USUARIO='aaaaa' AND usuario.PERFIL=1 LIMIT 1
+Dec 20 12:36:43 symfony [info] {myUser} User is authenticated
+Dec 20 12:36:43 symfony [info] {myUser} Add credential(s) "admin"
+Dec 20 12:36:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:43 symfony [info] {sfWebDebugLogger} Configuration 2.06 ms (8)
+Dec 20 12:36:43 symfony [info] {sfWebDebugLogger} Factories 37.71 ms (1)
+Dec 20 12:36:43 symfony [info] {sfWebDebugLogger} Action "login/autenticar" 185.28 ms (1)
+Dec 20 12:36:43 symfony [info] {sfWebDebugLogger} View "None" for "login/autenticar" 0.01 ms (1)
+Dec 20 12:36:43 symfony [info] {sfWebResponse} Send content (57 o)
+Dec 20 12:36:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 20 12:36:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:36:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:44 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 20 12:36:44 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 20 12:36:44 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:36:44 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:36:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:44 symfony [info] {sfWebDebugLogger} Configuration 75.02 ms (10)
+Dec 20 12:36:44 symfony [info] {sfWebDebugLogger} Factories 81.02 ms (1)
+Dec 20 12:36:44 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 20 12:36:44 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 47.56 ms (1)
+Dec 20 12:36:44 symfony [info] {sfWebResponse} Send content (30684 o)
+Dec 20 12:36:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 20 12:36:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:36:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:47 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 20 12:36:47 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 20 12:36:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:47 symfony [info] {sfWebDebugLogger} Configuration 60.56 ms (10)
+Dec 20 12:36:47 symfony [info] {sfWebDebugLogger} Factories 79.88 ms (1)
+Dec 20 12:36:47 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.14 ms (1)
+Dec 20 12:36:47 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 33.64 ms (1)
+Dec 20 12:36:47 symfony [info] {sfWebResponse} Send content (122 o)
+Dec 20 12:36:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 20 12:36:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:36:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:48 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 20 12:36:48 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:36:48 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 20 12:36:48 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 20 12:36:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:48 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (8)
+Dec 20 12:36:48 symfony [info] {sfWebDebugLogger} Factories 66.95 ms (1)
+Dec 20 12:36:48 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 294.61 ms (1)
+Dec 20 12:36:48 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 20 12:36:48 symfony [info] {sfWebResponse} Send content (855 o)
+Dec 20 12:36:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/index with parameters array (  'module' => 'reportes',  'action' => 'index',)
+Dec 20 12:36:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:52 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:36:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:52 symfony [info] {reportesActions} Call "reportesActions->executeIndex()"
+Dec 20 12:36:52 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/reportes/templates/indexSuccess.php"
+Dec 20 12:36:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:52 symfony [info] {sfWebDebugLogger} Configuration 29.55 ms (10)
+Dec 20 12:36:52 symfony [info] {sfWebDebugLogger} Factories 40.85 ms (1)
+Dec 20 12:36:52 symfony [info] {sfWebDebugLogger} Action "reportes/index" 0.57 ms (1)
+Dec 20 12:36:52 symfony [info] {sfWebDebugLogger} View "Success" for "reportes/index" 17.36 ms (1)
+Dec 20 12:36:52 symfony [info] {sfWebResponse} Send content (125 o)
+Dec 20 12:36:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/listarClientes with parameters array (  'module' => 'reportes',  'action' => 'listarClientes',)
+Dec 20 12:36:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:52 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:36:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:52 symfony [info] {reportesActions} Call "reportesActions->executeListarClientes()"
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=1
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT tipo_identificacion.CODIGO, tipo_identificacion.NOMBRE, tipo_identificacion.DESCRIPCION FROM tipo_identificacion WHERE tipo_identificacion.CODIGO=2
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=3
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=4
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT tipo_identificacion.CODIGO, tipo_identificacion.NOMBRE, tipo_identificacion.DESCRIPCION FROM tipo_identificacion WHERE tipo_identificacion.CODIGO=1
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=5
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=6
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=8
+Dec 20 12:36:52 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=9
+Dec 20 12:36:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:52 symfony [info] {sfWebDebugLogger} Configuration 5.78 ms (8)
+Dec 20 12:36:52 symfony [info] {sfWebDebugLogger} Factories 67.64 ms (1)
+Dec 20 12:36:52 symfony [info] {sfWebDebugLogger} Action "reportes/listarClientes" 391.20 ms (1)
+Dec 20 12:36:52 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarClientes" 0.01 ms (1)
+Dec 20 12:36:52 symfony [info] {sfWebResponse} Send content (1504 o)
+Dec 20 12:36:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/listarProgramacioncancion with parameters array (  'module' => 'reportes',  'action' => 'listarProgramacioncancion',)
+Dec 20 12:36:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:36:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:36:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:36:59 symfony [info] {reportesActions} Call "reportesActions->executeListarProgramacioncancion()"
+Dec 20 12:36:59 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:36:59 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO='4' AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO
+Dec 20 12:36:59 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO='4' AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO
+Dec 20 12:36:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:36:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:36:59 symfony [info] {sfWebDebugLogger} Configuration 1.74 ms (8)
+Dec 20 12:36:59 symfony [info] {sfWebDebugLogger} Factories 84.34 ms (1)
+Dec 20 12:36:59 symfony [info] {sfWebDebugLogger} Action "reportes/listarProgramacioncancion" 194.30 ms (1)
+Dec 20 12:36:59 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarProgramacioncancion" 0.01 ms (1)
+Dec 20 12:36:59 symfony [info] {sfWebResponse} Send content (29 o)
+Dec 20 12:37:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/listarProgramacioncancion with parameters array (  'module' => 'reportes',  'action' => 'listarProgramacioncancion',)
+Dec 20 12:37:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:03 symfony [info] {reportesActions} Call "reportesActions->executeListarProgramacioncancion()"
+Dec 20 12:37:03 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:37:03 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO='3' AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO
+Dec 20 12:37:03 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO='3' AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO
+Dec 20 12:37:03 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=1
+Dec 20 12:37:03 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=2
+Dec 20 12:37:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:03 symfony [info] {sfWebDebugLogger} Configuration 7.48 ms (8)
+Dec 20 12:37:03 symfony [info] {sfWebDebugLogger} Factories 101.89 ms (1)
+Dec 20 12:37:03 symfony [info] {sfWebDebugLogger} Action "reportes/listarProgramacioncancion" 233.44 ms (1)
+Dec 20 12:37:03 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarProgramacioncancion" 0.01 ms (1)
+Dec 20 12:37:03 symfony [info] {sfWebResponse} Send content (647 o)
+Dec 20 12:37:34 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 20 12:37:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:34 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 20 12:37:34 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 20 12:37:34 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:37:34 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:37:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:34 symfony [info] {sfWebDebugLogger} Configuration 2.47 ms (9)
+Dec 20 12:37:34 symfony [info] {sfWebDebugLogger} Factories 42.47 ms (1)
+Dec 20 12:37:34 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 20 12:37:34 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 21.23 ms (1)
+Dec 20 12:37:34 symfony [info] {sfWebResponse} Send content (30681 o)
+Dec 20 12:37:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 20 12:37:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:38 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 20 12:37:38 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 20 12:37:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:38 symfony [info] {sfWebDebugLogger} Configuration 2.13 ms (9)
+Dec 20 12:37:38 symfony [info] {sfWebDebugLogger} Factories 63.48 ms (1)
+Dec 20 12:37:38 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.14 ms (1)
+Dec 20 12:37:38 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 28.31 ms (1)
+Dec 20 12:37:38 symfony [info] {sfWebResponse} Send content (122 o)
+Dec 20 12:37:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 20 12:37:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:39 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:39 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 20 12:37:39 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:37:39 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 20 12:37:39 symfony [debug] {sfPropelLogger} time:  0.008 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 20 12:37:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:39 symfony [info] {sfWebDebugLogger} Configuration 6.00 ms (8)
+Dec 20 12:37:39 symfony [info] {sfWebDebugLogger} Factories 69.65 ms (1)
+Dec 20 12:37:39 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 310.90 ms (1)
+Dec 20 12:37:39 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 20 12:37:39 symfony [info] {sfWebResponse} Send content (855 o)
+Dec 20 12:37:40 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 20 12:37:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:41 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:41 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 20 12:37:41 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 20 12:37:41 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:37:41 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:37:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:41 symfony [info] {sfWebDebugLogger} Configuration 10.04 ms (9)
+Dec 20 12:37:41 symfony [info] {sfWebDebugLogger} Factories 90.08 ms (1)
+Dec 20 12:37:41 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 20 12:37:41 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 51.04 ms (1)
+Dec 20 12:37:41 symfony [info] {sfWebResponse} Send content (30714 o)
+Dec 20 12:37:41 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 20 12:37:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:41 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:41 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 20 12:37:41 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 20 12:37:41 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:37:41 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:37:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:41 symfony [info] {sfWebDebugLogger} Configuration 2.20 ms (9)
+Dec 20 12:37:41 symfony [info] {sfWebDebugLogger} Factories 37.21 ms (1)
+Dec 20 12:37:41 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 20 12:37:41 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 18.34 ms (1)
+Dec 20 12:37:41 symfony [info] {sfWebResponse} Send content (30713 o)
+Dec 20 12:37:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 20 12:37:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:44 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 20 12:37:44 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 20 12:37:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:44 symfony [info] {sfWebDebugLogger} Configuration 6.26 ms (9)
+Dec 20 12:37:44 symfony [info] {sfWebDebugLogger} Factories 73.05 ms (1)
+Dec 20 12:37:44 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 0.14 ms (1)
+Dec 20 12:37:44 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 22.45 ms (1)
+Dec 20 12:37:44 symfony [info] {sfWebResponse} Send content (122 o)
+Dec 20 12:37:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 20 12:37:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:45 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 20 12:37:46 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:37:46 symfony [debug] {sfPropelLogger} time:  0.003 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 20 12:37:46 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 20 12:37:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:46 symfony [info] {sfWebDebugLogger} Configuration 1.68 ms (8)
+Dec 20 12:37:46 symfony [info] {sfWebDebugLogger} Factories 70.27 ms (1)
+Dec 20 12:37:46 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 308.86 ms (1)
+Dec 20 12:37:46 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 20 12:37:46 symfony [info] {sfWebResponse} Send content (855 o)
+Dec 20 12:37:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/index with parameters array (  'module' => 'reportes',  'action' => 'index',)
+Dec 20 12:37:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:54 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:54 symfony [info] {reportesActions} Call "reportesActions->executeIndex()"
+Dec 20 12:37:54 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/reportes/templates/indexSuccess.php"
+Dec 20 12:37:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:54 symfony [info] {sfWebDebugLogger} Configuration 1.96 ms (9)
+Dec 20 12:37:54 symfony [info] {sfWebDebugLogger} Factories 33.83 ms (1)
+Dec 20 12:37:54 symfony [info] {sfWebDebugLogger} Action "reportes/index" 0.14 ms (1)
+Dec 20 12:37:54 symfony [info] {sfWebDebugLogger} View "Success" for "reportes/index" 15.55 ms (1)
+Dec 20 12:37:54 symfony [info] {sfWebResponse} Send content (125 o)
+Dec 20 12:37:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/listarClientes with parameters array (  'module' => 'reportes',  'action' => 'listarClientes',)
+Dec 20 12:37:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:54 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:54 symfony [info] {reportesActions} Call "reportesActions->executeListarClientes()"
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.008 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=1
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT tipo_identificacion.CODIGO, tipo_identificacion.NOMBRE, tipo_identificacion.DESCRIPCION FROM tipo_identificacion WHERE tipo_identificacion.CODIGO=2
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=3
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=4
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT tipo_identificacion.CODIGO, tipo_identificacion.NOMBRE, tipo_identificacion.DESCRIPCION FROM tipo_identificacion WHERE tipo_identificacion.CODIGO=1
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=5
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=6
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=8
+Dec 20 12:37:54 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=9
+Dec 20 12:37:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:54 symfony [info] {sfWebDebugLogger} Configuration 1.90 ms (8)
+Dec 20 12:37:54 symfony [info] {sfWebDebugLogger} Factories 72.15 ms (1)
+Dec 20 12:37:54 symfony [info] {sfWebDebugLogger} Action "reportes/listarClientes" 404.38 ms (1)
+Dec 20 12:37:54 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarClientes" 0.02 ms (1)
+Dec 20 12:37:54 symfony [info] {sfWebResponse} Send content (1504 o)
+Dec 20 12:37:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/listarProgramacioncancion with parameters array (  'module' => 'reportes',  'action' => 'listarProgramacioncancion',)
+Dec 20 12:37:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:37:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:37:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:37:58 symfony [info] {reportesActions} Call "reportesActions->executeListarProgramacioncancion()"
+Dec 20 12:37:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:37:58 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO='3' AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO
+Dec 20 12:37:58 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO='3' AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO
+Dec 20 12:37:58 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=1
+Dec 20 12:37:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=2
+Dec 20 12:37:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:37:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:37:58 symfony [info] {sfWebDebugLogger} Configuration 2.15 ms (8)
+Dec 20 12:37:58 symfony [info] {sfWebDebugLogger} Factories 77.07 ms (1)
+Dec 20 12:37:58 symfony [info] {sfWebDebugLogger} Action "reportes/listarProgramacioncancion" 221.37 ms (1)
+Dec 20 12:37:58 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarProgramacioncancion" 0.01 ms (1)
+Dec 20 12:37:58 symfony [info] {sfWebResponse} Send content (647 o)
+Dec 20 12:38:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/imprimir with parameters array (  'module' => 'reportes',  'action' => 'imprimir',)
+Dec 20 12:38:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:38:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:38:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:38:01 symfony [info] {reportesActions} Call "reportesActions->executeImprimir()"
+Dec 20 12:38:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   14.3 MB | mempeak:   14.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:38:02 symfony [debug] {sfPropelLogger} time:  0.008 sec | slow:  NO | mem:   14.3 MB | mempeak:   14.3 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:38:02 symfony [err] {sfPropelLogger} SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»
+Dec 20 12:38:02 symfony [err] {PropelException}  [wrapped: SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»]
+Dec 20 12:38:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 20 12:38:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:38:02 symfony [info] {sfWebDebugLogger} Configuration 117.27 ms (10)
+Dec 20 12:38:02 symfony [info] {sfWebDebugLogger} Factories 65.81 ms (1)
+Dec 20 12:38:02 symfony [info] {sfWebDebugLogger} Action "reportes/imprimir" 986.09 ms (1)
+Dec 20 12:39:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/imprimir with parameters array (  'module' => 'reportes',  'action' => 'imprimir',)
+Dec 20 12:39:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:39:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:39:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:39:31 symfony [info] {reportesActions} Call "reportesActions->executeImprimir()"
+Dec 20 12:39:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/imprimir with parameters array (  'module' => 'reportes',  'action' => 'imprimir',)
+Dec 20 12:39:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/imprimir with parameters array (  'module' => 'reportes',  'action' => 'imprimir',)
+Dec 20 12:39:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/imprimir with parameters array (  'module' => 'reportes',  'action' => 'imprimir',)
+Dec 20 12:39:32 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:39:32 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:39:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/imprimir with parameters array (  'module' => 'reportes',  'action' => 'imprimir',)
+Dec 20 12:39:32 symfony [err] {sfPropelLogger} SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»
+Dec 20 12:39:32 symfony [err] {PropelException}  [wrapped: SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»]
+Dec 20 12:39:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 20 12:39:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:39:32 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Dec 20 12:39:32 symfony [info] {sfWebDebugLogger} Factories 47.44 ms (1)
+Dec 20 12:39:32 symfony [info] {sfWebDebugLogger} Action "reportes/imprimir" 876.17 ms (1)
+Dec 20 12:39:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:39:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:39:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:39:32 symfony [info] {reportesActions} Call "reportesActions->executeImprimir()"
+Dec 20 12:39:32 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:39:32 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:39:32 symfony [err] {sfPropelLogger} SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»
+Dec 20 12:39:32 symfony [err] {PropelException}  [wrapped: SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»]
+Dec 20 12:39:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 20 12:39:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:39:32 symfony [info] {sfWebDebugLogger} Configuration 9.38 ms (9)
+Dec 20 12:39:32 symfony [info] {sfWebDebugLogger} Factories 788.28 ms (1)
+Dec 20 12:39:32 symfony [info] {sfWebDebugLogger} Action "reportes/imprimir" 506.62 ms (1)
+Dec 20 12:39:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:39:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:39:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:39:32 symfony [info] {reportesActions} Call "reportesActions->executeImprimir()"
+Dec 20 12:39:33 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:39:33 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:39:33 symfony [err] {sfPropelLogger} SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»
+Dec 20 12:39:33 symfony [err] {PropelException}  [wrapped: SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»]
+Dec 20 12:39:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 20 12:39:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:39:33 symfony [info] {sfWebDebugLogger} Configuration 1.88 ms (9)
+Dec 20 12:39:33 symfony [info] {sfWebDebugLogger} Factories 1168.81 ms (1)
+Dec 20 12:39:33 symfony [info] {sfWebDebugLogger} Action "reportes/imprimir" 504.45 ms (1)
+Dec 20 12:39:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:39:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:39:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:39:33 symfony [info] {reportesActions} Call "reportesActions->executeImprimir()"
+Dec 20 12:39:33 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:39:33 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:39:33 symfony [err] {sfPropelLogger} SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»
+Dec 20 12:39:33 symfony [err] {PropelException}  [wrapped: SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»]
+Dec 20 12:39:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 20 12:39:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:39:34 symfony [info] {sfWebDebugLogger} Configuration 2.24 ms (9)
+Dec 20 12:39:34 symfony [info] {sfWebDebugLogger} Factories 1590.57 ms (1)
+Dec 20 12:39:34 symfony [info] {sfWebDebugLogger} Action "reportes/imprimir" 505.56 ms (1)
+Dec 20 12:39:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:39:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:39:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:39:34 symfony [info] {reportesActions} Call "reportesActions->executeImprimir()"
+Dec 20 12:39:34 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:39:34 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:39:34 symfony [err] {sfPropelLogger} SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»
+Dec 20 12:39:34 symfony [err] {PropelException}  [wrapped: SQLSTATE[22007]: Invalid datetime format: 7 ERROR:  la sintaxis de entrada no es válida para tipo date: «undefined»]
+Dec 20 12:39:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 20 12:39:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:39:34 symfony [info] {sfWebDebugLogger} Configuration 12.27 ms (9)
+Dec 20 12:39:34 symfony [info] {sfWebDebugLogger} Factories 1998.99 ms (1)
+Dec 20 12:39:34 symfony [info] {sfWebDebugLogger} Action "reportes/imprimir" 511.27 ms (1)
+Dec 20 12:39:45 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /reportes with parameters array (  'module' => 'reportes',  'action' => 'index',)
+Dec 20 12:39:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:39:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:39:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:39:45 symfony [info] {reportesActions} Call "reportesActions->executeIndex()"
+Dec 20 12:39:45 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/reportes/templates/indexSuccess.php"
+Dec 20 12:39:45 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:39:45 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:39:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:39:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:39:45 symfony [info] {sfWebDebugLogger} Configuration 9.22 ms (9)
+Dec 20 12:39:45 symfony [info] {sfWebDebugLogger} Factories 63.66 ms (1)
+Dec 20 12:39:45 symfony [info] {sfWebDebugLogger} Action "reportes/index" 0.30 ms (1)
+Dec 20 12:39:45 symfony [info] {sfWebDebugLogger} View "Success" for "reportes/index" 16.54 ms (1)
+Dec 20 12:39:45 symfony [info] {sfWebResponse} Send content (30363 o)
+Dec 20 12:39:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/listarClientes with parameters array (  'module' => 'reportes',  'action' => 'listarClientes',)
+Dec 20 12:39:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:39:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:39:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:39:48 symfony [info] {reportesActions} Call "reportesActions->executeListarClientes()"
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=1
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT tipo_identificacion.CODIGO, tipo_identificacion.NOMBRE, tipo_identificacion.DESCRIPCION FROM tipo_identificacion WHERE tipo_identificacion.CODIGO=2
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=3
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=4
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT tipo_identificacion.CODIGO, tipo_identificacion.NOMBRE, tipo_identificacion.DESCRIPCION FROM tipo_identificacion WHERE tipo_identificacion.CODIGO=1
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=5
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=6
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=8
+Dec 20 12:39:48 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=9
+Dec 20 12:39:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:39:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:39:48 symfony [info] {sfWebDebugLogger} Configuration 5.81 ms (8)
+Dec 20 12:39:48 symfony [info] {sfWebDebugLogger} Factories 71.35 ms (1)
+Dec 20 12:39:48 symfony [info] {sfWebDebugLogger} Action "reportes/listarClientes" 390.80 ms (1)
+Dec 20 12:39:48 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarClientes" 0.01 ms (1)
+Dec 20 12:39:48 symfony [info] {sfWebResponse} Send content (1504 o)
+Dec 20 12:39:58 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /interfaz_admin with parameters array (  'module' => 'interfaz_admin',  'action' => 'index',)
+Dec 20 12:39:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:39:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:39:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:39:58 symfony [info] {interfaz_adminActions} Call "interfaz_adminActions->executeIndex()"
+Dec 20 12:39:58 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/interfaz_admin/templates/indexSuccess.php"
+Dec 20 12:39:58 symfony [info] {sfPHPView} Decorate content with "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:39:58 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/templates/layout.php"
+Dec 20 12:39:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:39:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:39:58 symfony [info] {sfWebDebugLogger} Configuration 6.77 ms (9)
+Dec 20 12:39:58 symfony [info] {sfWebDebugLogger} Factories 51.37 ms (1)
+Dec 20 12:39:58 symfony [info] {sfWebDebugLogger} Action "interfaz_admin/index" 0.14 ms (1)
+Dec 20 12:39:58 symfony [info] {sfWebDebugLogger} View "Success" for "interfaz_admin/index" 17.65 ms (1)
+Dec 20 12:39:59 symfony [info] {sfWebResponse} Send content (30604 o)
+Dec 20 12:40:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/index with parameters array (  'module' => 'gestionar_cancion',  'action' => 'index',)
+Dec 20 12:40:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:40:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:40:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:40:01 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeIndex()"
+Dec 20 12:40:01 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/gestionar_cancion/templates/indexSuccess.php"
+Dec 20 12:40:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:40:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:40:01 symfony [info] {sfWebDebugLogger} Configuration 1.97 ms (9)
+Dec 20 12:40:01 symfony [info] {sfWebDebugLogger} Factories 87.64 ms (1)
+Dec 20 12:40:01 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/index" 4.38 ms (1)
+Dec 20 12:40:01 symfony [info] {sfWebDebugLogger} View "Success" for "gestionar_cancion/index" 18.68 ms (1)
+Dec 20 12:40:01 symfony [info] {sfWebResponse} Send content (122 o)
+Dec 20 12:40:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /gestionar_cancion/listarCancion with parameters array (  'module' => 'gestionar_cancion',  'action' => 'listarCancion',)
+Dec 20 12:40:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:40:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:40:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:40:02 symfony [info] {gestionar_cancionActions} Call "gestionar_cancionActions->executeListarCancion()"
+Dec 20 12:40:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:40:02 symfony [debug] {sfPropelLogger} time:  0.009 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM cancion
+Dec 20 12:40:02 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion
+Dec 20 12:40:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:40:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:40:03 symfony [info] {sfWebDebugLogger} Configuration 1.68 ms (8)
+Dec 20 12:40:03 symfony [info] {sfWebDebugLogger} Factories 65.73 ms (1)
+Dec 20 12:40:03 symfony [info] {sfWebDebugLogger} Action "gestionar_cancion/listarCancion" 298.77 ms (1)
+Dec 20 12:40:03 symfony [info] {sfWebDebugLogger} View "None" for "gestionar_cancion/listarCancion" 0.01 ms (1)
+Dec 20 12:40:03 symfony [info] {sfWebResponse} Send content (855 o)
+Dec 20 12:40:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/index with parameters array (  'module' => 'reportes',  'action' => 'index',)
+Dec 20 12:40:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:40:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:40:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:40:06 symfony [info] {reportesActions} Call "reportesActions->executeIndex()"
+Dec 20 12:40:06 symfony [info] {sfPHPView} Render "/home/legnardz/www/www/oms/apps/oms_admin/modules/reportes/templates/indexSuccess.php"
+Dec 20 12:40:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:40:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:40:06 symfony [info] {sfWebDebugLogger} Configuration 2.00 ms (9)
+Dec 20 12:40:06 symfony [info] {sfWebDebugLogger} Factories 33.10 ms (1)
+Dec 20 12:40:06 symfony [info] {sfWebDebugLogger} Action "reportes/index" 0.14 ms (1)
+Dec 20 12:40:06 symfony [info] {sfWebDebugLogger} View "Success" for "reportes/index" 10.39 ms (1)
+Dec 20 12:40:06 symfony [info] {sfWebResponse} Send content (125 o)
+Dec 20 12:40:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/listarClientes with parameters array (  'module' => 'reportes',  'action' => 'listarClientes',)
+Dec 20 12:40:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:40:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:40:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:40:07 symfony [info] {reportesActions} Call "reportesActions->executeListarClientes()"
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=1
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT tipo_identificacion.CODIGO, tipo_identificacion.NOMBRE, tipo_identificacion.DESCRIPCION FROM tipo_identificacion WHERE tipo_identificacion.CODIGO=2
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=3
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=4
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT tipo_identificacion.CODIGO, tipo_identificacion.NOMBRE, tipo_identificacion.DESCRIPCION FROM tipo_identificacion WHERE tipo_identificacion.CODIGO=1
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=5
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=6
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=8
+Dec 20 12:40:07 symfony [debug] {sfPropelLogger} time:  0.007 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=9
+Dec 20 12:40:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:40:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:40:07 symfony [info] {sfWebDebugLogger} Configuration 5.79 ms (8)
+Dec 20 12:40:07 symfony [info] {sfWebDebugLogger} Factories 65.82 ms (1)
+Dec 20 12:40:07 symfony [info] {sfWebDebugLogger} Action "reportes/listarClientes" 398.19 ms (1)
+Dec 20 12:40:07 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarClientes" 0.01 ms (1)
+Dec 20 12:40:07 symfony [info] {sfWebResponse} Send content (1504 o)
+Dec 20 12:40:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/listarProgramacioncancion with parameters array (  'module' => 'reportes',  'action' => 'listarProgramacioncancion',)
+Dec 20 12:40:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:40:10 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:40:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:40:10 symfony [info] {reportesActions} Call "reportesActions->executeListarProgramacioncancion()"
+Dec 20 12:40:11 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:40:11 symfony [debug] {sfPropelLogger} time:  0.007 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM venta, programacion_cancion, cancion WHERE venta.USUARIO='3' AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO
+Dec 20 12:40:11 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO='3' AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO
+Dec 20 12:40:11 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=1
+Dec 20 12:40:11 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=2
+Dec 20 12:40:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 12:40:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 12:40:11 symfony [info] {sfWebDebugLogger} Configuration 2.67 ms (8)
+Dec 20 12:40:11 symfony [info] {sfWebDebugLogger} Factories 81.27 ms (1)
+Dec 20 12:40:11 symfony [info] {sfWebDebugLogger} Action "reportes/listarProgramacioncancion" 235.21 ms (1)
+Dec 20 12:40:11 symfony [info] {sfWebDebugLogger} View "None" for "reportes/listarProgramacioncancion" 0.01 ms (1)
+Dec 20 12:40:11 symfony [info] {sfWebResponse} Send content (647 o)
+Dec 20 12:40:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reportes/imprimir with parameters array (  'module' => 'reportes',  'action' => 'imprimir',)
+Dec 20 12:40:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 12:40:14 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 12:40:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 12:40:14 symfony [info] {reportesActions} Call "reportesActions->executeImprimir()"
+Dec 20 12:40:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Dec 20 12:40:15 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:   13.8 MB | mempeak:   13.8 MB | memdelta:      0.0 B | SELECT usuario.CODIGO, usuario.USUARIO, usuario.CONTRASENA, usuario.PERFIL, usuario.PERSONA, usuario.HABILITADO FROM usuario, persona WHERE usuario.PERFIL=2 AND usuario.PERSONA=persona.CODIGO
+Dec 20 12:40:15 symfony [debug] {sfPropelLogger} time:  0.004 sec | slow:  NO | mem:   14.0 MB | mempeak:   14.0 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=1 AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO ORDER BY programacion_cancion.FECHA ASC,programacion_cancion.INICIO ASC
+Dec 20 12:40:15 symfony [debug] {sfPropelLogger} time:  0.006 sec | slow:  NO | mem:   14.0 MB | mempeak:   14.0 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=3 AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO ORDER BY programacion_cancion.FECHA ASC,programacion_cancion.INICIO ASC
+Dec 20 12:40:15 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:   14.3 MB | mempeak:   14.5 MB | memdelta:      0.0 B | SELECT persona.CODIGO, persona.NOMBRE, persona.APELLIDO, persona.IDENTIFICACION, persona.TIPO_IDENTIFICACION, persona.DIRECCION, persona.TELEFONO, persona.E_MAIL FROM persona WHERE persona.CODIGO=3
+Dec 20 12:40:15 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:   14.5 MB | mempeak:   14.5 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=1
+Dec 20 12:40:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   14.8 MB | mempeak:   14.8 MB | memdelta:      0.0 B | SELECT cancion.CODIGO, cancion.NOMBRE, cancion.AUTOR, cancion.ALBUM, cancion.FECHA_DE_PUBLICACION, cancion.DURACION, cancion.URL, cancion.HABILITADA, cancion.PRECIO, cancion.RANKING FROM cancion WHERE cancion.CODIGO=2
+Dec 20 12:40:16 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:   16.0 MB | mempeak:   16.0 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=4 AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO ORDER BY programacion_cancion.FECHA ASC,programacion_cancion.INICIO ASC
+Dec 20 12:40:16 symfony [debug] {sfPropelLogger} time:  0.005 sec | slow:  NO | mem:   16.0 MB | mempeak:   16.0 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=5 AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO ORDER BY programacion_cancion.FECHA ASC,programacion_cancion.INICIO ASC
+Dec 20 12:40:16 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:   16.0 MB | mempeak:   16.0 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=6 AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO ORDER BY programacion_cancion.FECHA ASC,programacion_cancion.INICIO ASC
+Dec 20 12:40:16 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:   16.0 MB | mempeak:   16.0 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=8 AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO ORDER BY programacion_cancion.FECHA ASC,programacion_cancion.INICIO ASC
+Dec 20 12:40:16 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:   16.0 MB | mempeak:   16.0 MB | memdelta:      0.0 B | SELECT programacion_cancion.CANCION, programacion_cancion.VENTA, programacion_cancion.FECHA, programacion_cancion.INICIO, programacion_cancion.FIN FROM programacion_cancion, venta, cancion WHERE venta.USUARIO=9 AND programacion_cancion.VENTA=venta.CODIGO AND programacion_cancion.CANCION=cancion.CODIGO ORDER BY programacion_cancion.FECHA ASC,programacion_cancion.INICIO ASC

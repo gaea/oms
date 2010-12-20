@@ -299,9 +299,16 @@
 /***********************************FUNCIONES*****************************/
 	
 	function function_imprimir(){
+		var desde = '';
+		var hasta = '';
 		var buscar = Ext.getCmp('reportes_clientes_buscar_textfield').getValue();
-		var desde = Ext.getCmp('reportes_programacion_desde_datefield').getValue().format('Y-m-d');
-		var hasta = Ext.getCmp('reportes_programacion_hasta_datefield').getValue().format('Y-m-d');
+		if(Ext.getCmp('reportes_programacion_desde_datefield').getValue() != ''){
+			desde = Ext.getCmp('reportes_programacion_desde_datefield').getValue().format('Y-m-d');
+		}
+		if(Ext.getCmp('reportes_programacion_hasta_datefield').getValue() != ''){
+			hasta = Ext.getCmp('reportes_programacion_hasta_datefield').getValue().format('Y-m-d');
+		}
+		
 		window.location = 'reportes/imprimir?buscar='+buscar+'&desde='+desde+'&hasta='+hasta;
 	}
 

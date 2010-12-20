@@ -17,5 +17,14 @@ Duracion: 07:58:00
 			</description>
 			<pubDate>2010-12-20 08:00:00</pubDate>
 		</item>
+		<item>
+			<title><![CDATA[Paranoid]]></title>
+			<link>http://localhost/www/oms/web/uploads/cunias/Black Sabbath - Paranoid.mp3</link>
+			<enclosure url="http://localhost/www/oms/web/uploads/cunias/Black Sabbath - Paranoid.mp3" length="2721422" type="audio/mpeg" />
+			<description>
+Duracion: 02:50:00
+			</description>
+			<pubDate>2010-12-20 12:00:00</pubDate>
+		</item>
 	</channel>
 </rss>
