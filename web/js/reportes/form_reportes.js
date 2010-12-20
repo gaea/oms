@@ -81,10 +81,10 @@
 			{
 				xtype: 'textfield',
 				id: 'reportes_clientes_buscar_textfield'
-			},
+			},'-',
 			{
 				xtype: 'button',
-				text: 'buscar',
+				text: 'Suscar',
 				iconCls: 'buscar16',
 				handler: function(){
 					reportes_clientes_datastore.load({
@@ -176,12 +176,92 @@
 		}),
 		autoExpandColumn: 'can_nombre_col_id',
 		autoExpandMin: 120,
-		height: 474,
+		height: 478,
 		listeners: {
 			viewready: function(g) {
 				g.getSelectionModel().selectRow(0);
 			}
 		},
+		tbar: [
+			{
+				xtype: 'label',
+				text: 'Desde:'
+			},
+			{
+				xtype: 'datefield',
+				id: 'reportes_programacion_desde_datefield'
+			},'-',
+			{
+				xtype: 'label',
+				text: 'Hasta:'
+			},
+			{
+				xtype: 'datefield',
+				id: 'reportes_programacion_hasta_datefield'
+			},'-',
+			{
+				xtype: 'button',
+				text: 'Buscar',
+				iconCls: 'buscar16',
+				handler: function(){
+					if(codigo_usuario != ''){
+						if(Ext.getCmp('reportes_programacion_desde_datefield').getValue() != ''){
+							if(Ext.getCmp('reportes_programacion_hasta_datefield').getValue() != ''){
+								reportes_programacion_cancion_datastore.load(
+									{
+										params: {
+											codigo_usuario: codigo_usuario,
+											desde: Ext.getCmp('reportes_programacion_desde_datefield').getValue().format('Y-m-d'),
+											hasta: Ext.getCmp('reportes_programacion_hasta_datefield').getValue().format('Y-m-d')
+										}
+									}
+								);
+							}
+							else{
+								reportes_programacion_cancion_datastore.load(
+									{
+										params: {
+											codigo_usuario: codigo_usuario,
+											desde: Ext.getCmp('reportes_programacion_desde_datefield').getValue().format('Y-m-d')
+										}
+									}
+								);
+							}
+						}
+						if(Ext.getCmp('reportes_programacion_hasta_datefield').getValue() != ''){
+							if(Ext.getCmp('reportes_programacion_desde_datefield').getValue() != ''){
+								reportes_programacion_cancion_datastore.load(
+									{
+										params: {
+											codigo_usuario: codigo_usuario,
+											desde: Ext.getCmp('reportes_programacion_desde_datefield').getValue().format('Y-m-d'),
+											hasta: Ext.getCmp('reportes_programacion_hasta_datefield').getValue().format('Y-m-d')
+										}
+									}
+								);
+							}
+							else{
+								reportes_programacion_cancion_datastore.load(
+									{
+										params: {
+											codigo_usuario: codigo_usuario,
+											desde: Ext.getCmp('reportes_programacion_hasta_datefield').getValue().format('Y-m-d')
+										}
+									}
+								);
+							}
+						}
+						if(Ext.getCmp('reportes_programacion_desde_datefield').getValue() == '' &&
+							Ext.getCmp('reportes_programacion_hasta_datefield').getValue() == ''){
+							mostrarMensajeConfirmacion('Error', 'Por favor seleccione una fecha para realizar la busqueda');
+						}
+					}
+					else{
+						mostrarMensajeConfirmacion('Error', 'Por favor seleccione un cliente');
+					}
+				}
+			}
+		],
 		bbar: new Ext.PagingToolbar({
 			pageSize: 10,
 			store: reportes_programacion_cancion_datastore,
@@ -219,7 +299,10 @@
 /***********************************FUNCIONES*****************************/
 	
 	function function_imprimir(){
-		window.location = 'reportes/imprimir?buscar='+Ext.getCmp('reportes_clientes_buscar_textfield').getValue();
+		var buscar = Ext.getCmp('reportes_clientes_buscar_textfield').getValue();
+		var desde = Ext.getCmp('reportes_programacion_desde_datefield').getValue().format('Y-m-d');
+		var hasta = Ext.getCmp('reportes_programacion_hasta_datefield').getValue().format('Y-m-d');
+		window.location = 'reportes/imprimir?buscar='+buscar+'&desde='+desde+'&hasta='+hasta;
 	}
 
 	function fun_can_descargar(){

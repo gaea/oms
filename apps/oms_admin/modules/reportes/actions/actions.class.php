@@ -98,13 +98,23 @@ class reportesActions extends sfActions
 		$fila=0;
 		$datos;
 		$codigo_usuario = $this->getRequestParameter('codigo_usuario');
+		$desde = $this->getRequestParameter('desde');
+		$hasta = $this->getRequestParameter('hasta');
 		
 		try
 		{
 			$conexion = new Criteria();
 			$conexion->addJoin(ProgramacionCancionPeer::VENTA, VentaPeer::CODIGO);
 			$conexion->addJoin(ProgramacionCancionPeer::CANCION, CancionPeer::CODIGO);
-			$conexion->add(VentaPeer::USUARIO, $codigo_usuario); 
+			$conexion->add(VentaPeer::USUARIO, $codigo_usuario);
+			if($desde != '')
+			{
+				$conexion->add(ProgramacionCancionPeer::FECHA, $desde, Criteria::GREATER_EQUAL);
+			}
+			if($hasta != '')
+			{
+				$conexion->add(ProgramacionCancionPeer::FECHA, $hasta, Criteria::LESS_EQUAL);
+			}
 			
 			$numero_canciones = ProgramacionCancionPeer::doCount($conexion);
 			$conexion->setLimit($this->getRequestParameter('limit'));
@@ -147,7 +157,9 @@ class reportesActions extends sfActions
 	{
 		$config = sfTCPDFPluginConfigHandler::loadConfig();
 		$buscar = $this->getRequestParameter('buscar');
-
+		$desde = $this->getRequestParameter('desde');
+		$hasta = $this->getRequestParameter('hasta');
+		
 		$pdf = new sfTCPDF();
 
 
@@ -203,6 +215,16 @@ class reportesActions extends sfActions
 			$conexion->addJoin(ProgramacionCancionPeer::VENTA, VentaPeer::CODIGO);
 			$conexion->addJoin(ProgramacionCancionPeer::CANCION, CancionPeer::CODIGO);
 			$conexion->add(VentaPeer::USUARIO, $temporal->getCodigo());
+			
+			if($desde != '')
+			{
+				$conexion->add(ProgramacionCancionPeer::FECHA, $desde, Criteria::GREATER_EQUAL);
+			}
+			if($hasta != '')
+			{
+				$conexion->add(ProgramacionCancionPeer::FECHA, $hasta, Criteria::LESS_EQUAL);
+			}
+			
 			$conexion->addAscendingOrderByColumn(ProgramacionCancionPeer::FECHA);
 			$conexion->addAscendingOrderByColumn(ProgramacionCancionPeer::INICIO);
 			$programacion = ProgramacionCancionPeer::doSelect($conexion);
