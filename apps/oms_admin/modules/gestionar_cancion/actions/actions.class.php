@@ -195,13 +195,13 @@ class gestionar_cancionActions extends sfActions
 			if($fila>0)
 			{
 				$jsonresult = json_encode($datos);
-				$salida= '({"total":"'.$fila.'","results":'.$jsonresult.'})';
+				$salida= '({"total":"'.$numero_canciones.'","results":'.$jsonresult.'})';
 			}
 
 		}
 		catch (Exception $exception)
 		{
-			return "({success: false, errors: { reason: 'Hubo una excepci&oacute;n en listar canciones ' , error: '".$exception->getMessage()."'}})";
+			return $this->renderText("({success: false, errors: { reason: 'Hubo una excepci&oacute;n en listar canciones ' , error: '".$exception->getMessage()."'}})");
 		}
 
 		return $this->renderText($salida);
@@ -210,7 +210,7 @@ class gestionar_cancionActions extends sfActions
 	/**
 	 *@author:gaea
 	 *@date:2 de dic de 2010
-	 *Esta funcion elimina una Cancions
+	 *Esta funcion elimina una Cancion
 	 */
 	public function executeEliminarCancion(sfWebRequest $request)
 	{

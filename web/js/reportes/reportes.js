@@ -1,123 +1,4 @@
 
-﻿	var url_arc_web='';
-	
-	var cancion_formpanel = new Ext.FormPanel({
-		title: 'Datos detallados de la canci&oacute;n ',
-		columnWidth: '.4',
-		height: 502,
-		frame: true,
-		id: 'cancion_formpanel',
-		fileUpload: true,
-		style: {"margin-left": "10px"},
-		bodyStyle: 'padding:10px',
-		defaults:{xtype:'textfield',anchor:'100%'},
-		items:
-		[
-			{
-				fieldLabel: 'Nombre',
-				id: 'can_nombre',
-				name: 'can_nombre',
-				maskRe: /([a-zA-Z0-9\s]+)$/
-			},
-			{
-				fieldLabel: 'Autor',
-				id: 'can_autor',
-				name: 'can_autor',
-				maskRe: /([a-zA-Z0-9\s]+)$/
-			},
-			{
-				fieldLabel: 'Album',
-				id: 'can_album',
-				name: 'can_album',
-				maskRe: /([a-zA-Z0-9\s]+)$/,
-				//allowBlank: false
-			},
-			{
-				xtype:'datefield',
-				fieldLabel: 'Fecha de publicaci&oacute;n',
-				id: 'can_fecha_de_publicacion',
-				name: 'can_fecha_de_publicacion',
-				format: 'Y-m-d'
-			},
-			{
-				xtype:'textfield',
-				fieldLabel: 'Duraci&oacute;n',
-				id: 'can_duracion',
-				name: 'can_duracion',
-				value:'00:00:00'
-			},
-			{
-				xtype: 'fileuploadfield', 
-				id: 'can_url', 
-				emptyText: 'Seleccione una cancion', 
-				fieldLabel: 'Escoger',
-				name: 'can_archivo',
-				buttonText: '',
-				allowBlank: false,
-				buttonCfg: {iconCls: 'archivo'}
-		  	},
-			{
-				xtype:'checkbox',
-				fieldLabel: 'Habilitada',
-				id: 'can_habilitada',
-				name: 'can_habilitada',
-				allowBlank: false
-			},
-			{
-				xtype:'numberfield',
-				fieldLabel: 'Precio',
-				id: 'can_precio',
-				name: 'can_precio',
-				allowDecimal:true,
-				allowBlank: false
-			},
-			{
-				xtype:'numberfield',
-				fieldLabel: 'Ranking',
-				id: 'can_ranking',
-				name: 'can_ranking',
-				allowDecimal:false,
-				allowBlank: false
-			},
-			{
-				id:'can_codigo',
-				name: 'can_codigo',
-				xtype:'hidden'
-			}
-		],
-		buttons:
-		[
-			{	
-				text:'Guardar',
-				handler:fun_can_crear,
-				id:'can_crear_boton',
-				iconCls:'crear16',
-				tooltip:'Pulse aqui para guardar nuevas canciones'
-			},
-			{	
-				text:'Actualizar',
-				handler:fun_can_actualizar,
-				//id:'can_crear_boton',
-				iconCls:'actualizar16',
-				tooltip:'Pulse aqui para actualizar los datos de las canciones'
-			},
-			{
-				text:'Cancelar',
-				id: 'can_cancelar_boton',
-				handler: fun_can_cancelar,
-				iconCls: 'eliminar16',
-				tooltip: 'Pulse aqu&iacute; para cancelar'
-			},
-			{
-				text:'Descargar',
-				disabled:true,
-				id:'can_descargar_boton',
-				handler: fun_can_descargar,
-				iconCls: 'next16',
-				tooltip: 'Seleccione una canci&oacute;n y pulse aqu&iacute; para descargarla'
-			}
-		]	
-	});
 
 	var cancion_datastore = new Ext.data.GroupingStore({
 		id: 'cancion_datastore',
@@ -145,8 +26,8 @@
 			{name: 'can_ranking'}
 	
 		]),
-		sortInfo: {field: 'can_nombre', direction: "ASC"},
-		groupField: 'can_album'
+		sortInfo:{field: 'can_nombre', direction: "ASC"},
+		groupField:'can_album'
 	});
 	cancion_datastore.load();
 
@@ -220,9 +101,9 @@
 		items: 
 		[
 			cancion_gridpanel, 
-			cancion_formpanel
+			//cancion_formpanel
 		],
-		renderTo:'div_form_cancion'
+		renderTo:'div_form_reportes'
 	});
 
 /***********************************FUNCIONES*****************************/
@@ -257,28 +138,6 @@
 		}
 	}
 	
-	function fun_can_actualizar(){
-		if(codigo_cancion_actualizar != ''){ 
-			var verificacion = fun_can_verificarCamposDocumento();
-	 		if(verificacion){
-				subirDatos(
-					cancion_formpanel,
-					'gestionar_cancion/actualizarCancion',//getAbsoluteUrl('gestionar_cancion','actualizarCancion'),
-					{codigo_cancion: codigo_cancion_actualizar},
-					function(){
-						Ext.getCmp('can_crear_boton').setText('Nuevo');
-						//Ext.getCmp('can_cancelar_boton').setText('Eliminar');
-						Ext.getCmp('can_descargar_boton').setDisabled(false);
-						cancion_datastore.reload(); 
-					},
-					function(){}
-				);
-			}
-		}
-		else{
-			mostrarMensajeRapido('Alerta!', 'Seleccione una canci&oacute;n');
-		}
-	}
 
 	function fun_can_descargar(){
 		if(Ext.getCmp('can_url').getValue()!=''){

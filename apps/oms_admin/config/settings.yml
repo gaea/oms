@@ -33,3 +33,6 @@ all:
 
     # Enable the database manager
     use_database:           true
+  .action:
+    login_module: login
+    login_action: index

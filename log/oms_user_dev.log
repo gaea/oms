@@ -1406,3 +1406,54 @@ Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} Factories 45.80 ms (1)
 Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} Action "comprar_cancion/listarCancionadquirida" 52.85 ms (1)
 Dec 18 22:04:58 symfony [info] {sfWebDebugLogger} View "None" for "comprar_cancion/listarCancionadquirida" 0.01 ms (1)
 Dec 18 22:04:58 symfony [info] {sfWebResponse} Send content (824 o)
+Dec 19 23:00:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCancionadquirida with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCancionadquirida',)
+Dec 19 23:00:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /comprar_cancion/listarCanciondisponible with parameters array (  'module' => 'comprar_cancion',  'action' => 'listarCanciondisponible',)
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 19 23:00:55 symfony [info] {sfBasicSecurityFilter} Action "comprar_cancion/listarCanciondisponible" requires authentication, forwarding to "default/login"
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 19 23:00:55 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Dec 19 23:00:55 symfony [info] {sfPHPView} Render "/usr/share/php/symfony/controller/default/templates/loginSuccess.php"
+Dec 19 23:00:55 symfony [info] {sfPHPView} Decorate content with "/usr/share/php/symfony/controller/default/templates/defaultLayout.php"
+Dec 19 23:00:55 symfony [info] {sfPHPView} Render "/usr/share/php/symfony/controller/default/templates/defaultLayout.php"
+Dec 19 23:00:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 19 23:00:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 19 23:00:55 symfony [info] {sfWebDebugLogger} Configuration 535.39 ms (12)
+Dec 19 23:00:55 symfony [info] {sfWebDebugLogger} Factories 210.14 ms (1)
+Dec 19 23:00:55 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Dec 19 23:00:55 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 31.64 ms (1)
+Dec 19 23:00:55 symfony [info] {sfWebResponse} Send content (3038 o)
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 19 23:00:55 symfony [info] {sfBasicSecurityFilter} Action "comprar_cancion/listarCancionadquirida" requires authentication, forwarding to "default/login"
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 19 23:00:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 19 23:00:55 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Dec 19 23:00:55 symfony [info] {sfPHPView} Render "/usr/share/php/symfony/controller/default/templates/loginSuccess.php"
+Dec 19 23:00:55 symfony [info] {sfPHPView} Decorate content with "/usr/share/php/symfony/controller/default/templates/defaultLayout.php"
+Dec 19 23:00:55 symfony [info] {sfPHPView} Render "/usr/share/php/symfony/controller/default/templates/defaultLayout.php"
+Dec 19 23:00:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 19 23:00:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 19 23:00:55 symfony [info] {sfWebDebugLogger} Configuration 492.46 ms (12)
+Dec 19 23:00:55 symfony [info] {sfWebDebugLogger} Factories 287.83 ms (1)
+Dec 19 23:00:55 symfony [info] {sfWebDebugLogger} Action "default/login" 0.19 ms (1)
+Dec 19 23:00:55 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 9.08 ms (1)
+Dec 19 23:00:55 symfony [info] {sfWebResponse} Send content (3038 o)
+Dec 20 02:47:24 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /publicar_mensaje with parameters array (  'module' => 'publicar_mensaje',  'action' => 'index',)
+Dec 20 02:47:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 02:47:24 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 20 02:47:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 02:47:24 symfony [info] {publicar_mensajeActions} Call "publicar_mensajeActions->executeIndex()"
+Dec 20 02:47:24 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/modules/publicar_mensaje/templates/indexSuccess.php"
+Dec 20 02:47:24 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 20 02:47:24 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_user/templates/layout.php"
+Dec 20 02:47:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 02:47:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 02:47:24 symfony [info] {sfWebDebugLogger} Configuration 127.21 ms (9)
+Dec 20 02:47:24 symfony [info] {sfWebDebugLogger} Factories 27.37 ms (1)
+Dec 20 02:47:24 symfony [info] {sfWebDebugLogger} Action "publicar_mensaje/index" 0.20 ms (1)
+Dec 20 02:47:24 symfony [info] {sfWebDebugLogger} View "Success" for "publicar_mensaje/index" 32.96 ms (1)
+Dec 20 02:47:24 symfony [info] {sfWebResponse} Send content (29704 o)
