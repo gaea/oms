@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+	<channel>
+		<title>OMS</title>
+		<link>http://localhost/www/oms/web/oms_user.php/interfaz_cliente</link>
+		<description>Open Music Suscriptores...</description>
+		<image>
+			<url>http://localhost/www/oms/web/images/oms.png</url> 
+			<link>http://localhost/www/oms/web/oms_user.php/interfaz_cliente</link> 
+		</image>
+		<item>
+			<title><![CDATA[96 quit better]]></title>
+			<link>http://localhost/www/oms/web/uploads/96 quit better.mp3</link>
+			<enclosure url="http://localhost/www/oms/web/uploads/96 quit better.mp3" length="2450058" type="audio/mpeg" />
+			<description>
+					Album: nuevo
+Duracion: 03:24:00
+			</description>
+			<pubDate>2010-12-19 10:00:00</pubDate>
+		</item>
+		<item>
+			<title><![CDATA[Never Let Down]]></title>
+			<link>http://localhost/www/oms/web/uploads/Andrew W. K. - Never Let Down.mp3</link>
+			<enclosure url="http://localhost/www/oms/web/uploads/Andrew W. K. - Never Let Down.mp3" length="5735634" type="audio/mpeg" />
+			<description>
+					Album: The Wolf
+Duracion: 03:59:00
+			</description>
+			<pubDate>2010-12-19 11:00:00</pubDate>
+		</item>
+	</channel>
+</rss>

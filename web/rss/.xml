@@ -2,11 +2,11 @@
 <rss version="2.0">
 	<channel>
 		<title>OMS</title>
-		<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link>
+		<link>http://localhost/www/oms/web/oms_user.php/interfaz_cliente</link>
 		<description>Open Music Suscriptores...</description>
 		<image>
-			<url>http://localhost/oms/web/images/oms.png</url> 
-			<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link> 
+			<url>http://localhost/www/oms/web/images/oms.png</url> 
+			<link>http://localhost/www/oms/web/oms_user.php/interfaz_cliente</link> 
 		</image>
 	</channel>
 </rss>

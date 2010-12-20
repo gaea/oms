@@ -1,3 +1,35 @@
+	
+	var actual_admin_datastore = new Ext.data.GroupingStore({
+		id: 'actual_admin_datastore',
+		proxy: new Ext.data.HttpProxy({
+			url: 'login/consultarAdmin',
+			method: 'POST',
+			limit: 10,
+			start: 0
+		}),
+		baseParams:{}, 
+		reader: new Ext.data.JsonReader({
+			root: 'results',
+			totalProperty: 'total',
+			id: 'id_reader'
+			},[ 
+			{name: 'persona_codigo'},
+			{name: 'persona_nombre'},
+			{name: 'persona_apellido'},
+			{name: 'identificacion_codigo'},
+			{name: 'identificacion_nombre'},
+			{name: 'persona_identificacion'},
+			{name: 'persona_direccion'},
+			{name: 'persona_telefono'},
+			{name: 'persona_email'},
+			{name: 'usuario_codigo'},
+			{name: 'usuario_nombre'},
+			{name: 'usuario_contrasena'}
+		]),
+		sortInfo:{field: 'persona_nombre', direction: "ASC"}
+	});
+	actual_admin_datastore.load();
+	
 	var tipoid_datastore = new Ext.data.GroupingStore({
 		id: 'tipoId_datastore',
 		proxy: new Ext.data.HttpProxy({
@@ -45,7 +77,6 @@
 		height: 400,
 		frame:true,
 		id:'gestion_admin_formpanel',
-		fileUpload: true,
 		bodyStyle: 'padding:10px',
 		defaults:{xtype:'textfield',anchor:'100%'},
 		items:[
@@ -79,15 +110,15 @@
 				name:'persona_telefono',
 				id:'persona_telefono',
 				allowBlank:false
-		},
+			},
 			{
 				fieldLabel:'Correo-e',
 				name:'persona_email',
-					id:'persona_email',
+				id:'persona_email',
 				allowBlank:false
 			},
 			{
-			fieldLabel:'Login',
+				fieldLabel:'Login',
 				name:'usuario_nombre',
 				id:"usuario_nombre"
 			},
@@ -100,6 +131,11 @@
 		],
 		buttons:
 		[
+			{
+				text: 'Actualizar',
+				id: 'btn_actualizar_admin',
+				handler: fun_actualizar_admin
+			},
 			{	
 				text: 'Crear',
 				id: 'btn_crear_admin',
@@ -187,10 +223,6 @@
 					gestion_admin_formpanel.getForm().reset();
 					gestion_admin_formpanel.getForm().loadRecord(rec);
 					comboTipoId.setValue(rec.data.identificacion_nombre);
-					//Ext.getCmp('admin_crear_boton').setText('Nuevo');
-					//Ext.getCmp('admin_descargar_boton').setDisabled(false);
-					//Ext.getCmp('admin_cancelar_boton').setDisabled(false);
-					//codigo_admin_actualizar = rec.get('admin_codigo');
 					codigo_usuario = rec.get('usuario_codigo');
 				}
 			}
@@ -225,8 +257,8 @@
 		layout:'column',
 		items: 
 		[
-			gestion_admin_formpanel,
-			admin_gridpanel
+			admin_gridpanel,
+			gestion_admin_formpanel
 		],
 		renderTo:'div_form_gestion_admin'
 	});
@@ -244,6 +276,7 @@
 			gestion_admin_formpanel.getForm().reset();
 			Ext.getCmp('btn_crear_admin').setText('Guardar');
 			Ext.getCmp('btn_eliminar_admin').setDisabled(true);
+			Ext.getCmp('btn_actualizar_admin').setDisabled(true);
 			admin_gridpanel.disable(true);
 			Ext.getCmp('btn_cancelar').setDisabled(false);
 		}
@@ -253,16 +286,16 @@
 				
 				subirDatos(
 					gestion_admin_formpanel,
-					'gestionar_admin/deshabilitar',
+					'gestionar_admin/crear',
 					{
 						nombre_persona: Ext.getCmp('persona_nombre').getValue(),
 						apellido_persona: Ext.getCmp('persona_apellido').getValue(),
 						id_tipo_identificacion: Ext.getCmp('tipoId_combo').getValue(),
-						identificacion_persona: Ext.getCmp('identificacion_admin').getValue(),
+						identificacion_persona: Ext.getCmp('persona_identificacion').getValue(),
 						direccion_persona: Ext.getCmp('persona_direccion').getValue(),
 						telefono_persona: Ext.getCmp('persona_telefono').getValue(),
 						email_persona: Ext.getCmp('persona_email').getValue(),
-						usuario_nombre: Ext.getCmp('usuario_nombre').getValue(),
+						login_admin: Ext.getCmp('usuario_nombre').getValue(),
 						contrasena_admin: Ext.getCmp('usuario_contrasena').getValue()
 					},
 					function(){
@@ -271,6 +304,7 @@
 					},
 					function(){}
 				);
+				
 			}
 		}
 	}
@@ -280,36 +314,108 @@
 			gestion_admin_formpanel.getForm().reset();
 			fun_desabilitarCampos(true);
 			Ext.getCmp('btn_crear_admin').setDisabled(true);
+			Ext.getCmp('btn_actualizar_admin').setDisabled(true);
 			Ext.getCmp('btn_eliminar_admin').setText('Aceptar');
 			Ext.getCmp('btn_cancelar').setDisabled(false);
 		}
 		else if(Ext.getCmp('btn_eliminar_admin').getText()=='Aceptar'){
+			var admin_rec = actual_admin_datastore.getAt(0);
 			
 			if(fun_verificarCampos()){
+				
+				if(admin_rec.get('usuario_nombre')!=Ext.getCmp('usuario_nombre').getValue())
+				{
+					subirDatos(
+						gestion_admin_formpanel,
+						'gestionar_admin/deshabilitar',
+						{
+							login_admin: Ext.getCmp('usuario_nombre').getValue()
+						},
+						function(){
+							fun_cancelar();
+							admin_datastore.reload();
+						},
+						function(){}
+					);
+				}
+				else
+				{
+					Ext.Msg.show({
+						title:'Advertencia',
+						msg: 'No se puede eliminar el mismo usuairo autenticado',
+						buttons: Ext.Msg.OK,
+						animEl: 'elId',
+						modal: true,
+						width: 500,
+						icon: Ext.MessageBox.WARNING
+					});
+				}
+			}
+		}
+	}
+	
+	function fun_actualizar_admin(){
+		if(Ext.getCmp('btn_actualizar_admin').getText()=='Actualizar'){
+			var admin_rec = actual_admin_datastore.getAt(0);
+			
+			Ext.getCmp('persona_nombre').setValue(admin_rec.get('persona_nombre'));
+			Ext.getCmp('persona_apellido').setValue(admin_rec.get('persona_apellido'));
+			Ext.getCmp('tipoId_combo').setValue(admin_rec.get('identificacion_codigo'));
+			Ext.getCmp('persona_identificacion').setValue(admin_rec.get('persona_identificacion'));
+			Ext.getCmp('persona_direccion').setValue(admin_rec.get('persona_direccion'));
+			Ext.getCmp('persona_telefono').setValue(admin_rec.get('persona_telefono'));
+			Ext.getCmp('persona_email').setValue(admin_rec.get('persona_email'));
+			Ext.getCmp('usuario_nombre').setValue(admin_rec.get('usuario_nombre'));
+			Ext.getCmp('usuario_contrasena').setValue(admin_rec.get('usuario_contrasena'));
+			
+			Ext.getCmp('btn_eliminar_admin').setDisabled(true);
+			Ext.getCmp('btn_crear_admin').setDisabled(true);
+			Ext.getCmp('btn_cancelar').setDisabled(false);
+			admin_gridpanel.disable(true);
+			Ext.getCmp('usuario_nombre').setDisabled(true);
+			Ext.getCmp('btn_actualizar_admin').setText('Guardar');
+		}
+		else if(Ext.getCmp('btn_actualizar_admin').getText()=='Guardar'){
+			if(fun_verificarCampos()){
+				
 				subirDatos(
 					gestion_admin_formpanel,
-					'gestionar_admin/deshabilitar',
+					'gestionar_admin/actualizar',
 					{
-						login_admin: Ext.getCmp('usuario_nombre').getValue()
+						nombre_persona: Ext.getCmp('persona_nombre').getValue(),
+						apellido_persona: Ext.getCmp('persona_apellido').getValue(),
+						id_tipo_identificacion: Ext.getCmp('tipoId_combo').getValue(),
+						identificacion_persona: Ext.getCmp('persona_identificacion').getValue(),
+						direccion_persona: Ext.getCmp('persona_direccion').getValue(),
+						telefono_persona: Ext.getCmp('persona_telefono').getValue(),
+						email_persona: Ext.getCmp('persona_email').getValue(),
+						login_admin: Ext.getCmp('usuario_nombre').getValue(),
+						contrasena_admin: Ext.getCmp('usuario_contrasena').getValue()
 					},
 					function(){
 						fun_cancelar();
-						fun_desabilitarCampos(false);
 						admin_datastore.reload();
+						actual_admin_datastore.reload();
 					},
 					function(){}
 				);
+				
 			}
 		}
 	}
 	
 	function fun_cancelar(){
+		gestion_admin_formpanel.getForm().reset();
 		Ext.getCmp('btn_crear_admin').setText('Crear');
 		Ext.getCmp('btn_eliminar_admin').setText('Eliminar');
+		Ext.getCmp('btn_actualizar_admin').setText('Actualizar');
 		Ext.getCmp('btn_eliminar_admin').setDisabled(false);
 		Ext.getCmp('btn_crear_admin').setDisabled(false);
 		Ext.getCmp('btn_cancelar').setDisabled(true);
+		Ext.getCmp('btn_actualizar_admin').setDisabled(false);
 		admin_gridpanel.enable(true);
+		Ext.getCmp('usuario_nombre').setDisabled(false);
+		fun_desabilitarCampos(false);
 	}
 	
 	function fun_verificarCampos(){
@@ -317,13 +423,13 @@
 	}
 	
 	function fun_desabilitarCampos( $valor ){
-		Ext.getCmp('persona_nombre').setDisabled($valor),
-		Ext.getCmp('persona_apellido').setDisabled($valor),
-		Ext.getCmp('tipoId_combo').setDisabled($valor),
-		Ext.getCmp('persona_identificacion').setDisabled($valor),
-		Ext.getCmp('persona_direccion').setDisabled($valor),
-		Ext.getCmp('persona_telefono').setDisabled($valor),
-		Ext.getCmp('persona_email').setDisabled($valor),
-		Ext.getCmp('usuario_nombre').setDisabled($valor),
-		Ext.getCmp('usuario_contrasena').setDisabled($valor)
+		Ext.getCmp('persona_nombre').setDisabled($valor);
+		Ext.getCmp('persona_apellido').setDisabled($valor);
+		Ext.getCmp('tipoId_combo').setDisabled($valor);
+		Ext.getCmp('persona_identificacion').setDisabled($valor);
+		Ext.getCmp('persona_direccion').setDisabled($valor);
+		Ext.getCmp('persona_telefono').setDisabled($valor);
+		Ext.getCmp('persona_email').setDisabled($valor);
+		Ext.getCmp('usuario_nombre').setDisabled($valor);
+		Ext.getCmp('usuario_contrasena').setDisabled($valor);
 	}

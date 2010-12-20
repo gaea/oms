@@ -3,7 +3,11 @@
 		title: 'Ingreso',
 		frame: true,
 		height: 180,
-		padding: '10px',
+		//padding: '10px',
+		bodyStyle:'padding: 10px',
+		style: {
+		  "margin":"50px auto"
+		},
 		width: 350,
 		border: true,
 		items: 

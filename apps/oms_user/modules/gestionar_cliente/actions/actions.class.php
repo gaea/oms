@@ -69,7 +69,7 @@ class gestionar_clienteActions extends sfActions
 			
 		if($usuario)
 		{
-			$persona = new Persona();
+			$persona = $usuario->getPersonaRelatedByPersona();
 			$persona->setNombre($this->getRequestParameter('nombre_persona'));
 			$persona->setApellido($this->getRequestParameter('apellido_persona'));
 			$persona->setTipoIdentificacion($this->getRequestParameter('id_tipo_identificacion'));
@@ -79,7 +79,6 @@ class gestionar_clienteActions extends sfActions
 			$persona->setEMail($this->getRequestParameter('email_persona'));
 				
 			$usuario->setContrasena($this->getRequestParameter('contrasena_cliente'));
-			$usuario->setPersonaRelatedByPersona($persona);
 
 			try
 			{

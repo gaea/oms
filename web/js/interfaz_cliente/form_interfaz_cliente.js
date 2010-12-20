@@ -49,6 +49,12 @@
 						tabTip: 'Programar Cu&ntilde;as',
 						autoScroll: true,
 						autoLoad: {url: 'programar_cunia/index', scripts: true, scope: this}
+					},
+					{
+						title: 'Gestion de Cliente',
+						tabTip: 'Actualizar datos del cliente',
+						autoScroll: true,
+						autoLoad: {url: 'actualizar_cliente/index', scripts: true, scope: this}
 					}
 				]
 			}

@@ -158,11 +158,6 @@ class subir_cuniaActions extends sfActions
 			if($buscar != '')
 			{
 				$c1 = $conexion->getNewCriterion(CuniaComercialPeer::NOMBRE, '%'.$buscar.'%', Criteria::LIKE);
-				/*$c2 = $conexion->getNewCriterion(CancionPeer::NOMBRE, '%'.$buscar.'%', Criteria::LIKE);
-				$c3 = $conexion->getNewCriterion(CancionPeer::AUTOR, '%'.$buscar.'%', Criteria::LIKE);
-				$c2->addOr($c3);
-				$c1->addOr($c2);*/
-				
 				$conexion->add($c1);
 			}
 			

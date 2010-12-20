@@ -1,4 +1,35 @@
-
+	var actual_cliente_datastore = new Ext.data.GroupingStore({
+		id: 'actual_cliente_datastore',
+		proxy: new Ext.data.HttpProxy({
+			url: 'login/consultarCliente',
+			method: 'POST',
+			limit: 10,
+			start: 0
+		}),
+		baseParams:{}, 
+		reader: new Ext.data.JsonReader({
+			root: 'results',
+			totalProperty: 'total',
+			id: 'id_reader'
+			},[ 
+			{name: 'persona_codigo'},
+			{name: 'persona_nombre'},
+			{name: 'persona_apellido'},
+			{name: 'identificacion_codigo'},
+			{name: 'identificacion_nombre'},
+			{name: 'persona_identificacion'},
+			{name: 'persona_direccion'},
+			{name: 'persona_telefono'},
+			{name: 'persona_email'},
+			{name: 'usuario_codigo'},
+			{name: 'usuario_nombre'},
+			{name: 'usuario_contrasena'}
+		]),
+		sortInfo:{field: 'persona_nombre', direction: "ASC"}
+	});
+	actual_cliente_datastore.load();
+	
+	
 	var interfaz_visualizacion_contenedor_panel = new Ext.Panel({
 		frame: true,
 		padding: '5px',
@@ -87,7 +118,7 @@
 	canciones_jwplayer.addParam('allowfullscreen','false');
 	canciones_jwplayer.addParam('allowscriptaccess','always');
 	canciones_jwplayer.addParam('wmode','opaque');
-	canciones_jwplayer.addVariable('playlistfile','../rss/2.xml');
+	canciones_jwplayer.addVariable('playlistfile','../rss/'+document.getElementById("div_codigo").innerHTML+'.xml');
 	canciones_jwplayer.addVariable('playlistsize', '300');
 	canciones_jwplayer.addVariable('plugins','../mediaplayer/plugins/revolt.swf');
 	canciones_jwplayer.addVariable('skin','../mediaplayer/skins/beelden.zip');

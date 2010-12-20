@@ -13,11 +13,11 @@
 				totalProperty: 'total',
 				id: 'id'
 				},[ 
-				{name: 'tipoId_codigo'},
-				{name: 'tipoId_nombre'},
-				{name: 'tipoId_descripcion'}
+				{name: 'identificacion_codigo'},
+				{name: 'identificacion_nombre'},
+				{name: 'identificacion_descripcion'}
 			]),
-			sortInfo:{field: 'tipoId_nombre', direction: "ASC"}
+			sortInfo:{field: 'identificacion_nombre', direction: "ASC"}
 		});
 		tipoid_datastore.load();
 	
@@ -29,8 +29,8 @@
 			width: 168,
 			mode: 'local',
 			store: tipoid_datastore,
-			valueField: 'tipoId_codigo',
-			displayField:'tipoId_nombre',
+			valueField: 'identificacion_codigo',
+			displayField:'identificacion_nombre',
 			typeAhead: true,
 			triggerAction: 'all',
 			allowBlank: false,
