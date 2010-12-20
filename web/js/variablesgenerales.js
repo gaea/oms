@@ -1,8 +1,8 @@
 
 //var urlPrefix='http://localhost/oms/web/index.php/';
 
-var url_web = '/www/oms/web/';
-//var url_web = '/oms/web/';
+//var url_web = '/www/oms/web/';
+var url_web = '/oms/web/';
 
 var ancho_panel=630;
 

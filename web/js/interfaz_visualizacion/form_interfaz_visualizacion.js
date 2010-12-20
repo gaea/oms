@@ -1,33 +1,3 @@
-	var actual_cliente_datastore = new Ext.data.GroupingStore({
-		id: 'actual_cliente_datastore',
-		proxy: new Ext.data.HttpProxy({
-			url: 'login/consultarCliente',
-			method: 'POST',
-			limit: 10,
-			start: 0
-		}),
-		baseParams:{}, 
-		reader: new Ext.data.JsonReader({
-			root: 'results',
-			totalProperty: 'total',
-			id: 'id_reader'
-			},[ 
-			{name: 'persona_codigo'},
-			{name: 'persona_nombre'},
-			{name: 'persona_apellido'},
-			{name: 'identificacion_codigo'},
-			{name: 'identificacion_nombre'},
-			{name: 'persona_identificacion'},
-			{name: 'persona_direccion'},
-			{name: 'persona_telefono'},
-			{name: 'persona_email'},
-			{name: 'usuario_codigo'},
-			{name: 'usuario_nombre'},
-			{name: 'usuario_contrasena'}
-		]),
-		sortInfo:{field: 'persona_nombre', direction: "ASC"}
-	});
-	actual_cliente_datastore.load();
 	
 	
 	var interfaz_visualizacion_contenedor_panel = new Ext.Panel({
@@ -144,8 +114,8 @@
 	cunias_jwplayer.write('div_form_interfaz_visualizacion_cunias');
 	
 	
-	//var comet = new Comet();
-	//comet.connect();
+	var comet = new Comet();
+	comet.connect();
 
 /***********************************FUNCIONES*****************************/
 

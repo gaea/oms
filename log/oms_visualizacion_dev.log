@@ -1,0 +1,15 @@
+Dec 20 15:38:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /login with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 20 15:38:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /login with parameters array (  'module' => 'login',  'action' => 'index',)
+Dec 20 15:38:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 20 15:38:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 20 15:38:26 symfony [info] {loginActions} Call "loginActions->executeIndex()"
+Dec 20 15:38:26 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_visualizacion/modules/login/templates/indexSuccess.php"
+Dec 20 15:38:26 symfony [info] {sfPHPView} Decorate content with "/var/www/oms/apps/oms_visualizacion/templates/layout.php"
+Dec 20 15:38:26 symfony [info] {sfPHPView} Render "/var/www/oms/apps/oms_visualizacion/templates/layout.php"
+Dec 20 15:38:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 20 15:38:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 20 15:38:26 symfony [info] {sfWebDebugLogger} Configuration 15.43 ms (10)
+Dec 20 15:38:26 symfony [info] {sfWebDebugLogger} Factories 7.88 ms (1)
+Dec 20 15:38:26 symfony [info] {sfWebDebugLogger} Action "login/index" 0.12 ms (1)
+Dec 20 15:38:26 symfony [info] {sfWebDebugLogger} View "Success" for "login/index" 9.88 ms (1)
+Dec 20 15:38:26 symfony [info] {sfWebResponse} Send content (29276 o)

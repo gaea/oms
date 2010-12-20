@@ -2,29 +2,29 @@
 <rss version="2.0">
 	<channel>
 		<title>OMS</title>
-		<link>http://localhost/www/oms/web/oms_user.php/interfaz_cliente</link>
+		<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link>
 		<description>Open Music Suscriptores...</description>
 		<image>
-			<url>http://localhost/www/oms/web/images/oms.png</url> 
-			<link>http://localhost/www/oms/web/oms_user.php/interfaz_cliente</link> 
+			<url>http://localhost/oms/web/images/oms.png</url> 
+			<link>http://localhost/oms/web/oms_user.php/interfaz_cliente</link> 
 		</image>
 		<item>
-			<title><![CDATA[Black Sabbath - War Pigs]]></title>
-			<link>http://localhost/www/oms/web/uploads/cunias/Black Sabbath - War Pigs.mp3</link>
-			<enclosure url="http://localhost/www/oms/web/uploads/cunias/Black Sabbath - War Pigs.mp3" length="7643136" type="audio/mpeg" />
+			<title><![CDATA[Around the World]]></title>
+			<link>http://localhost/oms/web/uploads/cunias/around_daft_punk.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/cunias/around_daft_punk.mp3" length="" type="audio/mpeg" />
 			<description>
-Duracion: 07:58:00
+Duracion: 07:10:00
 			</description>
-			<pubDate>2010-12-20 08:00:00</pubDate>
+			<pubDate>2010-12-20 01:00:00</pubDate>
 		</item>
 		<item>
-			<title><![CDATA[Paranoid]]></title>
-			<link>http://localhost/www/oms/web/uploads/cunias/Black Sabbath - Paranoid.mp3</link>
-			<enclosure url="http://localhost/www/oms/web/uploads/cunias/Black Sabbath - Paranoid.mp3" length="2721422" type="audio/mpeg" />
+			<title><![CDATA[Chilanga Banda]]></title>
+			<link>http://localhost/oms/web/uploads/cunias/Cafe Tacuba - Chilanga Banda.mp3</link>
+			<enclosure url="http://localhost/oms/web/uploads/cunias/Cafe Tacuba - Chilanga Banda.mp3" length="" type="audio/mpeg" />
 			<description>
-Duracion: 02:50:00
+Duracion: 03:32:00
 			</description>
-			<pubDate>2010-12-20 12:00:00</pubDate>
+			<pubDate>2010-12-20 01:00:00</pubDate>
 		</item>
 	</channel>
 </rss>
